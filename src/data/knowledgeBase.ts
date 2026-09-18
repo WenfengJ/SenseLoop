@@ -1,0 +1,55 @@
+import { KnowledgeRule } from "../domain/types";
+
+export const knowledgeBase: KnowledgeRule[] = [
+  {
+    id: "sleep-recovery",
+    category: "sleep",
+    appliesTo: "all",
+    priority: "high",
+    statusHint: "昨晚恢复不足，今天更适合降低强度。",
+    recoveryAdvice: ["今天避免硬扛高强度训练，优先选择快走、拉伸或轻力量。"],
+    riskNotice: ["如果夜醒、咳嗽或打鼾连续增加，建议持续观察。"],
+  },
+  {
+    id: "weight-loss-food",
+    category: "diet",
+    appliesTo: ["weight_loss_female"],
+    priority: "high",
+    foodAdvice: ["今天控制总热量，但不要极端节食；早餐保留优质蛋白。", "排便偏干时，优先补水和膳食纤维。"],
+    recoveryAdvice: ["恢复不足时不建议 HIIT，适合 30 分钟快走。"],
+  },
+  {
+    id: "elderly-care",
+    category: "risk",
+    appliesTo: ["elderly"],
+    priority: "high",
+    foodAdvice: ["今天饮食以清淡、温热、易消化为主，减少高盐食物。"],
+    recoveryAdvice: ["上午适合散步和舒缓拉伸，不建议剧烈运动。"],
+    riskNotice: ["咳嗽和起夜若连续多日增加，建议家人协助关注。"],
+  },
+  {
+    id: "office-repair",
+    category: "sleep",
+    appliesTo: ["office_worker"],
+    priority: "high",
+    foodAdvice: ["午餐减少重油重辣，下午 2 点后避免继续摄入咖啡因。"],
+    recoveryAdvice: ["今天目标不是透支训练，而是把身体拉回稳定状态。"],
+  },
+  {
+    id: "student-energy",
+    category: "diet",
+    appliesTo: ["student"],
+    priority: "medium",
+    foodAdvice: ["早餐补充蛋白质和主食，减少高糖饮料。"],
+    recoveryAdvice: ["下午安排 15 分钟户外活动，帮助稳定专注。"],
+  },
+  {
+    id: "insomnia-plan",
+    category: "sleep",
+    appliesTo: ["insomnia"],
+    priority: "high",
+    foodAdvice: ["晚餐提前并减少油腻，下午避免咖啡因。"],
+    recoveryAdvice: ["午休控制在 20 分钟以内，晚上固定放松流程。"],
+    riskNotice: ["如果连续多日严重影响生活，建议寻求专业帮助。"],
+  },
+];
