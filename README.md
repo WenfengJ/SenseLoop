@@ -101,6 +101,7 @@ uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 
 ### 参赛与产品总览
 
+- [预选提交包](docs/submission-preselection/README.md)
 - [项目概览](docs/presentation/anker-SenseLoop-项目概览.md)
 - [项目概览 HTML](docs/presentation/anker-SenseLoop-项目概览.html)
 - [参赛背景](docs/drafts/需求参赛背景.md)
