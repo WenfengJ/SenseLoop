@@ -19,7 +19,7 @@
 | Roadmap 路线图 | ./Roadmap路线图.md | 已完成 |
 | 隐私与医疗边界 | ./隐私与医疗边界说明.md | 已完成 |
 | 评委可能会问的问题 | ./评委可能会问的问题.md | 已完成，部分人工信息待补 |
-| 系统架构图 | ./diagrams/系统架构图.md | 已完成 |
+| 系统架构图 | ./diagrams/系统架构图.md | 已完成，含 SVG/PNG 单图 |
 | Logo / 项目封面图说明 | ./Logo与项目封面图.md | 已完成 SVG 版本 |
 | Logo / 项目封面图文件 | ./brand/README.md | 已放入提交包 |
 | Demo 二维码 | ./qrcode/README.md | 已生成 |

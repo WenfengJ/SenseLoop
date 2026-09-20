@@ -1,0 +1,118 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F7FBF8"/>
+      <stop offset="0.52" stop-color="#EEF8F2"/>
+      <stop offset="1" stop-color="#F7F8FF"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#3CCB8E"/>
+      <stop offset="1" stop-color="#1F9A73"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#7EB7FF"/>
+      <stop offset="1" stop-color="#4B7DDF"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFD98A"/>
+      <stop offset="1" stop-color="#F3A640"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#0B2A22" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto-start-reverse">
+      <path d="M2 2L10 6L2 10" stroke="#2DA978" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      .title{font:700 48px "PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#10201A}
+      .subtitle{font:400 24px "PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#587068}
+      .label{font:700 26px "PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#10201A}
+      .small{font:400 19px "PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#587068}
+      .tiny{font:400 16px "PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#6B817A}
+      .whiteLabel{font:700 24px "PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:white}
+      .whiteSmall{font:400 18px "PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#EAFBF3}
+      .stage{font:700 18px "PingFang SC","Microsoft YaHei",Arial,sans-serif;fill:#2DA978}
+      .node{fill:#FFFFFF;stroke:#CFE2D8;stroke-width:2;filter:url(#softShadow)}
+      .soft{fill:#F7FBF8;stroke:#DCECE4;stroke-width:2}
+      .line{stroke:#2DA978;stroke-width:4;marker-end:url(#arrow)}
+      .dash{stroke:#83B9A2;stroke-width:3;stroke-dasharray:8 8;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" rx="36" fill="url(#bg)"/>
+  <circle cx="1365" cy="150" r="240" fill="#DFF6EA" opacity="0.72"/>
+  <circle cx="1390" cy="142" r="152" stroke="#41C8A4" stroke-width="28" opacity="0.7"/>
+  <path d="M1334 151C1360 102 1412 102 1438 151" stroke="#0F3C34" stroke-width="22" stroke-linecap="round"/>
+  <path d="M1459 94C1490 112 1504 142 1506 176" stroke="#89DFCF" stroke-width="18" stroke-linecap="round"/>
+
+  <text x="84" y="92" class="title">SenseLoop 系统架构</text>
+  <text x="86" y="132" class="subtitle">用 soundcore Work 验证“夜间声音 -> 身体信号理解 -> 晨间行动建议”的产品闭环</text>
+
+  <rect x="82" y="184" width="290" height="640" rx="28" fill="#FFFFFF" opacity="0.72" stroke="#DCECE4"/>
+  <text x="112" y="230" class="stage">01 数据采集层</text>
+  <rect x="112" y="262" width="230" height="116" rx="20" fill="url(#green)" filter="url(#softShadow)"/>
+  <text x="136" y="305" class="whiteLabel">soundcore Work</text>
+  <text x="136" y="338" class="whiteSmall">夜间声音 / 重点标记</text>
+  <text x="136" y="365" class="whiteSmall">打鼾 / 咳嗽 / 起夜</text>
+  <rect x="112" y="412" width="230" height="104" rx="20" class="soft"/>
+  <text x="136" y="454" class="label">App 输入</text>
+  <text x="136" y="486" class="small">画像 / 醒后反馈 / 饮食</text>
+  <rect x="112" y="550" width="230" height="104" rx="20" class="soft"/>
+  <text x="136" y="592" class="label">手机拍照 / eufy</text>
+  <text x="136" y="624" class="small">饮食 / 舌苔 / 非隐私视觉</text>
+  <rect x="112" y="688" width="230" height="86" rx="20" class="soft"/>
+  <text x="136" y="728" class="label">未来传感器</text>
+  <text x="136" y="758" class="small">心率 / 血氧 / 口气</text>
+
+  <rect x="470" y="184" width="260" height="640" rx="28" fill="#FFFFFF" opacity="0.72" stroke="#DCECE4"/>
+  <text x="500" y="230" class="stage">02 信号标签层</text>
+  <rect x="504" y="282" width="192" height="108" rx="22" class="node"/>
+  <text x="532" y="326" class="label">SleepAudioEvent</text>
+  <text x="532" y="358" class="small">snore / cough / wake</text>
+  <rect x="504" y="438" width="192" height="108" rx="22" class="node"/>
+  <text x="532" y="482" class="label">DailySignals</text>
+  <text x="532" y="514" class="small">饮食 / 排便 / 舌苔 / 口气</text>
+  <rect x="504" y="594" width="192" height="108" rx="22" class="node"/>
+  <text x="532" y="638" class="label">UserProfile</text>
+  <text x="532" y="670" class="small">减脂 / 老人 / 上班族</text>
+
+  <rect x="830" y="184" width="330" height="640" rx="28" fill="#FFFFFF" opacity="0.76" stroke="#DCECE4"/>
+  <text x="862" y="230" class="stage">03 理解与生成层</text>
+  <rect x="872" y="282" width="246" height="116" rx="24" fill="#FFFFFF" stroke="#CFE2D8" stroke-width="2" filter="url(#softShadow)"/>
+  <text x="912" y="328" class="label">健康知识库</text>
+  <text x="912" y="360" class="small">睡眠 / 饮食 / 减脂</text>
+  <rect x="872" y="444" width="246" height="116" rx="24" fill="#FFFFFF" stroke="#CFE2D8" stroke-width="2" filter="url(#softShadow)"/>
+  <text x="912" y="490" class="label">规则引擎</text>
+  <text x="912" y="522" class="small">边界可控 / 可解释</text>
+  <rect x="872" y="606" width="246" height="116" rx="24" fill="#FFFFFF" stroke="#CFE2D8" stroke-width="2" filter="url(#softShadow)"/>
+  <text x="912" y="652" class="label">报告生成服务</text>
+  <text x="912" y="684" class="small">今日建议 / 异常观察</text>
+
+  <rect x="1260" y="214" width="248" height="232" rx="30" fill="url(#blue)" filter="url(#softShadow)"/>
+  <text x="1292" y="270" class="whiteLabel">App 展示层</text>
+  <text x="1292" y="312" class="whiteSmall">首页 / 睡眠 / 饮食</text>
+  <text x="1292" y="342" class="whiteSmall">信号 / 日报 / 架构</text>
+  <text x="1292" y="388" class="whiteSmall">让评委看到闭环跑通</text>
+
+  <rect x="1260" y="536" width="248" height="210" rx="30" fill="url(#amber)" filter="url(#softShadow)"/>
+  <text x="1292" y="592" class="whiteLabel">产品化演进</text>
+  <text x="1292" y="634" class="whiteSmall">Watch / Band / Pendant</text>
+  <text x="1292" y="664" class="whiteSmall">端侧识别 + 多模态传感</text>
+  <text x="1292" y="708" class="whiteSmall">从 Demo 到新品类</text>
+
+  <path class="line" d="M342 320 H500"/>
+  <path class="line" d="M342 462 H500"/>
+  <path class="dash" d="M342 602 H500"/>
+  <path class="dash" d="M342 730 C420 730 426 650 500 650"/>
+  <path class="line" d="M696 336 H872"/>
+  <path class="line" d="M696 492 C780 492 778 502 872 502"/>
+  <path class="line" d="M696 648 C780 648 778 664 872 664"/>
+  <path class="line" d="M1118 664 C1198 664 1190 330 1260 330"/>
+  <path class="dash" d="M1118 502 C1198 502 1190 642 1260 642"/>
+
+  <rect x="110" y="858" width="1380" height="82" rx="24" fill="#10201A" opacity="0.92"/>
+  <text x="150" y="906" class="whiteLabel">核心原则：</text>
+  <text x="290" y="906" class="whiteSmall">当前用 mock adapter 稳定演示，现场替换 soundcore adapter 接真实数据，未来迁移到专用健康穿戴硬件。</text>
+
+  <text x="84" y="968" class="tiny">边界：不做医疗诊断，不自动拍摄隐私内容；排便、舌苔、口气等敏感数据必须用户主动触发。</text>
+</svg>
