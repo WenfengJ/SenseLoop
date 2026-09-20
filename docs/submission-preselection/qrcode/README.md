@@ -18,7 +18,7 @@ demo-qrcode.png
 - [x] 获取公开访问链接。
 - [x] 生成二维码。
 - [x] 将二维码保存为 `demo-qrcode.png`。
-- [ ] 放入 PPT / PDF。
+- [x] 放入 PPT / PDF。
 - [ ] 放入演示视频结尾页或备用页。
 
 ## 在线 Demo 链接

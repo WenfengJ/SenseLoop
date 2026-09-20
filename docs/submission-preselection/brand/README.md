@@ -5,7 +5,9 @@
 ## 文件
 
 - `senseloop-logo.svg`：项目 Logo。
+- `senseloop-logo.png`：项目 Logo PNG 版本，适合上传表单或放入视频。
 - `senseloop-cover.svg`：项目封面图，可用于 PPT 首页、视频封面、项目概览。
+- `senseloop-cover.png`：项目封面图 PNG 版本，适合上传表单或放入视频。
 
 ## 当前版本风格
 
@@ -22,7 +24,7 @@
 
 ## 后续如需补充
 
-- [ ] PNG 版本。
+- [x] PNG 版本。
 - [ ] 白底 Logo。
 - [ ] 深色底 Logo。
 - [ ] App Icon。

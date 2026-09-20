@@ -35,7 +35,7 @@ soundcore Work 原型 -> SenseLoop Watch / Band / Pendant
 
 - [x] 确认仓库名。
 - [ ] 清理无关文件。
-- [ ] 检查 `.gitignore`。
+- [x] 检查 `.gitignore`。
 - [ ] 提交代码。
 - [ ] Push 到 GitHub。
 - [x] 将 GitHub 链接填写到 `submission-ready/人工填写项.md`。
@@ -83,12 +83,12 @@ soundcore Work 原型 -> SenseLoop Watch / Band / Pendant
 
 待完成：
 
-- [ ] 队伍名称。
+- [x] 队伍名称：anker-SenseLoop。
 - [ ] 成员姓名。
 - [ ] 成员角色。
-- [ ] 联系方式。
+- [x] 联系方式：17611650226。
 - [ ] 是否个人参赛或组队参赛。
-- [ ] 填写到 `submission-ready/人工填写项.md`。
+- [x] 填写到 `submission-ready/人工填写项.md`。
 
 ### 5. 目标赛道确认
 
@@ -99,9 +99,9 @@ soundcore Work 原型 -> SenseLoop Watch / Band / Pendant
 
 待完成：
 
-- [ ] 确认官方提交表单里的赛道名称。
-- [ ] 将目标赛道写入 `submission-ready/人工填写项.md`。
-- [ ] 在 PPT / PDF 中明确写出使用的官方硬件。
+- [x] 确认官方提交表单里的赛道名称：智能录音 / Smart Audio。
+- [x] 将目标赛道写入 `submission-ready/人工填写项.md`。
+- [x] 在 PPT / PDF 中明确写出使用的官方硬件。
 
 ## P1：建议补
 
@@ -157,7 +157,8 @@ soundcore Work 原型 -> SenseLoop Watch / Band / Pendant
 - [x] 会不会涉及医疗诊断？
 - [x] 24 小时现场还能做什么？
 - [x] 未来为什么可以产品化？
-- [ ] 补充官方赛道、仓库链接、Demo 链接、团队信息等人工信息。
+- [x] 补充官方赛道、仓库链接、Demo 链接等信息。
+- [ ] 补充团队成员姓名、角色、是否组队等人工信息。
 
 ### 9. README 当前提交状态
 
@@ -167,12 +168,12 @@ soundcore Work 原型 -> SenseLoop Watch / Band / Pendant
 
 待补充：
 
-- [ ] 前端已跑通。
-- [ ] 后台已预留。
-- [ ] mock 数据可演示。
-- [ ] SDK 尚未接入。
-- [ ] API Key 尚未接入。
-- [ ] 现场增强方向。
+- [x] 前端已跑通。
+- [x] 后台已预留。
+- [x] mock 数据可演示。
+- [x] SDK 尚未接入，已通过 adapter 预留。
+- [x] API Key 尚未接入，无 API Key 时使用本地规则引擎。
+- [x] 现场增强方向已说明。
 
 ## P2：可选加分
 
@@ -188,7 +189,7 @@ soundcore Work 原型 -> SenseLoop Watch / Band / Pendant
 - [x] 生成项目封面图。
 - [x] 放入 `docs/assets/brand/`。
 - [x] 同步放入 `docs/submission-preselection/brand/`。
-- [ ] 如需提交 PNG，再从 SVG 导出 PNG。
+- [x] 如需提交 PNG，再从 SVG 导出 PNG。
 
 ### 11. Demo 二维码
 
@@ -204,6 +205,19 @@ soundcore Work 原型 -> SenseLoop Watch / Band / Pendant
 - [x] 保存到 `docs/submission-preselection/qrcode/demo-qrcode.png`。
 - [x] 放入 PPT / PDF。
 - [ ] 放入演示视频结尾页或备用页。
+
+### 11.1 系统架构图
+
+目的：
+
+- 让评委快速理解当前原型、技术链路和未来硬件演进。
+
+待完成：
+
+- [x] 生成单图版系统架构图。
+- [x] 保存 SVG：`docs/submission-preselection/diagrams/senseloop-system-architecture.svg`。
+- [x] 保存 PNG：`docs/submission-preselection/diagrams/senseloop-system-architecture.png`。
+- [x] 架构图 GitHub 链接已填写到 `submission-ready/人工填写项.md`。
 
 ### 12. 一页式 PDF
 
@@ -235,6 +249,26 @@ soundcore Work 原型 -> SenseLoop Watch / Band / Pendant
 - [x] 可试用 MVP：真实录音 + 7 天趋势 + 用户反馈。
 - [x] 产品化版本：SenseLoop Watch / Band / Pendant。
 - [x] 已生成 Roadmap 文档：`docs/submission-preselection/Roadmap路线图.md`。
+
+### 14. 百度网盘材料包
+
+目的：
+
+- 如果官方表单需要附件或视频链接，提供一个集中材料包。
+
+待完成：
+
+- [x] 人工上传到百度网盘。
+- [x] 填写网盘分享链接到 `submission-ready/人工填写项.md`。
+- [x] 确认分享权限可访问，提取码：`tjje`。
+
+建议上传：
+
+- [x] PPT / PDF 答辩材料已准备。
+- [x] 系统架构图已准备。
+- [x] Demo 二维码已准备。
+- [x] 核心截图已准备。
+- [ ] 演示视频待录制后上传。
 
 ## 当前优先级建议
 
