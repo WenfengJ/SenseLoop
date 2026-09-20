@@ -8,6 +8,32 @@
 http://127.0.0.1:5173/
 ```
 
+## 在线 Demo
+
+前端：
+
+```text
+https://13-57-166-217.sslip.io/senseloop/
+```
+
+后台健康检查：
+
+```text
+https://13-57-166-217.sslip.io/senseloop-api/health
+```
+
+报告接口示例：
+
+```text
+https://13-57-166-217.sslip.io/senseloop-api/api/report/weight_loss_female
+```
+
+GitHub 仓库：
+
+```text
+https://github.com/WenfengJ/SenseLoop
+```
+
 后台：
 
 ```text
@@ -44,8 +70,8 @@ bash scripts/start-all.sh
 
 如果官方提交表单需要公开视频或在线 Demo，请补充：
 
-- GitHub 仓库链接。
-- 在线部署链接。
+- GitHub 仓库链接：`https://github.com/WenfengJ/SenseLoop`
+- 在线部署链接：`https://13-57-166-217.sslip.io/senseloop/`
 - 3 分钟演示视频链接。
 - PPT 或项目概览附件链接。
 

@@ -152,6 +152,13 @@ soundcore Work / mock audio
 
 ## 9. 快速启动
 
+### 在线 Demo
+
+- Demo 地址：`https://13-57-166-217.sslip.io/senseloop/`
+- 后台健康检查：`https://13-57-166-217.sslip.io/senseloop-api/health`
+- GitHub 仓库：`https://github.com/WenfengJ/SenseLoop`
+- 服务器部署说明：[服务器部署说明](docs/deployment/服务器部署说明.md)
+
 ### 一键启动
 
 只启动前端：

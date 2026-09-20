@@ -46,8 +46,9 @@ class SenseLoopHandler(BaseHTTPRequestHandler):
 
 def run():
     port = int(os.environ.get("PORT", "8000"))
-    server = HTTPServer(("127.0.0.1", port), SenseLoopHandler)
-    print(f"SenseLoop simple backend running at http://127.0.0.1:{port}")
+    host = os.environ.get("HOST", "127.0.0.1")
+    server = HTTPServer((host, port), SenseLoopHandler)
+    print(f"SenseLoop simple backend running at http://{host}:{port}")
     server.serve_forever()
 
 

@@ -4,6 +4,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 BACKEND_PORT="${BACKEND_PORT:-8000}"
+BACKEND_HOST="${BACKEND_HOST:-127.0.0.1}"
 
 cleanup() {
   if [ -n "${BACKEND_PID:-}" ]; then
@@ -13,8 +14,8 @@ cleanup() {
 
 trap cleanup EXIT
 
-echo "Starting SenseLoop backend at http://127.0.0.1:${BACKEND_PORT}"
-(cd backend && PORT="$BACKEND_PORT" python3 simple_server.py) &
+echo "Starting SenseLoop backend at http://${BACKEND_HOST}:${BACKEND_PORT}"
+(cd backend && HOST="$BACKEND_HOST" PORT="$BACKEND_PORT" python3 simple_server.py) &
 BACKEND_PID=$!
 
 if [ ! -d "node_modules" ]; then

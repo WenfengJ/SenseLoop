@@ -13,12 +13,12 @@
 
 待完成：
 
-- [ ] 确认仓库名。
+- [x] 确认仓库名。
 - [ ] 清理无关文件。
 - [ ] 检查 `.gitignore`。
 - [ ] 提交代码。
 - [ ] Push 到 GitHub。
-- [ ] 将 GitHub 链接填写到 `manual-fill/人工填写项.md`。
+- [x] 将 GitHub 链接填写到 `manual-fill/人工填写项.md`。
 
 ### 2. 在线 Demo 链接
 
@@ -28,11 +28,11 @@
 
 待完成：
 
-- [ ] 选择部署方式：Netlify / Vercel / GitHub Pages。
-- [ ] 部署前端 Demo。
-- [ ] 验证页面可打开。
+- [x] 选择部署方式：自有服务器 Docker + nginx 子路径。
+- [x] 部署前端 Demo。
+- [x] 验证页面可打开。
 - [ ] 验证首页、睡眠页、日报页可切换。
-- [ ] 将在线 Demo 链接填写到 `manual-fill/人工填写项.md`。
+- [x] 将在线 Demo 链接填写到 `manual-fill/人工填写项.md`。
 
 ### 3. PPT 或 PDF 答辩材料
 
@@ -175,10 +175,10 @@
 
 待完成：
 
-- [ ] 在线 Demo 部署完成。
-- [ ] 获取公开 Demo 链接。
-- [ ] 生成二维码。
-- [ ] 保存到 `docs/submission-preselection/qrcode/demo-qrcode.png`。
+- [x] 在线 Demo 部署完成。
+- [x] 获取公开 Demo 链接。
+- [x] 生成二维码。
+- [x] 保存到 `docs/submission-preselection/qrcode/demo-qrcode.png`。
 - [ ] 放入 PPT / PDF。
 - [ ] 放入演示视频结尾页或备用页。
 
