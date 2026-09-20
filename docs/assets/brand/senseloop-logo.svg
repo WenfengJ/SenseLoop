@@ -1,0 +1,14 @@
+<svg width="960" height="320" viewBox="0 0 960 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SenseLoop logo">
+  <rect width="960" height="320" rx="40" fill="#F7FBF8"/>
+  <circle cx="176" cy="160" r="102" fill="#DDF5F1"/>
+  <circle cx="176" cy="160" r="72" fill="#FFFFFF"/>
+  <path d="M176 76C129.608 76 92 113.608 92 160C92 206.392 129.608 244 176 244C222.392 244 260 206.392 260 160" stroke="#41BFA6" stroke-width="14" stroke-linecap="round"/>
+  <path d="M258 159C258 112.608 220.392 75 174 75" stroke="#FFB36B" stroke-width="14" stroke-linecap="round"/>
+  <path d="M120 165C134 135 149 123 166 123C190 123 193 192 218 192C234 192 246 174 255 153" stroke="#123B3A" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M132 118C145 106 159 100 176 100C194 100 210 106 224 118" stroke="#9EE5D8" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="176" cy="160" r="13" fill="#41BFA6"/>
+  <circle cx="232" cy="101" r="7" fill="#FFB36B"/>
+  <text x="320" y="150" fill="#123B3A" font-family="Inter, PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="64" font-weight="800" letter-spacing="0">SenseLoop</text>
+  <text x="322" y="205" fill="#25A891" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="0">观息</text>
+  <text x="420" y="205" fill="#5D7873" font-family="PingFang SC, Microsoft YaHei, Arial, sans-serif" font-size="26" font-weight="500" letter-spacing="0">听见身体信号，生成今日行动</text>
+</svg>
