@@ -260,7 +260,7 @@ soundcore Work 原型 -> SenseLoop Watch / Band / Pendant
 
 - [x] 人工上传到百度网盘。
 - [x] 填写网盘分享链接到 `submission-ready/人工填写项.md`。
-- [x] 确认分享权限可访问，提取码：`tjje`。
+- [x] 确认分享权限可访问，文件名：`anker-SenseLoop-预选提交材料.zip`，提取码：`jvcv`。
 
 建议上传：
 
