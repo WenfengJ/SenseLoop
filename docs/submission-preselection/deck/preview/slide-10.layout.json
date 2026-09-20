@@ -2,15 +2,15 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/9ikbs2",
-    "id": "9ikbs2",
+    "aid": "sl/llflty",
+    "id": "llflty",
     "slide": 10,
-    "layoutId": "83cb91fb-f0c8-41cc-851c-2817359f4cec",
+    "layoutId": "5055eea5-a964-4833-9173-4233fdd43435",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+    "masterLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
     "masterLayoutName": "Master",
-    "backgroundColor": "#F7FBF8",
+    "backgroundColor": "#FFFFFF",
     "frame": {
       "left": 0,
       "top": 0,
@@ -45,15 +45,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "83cb91fb-f0c8-41cc-851c-2817359f4cec",
+      "id": "5055eea5-a964-4833-9173-4233fdd43435",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+      "parentLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+      "id": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -64,7 +64,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/gvy90je9",
+      "aid": "sh/9gr2p8nq",
       "id": "1",
       "bbox": [
         70,
@@ -73,8 +73,8 @@
         58
       ],
       "geometry": "rect",
-      "text": "24 小时现场开发计划很清晰",
-      "textPreview": "24 小时现场开发计划很清晰",
+      "text": "这不是一次性 Demo，而是一条产品化路线",
+      "textPreview": "这不是一次性 Demo，而是一条产品化路线",
       "resolvedFontSize": 38,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -96,14 +96,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "24 小时现场开发计划很清晰"
+            "text": "这不是一次性 Demo，而是一条产品化路线"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "24 小时现场开发计划很清晰",
+          "text": "这不是一次性 Demo，而是一条产品化路线",
           "resolvedTextStyle": {
             "fontSize": 38,
             "color": "#10201A",
@@ -113,7 +113,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "24 小时现场开发计划很清晰",
+              "text": "这不是一次性 Demo，而是一条产品化路线",
               "fontSize": 38,
               "color": "#10201A",
               "bold": true,
@@ -129,7 +129,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ra5gbq1o",
+      "aid": "sh/2p8nqxs7",
       "id": "2",
       "bbox": [
         70,
@@ -138,8 +138,8 @@
         34
       ],
       "geometry": "rect",
-      "text": "当前原型稳定可演示，现场时间用于增强真实硬件与真实数据。",
-      "textPreview": "当前原型稳定可演示，现场时间用于增强真实硬件与真实数据。",
+      "text": "Roadmap 回答的是：现在能演示什么，现场增强什么，比赛后怎样继续落地。",
+      "textPreview": "Roadmap 回答的是：现在能演示什么，现场增强什么，比赛后怎样继续落地。",
       "resolvedFontSize": 18,
       "resolvedTextStyle": {
         "anchor": 1,
@@ -160,14 +160,14 @@
         "lines": [
           {
             "index": 1,
-            "text": "当前原型稳定可演示，现场时间用于增强真实硬件与真实数据。"
+            "text": "Roadmap 回答的是：现在能演示什么，现场增强什么，比赛后怎样继续落地。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "当前原型稳定可演示，现场时间用于增强真实硬件与真实数据。",
+          "text": "Roadmap 回答的是：现在能演示什么，现场增强什么，比赛后怎样继续落地。",
           "resolvedTextStyle": {
             "fontSize": 18,
             "color": "#587068",
@@ -176,7 +176,7 @@
           "runs": [
             {
               "index": 1,
-              "text": "当前原型稳定可演示，现场时间用于增强真实硬件与真实数据。",
+              "text": "Roadmap 回答的是：现在能演示什么，现场增强什么，比赛后怎样继续落地。",
               "fontSize": 18,
               "color": "#587068",
               "alignment": "left"
@@ -191,7 +191,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/2p8nqxs7",
+      "aid": "sh/ra5gbq1o",
       "id": "3",
       "bbox": [
         70,
@@ -208,16 +208,16 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/94fu18jq",
+      "aid": "sh/kjm1cfa9",
       "id": "4",
       "bbox": [
-        78,
-        182,
-        720,
-        82
+        76,
+        192,
+        240,
+        240
       ],
       "geometry": "roundRect",
-      "fillColor": "#FFFFFF",
+      "fillColor": "#DFF6EA",
       "lineColor": "#C9DED4",
       "lineWidth": 1
     },
@@ -225,21 +225,21 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kjm1cfa9",
+      "aid": "sh/94fu18jq",
       "id": "5",
       "bbox": [
-        106,
-        204,
-        150,
-        32
+        100,
+        216,
+        54,
+        34
       ],
       "geometry": "rect",
-      "text": "优先增强",
-      "textPreview": "优先增强",
-      "resolvedFontSize": 24,
+      "text": "01",
+      "textPreview": "01",
+      "resolvedFontSize": 25,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 24,
+        "fontSize": 25,
         "typeface": "+mn-lt",
         "color": "#38A169",
         "bold": true,
@@ -257,16 +257,16 @@
         "lines": [
           {
             "index": 1,
-            "text": "优先增强"
+            "text": "01"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "优先增强",
+          "text": "01",
           "resolvedTextStyle": {
-            "fontSize": 24,
+            "fontSize": 25,
             "color": "#38A169",
             "bold": true,
             "alignment": "left"
@@ -274,8 +274,8 @@
           "runs": [
             {
               "index": 1,
-              "text": "优先增强",
-              "fontSize": 24,
+              "text": "01",
+              "fontSize": 25,
               "color": "#38A169",
               "bold": true,
               "alignment": "left"
@@ -290,23 +290,24 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/r2p8nqxs",
+      "aid": "sh/2hwfyxob",
       "id": "6",
       "bbox": [
-        274,
-        204,
-        480,
-        32
+        100,
+        266,
+        190,
+        34
       ],
       "geometry": "rect",
-      "text": "接入 soundcore Work SDK 或真实录音文件，把声音事件接入日报",
-      "textPreview": "接入 soundcore Work SDK 或真实录音文件，把声音事件接入日报",
-      "resolvedFontSize": 20,
+      "text": "预选 Demo",
+      "textPreview": "预选 Demo",
+      "resolvedFontSize": 25,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 20,
+        "fontSize": 25,
         "typeface": "+mn-lt",
-        "color": "#587068",
+        "color": "#10201A",
+        "bold": true,
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -317,33 +318,31 @@
         }
       },
       "textLayout": {
-        "lineCount": 2,
+        "lineCount": 1,
         "lines": [
           {
             "index": 1,
-            "text": "接入 soundcore Work SDK"
-          },
-          {
-            "index": 2,
-            "text": "或真实录音文件，把声音事件接入日报"
+            "text": "预选 Demo"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "接入 soundcore Work SDK 或真实录音文件，把声音事件接入日报",
+          "text": "预选 Demo",
           "resolvedTextStyle": {
-            "fontSize": 20,
-            "color": "#587068",
+            "fontSize": 25,
+            "color": "#10201A",
+            "bold": true,
             "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "接入 soundcore Work SDK 或真实录音文件，把声音事件接入日报",
-              "fontSize": 20,
-              "color": "#587068",
+              "text": "预选 Demo",
+              "fontSize": 25,
+              "color": "#10201A",
+              "bold": true,
               "alignment": "left"
             }
           ],
@@ -356,103 +355,21 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/2hwfyxob",
+      "aid": "sh/r2p8nqxs",
       "id": "7",
       "bbox": [
-        78,
-        294,
-        720,
-        82
-      ],
-      "geometry": "roundRect",
-      "fillColor": "#FFFFFF",
-      "lineColor": "#C9DED4",
-      "lineWidth": 1
-    },
-    {
-      "order": 8,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/9w3m94fu",
-      "id": "8",
-      "bbox": [
-        106,
+        100,
         316,
-        150,
-        32
+        188,
+        54
       ],
       "geometry": "rect",
-      "text": "可选增强",
-      "textPreview": "可选增强",
-      "resolvedFontSize": 24,
+      "text": "mock 数据 + 前端闭环",
+      "textPreview": "mock 数据 + 前端闭环",
+      "resolvedFontSize": 18,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 24,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
-        "alignment": "left",
-        "verticalAlignment": "top",
-        "insets": {
-          "top": 4.8,
-          "right": 9.6,
-          "bottom": 4.8,
-          "left": 9.6
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "可选增强"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "可选增强",
-          "resolvedTextStyle": {
-            "fontSize": 24,
-            "color": "#38A169",
-            "bold": true,
-            "alignment": "left"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "可选增强",
-              "fontSize": 24,
-              "color": "#38A169",
-              "bold": true,
-              "alignment": "left"
-            }
-          ],
-          "marginLeft": 0
-        }
-      ],
-      "lineWidth": 0
-    },
-    {
-      "order": 9,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/kb6xkf6d",
-      "id": "9",
-      "bbox": [
-        274,
-        316,
-        480,
-        32
-      ],
-      "geometry": "rect",
-      "text": "加入音频上传、图片上传、LLM 文案润色、eufy 非隐私视觉事件",
-      "textPreview": "加入音频上传、图片上传、LLM 文案润色、eufy 非隐私视觉事件",
-      "resolvedFontSize": 20,
-      "resolvedTextStyle": {
-        "anchor": 1,
-        "fontSize": 20,
+        "fontSize": 18,
         "typeface": "+mn-lt",
         "color": "#587068",
         "alignment": "left",
@@ -469,28 +386,28 @@
         "lines": [
           {
             "index": 1,
-            "text": "加入音频上传、图片上传、LLM 文案润色、eufy"
+            "text": "mock 数据 +"
           },
           {
             "index": 2,
-            "text": "非隐私视觉事件"
+            "text": "前端闭环"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "加入音频上传、图片上传、LLM 文案润色、eufy 非隐私视觉事件",
+          "text": "mock 数据 + 前端闭环",
           "resolvedTextStyle": {
-            "fontSize": 20,
+            "fontSize": 18,
             "color": "#587068",
             "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "加入音频上传、图片上传、LLM 文案润色、eufy 非隐私视觉事件",
-              "fontSize": 20,
+              "text": "mock 数据 + 前端闭环",
+              "fontSize": 18,
               "color": "#587068",
               "alignment": "left"
             }
@@ -501,19 +418,102 @@
       "lineWidth": 0
     },
     {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kb6xkf6d",
+      "id": "8",
+      "bbox": [
+        100,
+        382,
+        188,
+        48
+      ],
+      "geometry": "rect",
+      "text": "证明夜间声音到晨间建议的体验成立",
+      "textPreview": "证明夜间声音到晨间建议的体验成立",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "证明夜间声音到晨间"
+          },
+          {
+            "index": 2,
+            "text": "建议的体验成立"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "证明夜间声音到晨间建议的体验成立",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#10201A",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "证明夜间声音到晨间建议的体验成立",
+              "fontSize": 17,
+              "color": "#10201A",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9w3m94fu",
+      "id": "9",
+      "bbox": [
+        320,
+        306,
+        32,
+        16
+      ],
+      "geometry": "rightArrow",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/2p8nqxs7",
+      "aid": "sh/xczed8v6",
       "id": "10",
       "bbox": [
-        78,
-        406,
-        720,
-        82
+        364,
+        192,
+        240,
+        240
       ],
       "geometry": "roundRect",
-      "fillColor": "#FFFFFF",
+      "fillColor": "#EAF1FF",
       "lineColor": "#C9DED4",
       "lineWidth": 1
     },
@@ -521,21 +521,21 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ra5gbq1o",
+      "aid": "sh/8v6psfil",
       "id": "11",
       "bbox": [
-        106,
-        428,
-        150,
-        32
+        388,
+        216,
+        54,
+        34
       ],
       "geometry": "rect",
-      "text": "Fallback",
-      "textPreview": "Fallback",
-      "resolvedFontSize": 24,
+      "text": "02",
+      "textPreview": "02",
+      "resolvedFontSize": 25,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 24,
+        "fontSize": 25,
         "typeface": "+mn-lt",
         "color": "#38A169",
         "bold": true,
@@ -553,16 +553,16 @@
         "lines": [
           {
             "index": 1,
-            "text": "Fallback"
+            "text": "02"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "Fallback",
+          "text": "02",
           "resolvedTextStyle": {
-            "fontSize": 24,
+            "fontSize": 25,
             "color": "#38A169",
             "bold": true,
             "alignment": "left"
@@ -570,8 +570,8 @@
           "runs": [
             {
               "index": 1,
-              "text": "Fallback",
-              "fontSize": 24,
+              "text": "02",
+              "fontSize": 25,
               "color": "#38A169",
               "bold": true,
               "alignment": "left"
@@ -586,21 +586,86 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/gvy90je9",
+      "aid": "sh/fa9w3m94",
       "id": "12",
       "bbox": [
-        274,
-        428,
-        480,
-        32
+        388,
+        266,
+        190,
+        34
       ],
       "geometry": "rect",
-      "text": "无 SDK 用 mock adapter，无 API Key 用本地规则，无网络可本地运行",
-      "textPreview": "无 SDK 用 mock adapter，无 API Key 用本地规则，无网络可本地运行",
-      "resolvedFontSize": 20,
+      "text": "现场增强",
+      "textPreview": "现场增强",
+      "resolvedFontSize": 25,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 20,
+        "fontSize": 25,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "现场增强"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "现场增强",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "现场增强",
+              "fontSize": 25,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qpg3ex0n",
+      "id": "13",
+      "bbox": [
+        388,
+        316,
+        188,
+        54
+      ],
+      "geometry": "rect",
+      "text": "soundcore Work / 上传音频 / 报告增强",
+      "textPreview": "soundcore Work / 上传音频 / 报告增强",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
         "typeface": "+mn-lt",
         "color": "#587068",
         "alignment": "left",
@@ -617,28 +682,28 @@
         "lines": [
           {
             "index": 1,
-            "text": "无 SDK 用 mock adapter，无 API Key"
+            "text": "soundcore Work /"
           },
           {
             "index": 2,
-            "text": "用本地规则，无网络可本地运行"
+            "text": "上传音频 / 报告增强"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "无 SDK 用 mock adapter，无 API Key 用本地规则，无网络可本地运行",
+          "text": "soundcore Work / 上传音频 / 报告增强",
           "resolvedTextStyle": {
-            "fontSize": 20,
+            "fontSize": 18,
             "color": "#587068",
             "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "无 SDK 用 mock adapter，无 API Key 用本地规则，无网络可本地运行",
-              "fontSize": 20,
+              "text": "soundcore Work / 上传音频 / 报告增强",
+              "fontSize": 18,
               "color": "#587068",
               "alignment": "left"
             }
@@ -649,130 +714,27 @@
       "lineWidth": 0
     },
     {
-      "order": 13,
+      "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/9gr2p8nq",
-      "id": "13",
-      "bbox": [
-        870,
-        180,
-        250,
-        302
-      ],
-      "geometry": "roundRect",
-      "fillColor": "#FFFFFF",
-      "lineColor": "#C9DED4",
-      "lineWidth": 1
-    },
-    {
-      "order": 14,
-      "kind": "image",
-      "scope": "slide",
-      "aid": "im/t83itgfm",
+      "aid": "sh/x4nap4r6",
       "id": "14",
       "bbox": [
-        905,
-        214,
-        180,
-        180
-      ],
-      "alt": "Demo QR code",
-      "contentType": "image/png",
-      "imageFit": "contain",
-      "asset": {
-        "assetId": "903297f5-559a-48d4-8a58-8d92f899ce65",
-        "contentType": "image/png",
-        "byteLength": 975
-      }
-    },
-    {
-      "order": 15,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/r2p8nqxs",
-      "id": "15",
-      "bbox": [
-        898,
-        418,
-        194,
-        28
+        388,
+        382,
+        188,
+        48
       ],
       "geometry": "rect",
-      "text": "扫码打开 Demo",
-      "textPreview": "扫码打开 Demo",
-      "resolvedFontSize": 22,
+      "text": "把原型推进到真实设备和真实输入",
+      "textPreview": "把原型推进到真实设备和真实输入",
+      "resolvedFontSize": 17,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 22,
+        "fontSize": 17,
         "typeface": "+mn-lt",
         "color": "#10201A",
-        "bold": true,
-        "alignment": "center",
-        "verticalAlignment": "top",
-        "insets": {
-          "top": 4.8,
-          "right": 9.6,
-          "bottom": 4.8,
-          "left": 9.6
-        }
-      },
-      "textLayout": {
-        "lineCount": 1,
-        "lines": [
-          {
-            "index": 1,
-            "text": "扫码打开 Demo"
-          }
-        ]
-      },
-      "paragraphs": [
-        {
-          "index": 1,
-          "text": "扫码打开 Demo",
-          "resolvedTextStyle": {
-            "fontSize": 22,
-            "color": "#10201A",
-            "bold": true,
-            "alignment": "center"
-          },
-          "runs": [
-            {
-              "index": 1,
-              "text": "扫码打开 Demo",
-              "fontSize": 22,
-              "color": "#10201A",
-              "bold": true,
-              "alignment": "center"
-            }
-          ],
-          "marginLeft": 0
-        }
-      ],
-      "lineWidth": 0
-    },
-    {
-      "order": 16,
-      "kind": "shape",
-      "scope": "slide",
-      "aid": "sh/kjm1cfa9",
-      "id": "16",
-      "bbox": [
-        858,
-        456,
-        276,
-        52
-      ],
-      "geometry": "rect",
-      "text": "https://13-57-166-217.sslip.io/senseloop/",
-      "textPreview": "https://13-57-166-217.sslip.io/senseloop/",
-      "resolvedFontSize": 15,
-      "resolvedTextStyle": {
-        "anchor": 1,
-        "fontSize": 15,
-        "typeface": "+mn-lt",
-        "color": "#587068",
-        "alignment": "center",
+        "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
           "top": 4.8,
@@ -786,30 +748,30 @@
         "lines": [
           {
             "index": 1,
-            "text": "https://13-57-166-217.sslip.io/senselo"
+            "text": "把原型推进到真实设"
           },
           {
             "index": 2,
-            "text": "op/"
+            "text": "备和真实输入"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "https://13-57-166-217.sslip.io/senseloop/",
+          "text": "把原型推进到真实设备和真实输入",
           "resolvedTextStyle": {
-            "fontSize": 15,
-            "color": "#587068",
-            "alignment": "center"
+            "fontSize": 17,
+            "color": "#10201A",
+            "alignment": "left"
           },
           "runs": [
             {
               "index": 1,
-              "text": "https://13-57-166-217.sslip.io/senseloop/",
-              "fontSize": 15,
-              "color": "#587068",
-              "alignment": "center"
+              "text": "把原型推进到真实设备和真实输入",
+              "fontSize": 17,
+              "color": "#10201A",
+              "alignment": "left"
             }
           ],
           "marginLeft": 0
@@ -818,26 +780,618 @@
       "lineWidth": 0
     },
     {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8jqh0fep",
+      "id": "15",
+      "bbox": [
+        608,
+        306,
+        32,
+        16
+      ],
+      "geometry": "rightArrow",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fyxobm58",
+      "id": "16",
+      "bbox": [
+        652,
+        192,
+        240,
+        240
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFF4DC",
+      "lineColor": "#C9DED4",
+      "lineWidth": 1
+    },
+    {
       "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/94fu18jq",
+      "aid": "sh/qd4vmtwr",
       "id": "17",
       "bbox": [
-        90,
-        590,
-        1080,
+        676,
+        216,
+        54,
+        34
+      ],
+      "geometry": "rect",
+      "text": "03",
+      "textPreview": "03",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 25,
+        "typeface": "+mn-lt",
+        "color": "#38A169",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "03",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#38A169",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "03",
+              "fontSize": 25,
+              "color": "#38A169",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xs72x4na",
+      "id": "18",
+      "bbox": [
+        676,
+        266,
+        190,
+        34
+      ],
+      "geometry": "rect",
+      "text": "可试用 MVP",
+      "textPreview": "可试用 MVP",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 25,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "可试用 MVP"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "可试用 MVP",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "可试用 MVP",
+              "fontSize": 25,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/87ed8bat",
+      "id": "19",
+      "bbox": [
+        676,
+        316,
+        188,
+        54
+      ],
+      "geometry": "rect",
+      "text": "真实录音 + 7 天趋势 + 用户反馈",
+      "textPreview": "真实录音 + 7 天趋势 + 用户反馈",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "真实录音 + 7 天趋势"
+          },
+          {
+            "index": 2,
+            "text": "+ 用户反馈"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "真实录音 + 7 天趋势 + 用户反馈",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "真实录音 + 7 天趋势 + 用户反馈",
+              "fontSize": 18,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4fu18jqh",
+      "id": "20",
+      "bbox": [
+        676,
+        382,
+        188,
+        48
+      ],
+      "geometry": "rect",
+      "text": "验证用户是否愿意每天早晨打开",
+      "textPreview": "验证用户是否愿意每天早晨打开",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "验证用户是否愿意每"
+          },
+          {
+            "index": 2,
+            "text": "天早晨打开"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "验证用户是否愿意每天早晨打开",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#10201A",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "验证用户是否愿意每天早晨打开",
+              "fontSize": 17,
+              "color": "#10201A",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x0nuxc3y",
+      "id": "21",
+      "bbox": [
+        896,
+        306,
+        32,
+        16
+      ],
+      "geometry": "rightArrow",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m94fu18j",
+      "id": "22",
+      "bbox": [
+        940,
+        192,
+        240,
+        240
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FDECEA",
+      "lineColor": "#C9DED4",
+      "lineWidth": 1
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fu18jqh0",
+      "id": "23",
+      "bbox": [
+        964,
+        216,
+        54,
+        34
+      ],
+      "geometry": "rect",
+      "text": "04",
+      "textPreview": "04",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 25,
+        "typeface": "+mn-lt",
+        "color": "#38A169",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "04"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "04",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#38A169",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "04",
+              "fontSize": 25,
+              "color": "#38A169",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/83itgfml",
+      "id": "24",
+      "bbox": [
+        964,
+        266,
+        190,
+        34
+      ],
+      "geometry": "rect",
+      "text": "产品化硬件",
+      "textPreview": "产品化硬件",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 25,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "产品化硬件"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "产品化硬件",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "产品化硬件",
+              "fontSize": 25,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/xobm58z2",
+      "id": "25",
+      "bbox": [
+        964,
+        316,
+        188,
+        54
+      ],
+      "geometry": "rect",
+      "text": "SenseLoop Watch / Band / Pendant",
+      "textPreview": "SenseLoop Watch / Band / Pendant",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SenseLoop Watch /"
+          },
+          {
+            "index": 2,
+            "text": "Band / Pendant"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SenseLoop Watch / Band / Pendant",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SenseLoop Watch / Band / Pendant",
+              "fontSize": 18,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qxs72x4n",
+      "id": "26",
+      "bbox": [
+        964,
+        382,
+        188,
+        48
+      ],
+      "geometry": "rect",
+      "text": "扩展为 Anker 健康穿戴新品类",
+      "textPreview": "扩展为 Anker 健康穿戴新品类",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "扩展为 Anker"
+          },
+          {
+            "index": 2,
+            "text": "健康穿戴新品类"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "扩展为 Anker 健康穿戴新品类",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "color": "#10201A",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "扩展为 Anker 健康穿戴新品类",
+              "fontSize": 17,
+              "color": "#10201A",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fil0rqd4",
+      "id": "27",
+      "bbox": [
+        120,
+        520,
+        1040,
         38
       ],
       "geometry": "rect",
-      "text": "最终目标：用 Anker 官方硬件验证核心闭环，再演进为 SenseLoop 健康穿戴产品线。",
-      "textPreview": "最终目标：用 Anker 官方硬件验证核心闭环，再演进为 SenseLoop 健康穿戴产品线。",
-      "resolvedFontSize": 24,
+      "text": "主线始终不变：夜间声音 -> 身体信号理解 -> 晨间行动建议。",
+      "textPreview": "主线始终不变：夜间声音 -> 身体信号理解 -> 晨间行动建议。",
+      "resolvedFontSize": 27,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 24,
+        "fontSize": 27,
         "typeface": "+mn-lt",
-        "color": "#10201A",
+        "color": "#38A169",
         "bold": true,
         "alignment": "center",
         "verticalAlignment": "top",
@@ -853,26 +1407,26 @@
         "lines": [
           {
             "index": 1,
-            "text": "最终目标：用 Anker 官方硬件验证核心闭环，再演进为 SenseLoop 健康穿戴产品线。"
+            "text": "主线始终不变：夜间声音 -> 身体信号理解 -> 晨间行动建议。"
           }
         ]
       },
       "paragraphs": [
         {
           "index": 1,
-          "text": "最终目标：用 Anker 官方硬件验证核心闭环，再演进为 SenseLoop 健康穿戴产品线。",
+          "text": "主线始终不变：夜间声音 -> 身体信号理解 -> 晨间行动建议。",
           "resolvedTextStyle": {
-            "fontSize": 24,
-            "color": "#10201A",
+            "fontSize": 27,
+            "color": "#38A169",
             "bold": true,
             "alignment": "center"
           },
           "runs": [
             {
               "index": 1,
-              "text": "最终目标：用 Anker 官方硬件验证核心闭环，再演进为 SenseLoop 健康穿戴产品线。",
-              "fontSize": 24,
-              "color": "#10201A",
+              "text": "主线始终不变：夜间声音 -> 身体信号理解 -> 晨间行动建议。",
+              "fontSize": 27,
+              "color": "#38A169",
               "bold": true,
               "alignment": "center"
             }
@@ -883,11 +1437,11 @@
       "lineWidth": 0
     },
     {
-      "order": 18,
+      "order": 28,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/25kb6xkf",
-      "id": "18",
+      "aid": "sh/4zidonyd",
+      "id": "28",
       "bbox": [
         70,
         678,
@@ -945,11 +1499,11 @@
       "lineWidth": 0
     },
     {
-      "order": 19,
+      "order": 29,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/rqd4vmtw",
-      "id": "19",
+      "aid": "sh/xkf6dcbu",
+      "id": "29",
       "bbox": [
         1168,
         678,

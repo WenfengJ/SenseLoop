@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/h7u5l8",
-    "id": "h7u5l8",
+    "aid": "sl/p1y4ir",
+    "id": "p1y4ir",
     "slide": 3,
-    "layoutId": "83cb91fb-f0c8-41cc-851c-2817359f4cec",
+    "layoutId": "5055eea5-a964-4833-9173-4233fdd43435",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+    "masterLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
     "masterLayoutName": "Master",
     "backgroundColor": "#FFFFFF",
     "frame": {
@@ -45,15 +45,15 @@
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "83cb91fb-f0c8-41cc-851c-2817359f4cec",
+      "id": "5055eea5-a964-4833-9173-4233fdd43435",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+      "parentLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+      "id": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -64,7 +64,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/z61032ls",
+      "aid": "sh/pwb2hwfy",
       "id": "1",
       "bbox": [
         70,
@@ -129,7 +129,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/orytsvu9",
+      "aid": "sh/i5sneloj",
       "id": "2",
       "bbox": [
         70,
@@ -191,7 +191,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/hcrmhk3q",
+      "aid": "sh/7qpg3ex0",
       "id": "3",
       "bbox": [
         70,
@@ -208,7 +208,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/a9w3m94f",
+      "aid": "sh/wjudg7ad",
       "id": "4",
       "bbox": [
         78,
@@ -225,7 +225,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zupwb2hw",
+      "aid": "sh/p4r65wju",
       "id": "5",
       "bbox": [
         100,
@@ -290,7 +290,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/sfil0rqd",
+      "aid": "sh/ed8v6psf",
       "id": "6",
       "bbox": [
         100,
@@ -360,7 +360,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/h0fepkzu",
+      "aid": "sh/7y1kre1w",
       "id": "7",
       "bbox": [
         320,
@@ -377,7 +377,7 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/65wjudg7",
+      "aid": "sh/0nuxc3yl",
       "id": "8",
       "bbox": [
         364,
@@ -394,7 +394,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zqtcj6to",
+      "aid": "sh/p8nqxs72",
       "id": "9",
       "bbox": [
         386,
@@ -459,7 +459,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zupwb2hw",
+      "aid": "sh/xobm58z2",
       "id": "10",
       "bbox": [
         386,
@@ -529,7 +529,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/a9w3m94f",
+      "aid": "sh/83itgfml",
       "id": "11",
       "bbox": [
         606,
@@ -546,7 +546,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/h0fepkzu",
+      "aid": "sh/fil0rqd4",
       "id": "12",
       "bbox": [
         650,
@@ -563,7 +563,7 @@
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/sfil0rqd",
+      "aid": "sh/qxs72x4n",
       "id": "13",
       "bbox": [
         672,
@@ -628,7 +628,7 @@
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/z61032ls",
+      "aid": "sh/x0nuxc3y",
       "id": "14",
       "bbox": [
         672,
@@ -694,7 +694,7 @@
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/al87ed8b",
+      "aid": "sh/4fu18jqh",
       "id": "15",
       "bbox": [
         892,
@@ -711,7 +711,7 @@
       "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/hcrmhk3q",
+      "aid": "sh/fu18jqh0",
       "id": "16",
       "bbox": [
         936,
@@ -728,7 +728,7 @@
       "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/orytsvu9",
+      "aid": "sh/m94fu18j",
       "id": "17",
       "bbox": [
         958,
@@ -793,7 +793,7 @@
       "order": 18,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zed8v6ps",
+      "aid": "sh/xc3ylc7u",
       "id": "18",
       "bbox": [
         958,
@@ -863,7 +863,7 @@
       "order": 19,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/6xkf6dcb",
+      "aid": "sh/4r65wjud",
       "id": "19",
       "bbox": [
         125,
@@ -932,7 +932,7 @@
       "order": 20,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/e1w7mp0b",
+      "aid": "sh/032lszqt",
       "id": "20",
       "bbox": [
         70,
@@ -994,7 +994,7 @@
       "order": 21,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/7mp0bi9s",
+      "aid": "sh/tovahoza",
       "id": "21",
       "bbox": [
         1168,

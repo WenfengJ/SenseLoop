@@ -8,7 +8,7 @@
 | --- | --- |
 | `anker-SenseLoop-答辩材料.pptx` | 可编辑 PPT 答辩材料 |
 | `anker-SenseLoop-答辩材料.pdf` | 可直接提交或分享的 PDF 版本 |
-| `anker-SenseLoop-答辩材料-montage.png` | 10 页总览预览图 |
+| `anker-SenseLoop-答辩材料-montage.png` | 11 页总览预览图 |
 | `rendered/` | 每一页单独渲染图，便于检查和截图 |
 | `preview/` | PPT 生成过程中的页面预览和 layout 检查文件 |
 
@@ -23,7 +23,8 @@
 7. 五类用户画像与个性化日报。
 8. 隐私与医疗边界。
 9. 商业化价值。
-10. 24 小时现场开发计划与 Demo 二维码。
+10. Roadmap 路线图。
+11. 24 小时现场开发计划与 Demo 二维码。
 
 ## 使用建议
 

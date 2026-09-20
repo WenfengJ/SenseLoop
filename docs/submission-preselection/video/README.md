@@ -19,4 +19,4 @@ anker-SenseLoop-3分钟演示.mp4
 
 1. 按 `../3分钟演示视频脚本.md` 录屏。
 2. 上传到官方要求的平台或网盘。
-3. 将链接填写到 `../manual-fill/人工填写项.md`。
+3. 将链接填写到 `../submission-ready/人工填写项.md`。
