@@ -240,7 +240,10 @@ anker-watch/
 
 ### 参赛与产品总览
 
-- [预选提交包](docs/submission-preselection/README.md)
+- [预选提交包索引](docs/submission-preselection/README.md)
+- [预选提交包与补充清单](docs/submission-preselection/TODO-参赛提交补充清单.md)
+- [PPT 答辩材料](docs/submission-preselection/deck/anker-SenseLoop-答辩材料.pptx)
+- [PDF 答辩材料](docs/submission-preselection/deck/anker-SenseLoop-答辩材料.pdf)
 - [项目概览](docs/presentation/anker-SenseLoop-项目概览.md)
 - [项目概览 HTML](docs/presentation/anker-SenseLoop-项目概览.html)
 - [参赛背景](docs/drafts/需求参赛背景.md)
@@ -264,7 +267,9 @@ anker-watch/
 
 ### 预选提交材料
 
-- [预选提交包 README](docs/submission-preselection/README.md)
+- [预选提交包索引](docs/submission-preselection/README.md)
+- [预选提交包与补充清单](docs/submission-preselection/TODO-参赛提交补充清单.md)
+- [PPT / PDF 答辩材料说明](docs/submission-preselection/deck/README.md)
 - [3 分钟演示视频脚本](docs/submission-preselection/3分钟演示视频脚本.md)
 - [当前实现边界说明](docs/submission-preselection/当前实现边界说明.md)
 - [24 小时现场开发计划](docs/submission-preselection/24小时现场开发计划.md)

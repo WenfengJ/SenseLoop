@@ -1,4 +1,51 @@
-# TODO：参赛提交补充清单
+# anker-SenseLoop 预选提交包与补充清单
+
+这个目录用于准备 Anker 黑客松预选阶段的初始提交材料。本文同时作为提交包索引和后续补充 TODO，避免 README 与清单分散维护。
+
+## 推荐提交材料
+
+| 材料 | 文件/目录 | 状态 |
+| --- | --- | --- |
+| 项目 README | ../../README.md | 已完成 |
+| 项目概览 | ./项目概览.md | 已完成 |
+| Demo 链接说明 | ./Demo链接与运行方式.md | 已完成，在线 Demo 已部署 |
+| 代码仓库说明 | ./代码仓库说明.md | 已完成，GitHub 链接已补 |
+| PPT 答辩材料 | ./deck/anker-SenseLoop-答辩材料.pptx | 已完成 |
+| PDF 答辩材料 | ./deck/anker-SenseLoop-答辩材料.pdf | 已完成 |
+| PPT 总览预览图 | ./deck/anker-SenseLoop-答辩材料-montage.png | 已完成 |
+| 3 分钟演示视频脚本 | ./3分钟演示视频脚本.md | 已完成 |
+| 当前实现边界 | ./当前实现边界说明.md | 已完成 |
+| 24 小时现场开发计划 | ./24小时现场开发计划.md | 已完成 |
+| 隐私与医疗边界 | ./隐私与医疗边界说明.md | 已完成 |
+| 评委可能会问的问题 | ./评委可能会问的问题.md | 已完成，部分人工信息待补 |
+| 系统架构图 | ./diagrams/系统架构图.md | 已完成 |
+| Logo / 项目封面图说明 | ./Logo与项目封面图.md | 已完成 SVG 版本 |
+| Logo / 项目封面图文件 | ./brand/README.md | 已放入提交包 |
+| 当前实现截图 | ./screenshots/README.md | 目录已建立，截图待补 |
+| 演示视频文件 | ./video/README.md | 目录已建立，视频待录制 |
+| Demo 二维码 | ./qrcode/README.md | 已生成 |
+| 服务器部署说明 | ../deployment/服务器部署说明.md | 已完成 |
+| 提交前检查表 | ./checklist/提交前检查表.md | 已完成 |
+| 参赛补充 TODO | ./TODO-参赛提交补充清单.md | 持续维护 |
+| 人工填写项 | ./manual-fill/人工填写项.md | 已完成 |
+
+## 预选材料核心表达
+
+观息 SenseLoop 不是普通睡眠 App，也不是普通智能手表。它用 Anker soundcore Work 作为夜间声音入口，把打鼾、咳嗽、起夜、环境噪声等身体信号，与用户画像、饮食、排便、舌苔、口气等信息结合，生成第二天可执行的饮食、运动和恢复建议。
+
+当前原型验证的是：
+
+```text
+夜间声音 -> 身体信号理解 -> 晨间行动建议
+```
+
+未来演进为：
+
+```text
+soundcore Work 原型 -> SenseLoop Watch / Band / Pendant
+```
+
+## 参赛提交补充清单
 
 这份清单用于记录当前项目距离正式参赛提交还需要补充的内容。  
 已排除“当前实现截图”和“演示视频文件”两个已知待补项。
@@ -44,13 +91,16 @@
 
 建议结构：
 
-- [ ] 第 1 页：项目名 + 一句话介绍。
-- [ ] 第 2 页：真实痛点。
-- [ ] 第 3 页：解决方案与核心闭环。
-- [ ] 第 4 页：Demo 展示。
-- [ ] 第 5 页：技术架构。
-- [ ] 第 6 页：商业化价值。
-- [ ] 第 7 页：未来演进与 24 小时现场计划。
+- [x] 第 1 页：项目名 + 一句话介绍。
+- [x] 第 2 页：真实痛点。
+- [x] 第 3 页：解决方案与核心闭环。
+- [x] 第 4 页：Demo 展示。
+- [x] 第 5 页：技术架构。
+- [x] 第 6 页：商业化价值。
+- [x] 第 7 页：未来演进与 24 小时现场计划。
+- [x] 已生成 PPTX：`docs/submission-preselection/deck/anker-SenseLoop-答辩材料.pptx`。
+- [x] 已生成 PDF：`docs/submission-preselection/deck/anker-SenseLoop-答辩材料.pdf`。
+- [x] 已生成总览预览图：`docs/submission-preselection/deck/anker-SenseLoop-答辩材料-montage.png`。
 
 ### 4. 团队信息
 
@@ -179,7 +229,7 @@
 - [x] 获取公开 Demo 链接。
 - [x] 生成二维码。
 - [x] 保存到 `docs/submission-preselection/qrcode/demo-qrcode.png`。
-- [ ] 放入 PPT / PDF。
+- [x] 放入 PPT / PDF。
 - [ ] 放入演示视频结尾页或备用页。
 
 ### 12. 一页式 PDF
