@@ -20,6 +20,7 @@
 | Logo / 项目封面图文件 | ./brand/README.md | 已放入提交包 |
 | 当前实现截图 | ./screenshots/README.md | 目录已建立，截图待补 |
 | 演示视频文件 | ./video/README.md | 目录已建立，视频待录制 |
+| Demo 二维码 | ./qrcode/README.md | 目录已建立，待在线 Demo 链接 |
 | 提交前检查表 | ./checklist/提交前检查表.md | 已完成 |
 | 参赛补充 TODO | ./TODO-参赛提交补充清单.md | 已完成，待逐项实现 |
 | 人工填写项 | ./manual-fill/人工填写项.md | 已完成 |

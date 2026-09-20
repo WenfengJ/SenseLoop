@@ -176,8 +176,11 @@
 待完成：
 
 - [ ] 在线 Demo 部署完成。
+- [ ] 获取公开 Demo 链接。
 - [ ] 生成二维码。
+- [ ] 保存到 `docs/submission-preselection/qrcode/demo-qrcode.png`。
 - [ ] 放入 PPT / PDF。
+- [ ] 放入演示视频结尾页或备用页。
 
 ### 12. 一页式 PDF
 
