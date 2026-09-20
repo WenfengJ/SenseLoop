@@ -1,0 +1,909 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/zv1l4r",
+    "id": "zv1l4r",
+    "slide": 1,
+    "layoutId": "83cb91fb-f0c8-41cc-851c-2817359f4cec",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#F7FBF8",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "83cb91fb-f0c8-41cc-851c-2817359f4cec",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/i9s36hcr",
+      "id": "1",
+      "bbox": [
+        70,
+        62,
+        196,
+        70
+      ],
+      "alt": "SenseLoop logo",
+      "contentType": "image/png",
+      "imageFit": "contain",
+      "asset": {
+        "assetId": "0f2eba6f-22e0-47fd-b7d2-9a4b1b720b80",
+        "contentType": "image/png",
+        "byteLength": 34712
+      }
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wb2hwfyx",
+      "id": "2",
+      "bbox": [
+        70,
+        190,
+        560,
+        82
+      ],
+      "geometry": "rect",
+      "text": "观息 SenseLoop",
+      "textPreview": "观息 SenseLoop",
+      "resolvedFontSize": 54,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 54,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "观息 SenseLoop"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "观息 SenseLoop",
+          "resolvedTextStyle": {
+            "fontSize": 54,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "观息 SenseLoop",
+              "fontSize": 54,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lwval87e",
+      "id": "3",
+      "bbox": [
+        72,
+        288,
+        620,
+        74
+      ],
+      "geometry": "rect",
+      "text": "每天早晨，把夜间身体信号变成今日行动建议",
+      "textPreview": "每天早晨，把夜间身体信号变成今日行动建议",
+      "resolvedFontSize": 28,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 28,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "每天早晨，把夜间身体信号变成今日行动建议"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "每天早晨，把夜间身体信号变成今日行动建议",
+          "resolvedTextStyle": {
+            "fontSize": 28,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "每天早晨，把夜间身体信号变成今日行动建议",
+              "fontSize": 28,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ex0nuxc3",
+      "id": "4",
+      "bbox": [
+        72,
+        394,
+        250,
+        36
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#DFF6EA",
+      "lineColor": "#DFF6EA",
+      "lineWidth": 1
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3itgfmlk",
+      "id": "5",
+      "bbox": [
+        88,
+        402,
+        218,
+        20
+      ],
+      "geometry": "rect",
+      "text": "soundcore Work 夜间声音原型",
+      "textPreview": "soundcore Work 夜间声音原型",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "soundcore Work"
+          },
+          {
+            "index": 2,
+            "text": "夜间声音原型"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "soundcore Work 夜间声音原型",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "soundcore Work 夜间声音原型",
+              "fontSize": 15,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w3m94fu1",
+      "id": "6",
+      "bbox": [
+        340,
+        394,
+        230,
+        36
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#EAF1FF",
+      "lineColor": "#EAF1FF",
+      "lineWidth": 1
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/loj2t83i",
+      "id": "7",
+      "bbox": [
+        356,
+        402,
+        198,
+        20
+      ],
+      "geometry": "rect",
+      "text": "未来健康穿戴新品类",
+      "textPreview": "未来健康穿戴新品类",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "未来健康穿戴新品类"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "未来健康穿戴新品类",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "未来健康穿戴新品类",
+              "fontSize": 15,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/at47y1kr",
+      "id": "8",
+      "bbox": [
+        735,
+        132,
+        370,
+        92
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#DFF6EA",
+      "lineColor": "#C9DED4",
+      "lineWidth": 1
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ex0nuxc",
+      "id": "9",
+      "bbox": [
+        735,
+        282,
+        370,
+        92
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#EAF1FF",
+      "lineColor": "#C9DED4",
+      "lineWidth": 1
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3itgfmlk",
+      "id": "10",
+      "bbox": [
+        735,
+        432,
+        370,
+        92
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFF4DC",
+      "lineColor": "#C9DED4",
+      "lineWidth": 1
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ex0nuxc3",
+      "id": "11",
+      "bbox": [
+        765,
+        154,
+        160,
+        28
+      ],
+      "geometry": "rect",
+      "text": "夜间声音",
+      "textPreview": "夜间声音",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "+mn-lt",
+        "color": "#38A169",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "夜间声音"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "夜间声音",
+          "resolvedTextStyle": {
+            "fontSize": 27,
+            "color": "#38A169",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "夜间声音",
+              "fontSize": 27,
+              "color": "#38A169",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/loj2t83i",
+      "id": "12",
+      "bbox": [
+        765,
+        190,
+        286,
+        24
+      ],
+      "geometry": "rect",
+      "text": "打鼾 / 咳嗽 / 起夜 / 噪声",
+      "textPreview": "打鼾 / 咳嗽 / 起夜 / 噪声",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "打鼾 / 咳嗽 / 起夜 / 噪声"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "打鼾 / 咳嗽 / 起夜 / 噪声",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "打鼾 / 咳嗽 / 起夜 / 噪声",
+              "fontSize": 18,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/w3m94fu1",
+      "id": "13",
+      "bbox": [
+        765,
+        304,
+        160,
+        28
+      ],
+      "geometry": "rect",
+      "text": "身体信号",
+      "textPreview": "身体信号",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "+mn-lt",
+        "color": "#3B82F6",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "身体信号"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "身体信号",
+          "resolvedTextStyle": {
+            "fontSize": 27,
+            "color": "#3B82F6",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "身体信号",
+              "fontSize": 27,
+              "color": "#3B82F6",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3q5o7qpg",
+      "id": "14",
+      "bbox": [
+        765,
+        340,
+        286,
+        24
+      ],
+      "geometry": "rect",
+      "text": "画像 / 饮食 / 排便 / 舌苔",
+      "textPreview": "画像 / 饮食 / 排便 / 舌苔",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "画像 / 饮食 / 排便 / 舌苔"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "画像 / 饮食 / 排便 / 舌苔",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "画像 / 饮食 / 排便 / 舌苔",
+              "fontSize": 18,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e9cvixcz",
+      "id": "15",
+      "bbox": [
+        765,
+        454,
+        160,
+        28
+      ],
+      "geometry": "rect",
+      "text": "今日建议",
+      "textPreview": "今日建议",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "+mn-lt",
+        "color": "#C87918",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "今日建议"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "今日建议",
+          "resolvedTextStyle": {
+            "fontSize": 27,
+            "color": "#C87918",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "今日建议",
+              "fontSize": 27,
+              "color": "#C87918",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lwval87e",
+      "id": "16",
+      "bbox": [
+        765,
+        490,
+        286,
+        24
+      ],
+      "geometry": "rect",
+      "text": "怎么吃 / 怎么动 / 怎么恢复",
+      "textPreview": "怎么吃 / 怎么动 / 怎么恢复",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "怎么吃 / 怎么动 / 怎么恢复"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "怎么吃 / 怎么动 / 怎么恢复",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "怎么吃 / 怎么动 / 怎么恢复",
+              "fontSize": 18,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wb2hwfyx",
+      "id": "17",
+      "bbox": [
+        912,
+        228,
+        16,
+        50
+      ],
+      "geometry": "downArrow",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/32lszqtc",
+      "id": "18",
+      "bbox": [
+        912,
+        378,
+        16,
+        50
+      ],
+      "geometry": "downArrow",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ahoza1gv",
+      "id": "19",
+      "bbox": [
+        72,
+        622,
+        420,
+        28
+      ],
+      "geometry": "rect",
+      "text": "Anker 黑客松预选答辩材料",
+      "textPreview": "Anker 黑客松预选答辩材料",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Anker 黑客松预选答辩材料"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Anker 黑客松预选答辩材料",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Anker 黑客松预选答辩材料",
+              "fontSize": 18,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

@@ -1,0 +1,1057 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/h7u5l8",
+    "id": "h7u5l8",
+    "slide": 3,
+    "layoutId": "83cb91fb-f0c8-41cc-851c-2817359f4cec",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "83cb91fb-f0c8-41cc-851c-2817359f4cec",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/z61032ls",
+      "id": "1",
+      "bbox": [
+        70,
+        44,
+        820,
+        58
+      ],
+      "geometry": "rect",
+      "text": "当前 MVP 先跑通一个最硬的闭环",
+      "textPreview": "当前 MVP 先跑通一个最硬的闭环",
+      "resolvedFontSize": 38,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 38,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "当前 MVP 先跑通一个最硬的闭环"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "当前 MVP 先跑通一个最硬的闭环",
+          "resolvedTextStyle": {
+            "fontSize": 38,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "当前 MVP 先跑通一个最硬的闭环",
+              "fontSize": 38,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/orytsvu9",
+      "id": "2",
+      "bbox": [
+        70,
+        102,
+        860,
+        34
+      ],
+      "geometry": "rect",
+      "text": "夜间声音是高频、自然、贴合 soundcore Work 的真实入口。",
+      "textPreview": "夜间声音是高频、自然、贴合 soundcore Work 的真实入口。",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "夜间声音是高频、自然、贴合 soundcore Work 的真实入口。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "夜间声音是高频、自然、贴合 soundcore Work 的真实入口。",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "夜间声音是高频、自然、贴合 soundcore Work 的真实入口。",
+              "fontSize": 18,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hcrmhk3q",
+      "id": "3",
+      "bbox": [
+        70,
+        142,
+        1140,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#C9DED4",
+      "lineColor": "#C9DED4",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a9w3m94f",
+      "id": "4",
+      "bbox": [
+        78,
+        230,
+        238,
+        186
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#DFF6EA",
+      "lineColor": "#C9DED4",
+      "lineWidth": 1
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zupwb2hw",
+      "id": "5",
+      "bbox": [
+        100,
+        260,
+        194,
+        32
+      ],
+      "geometry": "rect",
+      "text": "soundcore Work",
+      "textPreview": "soundcore Work",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "soundcore Work"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "soundcore Work",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "soundcore Work",
+              "fontSize": 23,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sfil0rqd",
+      "id": "6",
+      "bbox": [
+        100,
+        314,
+        194,
+        74
+      ],
+      "geometry": "rect",
+      "text": "采集打鼾、咳嗽、起夜、环境噪声与重点标记",
+      "textPreview": "采集打鼾、咳嗽、起夜、环境噪声与重点标记",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "采集打鼾、咳嗽、起"
+          },
+          {
+            "index": 2,
+            "text": "夜、环境噪声与重点"
+          },
+          {
+            "index": 3,
+            "text": "标记"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "采集打鼾、咳嗽、起夜、环境噪声与重点标记",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#587068",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "采集打鼾、咳嗽、起夜、环境噪声与重点标记",
+              "fontSize": 18,
+              "color": "#587068",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h0fepkzu",
+      "id": "7",
+      "bbox": [
+        320,
+        315,
+        36,
+        16
+      ],
+      "geometry": "rightArrow",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/65wjudg7",
+      "id": "8",
+      "bbox": [
+        364,
+        230,
+        238,
+        186
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#C9DED4",
+      "lineWidth": 1
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zqtcj6to",
+      "id": "9",
+      "bbox": [
+        386,
+        260,
+        194,
+        32
+      ],
+      "geometry": "rect",
+      "text": "身体信号理解",
+      "textPreview": "身体信号理解",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "身体信号理解"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "身体信号理解",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "身体信号理解",
+              "fontSize": 23,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zupwb2hw",
+      "id": "10",
+      "bbox": [
+        386,
+        314,
+        194,
+        74
+      ],
+      "geometry": "rect",
+      "text": "把夜间事件与画像、饮食、排便、舌苔、口气关联",
+      "textPreview": "把夜间事件与画像、饮食、排便、舌苔、口气关联",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "把夜间事件与画像、"
+          },
+          {
+            "index": 2,
+            "text": "饮食、排便、舌苔、"
+          },
+          {
+            "index": 3,
+            "text": "口气关联"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "把夜间事件与画像、饮食、排便、舌苔、口气关联",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#587068",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "把夜间事件与画像、饮食、排便、舌苔、口气关联",
+              "fontSize": 18,
+              "color": "#587068",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/a9w3m94f",
+      "id": "11",
+      "bbox": [
+        606,
+        315,
+        36,
+        16
+      ],
+      "geometry": "rightArrow",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h0fepkzu",
+      "id": "12",
+      "bbox": [
+        650,
+        230,
+        238,
+        186
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#C9DED4",
+      "lineWidth": 1
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sfil0rqd",
+      "id": "13",
+      "bbox": [
+        672,
+        260,
+        194,
+        32
+      ],
+      "geometry": "rect",
+      "text": "晨间健康日报",
+      "textPreview": "晨间健康日报",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "晨间健康日报"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "晨间健康日报",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "晨间健康日报",
+              "fontSize": 23,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/z61032ls",
+      "id": "14",
+      "bbox": [
+        672,
+        314,
+        194,
+        74
+      ],
+      "geometry": "rect",
+      "text": "生成今天怎么吃、怎么动、怎么恢复",
+      "textPreview": "生成今天怎么吃、怎么动、怎么恢复",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "生成今天怎么吃、怎"
+          },
+          {
+            "index": 2,
+            "text": "么动、怎么恢复"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "生成今天怎么吃、怎么动、怎么恢复",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#587068",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "生成今天怎么吃、怎么动、怎么恢复",
+              "fontSize": 18,
+              "color": "#587068",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/al87ed8b",
+      "id": "15",
+      "bbox": [
+        892,
+        315,
+        36,
+        16
+      ],
+      "geometry": "rightArrow",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hcrmhk3q",
+      "id": "16",
+      "bbox": [
+        936,
+        230,
+        238,
+        186
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#C9DED4",
+      "lineWidth": 1
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/orytsvu9",
+      "id": "17",
+      "bbox": [
+        958,
+        260,
+        194,
+        32
+      ],
+      "geometry": "rect",
+      "text": "长期穿戴演进",
+      "textPreview": "长期穿戴演进",
+      "resolvedFontSize": 23,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 23,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "长期穿戴演进"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "长期穿戴演进",
+          "resolvedTextStyle": {
+            "fontSize": 23,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "长期穿戴演进",
+              "fontSize": 23,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zed8v6ps",
+      "id": "18",
+      "bbox": [
+        958,
+        314,
+        194,
+        74
+      ],
+      "geometry": "rect",
+      "text": "扩展到 Watch / Band / Pendant 多模态信号",
+      "textPreview": "扩展到 Watch / Band / Pendant 多模态信号",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "扩展到 Watch / Band"
+          },
+          {
+            "index": 2,
+            "text": "/ Pendant"
+          },
+          {
+            "index": 3,
+            "text": "多模态信号"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "扩展到 Watch / Band / Pendant 多模态信号",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#587068",
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "扩展到 Watch / Band / Pendant 多模态信号",
+              "fontSize": 18,
+              "color": "#587068",
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6xkf6dcb",
+      "id": "19",
+      "bbox": [
+        125,
+        500,
+        1030,
+        44
+      ],
+      "geometry": "rect",
+      "text": "产品价值不止是“昨晚发生了什么”，而是让用户早上打开就知道“今天应该怎么做”。",
+      "textPreview": "产品价值不止是“昨晚发生了什么”，而是让用户早上打开就知道“今天应该怎么做”。",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "产品价值不止是“昨晚发生了什么”，而是让用户早上打开就知道“今天应该怎么做”"
+          },
+          {
+            "index": 2,
+            "text": "。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "产品价值不止是“昨晚发生了什么”，而是让用户早上打开就知道“今天应该怎么做”。",
+          "resolvedTextStyle": {
+            "fontSize": 27,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "产品价值不止是“昨晚发生了什么”，而是让用户早上打开就知道“今天应该怎么做”。",
+              "fontSize": 27,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/e1w7mp0b",
+      "id": "20",
+      "bbox": [
+        70,
+        678,
+        260,
+        22
+      ],
+      "geometry": "rect",
+      "text": "anker-SenseLoop 观息",
+      "textPreview": "anker-SenseLoop 观息",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "anker-SenseLoop 观息"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "anker-SenseLoop 观息",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "anker-SenseLoop 观息",
+              "fontSize": 13,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7mp0bi9s",
+      "id": "21",
+      "bbox": [
+        1168,
+        678,
+        44,
+        22
+      ],
+      "geometry": "rect",
+      "text": "03",
+      "textPreview": "03",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "03",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#587068",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "03",
+              "fontSize": 13,
+              "color": "#587068",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

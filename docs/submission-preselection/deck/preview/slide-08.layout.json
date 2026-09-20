@@ -1,0 +1,1141 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/d8d0vh",
+    "id": "d8d0vh",
+    "slide": 8,
+    "layoutId": "83cb91fb-f0c8-41cc-851c-2817359f4cec",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "83cb91fb-f0c8-41cc-851c-2817359f4cec",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0nuxc3yl",
+      "id": "1",
+      "bbox": [
+        70,
+        44,
+        820,
+        58
+      ],
+      "geometry": "rect",
+      "text": "隐私和医疗边界会直接影响评审信任",
+      "textPreview": "隐私和医疗边界会直接影响评审信任",
+      "resolvedFontSize": 38,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 38,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "隐私和医疗边界会直接影响评审信任"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "隐私和医疗边界会直接影响评审信任",
+          "resolvedTextStyle": {
+            "fontSize": 38,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "隐私和医疗边界会直接影响评审信任",
+              "fontSize": 38,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/72x4nap4",
+      "id": "2",
+      "bbox": [
+        70,
+        102,
+        860,
+        34
+      ],
+      "geometry": "rect",
+      "text": "健康类产品必须先把不能做什么讲清楚，评委才会相信能落地。",
+      "textPreview": "健康类产品必须先把不能做什么讲清楚，评委才会相信能落地。",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "健康类产品必须先把不能做什么讲清楚，评委才会相信能落地。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "健康类产品必须先把不能做什么讲清楚，评委才会相信能落地。",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "健康类产品必须先把不能做什么讲清楚，评委才会相信能落地。",
+              "fontSize": 18,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ih4byhgn",
+      "id": "3",
+      "bbox": [
+        70,
+        142,
+        1140,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#C9DED4",
+      "lineColor": "#C9DED4",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pkzupwb2",
+      "id": "4",
+      "bbox": [
+        86,
+        188,
+        520,
+        350
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F8FBF9",
+      "lineColor": "#C9DED4",
+      "lineWidth": 1
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0z61032l",
+      "id": "5",
+      "bbox": [
+        674,
+        188,
+        520,
+        350
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F8FBF9",
+      "lineColor": "#C9DED4",
+      "lineWidth": 1
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7ed8bat4",
+      "id": "6",
+      "bbox": [
+        118,
+        222,
+        420,
+        34
+      ],
+      "geometry": "rect",
+      "text": "健康表达边界",
+      "textPreview": "健康表达边界",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "健康表达边界"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "健康表达边界",
+          "resolvedTextStyle": {
+            "fontSize": 27,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "健康表达边界",
+              "fontSize": 27,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/itgfmlkj",
+      "id": "7",
+      "bbox": [
+        118,
+        291,
+        8,
+        8
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/pwb2hwfy",
+      "id": "8",
+      "bbox": [
+        138,
+        282,
+        410,
+        58
+      ],
+      "geometry": "rect",
+      "text": "不做疾病诊断，不承诺治疗效果。",
+      "textPreview": "不做疾病诊断，不承诺治疗效果。",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "不做疾病诊断，不承诺治疗效果。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "不做疾病诊断，不承诺治疗效果。",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "不做疾病诊断，不承诺治疗效果。",
+              "fontSize": 19,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0bi9s36h",
+      "id": "9",
+      "bbox": [
+        118,
+        349,
+        8,
+        8
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u18jqh0f",
+      "id": "10",
+      "bbox": [
+        138,
+        340,
+        410,
+        58
+      ],
+      "geometry": "rect",
+      "text": "连续异常只提示继续观察或咨询专业医生。",
+      "textPreview": "连续异常只提示继续观察或咨询专业医生。",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "连续异常只提示继续观察或咨询专业医生。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "连续异常只提示继续观察或咨询专业医生。",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "连续异常只提示继续观察或咨询专业医生。",
+              "fontSize": 19,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jm1cfa9w",
+      "id": "11",
+      "bbox": [
+        118,
+        407,
+        8,
+        8
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/c7u54zid",
+      "id": "12",
+      "bbox": [
+        138,
+        398,
+        410,
+        58
+      ],
+      "geometry": "rect",
+      "text": "原始音频优先本地处理，报告默认展示结构化标签。",
+      "textPreview": "原始音频优先本地处理，报告默认展示结构化标签。",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "原始音频优先本地处理，报告默认展示结构化"
+          },
+          {
+            "index": 2,
+            "text": "标签。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "原始音频优先本地处理，报告默认展示结构化标签。",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "原始音频优先本地处理，报告默认展示结构化标签。",
+              "fontSize": 19,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1orytsvu",
+      "id": "13",
+      "bbox": [
+        118,
+        465,
+        8,
+        8
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u9knih4b",
+      "id": "14",
+      "bbox": [
+        138,
+        456,
+        410,
+        58
+      ],
+      "geometry": "rect",
+      "text": "排便、舌苔、口气等敏感信号必须用户主动触发。",
+      "textPreview": "排便、舌苔、口气等敏感信号必须用户主动触发。",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "排便、舌苔、口气等敏感信号必须用户主动触"
+          },
+          {
+            "index": 2,
+            "text": "发。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "排便、舌苔、口气等敏感信号必须用户主动触发。",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "排便、舌苔、口气等敏感信号必须用户主动触发。",
+              "fontSize": 19,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/judg7ads",
+      "id": "15",
+      "bbox": [
+        706,
+        222,
+        420,
+        34
+      ],
+      "geometry": "rect",
+      "text": "隐私保护边界",
+      "textPreview": "隐私保护边界",
+      "resolvedFontSize": 27,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 27,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "隐私保护边界"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "隐私保护边界",
+          "resolvedTextStyle": {
+            "fontSize": 27,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "隐私保护边界",
+              "fontSize": 27,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cfa9w3m9",
+      "id": "16",
+      "bbox": [
+        706,
+        291,
+        8,
+        8
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1032lszq",
+      "id": "17",
+      "bbox": [
+        726,
+        282,
+        410,
+        58
+      ],
+      "geometry": "rect",
+      "text": "eufy 只用于非隐私视觉场景。",
+      "textPreview": "eufy 只用于非隐私视觉场景。",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "eufy 只用于非隐私视觉场景。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "eufy 只用于非隐私视觉场景。",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "eufy 只用于非隐私视觉场景。",
+              "fontSize": 19,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/udg7adsj",
+      "id": "18",
+      "bbox": [
+        706,
+        349,
+        8,
+        8
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/nyd0z610",
+      "id": "19",
+      "bbox": [
+        726,
+        340,
+        410,
+        58
+      ],
+      "geometry": "rect",
+      "text": "不自动拍摄厕所、大便等敏感画面。",
+      "textPreview": "不自动拍摄厕所、大便等敏感画面。",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "不自动拍摄厕所、大便等敏感画面。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "不自动拍摄厕所、大便等敏感画面。",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "不自动拍摄厕所、大便等敏感画面。",
+              "fontSize": 19,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fu18jqh0",
+      "id": "20",
+      "bbox": [
+        706,
+        407,
+        8,
+        8
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m94fu18j",
+      "id": "21",
+      "bbox": [
+        726,
+        398,
+        410,
+        58
+      ],
+      "geometry": "rect",
+      "text": "家庭共享只展示摘要和趋势。",
+      "textPreview": "家庭共享只展示摘要和趋势。",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "家庭共享只展示摘要和趋势。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "家庭共享只展示摘要和趋势。",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "家庭共享只展示摘要和趋势。",
+              "fontSize": 19,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/x0nuxc3y",
+      "id": "22",
+      "bbox": [
+        706,
+        465,
+        8,
+        8
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4fu18jqh",
+      "id": "23",
+      "bbox": [
+        726,
+        456,
+        410,
+        58
+      ],
+      "geometry": "rect",
+      "text": "用户可以删除记录，现场可用 mock 数据 fallback。",
+      "textPreview": "用户可以删除记录，现场可用 mock 数据 fallback。",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "用户可以删除记录，现场可用 mock 数据"
+          },
+          {
+            "index": 2,
+            "text": "fallback。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "用户可以删除记录，现场可用 mock 数据 fallback。",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "用户可以删除记录，现场可用 mock 数据 fallback。",
+              "fontSize": 19,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fil0rqd4",
+      "id": "24",
+      "bbox": [
+        70,
+        678,
+        260,
+        22
+      ],
+      "geometry": "rect",
+      "text": "anker-SenseLoop 观息",
+      "textPreview": "anker-SenseLoop 观息",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "anker-SenseLoop 观息"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "anker-SenseLoop 观息",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "anker-SenseLoop 观息",
+              "fontSize": 13,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qxs72x4n",
+      "id": "25",
+      "bbox": [
+        1168,
+        678,
+        44,
+        22
+      ],
+      "geometry": "rect",
+      "text": "08",
+      "textPreview": "08",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "08"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "08",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#587068",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "08",
+              "fontSize": 13,
+              "color": "#587068",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

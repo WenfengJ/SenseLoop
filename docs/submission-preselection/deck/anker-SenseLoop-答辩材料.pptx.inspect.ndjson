@@ -1,0 +1,244 @@
+{"kind":"deck","id":"pr/josn3s","name":"Deck"}
+{"kind":"layout","layoutId":"aa541bfb-2076-4d5e-b784-c78f4bba70dd","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"83cb91fb-f0c8-41cc-851c-2817359f4cec","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/zv1l4r","slide":1,"title":"观息 SenseLoop","textShapes":11}
+{"kind":"textbox","id":"sh/wb2hwfyx","slide":1,"text":"观息 SenseLoop","textPreview":"观息 SenseLoop","textChars":12,"textLines":1,"bbox":[70,190,560,82]}
+{"kind":"textbox","id":"sh/lwval87e","slide":1,"text":"每天早晨，把夜间身体信号变成今日行动建议","textPreview":"每天早晨，把夜间身体信号变成今日行动建议","textChars":20,"textLines":1,"bbox":[72,288,620,74]}
+{"kind":"shape","id":"sh/ex0nuxc3","slide":1,"bbox":[72,394,250,36]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":1,"text":"soundcore Work 夜间声音原型","textPreview":"soundcore Work 夜间声音原型","textChars":21,"textLines":1,"bbox":[88,402,218,20]}
+{"kind":"shape","id":"sh/w3m94fu1","slide":1,"bbox":[340,394,230,36]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":1,"text":"未来健康穿戴新品类","textPreview":"未来健康穿戴新品类","textChars":9,"textLines":1,"bbox":[356,402,198,20]}
+{"kind":"shape","id":"sh/at47y1kr","slide":1,"bbox":[735,132,370,92]}
+{"kind":"shape","id":"sh/3ex0nuxc","slide":1,"bbox":[735,282,370,92]}
+{"kind":"shape","id":"sh/3itgfmlk","slide":1,"bbox":[735,432,370,92]}
+{"kind":"textbox","id":"sh/ex0nuxc3","slide":1,"text":"夜间声音","textPreview":"夜间声音","textChars":4,"textLines":1,"bbox":[765,154,160,28]}
+{"kind":"textbox","id":"sh/loj2t83i","slide":1,"text":"打鼾 / 咳嗽 / 起夜 / 噪声","textPreview":"打鼾 / 咳嗽 / 起夜 / 噪声","textChars":17,"textLines":1,"bbox":[765,190,286,24]}
+{"kind":"textbox","id":"sh/w3m94fu1","slide":1,"text":"身体信号","textPreview":"身体信号","textChars":4,"textLines":1,"bbox":[765,304,160,28]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":1,"text":"画像 / 饮食 / 排便 / 舌苔","textPreview":"画像 / 饮食 / 排便 / 舌苔","textChars":17,"textLines":1,"bbox":[765,340,286,24]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":1,"text":"今日建议","textPreview":"今日建议","textChars":4,"textLines":1,"bbox":[765,454,160,28]}
+{"kind":"textbox","id":"sh/lwval87e","slide":1,"text":"怎么吃 / 怎么动 / 怎么恢复","textPreview":"怎么吃 / 怎么动 / 怎么恢复","textChars":16,"textLines":1,"bbox":[765,490,286,24]}
+{"kind":"shape","id":"sh/wb2hwfyx","slide":1,"bbox":[912,228,16,50]}
+{"kind":"shape","id":"sh/32lszqtc","slide":1,"bbox":[912,378,16,50]}
+{"kind":"textbox","id":"sh/ahoza1gv","slide":1,"text":"Anker 黑客松预选答辩材料","textPreview":"Anker 黑客松预选答辩材料","textChars":15,"textLines":1,"bbox":[72,622,420,28]}
+{"kind":"image","id":"im/i9s36hcr","slide":1,"name":"","alt":"SenseLoop logo","bbox":[70,62,196,70]}
+{"kind":"notes","id":"nt/zv1l4r","slide":1,"text":""}
+{"kind":"slide","id":"sl/5suz73","slide":2,"title":"用户不缺健康数据，缺的是今天该怎么做","textShapes":14}
+{"kind":"textbox","id":"sh/1orytsvu","slide":2,"text":"用户不缺健康数据，缺的是今天该怎么做","textPreview":"用户不缺健康数据，缺的是今天该怎么做","textChars":18,"textLines":1,"bbox":[70,44,820,58]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":2,"text":"睡眠、饮食、排便、舌苔、口气都在发信号，但普通用户很难把它们连起来。","textPreview":"睡眠、饮食、排便、舌苔、口气都在发信号，但普通用户很难把它们连起来。","textChars":34,"textLines":1,"bbox":[70,102,860,34]}
+{"kind":"shape","id":"sh/jm1cfa9w","slide":2,"bbox":[70,142,1140,1]}
+{"kind":"shape","id":"sh/cfa9w3m9","slide":2,"bbox":[70,190,340,350]}
+{"kind":"textbox","id":"sh/1032lszq","slide":2,"text":"身体信号很零散","textPreview":"身体信号很零散","textChars":7,"textLines":1,"bbox":[98,218,284,44]}
+{"kind":"shape","id":"sh/u9knih4b","slide":2,"bbox":[98,301,8,8]}
+{"kind":"textbox","id":"sh/judg7ads","slide":2,"text":"打鼾、咳嗽、起夜、口干、便秘、舌苔变化，单独看都像小事。","textPreview":"打鼾、咳嗽、起夜、口干、便秘、舌苔变化，单独看都像小事。","textChars":28,"textLines":1,"bbox":[118,292,264,86]}
+{"kind":"shape","id":"sh/cj6tovah","slide":2,"bbox":[98,387,8,8]}
+{"kind":"textbox","id":"sh/54zidony","slide":2,"text":"连续出现时，它们可能已经在提醒用户调整生活方式。","textPreview":"连续出现时，它们可能已经在提醒用户调整生活方式。","textChars":24,"textLines":1,"bbox":[118,378,264,86]}
+{"kind":"shape","id":"sh/t47y1kre","slide":2,"bbox":[456,190,340,350]}
+{"kind":"textbox","id":"sh/0je9cvix","slide":2,"text":"健康 App 停在报告","textPreview":"健康 App 停在报告","textChars":11,"textLines":1,"bbox":[484,218,284,44]}
+{"kind":"shape","id":"sh/byhgn29g","slide":2,"bbox":[484,301,8,8]}
+{"kind":"textbox","id":"sh/idonyd0z","slide":2,"text":"睡眠分数、步数、心率、卡路里很常见。","textPreview":"睡眠分数、步数、心率、卡路里很常见。","textChars":18,"textLines":1,"bbox":[504,292,264,86]}
+{"kind":"shape","id":"sh/tcj6tova","slide":2,"bbox":[484,387,8,8]}
+{"kind":"textbox","id":"sh/0rqd4vmt","slide":2,"text":"用户真正想知道的是咖啡、运动、饮食和恢复怎么安排。","textPreview":"用户真正想知道的是咖啡、运动、饮食和恢复怎么安排。","textChars":25,"textLines":1,"bbox":[504,378,264,86]}
+{"kind":"shape","id":"sh/b6xkf6dc","slide":2,"bbox":[842,190,340,350]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":2,"text":"私密小问题没人持续看","textPreview":"私密小问题没人持续看","textChars":10,"textLines":1,"bbox":[870,218,284,44]}
+{"kind":"shape","id":"sh/tovahoza","slide":2,"bbox":[870,301,8,8]}
+{"kind":"textbox","id":"sh/032lszqt","slide":2,"text":"排便、口气、舌苔、睡眠差不一定立刻就医。","textPreview":"排便、口气、舌苔、睡眠差不一定立刻就医。","textChars":20,"textLines":1,"bbox":[890,292,264,86]}
+{"kind":"shape","id":"sh/czed8v6p","slide":2,"bbox":[870,387,8,8]}
+{"kind":"textbox","id":"sh/5kb6xkf6","slide":2,"text":"但这些高频问题每天影响状态，也最适合做趋势观察。","textPreview":"但这些高频问题每天影响状态，也最适合做趋势观察。","textChars":24,"textLines":1,"bbox":[890,378,264,86]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":2,"text":"SenseLoop 的切入点：把身体每天释放的细微信号，翻译成用户能执行的一天计划。","textPreview":"SenseLoop 的切入点：把身体每天释放的细微信号，翻译成用户能执行的一天计划。","textChars":42,"textLines":1,"bbox":[112,585,1040,40]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":2,"text":"anker-SenseLoop 观息","textPreview":"anker-SenseLoop 观息","textChars":18,"textLines":1,"bbox":[70,678,260,22]}
+{"kind":"textbox","id":"sh/cbulwval","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1168,678,44,22]}
+{"kind":"notes","id":"nt/5suz73","slide":2,"text":""}
+{"kind":"slide","id":"sl/h7u5l8","slide":3,"title":"当前 MVP 先跑通一个最硬的闭环","textShapes":13}
+{"kind":"textbox","id":"sh/z61032ls","slide":3,"text":"当前 MVP 先跑通一个最硬的闭环","textPreview":"当前 MVP 先跑通一个最硬的闭环","textChars":17,"textLines":1,"bbox":[70,44,820,58]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":3,"text":"夜间声音是高频、自然、贴合 soundcore Work 的真实入口。","textPreview":"夜间声音是高频、自然、贴合 soundcore Work 的真实入口。","textChars":35,"textLines":1,"bbox":[70,102,860,34]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":3,"bbox":[70,142,1140,1]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":3,"bbox":[78,230,238,186]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":3,"text":"soundcore Work","textPreview":"soundcore Work","textChars":14,"textLines":1,"bbox":[100,260,194,32]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":3,"text":"采集打鼾、咳嗽、起夜、环境噪声与重点标记","textPreview":"采集打鼾、咳嗽、起夜、环境噪声与重点标记","textChars":20,"textLines":1,"bbox":[100,314,194,74]}
+{"kind":"shape","id":"sh/h0fepkzu","slide":3,"bbox":[320,315,36,16]}
+{"kind":"shape","id":"sh/65wjudg7","slide":3,"bbox":[364,230,238,186]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":3,"text":"身体信号理解","textPreview":"身体信号理解","textChars":6,"textLines":1,"bbox":[386,260,194,32]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":3,"text":"把夜间事件与画像、饮食、排便、舌苔、口气关联","textPreview":"把夜间事件与画像、饮食、排便、舌苔、口气关联","textChars":22,"textLines":1,"bbox":[386,314,194,74]}
+{"kind":"shape","id":"sh/a9w3m94f","slide":3,"bbox":[606,315,36,16]}
+{"kind":"shape","id":"sh/h0fepkzu","slide":3,"bbox":[650,230,238,186]}
+{"kind":"textbox","id":"sh/sfil0rqd","slide":3,"text":"晨间健康日报","textPreview":"晨间健康日报","textChars":6,"textLines":1,"bbox":[672,260,194,32]}
+{"kind":"textbox","id":"sh/z61032ls","slide":3,"text":"生成今天怎么吃、怎么动、怎么恢复","textPreview":"生成今天怎么吃、怎么动、怎么恢复","textChars":16,"textLines":1,"bbox":[672,314,194,74]}
+{"kind":"shape","id":"sh/al87ed8b","slide":3,"bbox":[892,315,36,16]}
+{"kind":"shape","id":"sh/hcrmhk3q","slide":3,"bbox":[936,230,238,186]}
+{"kind":"textbox","id":"sh/orytsvu9","slide":3,"text":"长期穿戴演进","textPreview":"长期穿戴演进","textChars":6,"textLines":1,"bbox":[958,260,194,32]}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":3,"text":"扩展到 Watch / Band / Pendant 多模态信号","textPreview":"扩展到 Watch / Band / Pendant 多模态信号","textChars":32,"textLines":1,"bbox":[958,314,194,74]}
+{"kind":"textbox","id":"sh/6xkf6dcb","slide":3,"text":"产品价值不止是“昨晚发生了什么”，而是让用户早上打开就知道“今天应该怎么做”。","textPreview":"产品价值不止是“昨晚发生了什么”，而是让用户早上打开就知道“今天应该怎么做”。","textChars":39,"textLines":1,"bbox":[125,500,1030,44]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":3,"text":"anker-SenseLoop 观息","textPreview":"anker-SenseLoop 观息","textChars":18,"textLines":1,"bbox":[70,678,260,22]}
+{"kind":"textbox","id":"sh/7mp0bi9s","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1168,678,44,22]}
+{"kind":"notes","id":"nt/h7u5l8","slide":3,"text":""}
+{"kind":"slide","id":"sl/xfpaqq","slide":4,"title":"用 Anker 硬件重新解释“望闻问切”","textShapes":17}
+{"kind":"textbox","id":"sh/32lszqtc","slide":4,"text":"用 Anker 硬件重新解释“望闻问切”","textPreview":"用 Anker 硬件重新解释“望闻问切”","textChars":20,"textLines":1,"bbox":[70,44,820,58]}
+{"kind":"textbox","id":"sh/sneloj2t","slide":4,"text":"当前聚焦真实可演示的“闻 + 问”，同时保留未来穿戴硬件空间。","textPreview":"当前聚焦真实可演示的“闻 + 问”，同时保留未来穿戴硬件空间。","textChars":31,"textLines":1,"bbox":[70,102,860,34]}
+{"kind":"shape","id":"sh/l87ed8ba","slide":4,"bbox":[70,142,1140,1]}
+{"kind":"shape","id":"sh/at47y1kr","slide":4,"bbox":[92,174,1080,78]}
+{"kind":"textbox","id":"sh/3ex0nuxc","slide":4,"text":"闻","textPreview":"闻","textChars":1,"textLines":1,"bbox":[118,190,60,42]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":4,"text":"soundcore Work","textPreview":"soundcore Work","textChars":14,"textLines":1,"bbox":[220,192,230,32]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":4,"text":"夜间声音、打鼾、咳嗽、起夜、重点标记","textPreview":"夜间声音、打鼾、咳嗽、起夜、重点标记","textChars":18,"textLines":1,"bbox":[470,192,640,32]}
+{"kind":"shape","id":"sh/ex0nuxc3","slide":4,"bbox":[92,280,1080,78]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":4,"text":"问","textPreview":"问","textChars":1,"textLines":1,"bbox":[118,296,60,42]}
+{"kind":"textbox","id":"sh/bm58z25k","slide":4,"text":"App 输入","textPreview":"App 输入","textChars":6,"textLines":1,"bbox":[220,298,230,32]}
+{"kind":"textbox","id":"sh/m1cfa9w3","slide":4,"text":"用户画像、睡前/醒后反馈、饮食与排便记录","textPreview":"用户画像、睡前/醒后反馈、饮食与排便记录","textChars":20,"textLines":1,"bbox":[470,298,640,32]}
+{"kind":"shape","id":"sh/tsvu9kni","slide":4,"bbox":[92,386,1080,78]}
+{"kind":"textbox","id":"sh/47y1kre1","slide":4,"text":"望","textPreview":"望","textChars":1,"textLines":1,"bbox":[118,402,60,42]}
+{"kind":"textbox","id":"sh/bat47y1k","slide":4,"text":"手机拍照 / eufy","textPreview":"手机拍照 / eufy","textChars":11,"textLines":1,"bbox":[220,404,230,32]}
+{"kind":"textbox","id":"sh/mp0bi9s3","slide":4,"text":"饮食、舌苔、非隐私生活状态观察","textPreview":"饮食、舌苔、非隐私生活状态观察","textChars":15,"textLines":1,"bbox":[470,404,640,32]}
+{"kind":"shape","id":"sh/tgfmlkjm","slide":4,"bbox":[92,492,1080,78]}
+{"kind":"textbox","id":"sh/4vmtwra5","slide":4,"text":"切","textPreview":"切","textChars":1,"textLines":1,"bbox":[118,508,60,42]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":4,"text":"模拟 / 未来传感器","textPreview":"模拟 / 未来传感器","textChars":10,"textLines":1,"bbox":[220,510,230,32]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":4,"text":"心率、脉搏、血压、运动、血氧","textPreview":"心率、脉搏、血压、运动、血氧","textChars":14,"textLines":1,"bbox":[470,510,640,32]}
+{"kind":"textbox","id":"sh/udg7adsj","slide":4,"text":"边界很清楚：不做医疗诊断，不自动拍摄隐私内容，敏感数据必须用户主动触发。","textPreview":"边界很清楚：不做医疗诊断，不自动拍摄隐私内容，敏感数据必须用户主动触发。","textChars":36,"textLines":1,"bbox":[118,622,1040,34]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":4,"text":"anker-SenseLoop 观息","textPreview":"anker-SenseLoop 观息","textChars":18,"textLines":1,"bbox":[70,678,260,22]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1168,678,44,22]}
+{"kind":"notes","id":"nt/xfpaqq","slide":4,"text":""}
+{"kind":"slide","id":"sl/yk2pt0","slide":5,"title":"Demo 已经覆盖六个关键页面","textShapes":17}
+{"kind":"textbox","id":"sh/4byhgn29","slide":5,"text":"Demo 已经覆盖六个关键页面","textPreview":"Demo 已经覆盖六个关键页面","textChars":15,"textLines":1,"bbox":[70,44,820,58]}
+{"kind":"textbox","id":"sh/bq1oryts","slide":5,"text":"前端不是静态海报，而是围绕五类用户画像与报告生成闭环设计。","textPreview":"前端不是静态海报，而是围绕五类用户画像与报告生成闭环设计。","textChars":29,"textLines":1,"bbox":[70,102,860,34]}
+{"kind":"shape","id":"sh/m58z25kb","slide":5,"bbox":[70,142,1140,1]}
+{"kind":"shape","id":"sh/t83itgfm","slide":5,"bbox":[82,184,330,124]}
+{"kind":"textbox","id":"sh/4nap4r65","slide":5,"text":"首页","textPreview":"首页","textChars":2,"textLines":1,"bbox":[106,208,118,34]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":5,"text":"今日状态、恢复分、四诊完成度、今日建议","textPreview":"今日状态、恢复分、四诊完成度、今日建议","textChars":19,"textLines":1,"bbox":[106,248,278,42]}
+{"kind":"shape","id":"sh/mhk3q5o7","slide":5,"bbox":[462,184,330,124]}
+{"kind":"textbox","id":"sh/tgfmlkjm","slide":5,"text":"睡眠页","textPreview":"睡眠页","textChars":3,"textLines":1,"bbox":[486,208,118,34]}
+{"kind":"textbox","id":"sh/4vmtwra5","slide":5,"text":"声音时间线、打鼾/咳嗽/起夜、重点标记","textPreview":"声音时间线、打鼾/咳嗽/起夜、重点标记","textChars":19,"textLines":1,"bbox":[486,248,278,42]}
+{"kind":"shape","id":"sh/i5sneloj","slide":5,"bbox":[842,184,330,124]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":5,"text":"饮食页","textPreview":"饮食页","textChars":3,"textLines":1,"bbox":[866,208,118,34]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":5,"text":"拍照入口、kcal 区间估算、用户修正","textPreview":"拍照入口、kcal 区间估算、用户修正","textChars":19,"textLines":1,"bbox":[866,248,278,42]}
+{"kind":"shape","id":"sh/pwb2hwfy","slide":5,"bbox":[82,354,330,124]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":5,"text":"信号页","textPreview":"信号页","textChars":3,"textLines":1,"bbox":[106,378,118,34]}
+{"kind":"textbox","id":"sh/7y1kre1w","slide":5,"text":"排便、舌苔、口气记录与隐私边界","textPreview":"排便、舌苔、口气记录与隐私边界","textChars":15,"textLines":1,"bbox":[106,418,278,42]}
+{"kind":"shape","id":"sh/wjudg7ad","slide":5,"bbox":[462,354,330,124]}
+{"kind":"textbox","id":"sh/p4r65wju","slide":5,"text":"日报页","textPreview":"日报页","textChars":3,"textLines":1,"bbox":[486,378,118,34]}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":5,"text":"五类用户画像下的个性化行动建议","textPreview":"五类用户画像下的个性化行动建议","textChars":15,"textLines":1,"bbox":[486,418,278,42]}
+{"kind":"shape","id":"sh/72x4nap4","slide":5,"bbox":[842,354,330,124]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":5,"text":"架构页","textPreview":"架构页","textChars":3,"textLines":1,"bbox":[866,378,118,34]}
+{"kind":"textbox","id":"sh/uxc3ylc7","slide":5,"text":"soundcore Work 原型到未来穿戴演进","textPreview":"soundcore Work 原型到未来穿戴演进","textChars":24,"textLines":1,"bbox":[866,418,278,42]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":5,"text":"在线 Demo：https://13-57-166-217.sslip.io/senseloop/","textPreview":"在线 Demo：https://13-57-166-217.sslip.io/senseloop/","textChars":49,"textLines":1,"bbox":[110,592,790,28]}
+{"kind":"textbox","id":"sh/c3ylc7u5","slide":5,"text":"anker-SenseLoop 观息","textPreview":"anker-SenseLoop 观息","textChars":18,"textLines":1,"bbox":[70,678,260,22]}
+{"kind":"textbox","id":"sh/j6tovaho","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1168,678,44,22]}
+{"kind":"notes","id":"nt/yk2pt0","slide":5,"text":""}
+{"kind":"slide","id":"sl/2l0w7g","slide":6,"title":"技术架构按“可跑通、可替换、可增强”设计","textShapes":14}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":6,"text":"技术架构按“可跑通、可替换、可增强”设计","textPreview":"技术架构按“可跑通、可替换、可增强”设计","textChars":20,"textLines":1,"bbox":[70,44,820,58]}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":6,"text":"没有 SDK 时用 mock adapter 稳定演示，拿到 SDK 后替换采集层即可。","textPreview":"没有 SDK 时用 mock adapter 稳定演示，拿到 SDK 后替换采集层即可。","textChars":44,"textLines":1,"bbox":[70,102,860,34]}
+{"kind":"shape","id":"sh/72x4nap4","slide":6,"bbox":[70,142,1140,1]}
+{"kind":"shape","id":"sh/0z61032l","slide":6,"bbox":[135,170,1010,58]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":6,"text":"采集适配层","textPreview":"采集适配层","textChars":5,"textLines":1,"bbox":[165,185,210,26]}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":6,"text":"soundcore Work / 上传音频 / App 输入 / eufy placeholder","textPreview":"soundcore Work / 上传音频 / App 输入 / eufy placeholder","textChars":49,"textLines":1,"bbox":[410,185,680,26]}
+{"kind":"shape","id":"sh/7ed8bat4","slide":6,"bbox":[632,231,16,17]}
+{"kind":"shape","id":"sh/0bi9s36h","slide":6,"bbox":[135,252,1010,58]}
+{"kind":"textbox","id":"sh/pwb2hwfy","slide":6,"text":"信号标签层","textPreview":"信号标签层","textChars":5,"textLines":1,"bbox":[165,267,210,26]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":6,"text":"SleepAudioEvent、DietSignal、StoolSignal、TongueSignal","textPreview":"SleepAudioEvent、DietSignal、StoolSignal、TongueSignal","textChars":51,"textLines":1,"bbox":[410,267,680,26]}
+{"kind":"shape","id":"sh/kjm1cfa9","slide":6,"bbox":[632,313,16,17]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":6,"bbox":[135,334,1010,58]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":6,"text":"知识库规则层","textPreview":"知识库规则层","textChars":6,"textLines":1,"bbox":[165,349,210,26]}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":6,"text":"睡眠、饮食、减脂、排便、舌苔、运动恢复规则","textPreview":"睡眠、饮食、减脂、排便、舌苔、运动恢复规则","textChars":21,"textLines":1,"bbox":[410,349,680,26]}
+{"kind":"shape","id":"sh/gvy90je9","slide":6,"bbox":[632,395,16,17]}
+{"kind":"shape","id":"sh/ra5gbq1o","slide":6,"bbox":[135,416,1010,58]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":6,"text":"报告生成层","textPreview":"报告生成层","textChars":5,"textLines":1,"bbox":[165,431,210,26]}
+{"kind":"textbox","id":"sh/9knih4by","slide":6,"text":"用户画像 + 多模态信号 -> 今日行动建议","textPreview":"用户画像 + 多模态信号 -> 今日行动建议","textChars":22,"textLines":1,"bbox":[410,431,680,26]}
+{"kind":"shape","id":"sh/kzupwb2h","slide":6,"bbox":[632,477,16,17]}
+{"kind":"shape","id":"sh/0nuxc3yl","slide":6,"bbox":[135,498,1010,58]}
+{"kind":"textbox","id":"sh/p8nqxs72","slide":6,"text":"展示层","textPreview":"展示层","textChars":3,"textLines":1,"bbox":[165,513,210,26]}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":6,"text":"React App、Python API、在线 Demo","textPreview":"React App、Python API、在线 Demo","textChars":28,"textLines":1,"bbox":[410,513,680,26]}
+{"kind":"textbox","id":"sh/72x4nap4","slide":6,"text":"anker-SenseLoop 观息","textPreview":"anker-SenseLoop 观息","textChars":18,"textLines":1,"bbox":[70,678,260,22]}
+{"kind":"textbox","id":"sh/0z61032l","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1168,678,44,22]}
+{"kind":"notes","id":"nt/2l0w7g","slide":6,"text":""}
+{"kind":"slide","id":"sl/hkfo36","slide":7,"title":"同一夜间事件，会因为用户画像生成不同建议","textShapes":19}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":7,"text":"同一夜间事件，会因为用户画像生成不同建议","textPreview":"同一夜间事件，会因为用户画像生成不同建议","textChars":20,"textLines":1,"bbox":[70,44,820,58]}
+{"kind":"textbox","id":"sh/cbulwval","slide":7,"text":"这让 SenseLoop 从模板报告变成个性化健康行动助手。","textPreview":"这让 SenseLoop 从模板报告变成个性化健康行动助手。","textChars":30,"textLines":1,"bbox":[70,102,860,34]}
+{"kind":"shape","id":"sh/5sneloj2","slide":7,"bbox":[70,142,1140,1]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":7,"text":"减脂人群","textPreview":"减脂人群","textChars":4,"textLines":1,"bbox":[84,174,150,30]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":7,"text":"关注 kcal、排便、水肿和训练强度","textPreview":"关注 kcal、排便、水肿和训练强度","textChars":18,"textLines":1,"bbox":[260,168,370,44]}
+{"kind":"shape","id":"sh/czed8v6p","slide":7,"bbox":[666,160,500,60]}
+{"kind":"textbox","id":"sh/5kb6xkf6","slide":7,"text":"今天轻控热量，不建议硬扛高强度训练","textPreview":"今天轻控热量，不建议硬扛高强度训练","textChars":17,"textLines":1,"bbox":[690,177,452,28]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":7,"text":"老年人","textPreview":"老年人","textChars":3,"textLines":1,"bbox":[84,264,150,30]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":7,"text":"关注夜间咳嗽、起夜、饮食清淡和家人关怀","textPreview":"关注夜间咳嗽、起夜、饮食清淡和家人关怀","textChars":19,"textLines":1,"bbox":[260,258,370,44]}
+{"kind":"shape","id":"sh/fyxobm58","slide":7,"bbox":[666,250,500,60]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":7,"text":"今天以清淡饮食和低强度活动为主","textPreview":"今天以清淡饮食和低强度活动为主","textChars":15,"textLines":1,"bbox":[690,267,452,28]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":7,"text":"上班族","textPreview":"上班族","textChars":3,"textLines":1,"bbox":[84,354,150,30]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":7,"text":"关注睡眠债、咖啡因、外卖和肠胃负担","textPreview":"关注睡眠债、咖啡因、外卖和肠胃负担","textChars":17,"textLines":1,"bbox":[260,348,370,44]}
+{"kind":"shape","id":"sh/fa9w3m94","slide":7,"bbox":[666,340,500,60]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":7,"text":"今天先恢复，不要用咖啡和重训硬撑","textPreview":"今天先恢复，不要用咖啡和重训硬撑","textChars":16,"textLines":1,"bbox":[690,357,452,28]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":7,"text":"学生","textPreview":"学生","textChars":2,"textLines":1,"bbox":[84,444,150,30]}
+{"kind":"textbox","id":"sh/8v6psfil","slide":7,"text":"关注早餐、营养、专注和作息","textPreview":"关注早餐、营养、专注和作息","textChars":13,"textLines":1,"bbox":[260,438,370,44]}
+{"kind":"shape","id":"sh/je9cvixc","slide":7,"bbox":[666,430,500,60]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":7,"text":"今天优先补能量、稳专注，减少高糖饮料","textPreview":"今天优先补能量、稳专注，减少高糖饮料","textChars":18,"textLines":1,"bbox":[690,447,452,28]}
+{"kind":"textbox","id":"sh/u54zidon","slide":7,"text":"失眠人群","textPreview":"失眠人群","textChars":4,"textLines":1,"bbox":[84,534,150,30]}
+{"kind":"textbox","id":"sh/nqxs72x4","slide":7,"text":"关注夜醒、环境噪声、睡前行为","textPreview":"关注夜醒、环境噪声、睡前行为","textChars":14,"textLines":1,"bbox":[260,528,370,44]}
+{"kind":"shape","id":"sh/cbulwval","slide":7,"bbox":[666,520,500,60]}
+{"kind":"textbox","id":"sh/5sneloj2","slide":7,"text":"今天控制午睡，晚上提前进入放松流程","textPreview":"今天控制午睡，晚上提前进入放松流程","textChars":17,"textLines":1,"bbox":[690,537,452,28]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":7,"text":"anker-SenseLoop 观息","textPreview":"anker-SenseLoop 观息","textChars":18,"textLines":1,"bbox":[70,678,260,22]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1168,678,44,22]}
+{"kind":"notes","id":"nt/hkfo36","slide":7,"text":""}
+{"kind":"slide","id":"sl/d8d0vh","slide":8,"title":"隐私和医疗边界会直接影响评审信任","textShapes":14}
+{"kind":"textbox","id":"sh/0nuxc3yl","slide":8,"text":"隐私和医疗边界会直接影响评审信任","textPreview":"隐私和医疗边界会直接影响评审信任","textChars":16,"textLines":1,"bbox":[70,44,820,58]}
+{"kind":"textbox","id":"sh/72x4nap4","slide":8,"text":"健康类产品必须先把不能做什么讲清楚，评委才会相信能落地。","textPreview":"健康类产品必须先把不能做什么讲清楚，评委才会相信能落地。","textChars":28,"textLines":1,"bbox":[70,102,860,34]}
+{"kind":"shape","id":"sh/ih4byhgn","slide":8,"bbox":[70,142,1140,1]}
+{"kind":"shape","id":"sh/pkzupwb2","slide":8,"bbox":[86,188,520,350]}
+{"kind":"shape","id":"sh/0z61032l","slide":8,"bbox":[674,188,520,350]}
+{"kind":"textbox","id":"sh/7ed8bat4","slide":8,"text":"健康表达边界","textPreview":"健康表达边界","textChars":6,"textLines":1,"bbox":[118,222,420,34]}
+{"kind":"shape","id":"sh/itgfmlkj","slide":8,"bbox":[118,291,8,8]}
+{"kind":"textbox","id":"sh/pwb2hwfy","slide":8,"text":"不做疾病诊断，不承诺治疗效果。","textPreview":"不做疾病诊断，不承诺治疗效果。","textChars":15,"textLines":1,"bbox":[138,282,410,58]}
+{"kind":"shape","id":"sh/0bi9s36h","slide":8,"bbox":[118,349,8,8]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":8,"text":"连续异常只提示继续观察或咨询专业医生。","textPreview":"连续异常只提示继续观察或咨询专业医生。","textChars":19,"textLines":1,"bbox":[138,340,410,58]}
+{"kind":"shape","id":"sh/jm1cfa9w","slide":8,"bbox":[118,407,8,8]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":8,"text":"原始音频优先本地处理，报告默认展示结构化标签。","textPreview":"原始音频优先本地处理，报告默认展示结构化标签。","textChars":23,"textLines":1,"bbox":[138,398,410,58]}
+{"kind":"shape","id":"sh/1orytsvu","slide":8,"bbox":[118,465,8,8]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":8,"text":"排便、舌苔、口气等敏感信号必须用户主动触发。","textPreview":"排便、舌苔、口气等敏感信号必须用户主动触发。","textChars":22,"textLines":1,"bbox":[138,456,410,58]}
+{"kind":"textbox","id":"sh/judg7ads","slide":8,"text":"隐私保护边界","textPreview":"隐私保护边界","textChars":6,"textLines":1,"bbox":[706,222,420,34]}
+{"kind":"shape","id":"sh/cfa9w3m9","slide":8,"bbox":[706,291,8,8]}
+{"kind":"textbox","id":"sh/1032lszq","slide":8,"text":"eufy 只用于非隐私视觉场景。","textPreview":"eufy 只用于非隐私视觉场景。","textChars":16,"textLines":1,"bbox":[726,282,410,58]}
+{"kind":"shape","id":"sh/udg7adsj","slide":8,"bbox":[706,349,8,8]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":8,"text":"不自动拍摄厕所、大便等敏感画面。","textPreview":"不自动拍摄厕所、大便等敏感画面。","textChars":16,"textLines":1,"bbox":[726,340,410,58]}
+{"kind":"shape","id":"sh/fu18jqh0","slide":8,"bbox":[706,407,8,8]}
+{"kind":"textbox","id":"sh/m94fu18j","slide":8,"text":"家庭共享只展示摘要和趋势。","textPreview":"家庭共享只展示摘要和趋势。","textChars":13,"textLines":1,"bbox":[726,398,410,58]}
+{"kind":"shape","id":"sh/x0nuxc3y","slide":8,"bbox":[706,465,8,8]}
+{"kind":"textbox","id":"sh/4fu18jqh","slide":8,"text":"用户可以删除记录，现场可用 mock 数据 fallback。","textPreview":"用户可以删除记录，现场可用 mock 数据 fallback。","textChars":31,"textLines":1,"bbox":[726,456,410,58]}
+{"kind":"textbox","id":"sh/fil0rqd4","slide":8,"text":"anker-SenseLoop 观息","textPreview":"anker-SenseLoop 观息","textChars":18,"textLines":1,"bbox":[70,678,260,22]}
+{"kind":"textbox","id":"sh/qxs72x4n","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1168,678,44,22]}
+{"kind":"notes","id":"nt/d8d0vh","slide":8,"text":""}
+{"kind":"slide","id":"sl/jg8e40","slide":9,"title":"商业化价值来自每天早晨的高频入口","textShapes":13}
+{"kind":"textbox","id":"sh/m58z25kb","slide":9,"text":"商业化价值来自每天早晨的高频入口","textPreview":"商业化价值来自每天早晨的高频入口","textChars":16,"textLines":1,"bbox":[70,44,820,58]}
+{"kind":"textbox","id":"sh/twra5gbq","slide":9,"text":"它不是普通睡眠 App，也不是复刻 Apple Watch，而是 Anker 可延展的健康穿戴新品类。","textPreview":"它不是普通睡眠 App，也不是复刻 Apple Watch，而是 Anker 可延展的健康穿戴新品类。","textChars":51,"textLines":1,"bbox":[70,102,860,34]}
+{"kind":"shape","id":"sh/4byhgn29","slide":9,"bbox":[70,142,1140,1]}
+{"kind":"shape","id":"sh/b2hwfyxo","slide":9,"bbox":[92,194,500,128]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":9,"text":"硬件销售","textPreview":"硬件销售","textChars":4,"textLines":1,"bbox":[120,218,180,34]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":9,"text":"SenseLoop Watch / Band / Pendant，承接 soundcore 与 eufy 的能力演进","textPreview":"SenseLoop Watch / Band / Pendant，承接 soundcore 与 eufy 的能力演进","textChars":58,"textLines":1,"bbox":[120,262,430,42]}
+{"kind":"shape","id":"sh/4nap4r65","slide":9,"bbox":[652,194,500,128]}
+{"kind":"textbox","id":"sh/bat47y1k","slide":9,"text":"App 订阅","textPreview":"App 订阅","textChars":6,"textLines":1,"bbox":[680,218,180,34]}
+{"kind":"textbox","id":"sh/mp0bi9s3","slide":9,"text":"高级日报、长期趋势、个性化健康建议、减脂与恢复计划","textPreview":"高级日报、长期趋势、个性化健康建议、减脂与恢复计划","textChars":25,"textLines":1,"bbox":[680,262,430,42]}
+{"kind":"shape","id":"sh/4byhgn29","slide":9,"bbox":[92,370,500,128]}
+{"kind":"textbox","id":"sh/twra5gbq","slide":9,"text":"家庭健康","textPreview":"家庭健康","textChars":4,"textLines":1,"bbox":[120,394,180,34]}
+{"kind":"textbox","id":"sh/m58z25kb","slide":9,"text":"老人简版报告、家人同步、连续异常提醒","textPreview":"老人简版报告、家人同步、连续异常提醒","textChars":18,"textLines":1,"bbox":[120,438,430,42]}
+{"kind":"shape","id":"sh/bq1oryts","slide":9,"bbox":[652,370,500,128]}
+{"kind":"textbox","id":"sh/4nap4r65","slide":9,"text":"服务合作","textPreview":"服务合作","textChars":4,"textLines":1,"bbox":[680,394,180,34]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":9,"text":"营养、运动、睡眠改善、健康管理服务","textPreview":"营养、运动、睡眠改善、健康管理服务","textChars":17,"textLines":1,"bbox":[680,438,430,42]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":9,"text":"可卖的不是单个传感器，而是“读懂身体信号并给出今日行动”的长期关系。","textPreview":"可卖的不是单个传感器，而是“读懂身体信号并给出今日行动”的长期关系。","textChars":34,"textLines":1,"bbox":[110,588,1040,40]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":9,"text":"anker-SenseLoop 观息","textPreview":"anker-SenseLoop 观息","textChars":18,"textLines":1,"bbox":[70,678,260,22]}
+{"kind":"textbox","id":"sh/4vmtwra5","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1168,678,44,22]}
+{"kind":"notes","id":"nt/jg8e40","slide":9,"text":""}
+{"kind":"slide","id":"sl/9ikbs2","slide":10,"title":"24 小时现场开发计划很清晰","textShapes":13}
+{"kind":"textbox","id":"sh/gvy90je9","slide":10,"text":"24 小时现场开发计划很清晰","textPreview":"24 小时现场开发计划很清晰","textChars":14,"textLines":1,"bbox":[70,44,820,58]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":10,"text":"当前原型稳定可演示，现场时间用于增强真实硬件与真实数据。","textPreview":"当前原型稳定可演示，现场时间用于增强真实硬件与真实数据。","textChars":28,"textLines":1,"bbox":[70,102,860,34]}
+{"kind":"shape","id":"sh/2p8nqxs7","slide":10,"bbox":[70,142,1140,1]}
+{"kind":"shape","id":"sh/94fu18jq","slide":10,"bbox":[78,182,720,82]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":10,"text":"优先增强","textPreview":"优先增强","textChars":4,"textLines":1,"bbox":[106,204,150,32]}
+{"kind":"textbox","id":"sh/r2p8nqxs","slide":10,"text":"接入 soundcore Work SDK 或真实录音文件，把声音事件接入日报","textPreview":"接入 soundcore Work SDK 或真实录音文件，把声音事件接入日报","textChars":39,"textLines":1,"bbox":[274,204,480,32]}
+{"kind":"shape","id":"sh/2hwfyxob","slide":10,"bbox":[78,294,720,82]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":10,"text":"可选增强","textPreview":"可选增强","textChars":4,"textLines":1,"bbox":[106,316,150,32]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":10,"text":"加入音频上传、图片上传、LLM 文案润色、eufy 非隐私视觉事件","textPreview":"加入音频上传、图片上传、LLM 文案润色、eufy 非隐私视觉事件","textChars":33,"textLines":1,"bbox":[274,316,480,32]}
+{"kind":"shape","id":"sh/2p8nqxs7","slide":10,"bbox":[78,406,720,82]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":10,"text":"Fallback","textPreview":"Fallback","textChars":8,"textLines":1,"bbox":[106,428,150,32]}
+{"kind":"textbox","id":"sh/gvy90je9","slide":10,"text":"无 SDK 用 mock adapter，无 API Key 用本地规则，无网络可本地运行","textPreview":"无 SDK 用 mock adapter，无 API Key 用本地规则，无网络可本地运行","textChars":45,"textLines":1,"bbox":[274,428,480,32]}
+{"kind":"shape","id":"sh/9gr2p8nq","slide":10,"bbox":[870,180,250,302]}
+{"kind":"textbox","id":"sh/r2p8nqxs","slide":10,"text":"扫码打开 Demo","textPreview":"扫码打开 Demo","textChars":9,"textLines":1,"bbox":[898,418,194,28]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":10,"text":"https://13-57-166-217.sslip.io/senseloop/","textPreview":"https://13-57-166-217.sslip.io/senseloop/","textChars":41,"textLines":1,"bbox":[858,456,276,52]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":10,"text":"最终目标：用 Anker 官方硬件验证核心闭环，再演进为 SenseLoop 健康穿戴产品线。","textPreview":"最终目标：用 Anker 官方硬件验证核心闭环，再演进为 SenseLoop 健康穿戴产品线。","textChars":47,"textLines":1,"bbox":[90,590,1080,38]}
+{"kind":"textbox","id":"sh/25kb6xkf","slide":10,"text":"anker-SenseLoop 观息","textPreview":"anker-SenseLoop 观息","textChars":18,"textLines":1,"bbox":[70,678,260,22]}
+{"kind":"textbox","id":"sh/rqd4vmtw","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1168,678,44,22]}
+{"kind":"image","id":"im/t83itgfm","slide":10,"name":"","alt":"Demo QR code","bbox":[905,214,180,180]}
+{"kind":"notes","id":"nt/9ikbs2","slide":10,"text":""}

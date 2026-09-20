@@ -1,0 +1,1150 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/5suz73",
+    "id": "5suz73",
+    "slide": 2,
+    "layoutId": "83cb91fb-f0c8-41cc-851c-2817359f4cec",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "+mn-lt"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "83cb91fb-f0c8-41cc-851c-2817359f4cec",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "aa541bfb-2076-4d5e-b784-c78f4bba70dd",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1orytsvu",
+      "id": "1",
+      "bbox": [
+        70,
+        44,
+        820,
+        58
+      ],
+      "geometry": "rect",
+      "text": "用户不缺健康数据，缺的是今天该怎么做",
+      "textPreview": "用户不缺健康数据，缺的是今天该怎么做",
+      "resolvedFontSize": 38,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 38,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "用户不缺健康数据，缺的是今天该怎么做"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "用户不缺健康数据，缺的是今天该怎么做",
+          "resolvedTextStyle": {
+            "fontSize": 38,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "用户不缺健康数据，缺的是今天该怎么做",
+              "fontSize": 38,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u18jqh0f",
+      "id": "2",
+      "bbox": [
+        70,
+        102,
+        860,
+        34
+      ],
+      "geometry": "rect",
+      "text": "睡眠、饮食、排便、舌苔、口气都在发信号，但普通用户很难把它们连起来。",
+      "textPreview": "睡眠、饮食、排便、舌苔、口气都在发信号，但普通用户很难把它们连起来。",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 18,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "睡眠、饮食、排便、舌苔、口气都在发信号，但普通用户很难把它们连起来。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "睡眠、饮食、排便、舌苔、口气都在发信号，但普通用户很难把它们连起来。",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "睡眠、饮食、排便、舌苔、口气都在发信号，但普通用户很难把它们连起来。",
+              "fontSize": 18,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jm1cfa9w",
+      "id": "3",
+      "bbox": [
+        70,
+        142,
+        1140,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#C9DED4",
+      "lineColor": "#C9DED4",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cfa9w3m9",
+      "id": "4",
+      "bbox": [
+        70,
+        190,
+        340,
+        350
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#C9DED4",
+      "lineWidth": 1
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1032lszq",
+      "id": "5",
+      "bbox": [
+        98,
+        218,
+        284,
+        44
+      ],
+      "geometry": "rect",
+      "text": "身体信号很零散",
+      "textPreview": "身体信号很零散",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 25,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "身体信号很零散"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "身体信号很零散",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "身体信号很零散",
+              "fontSize": 25,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/u9knih4b",
+      "id": "6",
+      "bbox": [
+        98,
+        301,
+        8,
+        8
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/judg7ads",
+      "id": "7",
+      "bbox": [
+        118,
+        292,
+        264,
+        86
+      ],
+      "geometry": "rect",
+      "text": "打鼾、咳嗽、起夜、口干、便秘、舌苔变化，单独看都像小事。",
+      "textPreview": "打鼾、咳嗽、起夜、口干、便秘、舌苔变化，单独看都像小事。",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "打鼾、咳嗽、起夜、口干、"
+          },
+          {
+            "index": 2,
+            "text": "便秘、舌苔变化，单独看都"
+          },
+          {
+            "index": 3,
+            "text": "像小事。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "打鼾、咳嗽、起夜、口干、便秘、舌苔变化，单独看都像小事。",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "打鼾、咳嗽、起夜、口干、便秘、舌苔变化，单独看都像小事。",
+              "fontSize": 19,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cj6tovah",
+      "id": "8",
+      "bbox": [
+        98,
+        387,
+        8,
+        8
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/54zidony",
+      "id": "9",
+      "bbox": [
+        118,
+        378,
+        264,
+        86
+      ],
+      "geometry": "rect",
+      "text": "连续出现时，它们可能已经在提醒用户调整生活方式。",
+      "textPreview": "连续出现时，它们可能已经在提醒用户调整生活方式。",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "连续出现时，它们可能已经"
+          },
+          {
+            "index": 2,
+            "text": "在提醒用户调整生活方式。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "连续出现时，它们可能已经在提醒用户调整生活方式。",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "连续出现时，它们可能已经在提醒用户调整生活方式。",
+              "fontSize": 19,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/t47y1kre",
+      "id": "10",
+      "bbox": [
+        456,
+        190,
+        340,
+        350
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#F5FBF7",
+      "lineColor": "#C9DED4",
+      "lineWidth": 1
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0je9cvix",
+      "id": "11",
+      "bbox": [
+        484,
+        218,
+        284,
+        44
+      ],
+      "geometry": "rect",
+      "text": "健康 App 停在报告",
+      "textPreview": "健康 App 停在报告",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 25,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "健康 App 停在报告"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "健康 App 停在报告",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "健康 App 停在报告",
+              "fontSize": 25,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/byhgn29g",
+      "id": "12",
+      "bbox": [
+        484,
+        301,
+        8,
+        8
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/idonyd0z",
+      "id": "13",
+      "bbox": [
+        504,
+        292,
+        264,
+        86
+      ],
+      "geometry": "rect",
+      "text": "睡眠分数、步数、心率、卡路里很常见。",
+      "textPreview": "睡眠分数、步数、心率、卡路里很常见。",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "睡眠分数、步数、心率、卡"
+          },
+          {
+            "index": 2,
+            "text": "路里很常见。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "睡眠分数、步数、心率、卡路里很常见。",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "睡眠分数、步数、心率、卡路里很常见。",
+              "fontSize": 19,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tcj6tova",
+      "id": "14",
+      "bbox": [
+        484,
+        387,
+        8,
+        8
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0rqd4vmt",
+      "id": "15",
+      "bbox": [
+        504,
+        378,
+        264,
+        86
+      ],
+      "geometry": "rect",
+      "text": "用户真正想知道的是咖啡、运动、饮食和恢复怎么安排。",
+      "textPreview": "用户真正想知道的是咖啡、运动、饮食和恢复怎么安排。",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "用户真正想知道的是咖啡、"
+          },
+          {
+            "index": 2,
+            "text": "运动、饮食和恢复怎么安排"
+          },
+          {
+            "index": 3,
+            "text": "。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "用户真正想知道的是咖啡、运动、饮食和恢复怎么安排。",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "用户真正想知道的是咖啡、运动、饮食和恢复怎么安排。",
+              "fontSize": 19,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/b6xkf6dc",
+      "id": "16",
+      "bbox": [
+        842,
+        190,
+        340,
+        350
+      ],
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#C9DED4",
+      "lineWidth": 1
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/il0rqd4v",
+      "id": "17",
+      "bbox": [
+        870,
+        218,
+        284,
+        44
+      ],
+      "geometry": "rect",
+      "text": "私密小问题没人持续看",
+      "textPreview": "私密小问题没人持续看",
+      "resolvedFontSize": 25,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 25,
+        "typeface": "+mn-lt",
+        "color": "#10201A",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "私密小问题没人持续看"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "私密小问题没人持续看",
+          "resolvedTextStyle": {
+            "fontSize": 25,
+            "color": "#10201A",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "私密小问题没人持续看",
+              "fontSize": 25,
+              "color": "#10201A",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tovahoza",
+      "id": "18",
+      "bbox": [
+        870,
+        301,
+        8,
+        8
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/032lszqt",
+      "id": "19",
+      "bbox": [
+        890,
+        292,
+        264,
+        86
+      ],
+      "geometry": "rect",
+      "text": "排便、口气、舌苔、睡眠差不一定立刻就医。",
+      "textPreview": "排便、口气、舌苔、睡眠差不一定立刻就医。",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "排便、口气、舌苔、睡眠差"
+          },
+          {
+            "index": 2,
+            "text": "不一定立刻就医。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "排便、口气、舌苔、睡眠差不一定立刻就医。",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "排便、口气、舌苔、睡眠差不一定立刻就医。",
+              "fontSize": 19,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/czed8v6p",
+      "id": "20",
+      "bbox": [
+        870,
+        387,
+        8,
+        8
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#38A169",
+      "lineColor": "#38A169",
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5kb6xkf6",
+      "id": "21",
+      "bbox": [
+        890,
+        378,
+        264,
+        86
+      ],
+      "geometry": "rect",
+      "text": "但这些高频问题每天影响状态，也最适合做趋势观察。",
+      "textPreview": "但这些高频问题每天影响状态，也最适合做趋势观察。",
+      "resolvedFontSize": 19,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 19,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "但这些高频问题每天影响状"
+          },
+          {
+            "index": 2,
+            "text": "态，也最适合做趋势观察。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "但这些高频问题每天影响状态，也最适合做趋势观察。",
+          "resolvedTextStyle": {
+            "fontSize": 19,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "但这些高频问题每天影响状态，也最适合做趋势观察。",
+              "fontSize": 19,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ytsvu9kn",
+      "id": "22",
+      "bbox": [
+        112,
+        585,
+        1040,
+        40
+      ],
+      "geometry": "rect",
+      "text": "SenseLoop 的切入点：把身体每天释放的细微信号，翻译成用户能执行的一天计划。",
+      "textPreview": "SenseLoop 的切入点：把身体每天释放的细微信号，翻译成用户能执行的一天计划。",
+      "resolvedFontSize": 24,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 24,
+        "typeface": "+mn-lt",
+        "color": "#38A169",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SenseLoop 的切入点：把身体每天释放的细微信号，翻译成用户能执行的一天计划。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SenseLoop 的切入点：把身体每天释放的细微信号，翻译成用户能执行的一天计划。",
+          "resolvedTextStyle": {
+            "fontSize": 24,
+            "color": "#38A169",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SenseLoop 的切入点：把身体每天释放的细微信号，翻译成用户能执行的一天计划。",
+              "fontSize": 24,
+              "color": "#38A169",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/neloj2t8",
+      "id": "23",
+      "bbox": [
+        70,
+        678,
+        260,
+        22
+      ],
+      "geometry": "rect",
+      "text": "anker-SenseLoop 观息",
+      "textPreview": "anker-SenseLoop 观息",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "anker-SenseLoop 观息"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "anker-SenseLoop 观息",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#587068",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "anker-SenseLoop 观息",
+              "fontSize": 13,
+              "color": "#587068",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cbulwval",
+      "id": "24",
+      "bbox": [
+        1168,
+        678,
+        44,
+        22
+      ],
+      "geometry": "rect",
+      "text": "02",
+      "textPreview": "02",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "+mn-lt",
+        "color": "#587068",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "02"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "02",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "color": "#587068",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "02",
+              "fontSize": 13,
+              "color": "#587068",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}
