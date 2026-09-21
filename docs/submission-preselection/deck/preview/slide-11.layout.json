@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/vnwlrt",
-    "id": "vnwlrt",
+    "aid": "sl/re1w7mp0",
+    "id": "re1w7mp0",
     "slide": 11,
-    "layoutId": "5055eea5-a964-4833-9173-4233fdd43435",
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
     "masterLayoutName": "Master",
     "backgroundColor": "#F7FBF8",
     "frame": {
@@ -27,10 +27,6 @@
       "accent4": "#0F9ED5",
       "accent5": "#A02B93",
       "accent6": "#4EA72E",
-      "bg1": "#FFFFFF",
-      "bg2": "#000000",
-      "tx1": "#1F1F1F",
-      "tx2": "#FFFFFF",
       "dk1": "#000000",
       "lt1": "#FFFFFF",
       "dk2": "#0E2841",
@@ -38,22 +34,36 @@
       "hlink": "#467886",
       "folHlink": "#96607D"
     },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
     "typefaces": [
-      "+mn-lt"
+      "Calibri",
+      "Calibri Light"
     ]
   },
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "5055eea5-a964-4833-9173-4233fdd43435",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -75,13 +85,12 @@
       "geometry": "rect",
       "text": "24 小时现场开发计划很清晰",
       "textPreview": "24 小时现场开发计划很清晰",
-      "resolvedFontSize": 38,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 38,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -116,10 +125,10 @@
               "text": "24 小时现场开发计划很清晰",
               "fontSize": 38,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -140,12 +149,12 @@
       "geometry": "rect",
       "text": "当前原型稳定可演示，现场时间用于增强真实硬件与真实数据。",
       "textPreview": "当前原型稳定可演示，现场时间用于增强真实硬件与真实数据。",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -178,10 +187,10 @@
               "index": 1,
               "text": "当前原型稳定可演示，现场时间用于增强真实硬件与真实数据。",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -240,9 +249,8 @@
       "resolvedTextStyle": {
         "anchor": 1,
         "fontSize": 24,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -277,10 +285,10 @@
               "text": "优先增强",
               "fontSize": 24,
               "color": "#38A169",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -301,12 +309,12 @@
       "geometry": "rect",
       "text": "接入 soundcore Work SDK 或真实录音文件，把声音事件接入日报",
       "textPreview": "接入 soundcore Work SDK 或真实录音文件，把声音事件接入日报",
-      "resolvedFontSize": 20,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 20,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -343,10 +351,10 @@
               "index": 1,
               "text": "接入 soundcore Work SDK 或真实录音文件，把声音事件接入日报",
               "fontSize": 20,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -388,9 +396,8 @@
       "resolvedTextStyle": {
         "anchor": 1,
         "fontSize": 24,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -425,10 +432,10 @@
               "text": "可选增强",
               "fontSize": 24,
               "color": "#38A169",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -449,12 +456,12 @@
       "geometry": "rect",
       "text": "加入音频上传、图片上传、LLM 文案润色、eufy 非隐私视觉事件",
       "textPreview": "加入音频上传、图片上传、LLM 文案润色、eufy 非隐私视觉事件",
-      "resolvedFontSize": 20,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 20,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -491,10 +498,10 @@
               "index": 1,
               "text": "加入音频上传、图片上传、LLM 文案润色、eufy 非隐私视觉事件",
               "fontSize": 20,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -536,9 +543,8 @@
       "resolvedTextStyle": {
         "anchor": 1,
         "fontSize": 24,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -573,10 +579,10 @@
               "text": "Fallback",
               "fontSize": 24,
               "color": "#38A169",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -597,12 +603,12 @@
       "geometry": "rect",
       "text": "无 SDK 用 mock adapter，无 API Key 用本地规则，无网络可本地运行",
       "textPreview": "无 SDK 用 mock adapter，无 API Key 用本地规则，无网络可本地运行",
-      "resolvedFontSize": 20,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 20,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -639,10 +645,10 @@
               "index": 1,
               "text": "无 SDK 用 mock adapter，无 API Key 用本地规则，无网络可本地运行",
               "fontSize": 20,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -669,19 +675,22 @@
       "order": 14,
       "kind": "image",
       "scope": "slide",
-      "aid": "im/6psfil0r",
-      "id": "14",
+      "aid": "im/neloj2t8",
+      "id": "20",
       "bbox": [
         905,
         214,
         180,
         180
       ],
-      "alt": "Demo QR code",
       "contentType": "image/png",
-      "imageFit": "contain",
       "asset": {
-        "assetId": "584807d7-47e3-477d-a6f3-303145cffe21",
+        "assetId": "/ppt/media/image2.png",
+        "contentType": "image/png",
+        "byteLength": 975
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image2.png",
         "contentType": "image/png",
         "byteLength": 975
       }
@@ -701,14 +710,13 @@
       "geometry": "rect",
       "text": "扫码打开 Demo",
       "textPreview": "扫码打开 Demo",
-      "resolvedFontSize": 22,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 22,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
-        "alignment": "center",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
           "top": 4.8,
@@ -742,10 +750,10 @@
               "text": "扫码打开 Demo",
               "fontSize": 22,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "center"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -766,13 +774,13 @@
       "geometry": "rect",
       "text": "https://13-57-166-217.sslip.io/senseloop/",
       "textPreview": "https://13-57-166-217.sslip.io/senseloop/",
-      "resolvedFontSize": 15,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 15,
-        "typeface": "+mn-lt",
-        "color": "#587068",
-        "alignment": "center",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
           "top": 4.8,
@@ -808,10 +816,10 @@
               "index": 1,
               "text": "https://13-57-166-217.sslip.io/senseloop/",
               "fontSize": 15,
-              "color": "#587068",
-              "alignment": "center"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -836,10 +844,9 @@
       "resolvedTextStyle": {
         "anchor": 1,
         "fontSize": 24,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
-        "alignment": "center",
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
           "top": 4.8,
@@ -873,10 +880,10 @@
               "text": "最终目标：用 Anker 官方硬件验证核心闭环，再演进为 SenseLoop 健康穿戴产品线。",
               "fontSize": 24,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "center"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -897,12 +904,12 @@
       "geometry": "rect",
       "text": "anker-SenseLoop 观息",
       "textPreview": "anker-SenseLoop 观息",
-      "resolvedFontSize": 13,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 13,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -935,10 +942,10 @@
               "index": 1,
               "text": "anker-SenseLoop 观息",
               "fontSize": 13,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -959,13 +966,13 @@
       "geometry": "rect",
       "text": "11",
       "textPreview": "11",
-      "resolvedFontSize": 13,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 13,
-        "typeface": "+mn-lt",
-        "color": "#587068",
-        "alignment": "right",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
           "top": 4.8,
@@ -997,10 +1004,10 @@
               "index": 1,
               "text": "11",
               "fontSize": 13,
-              "color": "#587068",
-              "alignment": "right"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],

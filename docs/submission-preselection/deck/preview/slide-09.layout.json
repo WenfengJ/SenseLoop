@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/ev60k0",
-    "id": "ev60k0",
+    "aid": "sl/qh0fepkz",
+    "id": "qh0fepkz",
     "slide": 9,
-    "layoutId": "5055eea5-a964-4833-9173-4233fdd43435",
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
     "masterLayoutName": "Master",
     "backgroundColor": "#FFFFFF",
     "frame": {
@@ -27,10 +27,6 @@
       "accent4": "#0F9ED5",
       "accent5": "#A02B93",
       "accent6": "#4EA72E",
-      "bg1": "#FFFFFF",
-      "bg2": "#000000",
-      "tx1": "#1F1F1F",
-      "tx2": "#FFFFFF",
       "dk1": "#000000",
       "lt1": "#FFFFFF",
       "dk2": "#0E2841",
@@ -38,22 +34,36 @@
       "hlink": "#467886",
       "folHlink": "#96607D"
     },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
     "typefaces": [
-      "+mn-lt"
+      "Calibri",
+      "Calibri Light"
     ]
   },
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "5055eea5-a964-4833-9173-4233fdd43435",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -64,7 +74,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kf6dcbul",
+      "aid": "sh/vahoza1g",
       "id": "1",
       "bbox": [
         70,
@@ -75,13 +85,12 @@
       "geometry": "rect",
       "text": "商业化价值来自每天早晨的高频入口",
       "textPreview": "商业化价值来自每天早晨的高频入口",
-      "resolvedFontSize": 38,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 38,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -116,10 +125,10 @@
               "text": "商业化价值来自每天早晨的高频入口",
               "fontSize": 38,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -129,7 +138,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/vu9knih4",
+      "aid": "sh/ovahoza1",
       "id": "2",
       "bbox": [
         70,
@@ -140,12 +149,12 @@
       "geometry": "rect",
       "text": "它不是普通睡眠 App，也不是复刻 Apple Watch，而是 Anker 可延展的健康穿戴新品类。",
       "textPreview": "它不是普通睡眠 App，也不是复刻 Apple Watch，而是 Anker 可延展的健康穿戴新品类。",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -178,10 +187,10 @@
               "index": 1,
               "text": "它不是普通睡眠 App，也不是复刻 Apple Watch，而是 Anker 可延展的健康穿戴新品类。",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -191,7 +200,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/29gr2p8n",
+      "aid": "sh/dg7adsji",
       "id": "3",
       "bbox": [
         70,
@@ -208,7 +217,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/d8bat47y",
+      "aid": "sh/6hcrmhk3",
       "id": "4",
       "bbox": [
         92,
@@ -225,7 +234,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/knih4byh",
+      "aid": "sh/z25kb6xk",
       "id": "5",
       "bbox": [
         120,
@@ -236,13 +245,12 @@
       "geometry": "rect",
       "text": "硬件销售",
       "textPreview": "硬件销售",
-      "resolvedFontSize": 26,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 26,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -277,10 +285,10 @@
               "text": "硬件销售",
               "fontSize": 26,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -290,7 +298,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/v6psfil0",
+      "aid": "sh/onyd0z61",
       "id": "6",
       "bbox": [
         120,
@@ -301,12 +309,12 @@
       "geometry": "rect",
       "text": "SenseLoop Watch / Band / Pendant，承接 soundcore 与 eufy 的能力演进",
       "textPreview": "SenseLoop Watch / Band / Pendant，承接 soundcore 与 eufy 的能力演进",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -343,10 +351,10 @@
               "index": 1,
               "text": "SenseLoop Watch / Band / Pendant，承接 soundcore 与 eufy 的能力演进",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -356,7 +364,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/2lszqtcj",
+      "aid": "sh/d8v6psfi",
       "id": "7",
       "bbox": [
         652,
@@ -373,7 +381,7 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/dcbulwva",
+      "aid": "sh/6dcbulwv",
       "id": "8",
       "bbox": [
         680,
@@ -384,13 +392,12 @@
       "geometry": "rect",
       "text": "App 订阅",
       "textPreview": "App 订阅",
-      "resolvedFontSize": 26,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 26,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -425,10 +432,10 @@
               "text": "App 订阅",
               "fontSize": 26,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -438,7 +445,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kre1w7mp",
+      "aid": "sh/vy90je9c",
       "id": "9",
       "bbox": [
         680,
@@ -449,12 +456,12 @@
       "geometry": "rect",
       "text": "高级日报、长期趋势、个性化健康建议、减脂与恢复计划",
       "textPreview": "高级日报、长期趋势、个性化健康建议、减脂与恢复计划",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -491,10 +498,10 @@
               "index": 1,
               "text": "高级日报、长期趋势、个性化健康建议、减脂与恢复计划",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -504,7 +511,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/6psfil0r",
+      "aid": "sh/nuxc3ylc",
       "id": "10",
       "bbox": [
         92,
@@ -521,7 +528,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/val87ed8",
+      "aid": "sh/y90je9cv",
       "id": "11",
       "bbox": [
         120,
@@ -532,13 +539,12 @@
       "geometry": "rect",
       "text": "家庭健康",
       "textPreview": "家庭健康",
-      "resolvedFontSize": 26,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 26,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -573,10 +579,10 @@
               "text": "家庭健康",
               "fontSize": 26,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -586,7 +592,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kre1w7mp",
+      "aid": "sh/5wjudg7a",
       "id": "12",
       "bbox": [
         120,
@@ -597,12 +603,12 @@
       "geometry": "rect",
       "text": "老人简版报告、家人同步、连续异常提醒",
       "textPreview": "老人简版报告、家人同步、连续异常提醒",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -635,10 +641,10 @@
               "index": 1,
               "text": "老人简版报告、家人同步、连续异常提醒",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -648,7 +654,7 @@
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/dcbulwva",
+      "aid": "sh/gbq1oryt",
       "id": "13",
       "bbox": [
         652,
@@ -665,7 +671,7 @@
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/2x4nap4r",
+      "aid": "sh/n29gr2p8",
       "id": "14",
       "bbox": [
         680,
@@ -676,13 +682,12 @@
       "geometry": "rect",
       "text": "服务合作",
       "textPreview": "服务合作",
-      "resolvedFontSize": 26,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 26,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -717,10 +722,10 @@
               "text": "服务合作",
               "fontSize": 26,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -730,7 +735,7 @@
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/vixczed8",
+      "aid": "sh/yhgn29gr",
       "id": "15",
       "bbox": [
         680,
@@ -741,12 +746,12 @@
       "geometry": "rect",
       "text": "营养、运动、睡眠改善、健康管理服务",
       "textPreview": "营养、运动、睡眠改善、健康管理服务",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -779,10 +784,10 @@
               "index": 1,
               "text": "营养、运动、睡眠改善、健康管理服务",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -792,7 +797,7 @@
       "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/k3q5o7qp",
+      "aid": "sh/58z25kb6",
       "id": "16",
       "bbox": [
         110,
@@ -807,10 +812,9 @@
       "resolvedTextStyle": {
         "anchor": 1,
         "fontSize": 24,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
-        "alignment": "center",
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
           "top": 4.8,
@@ -844,10 +848,10 @@
               "text": "可卖的不是单个传感器，而是“读懂身体信号并给出今日行动”的长期关系。",
               "fontSize": 24,
               "color": "#38A169",
-              "bold": true,
-              "alignment": "center"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -857,7 +861,7 @@
       "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/donyd0z6",
+      "aid": "sh/gn29gr2p",
       "id": "17",
       "bbox": [
         70,
@@ -868,12 +872,12 @@
       "geometry": "rect",
       "text": "anker-SenseLoop 观息",
       "textPreview": "anker-SenseLoop 观息",
-      "resolvedFontSize": 13,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 13,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -906,10 +910,10 @@
               "index": 1,
               "text": "anker-SenseLoop 观息",
               "fontSize": 13,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -919,7 +923,7 @@
       "order": 18,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/29gr2p8n",
+      "aid": "sh/neloj2t8",
       "id": "18",
       "bbox": [
         1168,
@@ -930,13 +934,13 @@
       "geometry": "rect",
       "text": "09",
       "textPreview": "09",
-      "resolvedFontSize": 13,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 13,
-        "typeface": "+mn-lt",
-        "color": "#587068",
-        "alignment": "right",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
           "top": 4.8,
@@ -968,10 +972,10 @@
               "index": 1,
               "text": "09",
               "fontSize": 13,
-              "color": "#587068",
-              "alignment": "right"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],

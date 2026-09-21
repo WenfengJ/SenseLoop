@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/302sva",
-    "id": "302sva",
+    "aid": "sl/fu18jqh0",
+    "id": "fu18jqh0",
     "slide": 8,
-    "layoutId": "5055eea5-a964-4833-9173-4233fdd43435",
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
     "masterLayoutName": "Master",
     "backgroundColor": "#FFFFFF",
     "frame": {
@@ -27,10 +27,6 @@
       "accent4": "#0F9ED5",
       "accent5": "#A02B93",
       "accent6": "#4EA72E",
-      "bg1": "#FFFFFF",
-      "bg2": "#000000",
-      "tx1": "#1F1F1F",
-      "tx2": "#FFFFFF",
       "dk1": "#000000",
       "lt1": "#FFFFFF",
       "dk2": "#0E2841",
@@ -38,22 +34,36 @@
       "hlink": "#467886",
       "folHlink": "#96607D"
     },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
     "typefaces": [
-      "+mn-lt"
+      "Calibri",
+      "Calibri Light"
     ]
   },
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "5055eea5-a964-4833-9173-4233fdd43435",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -64,7 +74,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/5sneloj2",
+      "aid": "sh/1032lszq",
       "id": "1",
       "bbox": [
         70,
@@ -75,13 +85,12 @@
       "geometry": "rect",
       "text": "隐私和医疗边界会直接影响评审信任",
       "textPreview": "隐私和医疗边界会直接影响评审信任",
-      "resolvedFontSize": 38,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 38,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -116,10 +125,10 @@
               "text": "隐私和医疗边界会直接影响评审信任",
               "fontSize": 38,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -129,7 +138,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/u54zidon",
+      "aid": "sh/u9knih4b",
       "id": "2",
       "bbox": [
         70,
@@ -140,12 +149,12 @@
       "geometry": "rect",
       "text": "健康类产品必须先把不能做什么讲清楚，评委才会相信能落地。",
       "textPreview": "健康类产品必须先把不能做什么讲清楚，评委才会相信能落地。",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -178,10 +187,10 @@
               "index": 1,
               "text": "健康类产品必须先把不能做什么讲清楚，评委才会相信能落地。",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -191,7 +200,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/nqxs72x4",
+      "aid": "sh/judg7ads",
       "id": "3",
       "bbox": [
         70,
@@ -208,7 +217,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/czed8v6p",
+      "aid": "sh/c7u54zid",
       "id": "4",
       "bbox": [
         86,
@@ -225,7 +234,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/5kb6xkf6",
+      "aid": "sh/1orytsvu",
       "id": "5",
       "bbox": [
         674,
@@ -242,7 +251,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ytsvu9kn",
+      "aid": "sh/u18jqh0f",
       "id": "6",
       "bbox": [
         118,
@@ -253,13 +262,12 @@
       "geometry": "rect",
       "text": "健康表达边界",
       "textPreview": "健康表达边界",
-      "resolvedFontSize": 27,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 27,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -294,10 +302,10 @@
               "text": "健康表达边界",
               "fontSize": 27,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -307,7 +315,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/neloj2t8",
+      "aid": "sh/jm1cfa9w",
       "id": "7",
       "bbox": [
         118,
@@ -324,7 +332,7 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/gn29gr2p",
+      "aid": "sh/cvixczed",
       "id": "8",
       "bbox": [
         138,
@@ -335,12 +343,12 @@
       "geometry": "rect",
       "text": "不做疾病诊断，不承诺治疗效果。",
       "textPreview": "不做疾病诊断，不承诺治疗效果。",
-      "resolvedFontSize": 19,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 19,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -373,10 +381,10 @@
               "index": 1,
               "text": "不做疾病诊断，不承诺治疗效果。",
               "fontSize": 19,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -386,7 +394,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/58z25kb6",
+      "aid": "sh/5gbq1ory",
       "id": "9",
       "bbox": [
         118,
@@ -403,7 +411,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/d8bat47y",
+      "aid": "sh/18jqh0fe",
       "id": "10",
       "bbox": [
         138,
@@ -414,12 +422,12 @@
       "geometry": "rect",
       "text": "连续异常只提示继续观察或咨询专业医生。",
       "textPreview": "连续异常只提示继续观察或咨询专业医生。",
-      "resolvedFontSize": 19,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 19,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -452,10 +460,10 @@
               "index": 1,
               "text": "连续异常只提示继续观察或咨询专业医生。",
               "fontSize": 19,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -465,7 +473,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/knih4byh",
+      "aid": "sh/8nqxs72x",
       "id": "11",
       "bbox": [
         118,
@@ -482,7 +490,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/v6psfil0",
+      "aid": "sh/j2t83itg",
       "id": "12",
       "bbox": [
         138,
@@ -493,12 +501,12 @@
       "geometry": "rect",
       "text": "原始音频优先本地处理，报告默认展示结构化标签。",
       "textPreview": "原始音频优先本地处理，报告默认展示结构化标签。",
-      "resolvedFontSize": 19,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 19,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -535,10 +543,10 @@
               "index": 1,
               "text": "原始音频优先本地处理，报告默认展示结构化标签。",
               "fontSize": 19,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -548,7 +556,7 @@
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/2lszqtcj",
+      "aid": "sh/qh0fepkz",
       "id": "13",
       "bbox": [
         118,
@@ -565,7 +573,7 @@
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/d0z61032",
+      "aid": "sh/1w7mp0bi",
       "id": "14",
       "bbox": [
         138,
@@ -576,12 +584,12 @@
       "geometry": "rect",
       "text": "排便、舌苔、口气等敏感信号必须用户主动触发。",
       "textPreview": "排便、舌苔、口气等敏感信号必须用户主动触发。",
-      "resolvedFontSize": 19,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 19,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -618,10 +626,10 @@
               "index": 1,
               "text": "排便、舌苔、口气等敏感信号必须用户主动触发。",
               "fontSize": 19,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -631,7 +639,7 @@
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kf6dcbul",
+      "aid": "sh/8bat47y1",
       "id": "15",
       "bbox": [
         706,
@@ -642,13 +650,12 @@
       "geometry": "rect",
       "text": "隐私保护边界",
       "textPreview": "隐私保护边界",
-      "resolvedFontSize": 27,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 27,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -683,10 +690,10 @@
               "text": "隐私保护边界",
               "fontSize": 27,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -696,7 +703,7 @@
       "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/vu9knih4",
+      "aid": "sh/jqh0fepk",
       "id": "16",
       "bbox": [
         706,
@@ -713,7 +720,7 @@
       "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/29gr2p8n",
+      "aid": "sh/q5o7qpg3",
       "id": "17",
       "bbox": [
         726,
@@ -724,12 +731,12 @@
       "geometry": "rect",
       "text": "eufy 只用于非隐私视觉场景。",
       "textPreview": "eufy 只用于非隐私视觉场景。",
-      "resolvedFontSize": 19,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 19,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -762,10 +769,10 @@
               "index": 1,
               "text": "eufy 只用于非隐私视觉场景。",
               "fontSize": 19,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -775,7 +782,7 @@
       "order": 18,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/donyd0z6",
+      "aid": "sh/1kre1w7m",
       "id": "18",
       "bbox": [
         706,
@@ -792,7 +799,7 @@
       "order": 19,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/k3q5o7qp",
+      "aid": "sh/c3ylc7u5",
       "id": "19",
       "bbox": [
         726,
@@ -803,12 +810,12 @@
       "geometry": "rect",
       "text": "不自动拍摄厕所、大便等敏感画面。",
       "textPreview": "不自动拍摄厕所、大便等敏感画面。",
-      "resolvedFontSize": 19,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 19,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -841,10 +848,10 @@
               "index": 1,
               "text": "不自动拍摄厕所、大便等敏感画面。",
               "fontSize": 19,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -854,7 +861,7 @@
       "order": 20,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kb6xkf6d",
+      "aid": "sh/orytsvu9",
       "id": "20",
       "bbox": [
         706,
@@ -871,7 +878,7 @@
       "order": 21,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/9w3m94fu",
+      "aid": "sh/hcrmhk3q",
       "id": "21",
       "bbox": [
         726,
@@ -882,12 +889,12 @@
       "geometry": "rect",
       "text": "家庭共享只展示摘要和趋势。",
       "textPreview": "家庭共享只展示摘要和趋势。",
-      "resolvedFontSize": 19,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 19,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -920,10 +927,10 @@
               "index": 1,
               "text": "家庭共享只展示摘要和趋势。",
               "fontSize": 19,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -933,7 +940,7 @@
       "order": 22,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/25kb6xkf",
+      "aid": "sh/al87ed8b",
       "id": "22",
       "bbox": [
         706,
@@ -950,7 +957,7 @@
       "order": 23,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/rqd4vmtw",
+      "aid": "sh/z61032ls",
       "id": "23",
       "bbox": [
         726,
@@ -961,12 +968,12 @@
       "geometry": "rect",
       "text": "用户可以删除记录，现场可用 mock 数据 fallback。",
       "textPreview": "用户可以删除记录，现场可用 mock 数据 fallback。",
-      "resolvedFontSize": 19,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 19,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -1003,10 +1010,10 @@
               "index": 1,
               "text": "用户可以删除记录，现场可用 mock 数据 fallback。",
               "fontSize": 19,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -1016,7 +1023,7 @@
       "order": 24,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kzupwb2h",
+      "aid": "sh/sfil0rqd",
       "id": "24",
       "bbox": [
         70,
@@ -1027,12 +1034,12 @@
       "geometry": "rect",
       "text": "anker-SenseLoop 观息",
       "textPreview": "anker-SenseLoop 观息",
-      "resolvedFontSize": 13,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 13,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -1065,10 +1072,10 @@
               "index": 1,
               "text": "anker-SenseLoop 观息",
               "fontSize": 13,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -1078,7 +1085,7 @@
       "order": 25,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/9knih4by",
+      "aid": "sh/h0fepkzu",
       "id": "25",
       "bbox": [
         1168,
@@ -1089,13 +1096,13 @@
       "geometry": "rect",
       "text": "08",
       "textPreview": "08",
-      "resolvedFontSize": 13,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 13,
-        "typeface": "+mn-lt",
-        "color": "#587068",
-        "alignment": "right",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
           "top": 4.8,
@@ -1127,10 +1134,10 @@
               "index": 1,
               "text": "08",
               "fontSize": 13,
-              "color": "#587068",
-              "alignment": "right"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],

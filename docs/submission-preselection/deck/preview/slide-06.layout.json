@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/87dbmm",
-    "id": "87dbmm",
+    "aid": "sl/58z25kb6",
+    "id": "58z25kb6",
     "slide": 6,
-    "layoutId": "5055eea5-a964-4833-9173-4233fdd43435",
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
     "masterLayoutName": "Master",
     "backgroundColor": "#FFFFFF",
     "frame": {
@@ -27,10 +27,6 @@
       "accent4": "#0F9ED5",
       "accent5": "#A02B93",
       "accent6": "#4EA72E",
-      "bg1": "#FFFFFF",
-      "bg2": "#000000",
-      "tx1": "#1F1F1F",
-      "tx2": "#FFFFFF",
       "dk1": "#000000",
       "lt1": "#FFFFFF",
       "dk2": "#0E2841",
@@ -38,22 +34,36 @@
       "hlink": "#467886",
       "folHlink": "#96607D"
     },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
     "typefaces": [
-      "+mn-lt"
+      "Calibri",
+      "Calibri Light"
     ]
   },
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "5055eea5-a964-4833-9173-4233fdd43435",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -64,7 +74,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/hgn29gr2",
+      "aid": "sh/9cvixcze",
       "id": "1",
       "bbox": [
         70,
@@ -75,13 +85,12 @@
       "geometry": "rect",
       "text": "技术架构按“可跑通、可替换、可增强”设计",
       "textPreview": "技术架构按“可跑通、可替换、可增强”设计",
-      "resolvedFontSize": 38,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 38,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -116,10 +125,10 @@
               "text": "技术架构按“可跑通、可替换、可增强”设计",
               "fontSize": 38,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -129,7 +138,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ap4r65wj",
+      "aid": "sh/ylc7u54z",
       "id": "2",
       "bbox": [
         70,
@@ -140,12 +149,12 @@
       "geometry": "rect",
       "text": "没有 SDK 时用 mock adapter 稳定演示，拿到 SDK 后替换采集层即可。",
       "textPreview": "没有 SDK 时用 mock adapter 稳定演示，拿到 SDK 后替换采集层即可。",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -178,10 +187,10 @@
               "index": 1,
               "text": "没有 SDK 时用 mock adapter 稳定演示，拿到 SDK 后替换采集层即可。",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -191,7 +200,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/za1gvy90",
+      "aid": "sh/r65wjudg",
       "id": "3",
       "bbox": [
         70,
@@ -208,7 +217,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/s36hcrmh",
+      "aid": "sh/g3ex0nux",
       "id": "4",
       "bbox": [
         135,
@@ -225,7 +234,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/hoza1gvy",
+      "aid": "sh/5o7qpg3e",
       "id": "5",
       "bbox": [
         165,
@@ -236,13 +245,12 @@
       "geometry": "rect",
       "text": "采集适配层",
       "textPreview": "采集适配层",
-      "resolvedFontSize": 21,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 21,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -277,10 +285,10 @@
               "text": "采集适配层",
               "fontSize": 21,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -290,7 +298,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/a1gvy90j",
+      "aid": "sh/yxobm58z",
       "id": "6",
       "bbox": [
         410,
@@ -301,12 +309,12 @@
       "geometry": "rect",
       "text": "soundcore Work / 上传音频 / App 输入 / eufy placeholder",
       "textPreview": "soundcore Work / 上传音频 / App 输入 / eufy placeholder",
-      "resolvedFontSize": 20,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 20,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -339,10 +347,10 @@
               "index": 1,
               "text": "soundcore Work / 上传音频 / App 输入 / eufy placeholder",
               "fontSize": 20,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -352,7 +360,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zidonyd0",
+      "aid": "sh/nih4byhg",
       "id": "7",
       "bbox": [
         632,
@@ -369,7 +377,7 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/s72x4nap",
+      "aid": "sh/g7adsji5",
       "id": "8",
       "bbox": [
         135,
@@ -386,7 +394,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/lszqtcj6",
+      "aid": "sh/9s36hcrm",
       "id": "9",
       "bbox": [
         165,
@@ -397,13 +405,12 @@
       "geometry": "rect",
       "text": "信号标签层",
       "textPreview": "信号标签层",
-      "resolvedFontSize": 21,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 21,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -438,10 +445,10 @@
               "text": "信号标签层",
               "fontSize": 21,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -451,7 +458,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/h0fepkzu",
+      "aid": "sh/d8v6psfi",
       "id": "10",
       "bbox": [
         410,
@@ -462,12 +469,12 @@
       "geometry": "rect",
       "text": "SleepAudioEvent、DietSignal、StoolSignal、TongueSignal",
       "textPreview": "SleepAudioEvent、DietSignal、StoolSignal、TongueSignal",
-      "resolvedFontSize": 20,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 20,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -500,10 +507,10 @@
               "index": 1,
               "text": "SleepAudioEvent、DietSignal、StoolSignal、TongueSignal",
               "fontSize": 20,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -513,7 +520,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/sfil0rqd",
+      "aid": "sh/onyd0z61",
       "id": "11",
       "bbox": [
         632,
@@ -530,7 +537,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zupwb2hw",
+      "aid": "sh/z25kb6xk",
       "id": "12",
       "bbox": [
         135,
@@ -547,7 +554,7 @@
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/a9w3m94f",
+      "aid": "sh/6hcrmhk3",
       "id": "13",
       "bbox": [
         165,
@@ -558,13 +565,12 @@
       "geometry": "rect",
       "text": "知识库规则层",
       "textPreview": "知识库规则层",
-      "resolvedFontSize": 21,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 21,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -599,10 +605,10 @@
               "text": "知识库规则层",
               "fontSize": 21,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -612,7 +618,7 @@
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/hcrmhk3q",
+      "aid": "sh/dg7adsji",
       "id": "14",
       "bbox": [
         410,
@@ -623,12 +629,12 @@
       "geometry": "rect",
       "text": "睡眠、饮食、减脂、排便、舌苔、运动恢复规则",
       "textPreview": "睡眠、饮食、减脂、排便、舌苔、运动恢复规则",
-      "resolvedFontSize": 20,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 20,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -661,10 +667,10 @@
               "index": 1,
               "text": "睡眠、饮食、减脂、排便、舌苔、运动恢复规则",
               "fontSize": 20,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -674,7 +680,7 @@
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/orytsvu9",
+      "aid": "sh/ovahoza1",
       "id": "15",
       "bbox": [
         632,
@@ -691,7 +697,7 @@
       "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/z61032ls",
+      "aid": "sh/vahoza1g",
       "id": "16",
       "bbox": [
         135,
@@ -708,7 +714,7 @@
       "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/al87ed8b",
+      "aid": "sh/6tovahoz",
       "id": "17",
       "bbox": [
         165,
@@ -719,13 +725,12 @@
       "geometry": "rect",
       "text": "报告生成层",
       "textPreview": "报告生成层",
-      "resolvedFontSize": 21,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 21,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -760,10 +765,10 @@
               "text": "报告生成层",
               "fontSize": 21,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -773,7 +778,7 @@
       "order": 18,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/hk3q5o7q",
+      "aid": "sh/dsji5sne",
       "id": "18",
       "bbox": [
         410,
@@ -784,12 +789,12 @@
       "geometry": "rect",
       "text": "用户画像 + 多模态信号 -> 今日行动建议",
       "textPreview": "用户画像 + 多模态信号 -> 今日行动建议",
-      "resolvedFontSize": 20,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 20,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -822,10 +827,10 @@
               "index": 1,
               "text": "用户画像 + 多模态信号 -> 今日行动建议",
               "fontSize": 20,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -835,7 +840,7 @@
       "order": 19,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/oza1gvy9",
+      "aid": "sh/o7qpg3ex",
       "id": "19",
       "bbox": [
         632,
@@ -852,7 +857,7 @@
       "order": 20,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/kf6dcbul",
+      "aid": "sh/kjm1cfa9",
       "id": "20",
       "bbox": [
         135,
@@ -869,7 +874,7 @@
       "order": 21,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/d0z61032",
+      "aid": "sh/94fu18jq",
       "id": "21",
       "bbox": [
         165,
@@ -880,13 +885,12 @@
       "geometry": "rect",
       "text": "展示层",
       "textPreview": "展示层",
-      "resolvedFontSize": 21,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 21,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -921,10 +925,10 @@
               "text": "展示层",
               "fontSize": 21,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -934,7 +938,7 @@
       "order": 22,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/29gr2p8n",
+      "aid": "sh/2hwfyxob",
       "id": "22",
       "bbox": [
         410,
@@ -945,12 +949,12 @@
       "geometry": "rect",
       "text": "React App、Python API、在线 Demo",
       "textPreview": "React App、Python API、在线 Demo",
-      "resolvedFontSize": 20,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 20,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -983,10 +987,10 @@
               "index": 1,
               "text": "React App、Python API、在线 Demo",
               "fontSize": 20,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -996,7 +1000,7 @@
       "order": 23,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/vu9knih4",
+      "aid": "sh/r2p8nqxs",
       "id": "23",
       "bbox": [
         70,
@@ -1007,12 +1011,12 @@
       "geometry": "rect",
       "text": "anker-SenseLoop 观息",
       "textPreview": "anker-SenseLoop 观息",
-      "resolvedFontSize": 13,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 13,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -1045,10 +1049,10 @@
               "index": 1,
               "text": "anker-SenseLoop 观息",
               "fontSize": 13,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -1058,7 +1062,7 @@
       "order": 24,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/knih4byh",
+      "aid": "sh/gvy90je9",
       "id": "24",
       "bbox": [
         1168,
@@ -1069,13 +1073,13 @@
       "geometry": "rect",
       "text": "06",
       "textPreview": "06",
-      "resolvedFontSize": 13,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 13,
-        "typeface": "+mn-lt",
-        "color": "#587068",
-        "alignment": "right",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
           "top": 4.8,
@@ -1107,10 +1111,10 @@
               "index": 1,
               "text": "06",
               "fontSize": 13,
-              "color": "#587068",
-              "alignment": "right"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],

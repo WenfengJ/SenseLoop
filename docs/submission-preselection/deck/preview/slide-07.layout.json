@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/npk7ev",
-    "id": "npk7ev",
+    "aid": "sl/0z61032l",
+    "id": "0z61032l",
     "slide": 7,
-    "layoutId": "5055eea5-a964-4833-9173-4233fdd43435",
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
     "masterLayoutName": "Master",
     "backgroundColor": "#FFFFFF",
     "frame": {
@@ -27,10 +27,6 @@
       "accent4": "#0F9ED5",
       "accent5": "#A02B93",
       "accent6": "#4EA72E",
-      "bg1": "#FFFFFF",
-      "bg2": "#000000",
-      "tx1": "#1F1F1F",
-      "tx2": "#FFFFFF",
       "dk1": "#000000",
       "lt1": "#FFFFFF",
       "dk2": "#0E2841",
@@ -38,22 +34,36 @@
       "hlink": "#467886",
       "folHlink": "#96607D"
     },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
     "typefaces": [
-      "+mn-lt"
+      "Calibri",
+      "Calibri Light"
     ]
   },
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "5055eea5-a964-4833-9173-4233fdd43435",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -64,7 +74,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/fepkzupw",
+      "aid": "sh/qd4vmtwr",
       "id": "1",
       "bbox": [
         70,
@@ -75,13 +85,12 @@
       "geometry": "rect",
       "text": "同一夜间事件，会因为用户画像生成不同建议",
       "textPreview": "同一夜间事件，会因为用户画像生成不同建议",
-      "resolvedFontSize": 38,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 38,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -116,10 +125,10 @@
               "text": "同一夜间事件，会因为用户画像生成不同建议",
               "fontSize": 38,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -129,7 +138,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4zidonyd",
+      "aid": "sh/x4nap4r6",
       "id": "2",
       "bbox": [
         70,
@@ -140,12 +149,12 @@
       "geometry": "rect",
       "text": "这让 SenseLoop 从模板报告变成个性化健康行动助手。",
       "textPreview": "这让 SenseLoop 从模板报告变成个性化健康行动助手。",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -178,10 +187,10 @@
               "index": 1,
               "text": "这让 SenseLoop 从模板报告变成个性化健康行动助手。",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -191,7 +200,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/xkf6dcbu",
+      "aid": "sh/8jqh0fep",
       "id": "3",
       "bbox": [
         70,
@@ -208,7 +217,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/mlkjm1cf",
+      "aid": "sh/fa9w3m94",
       "id": "4",
       "bbox": [
         84,
@@ -219,13 +228,12 @@
       "geometry": "rect",
       "text": "减脂人群",
       "textPreview": "减脂人群",
-      "resolvedFontSize": 22,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 22,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -260,10 +268,10 @@
               "text": "减脂人群",
               "fontSize": 22,
               "color": "#38A169",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -273,7 +281,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/f6dcbulw",
+      "aid": "sh/qpg3ex0n",
       "id": "5",
       "bbox": [
         260,
@@ -284,12 +292,12 @@
       "geometry": "rect",
       "text": "关注 kcal、排便、水肿和训练强度",
       "textPreview": "关注 kcal、排便、水肿和训练强度",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -322,10 +330,10 @@
               "index": 1,
               "text": "关注 kcal、排便、水肿和训练强度",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -335,7 +343,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/4r65wjud",
+      "aid": "sh/xczed8v6",
       "id": "6",
       "bbox": [
         666,
@@ -352,7 +360,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/xc3ylc7u",
+      "aid": "sh/8v6psfil",
       "id": "7",
       "bbox": [
         690,
@@ -363,13 +371,12 @@
       "geometry": "rect",
       "text": "今天轻控热量，不建议硬扛高强度训练",
       "textPreview": "今天轻控热量，不建议硬扛高强度训练",
-      "resolvedFontSize": 20,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 20,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -404,10 +411,10 @@
               "text": "今天轻控热量，不建议硬扛高强度训练",
               "fontSize": 20,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -417,7 +424,7 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/m94fu18j",
+      "aid": "sh/je9cvixc",
       "id": "8",
       "bbox": [
         84,
@@ -428,13 +435,12 @@
       "geometry": "rect",
       "text": "老年人",
       "textPreview": "老年人",
-      "resolvedFontSize": 22,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 22,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -469,10 +475,10 @@
               "text": "老年人",
               "fontSize": 22,
               "color": "#38A169",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -482,7 +488,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/fu18jqh0",
+      "aid": "sh/qtcj6tov",
       "id": "9",
       "bbox": [
         260,
@@ -493,12 +499,12 @@
       "geometry": "rect",
       "text": "关注夜间咳嗽、起夜、饮食清淡和家人关怀",
       "textPreview": "关注夜间咳嗽、起夜、饮食清淡和家人关怀",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -531,10 +537,10 @@
               "index": 1,
               "text": "关注夜间咳嗽、起夜、饮食清淡和家人关怀",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -544,7 +550,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/r65wjudg",
+      "aid": "sh/svu9knih",
       "id": "10",
       "bbox": [
         666,
@@ -561,7 +567,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ylc7u54z",
+      "aid": "sh/hgn29gr2",
       "id": "11",
       "bbox": [
         690,
@@ -572,13 +578,12 @@
       "geometry": "rect",
       "text": "今天以清淡饮食和低强度活动为主",
       "textPreview": "今天以清淡饮食和低强度活动为主",
-      "resolvedFontSize": 20,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 20,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -613,10 +618,10 @@
               "text": "今天以清淡饮食和低强度活动为主",
               "fontSize": 20,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -626,7 +631,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/9cvixcze",
+      "aid": "sh/ap4r65wj",
       "id": "12",
       "bbox": [
         84,
@@ -637,13 +642,12 @@
       "geometry": "rect",
       "text": "上班族",
       "textPreview": "上班族",
-      "resolvedFontSize": 22,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 22,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -678,10 +682,10 @@
               "text": "上班族",
               "fontSize": 22,
               "color": "#38A169",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -691,7 +695,7 @@
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/gr2p8nqx",
+      "aid": "sh/za1gvy90",
       "id": "13",
       "bbox": [
         260,
@@ -702,12 +706,12 @@
       "geometry": "rect",
       "text": "关注睡眠债、咖啡因、外卖和肠胃负担",
       "textPreview": "关注睡眠债、咖啡因、外卖和肠胃负担",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -740,10 +744,10 @@
               "index": 1,
               "text": "关注睡眠债、咖啡因、外卖和肠胃负担",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -753,7 +757,7 @@
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/nih4byhg",
+      "aid": "sh/s36hcrmh",
       "id": "14",
       "bbox": [
         666,
@@ -770,7 +774,7 @@
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/yxobm58z",
+      "aid": "sh/hoza1gvy",
       "id": "15",
       "bbox": [
         690,
@@ -781,13 +785,12 @@
       "geometry": "rect",
       "text": "今天先恢复，不要用咖啡和重训硬撑",
       "textPreview": "今天先恢复，不要用咖啡和重训硬撑",
-      "resolvedFontSize": 20,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 20,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -822,10 +825,10 @@
               "text": "今天先恢复，不要用咖啡和重训硬撑",
               "fontSize": 20,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -835,7 +838,7 @@
       "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/5o7qpg3e",
+      "aid": "sh/a1gvy90j",
       "id": "16",
       "bbox": [
         84,
@@ -846,13 +849,12 @@
       "geometry": "rect",
       "text": "学生",
       "textPreview": "学生",
-      "resolvedFontSize": 22,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 22,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -887,10 +889,10 @@
               "text": "学生",
               "fontSize": 22,
               "color": "#38A169",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -900,7 +902,7 @@
       "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/g3ex0nux",
+      "aid": "sh/zidonyd0",
       "id": "17",
       "bbox": [
         260,
@@ -911,12 +913,12 @@
       "geometry": "rect",
       "text": "关注早餐、营养、专注和作息",
       "textPreview": "关注早餐、营养、专注和作息",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -949,10 +951,10 @@
               "index": 1,
               "text": "关注早餐、营养、专注和作息",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -962,7 +964,7 @@
       "order": 18,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/rmhk3q5o",
+      "aid": "sh/s72x4nap",
       "id": "18",
       "bbox": [
         666,
@@ -979,7 +981,7 @@
       "order": 19,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/y1kre1w7",
+      "aid": "sh/lszqtcj6",
       "id": "19",
       "bbox": [
         690,
@@ -990,13 +992,12 @@
       "geometry": "rect",
       "text": "今天优先补能量、稳专注，减少高糖饮料",
       "textPreview": "今天优先补能量、稳专注，减少高糖饮料",
-      "resolvedFontSize": 20,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 20,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -1031,10 +1032,10 @@
               "text": "今天优先补能量、稳专注，减少高糖饮料",
               "fontSize": 20,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -1044,7 +1045,7 @@
       "order": 20,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/6dcbulwv",
+      "aid": "sh/pg3ex0nu",
       "id": "20",
       "bbox": [
         84,
@@ -1055,13 +1056,12 @@
       "geometry": "rect",
       "text": "失眠人群",
       "textPreview": "失眠人群",
-      "resolvedFontSize": 22,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 22,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -1096,10 +1096,10 @@
               "text": "失眠人群",
               "fontSize": 22,
               "color": "#38A169",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -1109,7 +1109,7 @@
       "order": 21,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/vy90je9c",
+      "aid": "sh/wval87ed",
       "id": "21",
       "bbox": [
         260,
@@ -1120,12 +1120,12 @@
       "geometry": "rect",
       "text": "关注夜醒、环境噪声、睡前行为",
       "textPreview": "关注夜醒、环境噪声、睡前行为",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -1158,10 +1158,10 @@
               "index": 1,
               "text": "关注夜醒、环境噪声、睡前行为",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -1171,7 +1171,7 @@
       "order": 22,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/oj2t83it",
+      "aid": "sh/7adsji5s",
       "id": "22",
       "bbox": [
         666,
@@ -1188,7 +1188,7 @@
       "order": 23,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/d4vmtwra",
+      "aid": "sh/epkzupwb",
       "id": "23",
       "bbox": [
         690,
@@ -1199,13 +1199,12 @@
       "geometry": "rect",
       "text": "今天控制午睡，晚上提前进入放松流程",
       "textPreview": "今天控制午睡，晚上提前进入放松流程",
-      "resolvedFontSize": 20,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 20,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -1240,10 +1239,10 @@
               "text": "今天控制午睡，晚上提前进入放松流程",
               "fontSize": 20,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -1253,7 +1252,7 @@
       "order": 24,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/61032lsz",
+      "aid": "sh/psfil0rq",
       "id": "24",
       "bbox": [
         70,
@@ -1264,12 +1263,12 @@
       "geometry": "rect",
       "text": "anker-SenseLoop 观息",
       "textPreview": "anker-SenseLoop 观息",
-      "resolvedFontSize": 13,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 13,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -1302,10 +1301,10 @@
               "index": 1,
               "text": "anker-SenseLoop 观息",
               "fontSize": 13,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -1315,7 +1314,7 @@
       "order": 25,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/vmtwra5g",
+      "aid": "sh/w7mp0bi9",
       "id": "25",
       "bbox": [
         1168,
@@ -1326,13 +1325,13 @@
       "geometry": "rect",
       "text": "07",
       "textPreview": "07",
-      "resolvedFontSize": 13,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 13,
-        "typeface": "+mn-lt",
-        "color": "#587068",
-        "alignment": "right",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
           "top": 4.8,
@@ -1364,10 +1363,10 @@
               "index": 1,
               "text": "07",
               "fontSize": 13,
-              "color": "#587068",
-              "alignment": "right"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],

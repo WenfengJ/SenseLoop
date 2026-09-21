@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/h7jpz2",
-    "id": "h7jpz2",
+    "aid": "sl/mlkjm1cf",
+    "id": "mlkjm1cf",
     "slide": 5,
-    "layoutId": "5055eea5-a964-4833-9173-4233fdd43435",
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
     "masterLayoutName": "Master",
     "backgroundColor": "#FFFFFF",
     "frame": {
@@ -27,10 +27,6 @@
       "accent4": "#0F9ED5",
       "accent5": "#A02B93",
       "accent6": "#4EA72E",
-      "bg1": "#FFFFFF",
-      "bg2": "#000000",
-      "tx1": "#1F1F1F",
-      "tx2": "#FFFFFF",
       "dk1": "#000000",
       "lt1": "#FFFFFF",
       "dk2": "#0E2841",
@@ -38,22 +34,36 @@
       "hlink": "#467886",
       "folHlink": "#96607D"
     },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
     "typefaces": [
-      "+mn-lt"
+      "Calibri",
+      "Calibri Light"
     ]
   },
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "5055eea5-a964-4833-9173-4233fdd43435",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -64,7 +74,7 @@
       "order": 1,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/rmhk3q5o",
+      "aid": "sh/vahoza1g",
       "id": "1",
       "bbox": [
         70,
@@ -75,13 +85,12 @@
       "geometry": "rect",
       "text": "Demo 已经覆盖六个关键页面",
       "textPreview": "Demo 已经覆盖六个关键页面",
-      "resolvedFontSize": 38,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 38,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -116,10 +125,10 @@
               "text": "Demo 已经覆盖六个关键页面",
               "fontSize": 38,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -129,7 +138,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/g7adsji5",
+      "aid": "sh/ovahoza1",
       "id": "2",
       "bbox": [
         70,
@@ -140,12 +149,12 @@
       "geometry": "rect",
       "text": "前端不是静态海报，而是围绕五类用户画像与报告生成闭环设计。",
       "textPreview": "前端不是静态海报，而是围绕五类用户画像与报告生成闭环设计。",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -178,10 +187,10 @@
               "index": 1,
               "text": "前端不是静态海报，而是围绕五类用户画像与报告生成闭环设计。",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -191,7 +200,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/9s36hcrm",
+      "aid": "sh/dg7adsji",
       "id": "3",
       "bbox": [
         70,
@@ -208,7 +217,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/yd0z6103",
+      "aid": "sh/6hcrmhk3",
       "id": "4",
       "bbox": [
         82,
@@ -225,7 +234,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/rytsvu9k",
+      "aid": "sh/z25kb6xk",
       "id": "5",
       "bbox": [
         106,
@@ -236,13 +245,12 @@
       "geometry": "rect",
       "text": "首页",
       "textPreview": "首页",
-      "resolvedFontSize": 25,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 25,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -277,10 +285,10 @@
               "text": "首页",
               "fontSize": 25,
               "color": "#38A169",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -290,7 +298,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/gfmlkjm1",
+      "aid": "sh/onyd0z61",
       "id": "6",
       "bbox": [
         106,
@@ -301,12 +309,12 @@
       "geometry": "rect",
       "text": "今日状态、恢复分、四诊完成度、今日建议",
       "textPreview": "今日状态、恢复分、四诊完成度、今日建议",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -343,10 +351,10 @@
               "index": 1,
               "text": "今日状态、恢复分、四诊完成度、今日建议",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -356,7 +364,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/90je9cvi",
+      "aid": "sh/d8v6psfi",
       "id": "7",
       "bbox": [
         462,
@@ -373,7 +381,7 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ylc7u54z",
+      "aid": "sh/6dcbulwv",
       "id": "8",
       "bbox": [
         486,
@@ -384,13 +392,12 @@
       "geometry": "rect",
       "text": "睡眠页",
       "textPreview": "睡眠页",
-      "resolvedFontSize": 25,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 25,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -425,10 +432,10 @@
               "text": "睡眠页",
               "fontSize": 25,
               "color": "#38A169",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -438,7 +445,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/r65wjudg",
+      "aid": "sh/vy90je9c",
       "id": "9",
       "bbox": [
         486,
@@ -449,12 +456,12 @@
       "geometry": "rect",
       "text": "声音时间线、打鼾/咳嗽/起夜、重点标记",
       "textPreview": "声音时间线、打鼾/咳嗽/起夜、重点标记",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -491,10 +498,10 @@
               "index": 1,
               "text": "声音时间线、打鼾/咳嗽/起夜、重点标记",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -504,7 +511,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/vahoza1g",
+      "aid": "sh/nuxc3ylc",
       "id": "10",
       "bbox": [
         842,
@@ -521,7 +528,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/6tovahoz",
+      "aid": "sh/y90je9cv",
       "id": "11",
       "bbox": [
         866,
@@ -532,13 +539,12 @@
       "geometry": "rect",
       "text": "饮食页",
       "textPreview": "饮食页",
-      "resolvedFontSize": 25,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 25,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -573,10 +579,10 @@
               "text": "饮食页",
               "fontSize": 25,
               "color": "#38A169",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -586,7 +592,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/dg7adsji",
+      "aid": "sh/5wjudg7a",
       "id": "12",
       "bbox": [
         866,
@@ -597,12 +603,12 @@
       "geometry": "rect",
       "text": "拍照入口、kcal 区间估算、用户修正",
       "textPreview": "拍照入口、kcal 区间估算、用户修正",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -639,10 +645,10 @@
               "index": 1,
               "text": "拍照入口、kcal 区间估算、用户修正",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -652,7 +658,7 @@
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ovahoza1",
+      "aid": "sh/gbq1oryt",
       "id": "13",
       "bbox": [
         82,
@@ -669,7 +675,7 @@
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/z25kb6xk",
+      "aid": "sh/n29gr2p8",
       "id": "14",
       "bbox": [
         106,
@@ -680,13 +686,12 @@
       "geometry": "rect",
       "text": "信号页",
       "textPreview": "信号页",
-      "resolvedFontSize": 25,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 25,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -721,10 +726,10 @@
               "text": "信号页",
               "fontSize": 25,
               "color": "#38A169",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -734,7 +739,7 @@
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/6hcrmhk3",
+      "aid": "sh/yhgn29gr",
       "id": "15",
       "bbox": [
         106,
@@ -745,12 +750,12 @@
       "geometry": "rect",
       "text": "排便、舌苔、口气记录与隐私边界",
       "textPreview": "排便、舌苔、口气记录与隐私边界",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -787,10 +792,10 @@
               "index": 1,
               "text": "排便、舌苔、口气记录与隐私边界",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -800,7 +805,7 @@
       "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/d8v6psfi",
+      "aid": "sh/58z25kb6",
       "id": "16",
       "bbox": [
         462,
@@ -817,7 +822,7 @@
       "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/onyd0z61",
+      "aid": "sh/gn29gr2p",
       "id": "17",
       "bbox": [
         486,
@@ -828,13 +833,12 @@
       "geometry": "rect",
       "text": "日报页",
       "textPreview": "日报页",
-      "resolvedFontSize": 25,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 25,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -869,10 +873,10 @@
               "text": "日报页",
               "fontSize": 25,
               "color": "#38A169",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -882,7 +886,7 @@
       "order": 18,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/vy90je9c",
+      "aid": "sh/neloj2t8",
       "id": "18",
       "bbox": [
         486,
@@ -893,12 +897,12 @@
       "geometry": "rect",
       "text": "五类用户画像下的个性化行动建议",
       "textPreview": "五类用户画像下的个性化行动建议",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -935,10 +939,10 @@
               "index": 1,
               "text": "五类用户画像下的个性化行动建议",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -948,7 +952,7 @@
       "order": 19,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/6dcbulwv",
+      "aid": "sh/ytsvu9kn",
       "id": "19",
       "bbox": [
         842,
@@ -965,7 +969,7 @@
       "order": 20,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ahoza1gv",
+      "aid": "sh/2x4nap4r",
       "id": "20",
       "bbox": [
         866,
@@ -976,13 +980,12 @@
       "geometry": "rect",
       "text": "架构页",
       "textPreview": "架构页",
-      "resolvedFontSize": 25,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 25,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -1017,10 +1020,10 @@
               "text": "架构页",
               "fontSize": 25,
               "color": "#38A169",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -1030,7 +1033,7 @@
       "order": 21,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/32lszqtc",
+      "aid": "sh/vixczed8",
       "id": "21",
       "bbox": [
         866,
@@ -1041,12 +1044,12 @@
       "geometry": "rect",
       "text": "soundcore Work 原型到未来穿戴演进",
       "textPreview": "soundcore Work 原型到未来穿戴演进",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -1083,10 +1086,10 @@
               "index": 1,
               "text": "soundcore Work 原型到未来穿戴演进",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -1096,7 +1099,7 @@
       "order": 22,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/sneloj2t",
+      "aid": "sh/k3q5o7qp",
       "id": "22",
       "bbox": [
         110,
@@ -1107,12 +1110,12 @@
       "geometry": "rect",
       "text": "在线 Demo：https://13-57-166-217.sslip.io/senseloop/",
       "textPreview": "在线 Demo：https://13-57-166-217.sslip.io/senseloop/",
-      "resolvedFontSize": 19,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 19,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -1145,10 +1148,10 @@
               "index": 1,
               "text": "在线 Demo：https://13-57-166-217.sslip.io/senseloop/",
               "fontSize": 19,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -1158,7 +1161,7 @@
       "order": 23,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/l87ed8ba",
+      "aid": "sh/donyd0z6",
       "id": "23",
       "bbox": [
         70,
@@ -1169,12 +1172,12 @@
       "geometry": "rect",
       "text": "anker-SenseLoop 观息",
       "textPreview": "anker-SenseLoop 观息",
-      "resolvedFontSize": 13,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 13,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -1207,10 +1210,10 @@
               "index": 1,
               "text": "anker-SenseLoop 观息",
               "fontSize": 13,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -1220,7 +1223,7 @@
       "order": 24,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/at47y1kr",
+      "aid": "sh/6psfil0r",
       "id": "24",
       "bbox": [
         1168,
@@ -1231,13 +1234,13 @@
       "geometry": "rect",
       "text": "05",
       "textPreview": "05",
-      "resolvedFontSize": 13,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 13,
-        "typeface": "+mn-lt",
-        "color": "#587068",
-        "alignment": "right",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
           "top": 4.8,
@@ -1269,10 +1272,10 @@
               "index": 1,
               "text": "05",
               "fontSize": 13,
-              "color": "#587068",
-              "alignment": "right"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],

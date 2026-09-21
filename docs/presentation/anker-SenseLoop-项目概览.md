@@ -79,7 +79,7 @@ soundcore Work 不只是收音设备，而是夜间健康观察的入口。它�
 
 ### 4. 连接当前官方硬件和未来健康穿戴新品类
 
-当前用 soundcore Work 和 eufy 验证核心场景，未来可演进为 SenseLoop Watch / Band / Pendant，形成 Anker 在健康穿戴方向的新产品想象空间。
+当前用 soundcore Work 和 eufy 验证核心场景，未来可演进为 SenseLoop Watch / Band / Pendant，形成 Anker 在健康穿戴方向的新产品想象空间。卧室环境反馈可以作为后续可选探索，不作为当前比赛交付重点。
 
 ## 技术路线
 

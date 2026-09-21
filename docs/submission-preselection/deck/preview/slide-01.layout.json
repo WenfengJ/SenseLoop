@@ -2,13 +2,13 @@
   "schema": "openai.presentation.layout/v4",
   "unit": "px",
   "slide": {
-    "aid": "sl/jw2zwj",
-    "id": "jw2zwj",
+    "aid": "sl/2x4nap4r",
+    "id": "2x4nap4r",
     "slide": 1,
-    "layoutId": "5055eea5-a964-4833-9173-4233fdd43435",
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
     "layoutName": "Title Slide",
     "layoutType": "title",
-    "masterLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
     "masterLayoutName": "Master",
     "backgroundColor": "#F7FBF8",
     "frame": {
@@ -27,10 +27,6 @@
       "accent4": "#0F9ED5",
       "accent5": "#A02B93",
       "accent6": "#4EA72E",
-      "bg1": "#FFFFFF",
-      "bg2": "#000000",
-      "tx1": "#1F1F1F",
-      "tx2": "#FFFFFF",
       "dk1": "#000000",
       "lt1": "#FFFFFF",
       "dk2": "#0E2841",
@@ -38,22 +34,36 @@
       "hlink": "#467886",
       "folHlink": "#96607D"
     },
+    "fontScheme": {
+      "name": "Office",
+      "majorFont": {
+        "latinTypeface": "Calibri Light",
+        "eastAsianTypeface": "Calibri Light",
+        "complexScriptTypeface": "Calibri Light"
+      },
+      "minorFont": {
+        "latinTypeface": "Calibri",
+        "eastAsianTypeface": "Calibri",
+        "complexScriptTypeface": "Calibri"
+      }
+    },
     "typefaces": [
-      "+mn-lt"
+      "Calibri",
+      "Calibri Light"
     ]
   },
   "inheritedLayers": [
     {
       "scope": "layout",
-      "id": "5055eea5-a964-4833-9173-4233fdd43435",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
       "name": "Title Slide",
       "type": "title",
-      "parentLayoutId": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
       "elements": []
     },
     {
       "scope": "master",
-      "id": "ff5a84ba-db91-4412-ac42-0a66b203eab2",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
       "name": "Master",
       "type": "master",
       "elements": []
@@ -64,19 +74,22 @@
       "order": 1,
       "kind": "image",
       "scope": "slide",
-      "aid": "im/xczed8v6",
-      "id": "1",
+      "aid": "im/90je9cvi",
+      "id": "20",
       "bbox": [
         70,
-        62,
+        64.33,
         196,
-        70
+        65.33
       ],
-      "alt": "SenseLoop logo",
       "contentType": "image/png",
-      "imageFit": "contain",
       "asset": {
-        "assetId": "4898870d-d571-4a42-8d0e-7dbc11c5efcc",
+        "assetId": "/ppt/media/image.png",
+        "contentType": "image/png",
+        "byteLength": 34712
+      },
+      "fillImage": {
+        "assetId": "/ppt/media/image.png",
         "contentType": "image/png",
         "byteLength": 34712
       }
@@ -85,7 +98,7 @@
       "order": 2,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/j2t83itg",
+      "aid": "sh/cvixczed",
       "id": "2",
       "bbox": [
         70,
@@ -96,13 +109,12 @@
       "geometry": "rect",
       "text": "观息 SenseLoop",
       "textPreview": "观息 SenseLoop",
-      "resolvedFontSize": 54,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 54,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -137,10 +149,10 @@
               "text": "观息 SenseLoop",
               "fontSize": 54,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -150,7 +162,7 @@
       "order": 3,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/qh0fepkz",
+      "aid": "sh/5gbq1ory",
       "id": "3",
       "bbox": [
         72,
@@ -161,12 +173,12 @@
       "geometry": "rect",
       "text": "每天早晨，把夜间身体信号变成今日行动建议",
       "textPreview": "每天早晨，把夜间身体信号变成今日行动建议",
-      "resolvedFontSize": 28,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 28,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -199,10 +211,10 @@
               "index": 1,
               "text": "每天早晨，把夜间身体信号变成今日行动建议",
               "fontSize": 28,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -212,7 +224,7 @@
       "order": 4,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/1w7mp0bi",
+      "aid": "sh/udg7adsj",
       "id": "4",
       "bbox": [
         72,
@@ -229,7 +241,7 @@
       "order": 5,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/8bat47y1",
+      "aid": "sh/nyd0z610",
       "id": "5",
       "bbox": [
         88,
@@ -240,14 +252,13 @@
       "geometry": "rect",
       "text": "soundcore Work 夜间声音原型",
       "textPreview": "soundcore Work 夜间声音原型",
-      "resolvedFontSize": 15,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 15,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
-        "alignment": "center",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
           "top": 4.8,
@@ -285,10 +296,10 @@
               "text": "soundcore Work 夜间声音原型",
               "fontSize": 15,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "center"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -298,7 +309,7 @@
       "order": 6,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/jqh0fepk",
+      "aid": "sh/cj6tovah",
       "id": "6",
       "bbox": [
         340,
@@ -315,7 +326,7 @@
       "order": 7,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/q5o7qpg3",
+      "aid": "sh/54zidony",
       "id": "7",
       "bbox": [
         356,
@@ -326,14 +337,13 @@
       "geometry": "rect",
       "text": "未来健康穿戴新品类",
       "textPreview": "未来健康穿戴新品类",
-      "resolvedFontSize": 15,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 15,
-        "typeface": "+mn-lt",
-        "color": "#10201A",
-        "bold": true,
-        "alignment": "center",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
+        "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
           "top": 4.8,
@@ -367,10 +377,10 @@
               "text": "未来健康穿戴新品类",
               "fontSize": 15,
               "color": "#10201A",
-              "bold": true,
-              "alignment": "center"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -380,7 +390,7 @@
       "order": 8,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/1kre1w7m",
+      "aid": "sh/u9knih4b",
       "id": "8",
       "bbox": [
         735,
@@ -397,7 +407,7 @@
       "order": 9,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/c3ylc7u5",
+      "aid": "sh/judg7ads",
       "id": "9",
       "bbox": [
         735,
@@ -414,7 +424,7 @@
       "order": 10,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/a1gvy90j",
+      "aid": "sh/nyd0z610",
       "id": "10",
       "bbox": [
         735,
@@ -431,7 +441,7 @@
       "order": 11,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/zidonyd0",
+      "aid": "sh/udg7adsj",
       "id": "11",
       "bbox": [
         765,
@@ -442,13 +452,12 @@
       "geometry": "rect",
       "text": "夜间声音",
       "textPreview": "夜间声音",
-      "resolvedFontSize": 27,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 27,
-        "typeface": "+mn-lt",
-        "color": "#38A169",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -483,10 +492,10 @@
               "text": "夜间声音",
               "fontSize": 27,
               "color": "#38A169",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -496,7 +505,7 @@
       "order": 12,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/s36hcrmh",
+      "aid": "sh/54zidony",
       "id": "12",
       "bbox": [
         765,
@@ -507,12 +516,12 @@
       "geometry": "rect",
       "text": "打鼾 / 咳嗽 / 起夜 / 噪声",
       "textPreview": "打鼾 / 咳嗽 / 起夜 / 噪声",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -545,10 +554,10 @@
               "index": 1,
               "text": "打鼾 / 咳嗽 / 起夜 / 噪声",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -558,7 +567,7 @@
       "order": 13,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/hoza1gvy",
+      "aid": "sh/cj6tovah",
       "id": "13",
       "bbox": [
         765,
@@ -569,13 +578,12 @@
       "geometry": "rect",
       "text": "身体信号",
       "textPreview": "身体信号",
-      "resolvedFontSize": 27,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 27,
-        "typeface": "+mn-lt",
-        "color": "#3B82F6",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -610,10 +618,10 @@
               "text": "身体信号",
               "fontSize": 27,
               "color": "#3B82F6",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -623,7 +631,7 @@
       "order": 14,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/ap4r65wj",
+      "aid": "sh/nap4r65w",
       "id": "14",
       "bbox": [
         765,
@@ -634,12 +642,12 @@
       "geometry": "rect",
       "text": "画像 / 饮食 / 排便 / 舌苔",
       "textPreview": "画像 / 饮食 / 排便 / 舌苔",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -672,10 +680,10 @@
               "index": 1,
               "text": "画像 / 饮食 / 排便 / 舌苔",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -685,7 +693,7 @@
       "order": 15,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/za1gvy90",
+      "aid": "sh/upwb2hwf",
       "id": "15",
       "bbox": [
         765,
@@ -696,13 +704,12 @@
       "geometry": "rect",
       "text": "今日建议",
       "textPreview": "今日建议",
-      "resolvedFontSize": 27,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 27,
-        "typeface": "+mn-lt",
-        "color": "#C87918",
-        "bold": true,
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -737,10 +744,10 @@
               "text": "今日建议",
               "fontSize": 27,
               "color": "#C87918",
-              "bold": true,
-              "alignment": "left"
+              "bold": true
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -750,7 +757,7 @@
       "order": 16,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/svu9knih",
+      "aid": "sh/5gbq1ory",
       "id": "16",
       "bbox": [
         765,
@@ -761,12 +768,12 @@
       "geometry": "rect",
       "text": "怎么吃 / 怎么动 / 怎么恢复",
       "textPreview": "怎么吃 / 怎么动 / 怎么恢复",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -799,10 +806,10 @@
               "index": 1,
               "text": "怎么吃 / 怎么动 / 怎么恢复",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
@@ -812,7 +819,7 @@
       "order": 17,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/hgn29gr2",
+      "aid": "sh/cvixczed",
       "id": "17",
       "bbox": [
         912,
@@ -829,7 +836,7 @@
       "order": 18,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/adsji5sn",
+      "aid": "sh/jm1cfa9w",
       "id": "18",
       "bbox": [
         912,
@@ -846,7 +853,7 @@
       "order": 19,
       "kind": "shape",
       "scope": "slide",
-      "aid": "sh/3ylc7u54",
+      "aid": "sh/u18jqh0f",
       "id": "19",
       "bbox": [
         72,
@@ -857,12 +864,12 @@
       "geometry": "rect",
       "text": "Anker 黑客松预选答辩材料",
       "textPreview": "Anker 黑客松预选答辩材料",
-      "resolvedFontSize": 18,
+      "resolvedFontSize": 24,
       "resolvedTextStyle": {
         "anchor": 1,
-        "fontSize": 18,
-        "typeface": "+mn-lt",
-        "color": "#587068",
+        "fontSize": 24,
+        "typeface": "Calibri",
+        "color": "tx1",
         "alignment": "left",
         "verticalAlignment": "top",
         "insets": {
@@ -895,10 +902,10 @@
               "index": 1,
               "text": "Anker 黑客松预选答辩材料",
               "fontSize": 18,
-              "color": "#587068",
-              "alignment": "left"
+              "color": "#587068"
             }
           ],
+          "bulletCharacter": "",
           "marginLeft": 0
         }
       ],
