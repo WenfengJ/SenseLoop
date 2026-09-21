@@ -9,10 +9,13 @@ import {
   Ear,
   HeartPulse,
   Home,
+  LockKeyhole,
   Moon,
+  Play,
   ShieldCheck,
   Sparkles,
   Utensils,
+  Volume2,
   Watch,
 } from "lucide-react";
 import type React from "react";
@@ -177,28 +180,63 @@ function SleepPage({ events }: { events: SleepAudioEvent[] }) {
   const snoreCount = events.filter((event) => event.type === "snore").length;
   const coughCount = events.filter((event) => event.type === "cough").length;
   const markerCount = events.filter((event) => event.type === "wake_marker").length;
+  const totalRecordedSec = events.reduce((sum, event) => sum + event.durationSec, 0);
+  const averageConfidence = events.length
+    ? Math.round((events.reduce((sum, event) => sum + event.confidence, 0) / events.length) * 100)
+    : 0;
+  const loudEvents = events.filter((event) => event.intensity === "high").length;
+  const snoreDuration = events
+    .filter((event) => event.type === "snore")
+    .reduce((sum, event) => sum + event.durationSec, 0);
 
   return (
     <>
       <PageTitle
         eyebrow="soundcore Work 夜间声音"
-        title="把夜间声音转成第二天能执行的健康建议"
-        text="当前使用原型数据展示设备能力，现场可替换为 soundcore Work SDK、上传音频或人工标注事件。"
+        title="先把昨晚听清楚，再把今天安排明白"
+        text="借鉴睡眠录音 App 的细颗粒回看方式：整夜噪声、事件分类、录音片段和来源标签都清楚展示，再进入 SenseLoop 的晨间建议。"
       />
       <div className="card-grid">
-        <MetricCard label="打鼾片段" value={`${snoreCount}`} icon={<Moon size={18} />} />
-        <MetricCard label="咳嗽片段" value={`${coughCount}`} icon={<Ear size={18} />} />
-        <MetricCard label="重点标记" value={`${markerCount}`} icon={<AlertTriangle size={18} />} />
+        <MetricCard label="声音片段" value={`${events.length}`} suffix={`共 ${formatDuration(totalRecordedSec)}`} icon={<Volume2 size={18} />} />
+        <MetricCard label="打鼾" value={`${snoreCount}`} suffix={formatDuration(snoreDuration)} icon={<Moon size={18} />} />
+        <MetricCard label="识别置信度" value={`${averageConfidence}%`} icon={<Ear size={18} />} />
       </div>
+      <section className="sleep-dashboard">
+        <Panel title="整夜声音地图">
+          <div className="sleep-session-head">
+            <div>
+              <span>23:18 - 06:52</span>
+              <strong>7h 34m 睡眠观察窗口</strong>
+            </div>
+            <em>{loudEvents > 0 ? `${loudEvents} 个高强度片段` : "未见高强度片段"}</em>
+          </div>
+          <NoiseMap events={events} />
+          <div className="event-legend">
+            <span><i className="legend-dot snore" />打鼾</span>
+            <span><i className="legend-dot cough" />咳嗽</span>
+            <span><i className="legend-dot wake" />起夜/标记</span>
+            <span><i className="legend-dot noise" />环境噪声</span>
+          </div>
+        </Panel>
+        <Panel title="声音事件统计">
+          <div className="sleep-stat-grid">
+            <SleepStat label="打鼾" value={`${snoreCount} 段`} detail={formatDuration(snoreDuration)} />
+            <SleepStat label="咳嗽" value={`${coughCount} 段`} detail="建议结合白天状态观察" />
+            <SleepStat label="重点标记" value={`${markerCount} 次`} detail="可进入日报依据" />
+            <SleepStat label="本地标签" value="优先" detail="默认保存结构化摘要" />
+          </div>
+          <div className="sleep-tabs" aria-label="声音详情切换">
+            <button className="active" type="button">统计</button>
+            <button type="button">录音片段</button>
+          </div>
+          <p className="subtle">当前为演示数据；接入 SDK 或上传音频后，这里会展示真实来源和识别置信度。</p>
+        </Panel>
+      </section>
       <section className="section-grid">
-        <Panel title="夜间声音时间线">
-          <div className="timeline">
-            {events.map((event) => (
-              <div className="timeline-item" key={event.id}>
-                <span>{formatMinute(event.startMinute)}</span>
-                <strong>{sleepEventLabels[event.type]}</strong>
-                <em>{event.intensity === "high" ? "强" : event.intensity === "medium" ? "中" : "轻"} · {Math.round(event.confidence * 100)}%</em>
-              </div>
+        <Panel title="录音片段回看">
+          <div className="recording-list">
+            {events.map((event, index) => (
+              <RecordingRow event={event} index={index} key={event.id} />
             ))}
           </div>
         </Panel>
@@ -206,7 +244,10 @@ function SleepPage({ events }: { events: SleepAudioEvent[] }) {
           <TrendBar label="打鼾" values={[30, 42, 34, 48, 40, 52, 58]} />
           <TrendBar label="夜醒/起夜" values={[18, 22, 20, 28, 24, 34, 38]} />
           <TrendBar label="环境噪声" values={[40, 36, 44, 50, 32, 46, 41]} />
-          <p className="subtle">趋势用于演示长期观察思路，不作为医疗诊断。</p>
+          <section className="privacy-mini">
+            <LockKeyhole size={16} />
+            <span>原始音频优先本地处理；日报默认使用事件标签、时长、强度和趋势摘要。</span>
+          </section>
         </Panel>
       </section>
     </>
@@ -402,14 +443,119 @@ function AdviceLine({ icon, title, text }: { icon: React.ReactNode; title: strin
 }
 
 function TrendBar({ label, values }: { label: string; values: number[] }) {
+  const maxValue = Math.max(...values, 1);
+  const minValue = Math.min(...values);
+  const average = Math.round(values.reduce((sum, value) => sum + value, 0) / values.length);
+  const latest = values[values.length - 1] ?? 0;
+  const previous = values[values.length - 2] ?? latest;
+  const trend = latest > previous ? "较昨晚增加" : latest < previous ? "较昨晚下降" : "与昨晚持平";
+  const range = Math.max(1, maxValue - minValue);
+  const points = values.map((value, index) => {
+    const x = 12 + index * (256 / Math.max(1, values.length - 1));
+    const y = 74 - ((value - minValue) / range) * 50;
+    return { x, y, value };
+  });
+  const linePoints = points.map((point) => `${point.x},${point.y}`).join(" ");
+  const areaPoints = `12,82 ${linePoints} 268,82`;
+  const averageY = 74 - ((average - minValue) / range) * 50;
+
   return (
     <div className="trend-row">
-      <span>{label}</span>
-      <div className="bars">
+      <div className="trend-head">
+        <span>{label}</span>
+        <em>{trend}</em>
+      </div>
+      <div className="sparkline-card">
+        <svg className="sparkline" viewBox="0 0 280 92" role="img" aria-label={`${label} 7 天趋势`}>
+          <polygon points={areaPoints} />
+          <line className="average-line" x1="12" x2="268" y1={averageY} y2={averageY} />
+          <polyline points={linePoints} />
+          {points.map((point, index) => (
+            <circle
+              className={index === points.length - 1 ? "current-dot" : ""}
+              cx={point.x}
+              cy={point.y}
+              key={`${label}-point-${index}`}
+              r={index === points.length - 1 ? 4.6 : 3.3}
+            />
+          ))}
+        </svg>
+        <div className="sparkline-labels">
+          {["一", "二", "三", "四", "五", "六", "今"].map((day) => (
+            <small key={`${label}-${day}`}>{day}</small>
+          ))}
+        </div>
+      </div>
+      <div className="trend-foot">
+        <span>均值 {average}</span>
+        <strong>今日 {latest}</strong>
+      </div>
+    </div>
+  );
+}
+
+function NoiseMap({ events }: { events: SleepAudioEvent[] }) {
+  const values = [18, 24, 20, 32, 42, 28, 36, 66, 24, 22, 38, 45, 26, 30, 54, 34, 28, 40, 62, 35, 28, 44, 31, 22];
+
+  return (
+    <div className="noise-map">
+      <div className="noise-bars">
         {values.map((value, index) => (
-          <i key={`${label}-${index}`} style={{ height: `${value}px` }} />
+          <i key={`noise-${index}`} style={{ height: `${value}%` }} />
         ))}
       </div>
+      <div className="noise-markers">
+        {events.map((event) => (
+          <span
+            className={`event-marker ${eventMarkerClass(event.type)}`}
+            key={event.id}
+            style={{ left: `${Math.min(96, Math.max(2, (event.startMinute / 480) * 100))}%` }}
+            title={`${formatMinute(event.startMinute)} ${sleepEventLabels[event.type]}`}
+          />
+        ))}
+      </div>
+      <div className="noise-axis">
+        <span>23:00</span>
+        <span>01:00</span>
+        <span>03:00</span>
+        <span>05:00</span>
+        <span>07:00</span>
+      </div>
+    </div>
+  );
+}
+
+function SleepStat({ label, value, detail }: { label: string; value: string; detail: string }) {
+  return (
+    <div className="sleep-stat">
+      <span>{label}</span>
+      <strong>{value}</strong>
+      <em>{detail}</em>
+    </div>
+  );
+}
+
+function RecordingRow({ event, index }: { event: SleepAudioEvent; index: number }) {
+  const db = event.intensity === "high" ? 58 : event.intensity === "medium" ? 46 : 37;
+  const waveform = [18, 34, 22, 46, 30, 56, 26, 42, 20, 35, 28, 48];
+
+  return (
+    <div className="recording-row">
+      <button className="play-button" type="button" aria-label={`播放 ${sleepEventLabels[event.type]}`}>
+        <Play size={15} fill="currentColor" />
+      </button>
+      <div className="recording-main">
+        <div className="recording-title">
+          <strong>{String(index + 1).padStart(2, "0")} · {sleepEventLabels[event.type]}</strong>
+          <span>{formatMinute(event.startMinute)} · {formatDuration(event.durationSec)} · {db}dB</span>
+        </div>
+        <div className="waveform" aria-hidden="true">
+          {waveform.map((value, waveIndex) => (
+            <i key={`${event.id}-${waveIndex}`} style={{ height: `${Math.max(10, value * event.confidence)}%` }} />
+          ))}
+        </div>
+      </div>
+      <em className="source-pill">{sourceLabel(event.source)}</em>
     </div>
   );
 }
@@ -438,6 +584,32 @@ function formatMinute(total: number) {
   const hour = Math.floor(total / 60);
   const minute = total % 60;
   return `${String(hour).padStart(2, "0")}:${String(minute).padStart(2, "0")}`;
+}
+
+function formatDuration(totalSec: number) {
+  if (totalSec < 60) {
+    return `${totalSec}s`;
+  }
+  const minute = Math.floor(totalSec / 60);
+  const second = totalSec % 60;
+  return second ? `${minute}m ${second}s` : `${minute}m`;
+}
+
+function eventMarkerClass(type: SleepAudioEvent["type"]) {
+  if (type === "snore") return "snore";
+  if (type === "cough") return "cough";
+  if (type === "get_up" || type === "wake_marker") return "wake";
+  if (type === "ambient_noise") return "noise";
+  return "other";
+}
+
+function sourceLabel(source: SleepAudioEvent["source"]) {
+  return {
+    mock: "demo",
+    manual: "manual",
+    soundcore_sdk: "soundcore",
+    audio_model: "model",
+  }[source];
 }
 
 function mealName(type: DietSignal["mealType"]) {
