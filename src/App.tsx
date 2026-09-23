@@ -2,6 +2,8 @@ import {
   Activity,
   AlertTriangle,
   Apple,
+  ArrowLeft,
+  CalendarDays,
   Camera,
   ChevronRight,
   CheckCircle2,
@@ -19,6 +21,8 @@ import {
   ShieldCheck,
   Sparkles,
   Utensils,
+  UserPlus,
+  Users,
   Volume2,
   Watch,
   X,
@@ -31,6 +35,7 @@ import { knowledgeBase } from "./data/knowledgeBase";
 import { sleepEventLabels } from "./domain/labels";
 import { DailyReport, DailySignals, DietSignal, ProfileType, SleepAudioEvent, UserProfile } from "./domain/types";
 import {
+  analyzeTongue,
   createAgentSession,
   createObservation,
   generateReport,
@@ -41,10 +46,11 @@ import {
 } from "./services/apiClient";
 import { buildDailyReport } from "./services/reportBuilder";
 
-type PageKey = "onboarding" | "today" | "sleep" | "diet" | "signals" | "report" | "architecture";
+type PageKey = "onboarding" | "profiles" | "today" | "sleep" | "diet" | "signals" | "report" | "architecture";
 type ApiMode = "checking" | "api" | "mock";
 type ToastState = { kind: "success" | "error" | "info"; message: string };
 type SaveObservation = (payload: ObservationPayload) => Promise<void>;
+type AnalyzeTongue = (input: { date: string; tongue: TongueDraft; upload: TongueUpload | null }) => Promise<string>;
 type StoolDraft = {
   shape: NonNullable<DailySignals["stool"]["shape"]>;
   color: NonNullable<DailySignals["stool"]["color"]>;
@@ -57,13 +63,15 @@ type TongueDraft = {
   moisture: NonNullable<DailySignals["tongue"]["moisture"]>;
   photoName: string;
 };
+type TongueUpload = { name: string; url: string; size: number; type: string };
 
 const pageNames: Record<PageKey, string> = {
   onboarding: "建档",
+  profiles: "档案",
   today: "今日",
   sleep: "睡眠",
   diet: "饮食",
-  signals: "信号",
+  signals: "四诊",
   report: "日报",
   architecture: "架构",
 };
@@ -194,11 +202,31 @@ export default function App() {
     try {
       const session = await createAgentSession(profile.id);
       const answer = await sendAgentMessage(session.id, `请解释 ${profile.name} 在 ${signals.date} 的健康日报，并指出下一步应该补充哪些记录。`);
-      setAgentAnswer(answer.assistantMessage);
+      setAgentAnswer(answer.assistantMessage || answer.answer || "");
       setApiMode("api");
     } catch {
       setAgentAnswer("当前后端 Agent 接口不可用。前端入口已经预留，后续接入 RAG/AI 后这里会展示基于知识库的解释。");
     }
+  }
+
+  async function handleAnalyzeTongue(input: { date: string; tongue: TongueDraft; upload: TongueUpload | null }) {
+    const result = await analyzeTongue(profile.id, {
+      date: input.date,
+      tongue: {
+        recorded: true,
+        tongueColor: input.tongue.tongueColor,
+        coatingThickness: input.tongue.coatingThickness,
+        moisture: input.tongue.moisture,
+        photoName: input.tongue.photoName,
+      },
+      upload: input.upload ? { name: input.upload.name, size: input.upload.size, type: input.upload.type } : null,
+    });
+    setApiMode("api");
+    setToast({
+      kind: result.aiEnabled ? "success" : "info",
+      message: result.aiEnabled ? "已调用模型完成舌诊分析并落库" : "模型暂不可用，已用后端规则生成舌诊分析并落库",
+    });
+    return result.analysis;
   }
 
   return (
@@ -239,13 +267,25 @@ export default function App() {
             profile={profile}
             profileType={profile.profileType}
             onGenerateReport={handleGenerateReport}
+            onOpenProfiles={() => setPage("profiles")}
             onSaveObservation={saveObservation}
+          />
+        )}
+        {page === "profiles" && (
+          <ProfileArchivePage
+            activeProfile={profile}
+            onBack={() => setPage("onboarding")}
+            onSelectProfile={(nextProfileType) => {
+              setProfileType(nextProfileType);
+              setPage("onboarding");
+            }}
+            profiles={profiles}
           />
         )}
         {page === "today" && <TodayPage report={report} signals={signals} profileType={profile.profileType} />}
         {page === "sleep" && <SleepPage events={signals.audioEvents} />}
         {page === "diet" && <DietPage diet={signals.diet} profileType={profile.profileType} onSaveObservation={saveObservation} />}
-        {page === "signals" && <SignalsPage signals={signals} onSaveObservation={saveObservation} />}
+        {page === "signals" && <SignalsPage signals={signals} onAnalyzeTongue={handleAnalyzeTongue} onSaveObservation={saveObservation} />}
         {page === "report" && (
           <ReportPage
             agentAnswer={agentAnswer}
@@ -322,11 +362,13 @@ function OnboardingPage({
   profile,
   profileType,
   onGenerateReport,
+  onOpenProfiles,
   onSaveObservation,
 }: {
   profile: UserProfile;
   profileType: ProfileType;
   onGenerateReport: () => Promise<void>;
+  onOpenProfiles: () => void;
   onSaveObservation: SaveObservation;
 }) {
   const [choices, setChoices] = useState<Record<IntakeChoiceKey, string>>({
@@ -483,9 +525,15 @@ function OnboardingPage({
                 基础信息、照片入口、声音事件和报告生成都已经具备可点击闭环；当前建档草稿先写入观察记录，后续补 profile 创建接口即可升级成真实新建档案。
               </p>
             </div>
-            <button className="ghost-button compact" type="button" onClick={() => setReportReady(false)}>
-              重置报告
-            </button>
+            <div className="button-stack">
+              <button className="ghost-button compact" type="button" onClick={onOpenProfiles}>
+                <Users size={15} />
+                其他档案
+              </button>
+              <button className="ghost-button compact" type="button" onClick={() => setReportReady(false)}>
+                重置报告
+              </button>
+            </div>
           </div>
 
           <section className="intake-panel">
@@ -669,6 +717,188 @@ function OnboardingPage({
         <span>当前 MVP 亮点：用户可以完成基础问答、选择照片信号、选择录音事件，并即时生成健康日报。边界仍然清楚：只做趋势观察和生活方式建议，不做诊断。</span>
       </section>
     </>
+  );
+}
+
+const birthHourOptions = [
+  { key: "zi", label: "子时", time: "23:00-01:00" },
+  { key: "chou", label: "丑时", time: "01:00-03:00" },
+  { key: "yin", label: "寅时", time: "03:00-05:00" },
+  { key: "mao", label: "卯时", time: "05:00-07:00" },
+  { key: "chen", label: "辰时", time: "07:00-09:00" },
+  { key: "si", label: "巳时", time: "09:00-11:00" },
+  { key: "wu", label: "午时", time: "11:00-13:00" },
+  { key: "wei", label: "未时", time: "13:00-15:00" },
+  { key: "shen", label: "申时", time: "15:00-17:00" },
+  { key: "you", label: "酉时", time: "17:00-19:00" },
+  { key: "xu", label: "戌时", time: "19:00-21:00" },
+  { key: "hai", label: "亥时", time: "21:00-23:00" },
+];
+
+function ProfileArchivePage({
+  activeProfile,
+  onBack,
+  onSelectProfile,
+  profiles,
+}: {
+  activeProfile: UserProfile;
+  onBack: () => void;
+  onSelectProfile: (profileType: ProfileType) => void;
+  profiles: UserProfile[];
+}) {
+  const [mode, setMode] = useState<"list" | "new" | "reports">("list");
+  const [draft, setDraft] = useState({
+    name: "用户3968",
+    gender: "male",
+    birthDate: "2021-03-18",
+    birthHour: "you",
+  });
+
+  if (mode === "new") {
+    return (
+      <section className="mobile-app-page">
+        <div className="mobile-app-top">
+          <button className="icon-button" type="button" onClick={() => setMode("list")} aria-label="返回档案列表">
+            <ArrowLeft size={18} />
+          </button>
+          <strong>第 4 步 / 共 4 步</strong>
+          <span>五运六气</span>
+        </div>
+        <div className="step-progress" aria-label="建档步骤">
+          {["舌诊", "脉诊", "问诊", "五运六气"].map((item, index) => (
+            <span className={index === 3 ? "active" : ""} key={item}>{item}</span>
+          ))}
+        </div>
+        <div className="mobile-hint">已从档案中自动填入出生信息，如需修改可直接更改</div>
+        <section className="mobile-form-card">
+          <label className="form-field">
+            <span><CalendarDays size={15} /> 出生日期</span>
+            <input
+              type="date"
+              value={draft.birthDate}
+              onChange={(event) => setDraft((current) => ({ ...current, birthDate: event.target.value }))}
+            />
+          </label>
+        </section>
+        <section className="mobile-form-card">
+          <div className="mobile-form-title">
+            <Clock3 size={16} />
+            出生时辰
+          </div>
+          <div className="birth-hour-grid">
+            {birthHourOptions.map((item) => (
+              <button
+                className={draft.birthHour === item.key ? "birth-hour active" : "birth-hour"}
+                key={item.key}
+                type="button"
+                onClick={() => setDraft((current) => ({ ...current, birthHour: item.key }))}
+              >
+                <strong>{item.label}</strong>
+                <span>{item.time}</span>
+              </button>
+            ))}
+          </div>
+        </section>
+        <button className="action-button mobile-primary" type="button" onClick={() => setMode("list")}>
+          确认并继续
+        </button>
+      </section>
+    );
+  }
+
+  if (mode === "reports") {
+    return (
+      <section className="mobile-app-page">
+        <div className="mobile-app-top">
+          <button className="icon-button" type="button" onClick={() => setMode("list")} aria-label="返回档案首页">
+            <ArrowLeft size={18} />
+          </button>
+          <strong>我的报告</strong>
+          <span>历史测评</span>
+        </div>
+        <section className="archive-list">
+          {profiles.map((item, index) => (
+            <button
+              className={item.id === activeProfile.id ? "archive-row active" : "archive-row"}
+              key={item.id}
+              type="button"
+              onClick={() => {
+                onSelectProfile(item.profileType);
+                setMode("list");
+              }}
+            >
+              <span>{String(72 - index * 3)}</span>
+              <div>
+                <strong>{item.name} · 四诊合参健康报告</strong>
+                <em>舌诊 / 问诊 / 五运六气 · 点击切换档案查看</em>
+              </div>
+              <ChevronRight size={16} />
+            </button>
+          ))}
+        </section>
+      </section>
+    );
+  }
+
+  return (
+    <section className="mobile-app-page">
+      <div className="mobile-brand-bar">
+        <div className="brand-mark">SL</div>
+        <strong>岐黄 AI 健康</strong>
+        <button className="profile-pill" type="button">
+          {activeProfile.name}
+          <ChevronRight size={14} />
+        </button>
+      </div>
+      <section className="mobile-welcome-card">
+        <p>下午好，{activeProfile.name}</p>
+        <span>基于中医四诊合参，AI 智能分析你的健康状态</span>
+      </section>
+      <div className="mobile-action-grid">
+        <button className="mobile-action-card active" type="button" onClick={() => setMode("new")}>
+          <UserPlus size={28} />
+          <strong>新建档案</strong>
+          <span>舌诊 / 问诊 / 五运六气</span>
+        </button>
+        <button className="mobile-action-card" type="button" onClick={() => setMode("reports")}>
+          <FileText size={28} />
+          <strong>我的报告</strong>
+          <span>查看历史健康报告</span>
+        </button>
+      </div>
+      <button className="action-button mobile-primary" type="button" onClick={() => setMode("new")}>
+        开始健康测评
+      </button>
+      <section className="mobile-info-card">
+        <h3>服务号测评说明</h3>
+        <ol>
+          <li>舌诊：拍摄舌面/舌底照片，AI 智能分析舌象</li>
+          <li>问诊：通过智能问卷采集症状与体征信息</li>
+          <li>五运六气：基于出生时辰推算运气养生方案</li>
+        </ol>
+      </section>
+      <section className="archive-list">
+        <div className="panel-toolbar">
+          <strong>其他档案</strong>
+          <span>点击可切换当前页面画像</span>
+        </div>
+        {profiles.map((item) => (
+          <button
+            className={item.id === activeProfile.id ? "archive-row active" : "archive-row"}
+            key={item.id}
+            type="button"
+            onClick={() => onSelectProfile(item.profileType)}
+          >
+            <span>{item.name.slice(0, 1)}</span>
+            <div>
+              <strong>{item.name}</strong>
+              <em>{item.age} 岁 · {item.occupation}</em>
+            </div>
+            <ChevronRight size={16} />
+          </button>
+        ))}
+      </section>
+    </section>
   );
 }
 
@@ -941,14 +1171,21 @@ function DietPage({
 }
 
 function SignalsPage({
+  onAnalyzeTongue,
   signals,
   onSaveObservation,
 }: {
+  onAnalyzeTongue: AnalyzeTongue;
   signals: DailySignals;
   onSaveObservation: SaveObservation;
 }) {
   const tongueFileRef = useRef<HTMLInputElement | null>(null);
   const [modal, setModal] = useState<"stool" | "tongue" | "breath" | null>(null);
+  const [tongueUpload, setTongueUpload] = useState<TongueUpload | null>(null);
+  const [showTongueReport, setShowTongueReport] = useState(Boolean(signals.tongue.recorded));
+  const [tongueAiText, setTongueAiText] = useState("");
+  const [tongueAiLoading, setTongueAiLoading] = useState(false);
+  const [tongueAiError, setTongueAiError] = useState("");
   const [stoolDraft, setStoolDraft] = useState<StoolDraft>({
     shape: signals.stool.shape ?? "normal",
     color: signals.stool.color ?? "brown",
@@ -967,6 +1204,42 @@ function SignalsPage({
     bitterTaste: signals.breath.bitterTaste,
   });
 
+  useEffect(() => () => {
+    if (tongueUpload?.url) URL.revokeObjectURL(tongueUpload.url);
+  }, [tongueUpload?.url]);
+
+  async function handleTongueFileSelected(event: React.ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    if (tongueUpload?.url) URL.revokeObjectURL(tongueUpload.url);
+    const nextUpload = {
+      name: file.name,
+      url: URL.createObjectURL(file),
+      size: file.size,
+      type: file.type,
+    };
+    const nextDraft: TongueDraft = {
+      ...tongueDraft,
+      photoName: file.name,
+      tongueColor: "pale",
+      coatingThickness: "thin",
+      moisture: "dry",
+    };
+    setTongueUpload(nextUpload);
+    setTongueDraft(nextDraft);
+    setShowTongueReport(true);
+    setTongueAiLoading(true);
+    setTongueAiError("");
+    try {
+      const analysis = await onAnalyzeTongue({ date: signals.date, tongue: nextDraft, upload: nextUpload });
+      setTongueAiText(analysis);
+    } catch {
+      setTongueAiError("模型分析暂不可用，已保留本地舌象报告，可稍后再次测评。");
+    } finally {
+      setTongueAiLoading(false);
+    }
+  }
+
   async function saveSignal(type: "stool" | "tongue" | "breath") {
     const valueJson =
       type === "stool"
@@ -981,30 +1254,31 @@ function SignalsPage({
       confidence: type === "tongue" && tongueDraft.photoName ? 0.68 : 1,
       valueJson,
     });
+    if (type === "tongue") setShowTongueReport(true);
     setModal(null);
   }
 
   return (
     <>
       <PageTitle
-        eyebrow="身体信号"
-        title="排便、舌苔、口气都以主动记录为前提"
-        text="这些信号用于趋势观察和生活方式建议，敏感数据默认只保存标签，不保存原始图片。"
+        eyebrow="望闻记录"
+        title="舌诊、便诊、口气反馈，组成今日四诊线索"
+        text="这些记录用于趋势观察和生活方式建议，敏感数据默认优先保存结构化标签。"
       />
       <section className="section-grid three">
-        <Panel title="排便记录">
+        <Panel title="便诊记录">
           <SignalValue label="今日状态" value={signals.stool.recorded ? stoolShape(signals.stool.shape) : "未记录"} />
           <SignalValue label="颜色" value={signals.stool.color ? stoolColor(signals.stool.color) : "未记录"} />
           <SignalValue label="趋势" value={signals.stool.dryness === "dry" ? "近几天偏干" : "暂无明显异常"} />
           <button className="action-button" type="button" onClick={() => setModal("stool")}>记录排便</button>
         </Panel>
-        <Panel title="舌苔观察">
+        <Panel title="舌诊观察">
           <SignalValue label="舌色" value={tongueColor(signals.tongue.tongueColor)} />
           <SignalValue label="舌苔" value={coating(signals.tongue.coatingThickness)} />
           <SignalValue label="照片质量" value={photoQuality(signals.tongue.photoQuality)} />
           <button className="action-button" type="button" onClick={() => setModal("tongue")}>拍照记录舌苔</button>
         </Panel>
-        <Panel title="口气反馈">
+        <Panel title="闻诊反馈">
           <SignalValue label="口气等级" value={breathLevel(signals.breath.level)} />
           <SignalValue label="早晨口干" value={signals.breath.dryMouth ? "是" : "否"} />
           <SignalValue label="口苦反馈" value={signals.breath.bitterTaste ? "是" : "否"} />
@@ -1015,6 +1289,16 @@ function SignalsPage({
         <ShieldCheck size={18} />
         <span>隐私策略：排便、舌苔、口气均为手动触发；默认保存结构化标签，原始敏感内容不自动上传。</span>
       </section>
+      {showTongueReport && (
+        <TongueDiagnosisReport
+          aiError={tongueAiError}
+          aiLoading={tongueAiLoading}
+          aiText={tongueAiText}
+          draft={tongueDraft}
+          onRetest={() => setModal("tongue")}
+          upload={tongueUpload}
+        />
+      )}
       <Modal onClose={() => setModal(null)} open={modal === "stool"} title="记录排便">
         <div className="form-grid">
           <label className="form-field">
@@ -1057,7 +1341,7 @@ function SignalsPage({
         <input
           accept="image/*"
           className="visually-hidden"
-          onChange={(event) => setTongueDraft((current) => ({ ...current, photoName: event.target.files?.[0]?.name ?? "" }))}
+          onChange={handleTongueFileSelected}
           ref={tongueFileRef}
           type="file"
         />
@@ -1121,6 +1405,240 @@ function SignalsPage({
         <button className="action-button" type="button" onClick={() => saveSignal("breath")}>保存口气记录</button>
       </Modal>
     </>
+  );
+}
+
+const constitutionScores = [
+  { label: "阳虚质", value: 85, highlight: true },
+  { label: "气虚质", value: 75 },
+  { label: "湿热质", value: 55 },
+  { label: "阴虚质", value: 50 },
+  { label: "痰湿质", value: 45 },
+  { label: "血瘀质", value: 40 },
+  { label: "气郁质", value: 35 },
+  { label: "平和质", value: 15 },
+];
+
+const foodTherapyItems = [
+  { name: "山药", text: "性平味甘，补脾养胃，生津益肺", usage: "蒸食、煮粥或炖汤，每日 100-200g" },
+  { name: "核桃", text: "性温味甘，补肾温肺，润肠通便", usage: "每日 2-3 个，嚼食或煮粥" },
+  { name: "红枣", text: "性温味甘，补中益气，养血安神", usage: "每日 3-5 颗，泡茶或煮粥" },
+  { name: "生姜", text: "性微温味辛，解表散寒，温中止呕", usage: "做菜佐料或晨起含服，不宜过量" },
+];
+
+function TongueDiagnosisReport({
+  aiError,
+  aiLoading,
+  aiText,
+  draft,
+  onRetest,
+  upload,
+}: {
+  aiError: string;
+  aiLoading: boolean;
+  aiText: string;
+  draft: TongueDraft;
+  onRetest: () => void;
+  upload: TongueUpload | null;
+}) {
+  const [activeTab, setActiveTab] = useState<"overview" | "tongue" | "inquiry" | "wuyun" | "risk" | "therapy">("tongue");
+  const [shareStatus, setShareStatus] = useState("");
+  const mainPattern = draft.moisture === "dry" || draft.coatingThickness === "none" ? "阴虚内热，以胃阴不足为主" : draft.tongueColor === "pale" ? "气血偏虚，脾胃运化不足倾向" : "气虚质";
+  const abnormalItems = [
+    draft.tongueColor === "pale" ? "舌色偏淡白，提示气血不足倾向" : "舌色以淡红为主，需结合疲劳和饮食观察",
+    draft.moisture === "dry" ? "舌面津液偏少，建议结合口干和睡眠状态观察" : "津液尚可，继续观察晨起口干变化",
+    draft.coatingThickness === "thin" || draft.coatingThickness === "none" ? "舌苔偏薄或少苔，近期不宜过食辛辣燥热" : "舌苔厚薄变化需结合饮食和排便趋势判断",
+  ];
+  const tabs = [
+    { key: "overview", label: "体质总览" },
+    { key: "tongue", label: "舌诊" },
+    { key: "inquiry", label: "问诊" },
+    { key: "wuyun", label: "五运六气" },
+    { key: "risk", label: "风险评估" },
+    { key: "therapy", label: "调理方案" },
+  ] as const;
+  const featureCards = [
+    { title: "舌色", value: draft.tongueColor === "pale" ? "舌质淡白偏淡，局部可见淡红" : tongueColor(draft.tongueColor), tone: "rose" },
+    { title: "舌形", value: "舌体形态适中略偏胖，质地较为柔嫩", tone: "amber" },
+    { title: "苔质", value: draft.coatingThickness === "none" ? "少苔或局部剥脱，舌面较光洁" : `${coating(draft.coatingThickness)}，需结合饮食观察`, tone: "gold" },
+    { title: "津液", value: draft.moisture === "dry" ? "津液偏少，舌面水润度不足" : "津液尚可，舌面有光泽", tone: "blue" },
+  ];
+
+  async function handleShareReport() {
+    const text = `SenseLoop 舌诊报告：${mainPattern}。舌象要点：${abnormalItems.join("；")}。当前结果仅作健康管理参考。`;
+    try {
+      const nav = navigator as Navigator & { share?: (data: { title?: string; text?: string }) => Promise<void> };
+      if (nav.share) {
+        await nav.share({ title: "SenseLoop 舌诊报告", text });
+        setShareStatus("已打开系统分享");
+        return;
+      }
+      await navigator.clipboard.writeText(text);
+      setShareStatus("报告摘要已复制");
+    } catch {
+      setShareStatus("分享暂不可用，可稍后重试");
+    }
+  }
+
+  return (
+    <section className="tongue-report-shell">
+      <div className="tcm-report-brand">
+        <div className="brand-leaf">叶</div>
+        <div>
+          <strong>AI 中医舌诊</strong>
+          <span>Traditional TCM Tongue Analysis</span>
+        </div>
+      </div>
+      <div className="report-hero-card">
+        <div>
+          <p>AI 四诊合参 · 舌诊健康报告</p>
+          <h2>用户3968</h2>
+          <span>测评日期：2026年3月15日</span>
+          <div className="report-pill-row">
+            <b>舌诊 · 已完成</b>
+            <b>问诊 · 已完成</b>
+            <b>五运六气 · 已完成</b>
+          </div>
+        </div>
+        <div className="report-score-ring">
+          <strong>72</strong>
+          <span>综合评分</span>
+        </div>
+      </div>
+      <div className="report-tab-strip">
+        {tabs.map((item) => (
+          <button className={activeTab === item.key ? "active" : ""} key={item.key} type="button" onClick={() => setActiveTab(item.key)}>
+            {item.label}
+          </button>
+        ))}
+      </div>
+      {activeTab === "overview" && (
+        <section className="tongue-result-card">
+          <h3>体质辨识结果</h3>
+          <div className="constitution-title">
+            <strong>{mainPattern}</strong>
+            <span>主要倾向</span>
+          </div>
+          <p>当前结果结合舌象标签与模型分析生成，只做健康管理参考，不替代医疗诊断。</p>
+          <strong className="mini-heading">九型体质评估</strong>
+          <div className="constitution-list">
+            {constitutionScores.map((item) => (
+              <div className="constitution-row" key={item.label}>
+                <span>{item.label}</span>
+                <i><b style={{ width: `${item.value}%` }} /></i>
+                <em>{item.value}%{item.highlight ? " *" : ""}</em>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+      {activeTab === "tongue" && (
+        <>
+          <section className="tongue-result-card">
+            <h3>舌象分析</h3>
+            <div className="tongue-photo-grid">
+              <figure>
+                {upload ? <img alt="舌面上传预览" src={upload.url} /> : <div className="tongue-placeholder">舌</div>}
+                <figcaption>舌面</figcaption>
+              </figure>
+              <figure>
+                <div className="tongue-placeholder underside">舌下</div>
+                <figcaption>舌下</figcaption>
+              </figure>
+            </div>
+            <div className="tongue-feature-grid">
+              {featureCards.map((item) => (
+                <article className={`tongue-feature-card ${item.tone}`} key={item.title}>
+                  <span>{item.title}</span>
+                  <strong>{item.value}</strong>
+                </article>
+              ))}
+            </div>
+          </section>
+          <section className="diagnosis-card">
+            <h3><CheckCircle2 size={22} /> 辨证结果 <span>(Diagnosis)</span></h3>
+            <b>{mainPattern}</b>
+            <p>您的舌象较显著的特征会优先进入健康管理建议。请结合问诊、排便、睡眠和饮食记录一起观察。</p>
+          </section>
+          <section className="ai-analysis-box">
+            <h3><Sparkles size={20} /> 模型分析</h3>
+            {aiLoading && <p>正在调用后端模型分析舌象...</p>}
+            {aiError && <p>{aiError}</p>}
+            {!aiLoading && !aiError && aiText && aiText.split("\n").filter(Boolean).map((line) => <p key={line}>{line}</p>)}
+            {!aiLoading && !aiError && !aiText && <p>上传舌苔照片后，这里会展示后端模型生成的分析结果。</p>}
+          </section>
+        </>
+      )}
+      {activeTab === "inquiry" && (
+        <section className="tongue-result-card">
+          <h3>问诊摘要</h3>
+          <div className="inquiry-grid">
+            {["晨起口干", "精神不振", "食欲一般", "睡眠偏晚"].map((item) => <span key={item}>{item}</span>)}
+          </div>
+          <p>后续这里会接入问卷模块，把口干、口苦、畏寒、出汗、排便等回答与舌象合参。</p>
+        </section>
+      )}
+      {activeTab === "wuyun" && (
+        <section className="tongue-result-card">
+          <h3>五运六气参考</h3>
+          <p>当前按春末湿热与作息消耗场景处理：饮食宜清润，避免连续熬夜、辛辣和大汗运动。</p>
+          <div className="abnormal-box">
+            <strong>季节提醒</strong>
+            <p>如近期口干、咽干明显，优先关注补水、睡眠和室内湿度。</p>
+          </div>
+        </section>
+      )}
+      {activeTab === "risk" && (
+        <section className="tongue-result-card">
+          <h3>风险评估</h3>
+          <div className="abnormal-box">
+            <strong>注意事项</strong>
+            {abnormalItems.map((item) => <p key={item}>· {item}</p>)}
+            <p>· 如出现持续疼痛、发热、口腔溃疡不愈或明显不适，请及时就医。</p>
+          </div>
+        </section>
+      )}
+      {activeTab === "therapy" && (
+        <section className="therapy-card">
+          <div className="therapy-head">
+            <span>膳</span>
+            <div>
+              <h3>饮食调理与个性化食疗</h3>
+              <p>基于体质辨识和舌诊数据，精选药食同源食材</p>
+            </div>
+          </div>
+          <div className="diet-advice-card">
+            <h3><Apple size={20} /> 饮食调理 (Diet)</h3>
+            <p>多吃滋阴润燥的食物，如银耳、百合、雪梨、莲藕、山药。</p>
+            <p>避免辛辣刺激性食物，少吃油炸烧烤，减少温热性食物过量摄入。</p>
+          </div>
+          <div className="herb-chip-grid">
+            {["石斛（滋养胃阴）", "麦冬（养阴生津）", "沙参（清肺养阴）", "玉竹（养阴润燥）", "枸杞子（滋补肝肾）", "西洋参（补气养阴）"].map((item) => <span key={item}>{item}</span>)}
+          </div>
+          <div className="therapy-grid">
+            {foodTherapyItems.map((item) => (
+              <article className="therapy-item" key={item.name}>
+                <div>{item.name.slice(0, 1)}</div>
+                <strong>{item.name}</strong>
+                <p>{item.text}</p>
+                <em>{item.usage}</em>
+              </article>
+            ))}
+          </div>
+          <div className="lifestyle-list">
+            <h3><Clock3 size={20} /> 起居建议 (Lifestyle)</h3>
+            <p>务必保证充足睡眠，尽量在晚上 11 点前入睡。</p>
+            <p>运动宜缓，避免大汗淋漓的剧烈运动。</p>
+            <p>保持情绪平稳，避免焦虑急躁。</p>
+          </div>
+        </section>
+      )}
+      <section className="fixed-report-actions">
+        <button className="ghost-button" type="button" onClick={handleShareReport}>分享报告</button>
+        <button className="action-button compact" type="button" onClick={onRetest}>再次测评</button>
+        {shareStatus && <span>{shareStatus}</span>}
+      </section>
+    </section>
   );
 }
 

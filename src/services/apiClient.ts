@@ -31,7 +31,27 @@ export type AgentMessageResult = {
   sessionId: string;
   userMessage: string;
   assistantMessage: string;
+  answer?: string;
+  model?: string | null;
   toolCalls?: Array<Record<string, unknown>>;
+};
+
+export type TongueAnalysisPayload = {
+  date: string;
+  tongue: Record<string, unknown>;
+  upload?: {
+    name: string;
+    size: number;
+    type: string;
+  } | null;
+};
+
+export type TongueAnalysisResult = {
+  analysis: string;
+  aiEnabled: boolean;
+  model?: string | null;
+  sessionId?: string | null;
+  observation?: Record<string, unknown> | null;
 };
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
@@ -101,5 +121,12 @@ export function sendAgentMessage(sessionId: string, message: string) {
   return request<AgentMessageResult>(`/api/agent/sessions/${encodeURIComponent(sessionId)}/messages`, {
     method: "POST",
     body: JSON.stringify({ message, useRag: true, allowedTools: ["knowledge_search", "report_context"] }),
+  });
+}
+
+export function analyzeTongue(profileId: string, payload: TongueAnalysisPayload) {
+  return request<TongueAnalysisResult>(`/api/profiles/${encodeURIComponent(profileId)}/tongue-analysis`, {
+    method: "POST",
+    body: JSON.stringify(payload),
   });
 }

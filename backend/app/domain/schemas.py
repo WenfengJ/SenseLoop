@@ -161,6 +161,20 @@ class AgentMessageCreate(BaseModel):
     allowedTools: list[str] = Field(default_factory=list)
 
 
+class TongueAnalysisRequest(BaseModel):
+    date: str
+    tongue: dict[str, Any]
+    upload: dict[str, Any] | None = None
+
+
+class TongueAnalysisResponse(BaseModel):
+    analysis: str
+    aiEnabled: bool
+    model: str | None = None
+    sessionId: str | None = None
+    observation: dict[str, Any] | None = None
+
+
 class DbStatus(BaseModel):
     model_config = ConfigDict(extra="allow")
 

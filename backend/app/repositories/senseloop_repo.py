@@ -174,14 +174,66 @@ def create_agent_session(session: Session, payload: dict) -> dict:
     return {"id": row.id, "profileId": row.profile_id, "sessionType": row.session_type, "status": row.status}
 
 
-def add_agent_message(session: Session, session_id: str, message: str) -> dict:
-    row = AgentMessageTable(id=str(uuid4()), session_id=session_id, role="user", content=message)
-    session.add(row)
+def get_agent_session(session: Session, session_id: str) -> dict | None:
+    row = session.get(AgentSessionTable, session_id)
+    if not row:
+        return None
+    return {
+        "id": row.id,
+        "profileId": row.profile_id,
+        "sessionType": row.session_type,
+        "status": row.status,
+        "modelName": row.model_name,
+        "metadata": row.extra_metadata,
+    }
+
+
+def add_agent_message(
+    session: Session,
+    session_id: str,
+    message: str,
+    *,
+    assistant_message: str | None = None,
+    model_name: str | None = None,
+    metadata: dict | None = None,
+) -> dict:
+    session_row = session.get(AgentSessionTable, session_id)
+    if session_row is None:
+        return {
+            "answer": "Agent 会话不存在。",
+            "assistantMessage": "Agent 会话不存在。",
+            "citations": [],
+            "toolCalls": [{"toolName": "persist_agent_message", "status": "failed"}],
+        }
+
+    user_row = AgentMessageTable(
+        id=str(uuid4()),
+        session_id=session_id,
+        role="user",
+        content=message,
+        extra_metadata=metadata or {},
+    )
+    session.add(user_row)
+
+    if assistant_message:
+        session.add(
+            AgentMessageTable(
+                id=str(uuid4()),
+                session_id=session_id,
+                role="assistant",
+                content=assistant_message,
+                extra_metadata={"model": model_name, **(metadata or {})},
+            )
+        )
+        session_row.model_name = model_name
+
     session.commit()
     return {
-        "answer": "Agent 会话已记录。RAG 检索和工具调用会在下一阶段接入。",
+        "answer": assistant_message or "Agent 会话已记录。RAG 检索和工具调用会在下一阶段接入。",
+        "assistantMessage": assistant_message or "Agent 会话已记录。RAG 检索和工具调用会在下一阶段接入。",
         "citations": [],
         "toolCalls": [{"toolName": "persist_agent_message", "status": "succeeded"}],
+        "model": model_name,
     }
 
 

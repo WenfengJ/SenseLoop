@@ -5,7 +5,10 @@ from pathlib import Path
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import Session, sessionmaker
 
+from app.config import load_local_env
 from app.models.tables import Base
+
+load_local_env()
 
 
 def _default_sqlite_url() -> str:
