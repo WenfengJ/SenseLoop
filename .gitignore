@@ -2,6 +2,11 @@ node_modules/
 dist/
 .npm-cache/
 backend/.venv/
+backend/.local/
 backend/__pycache__/
 backend/app/**/__pycache__/
+.env
+.env.*
+backend/.env
+backend/.env.*
 .DS_Store

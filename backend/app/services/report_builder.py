@@ -22,9 +22,20 @@ def build_daily_report(profile: dict, signals: dict) -> dict:
         "recoveryScore": recovery_score,
         "oneSentenceAdvice": _one_sentence(profile["profileType"]),
         "nightAudioSummary": _audio_summary(signals["audioEvents"]),
+        "bodyStatusHints": _body_status_hints(signals),
         "foodAdvice": _food_advice(profile["profileType"], signals),
         "recoveryAdvice": _recovery_advice(profile["profileType"]),
         "riskNotice": _risk_notice(profile["profileType"], signals),
+        "fourDiagnosisCompletion": {
+            "wang": bool(signals.get("diet")) or signals.get("stool", {}).get("recorded") or signals.get("tongue", {}).get("recorded"),
+            "wen": bool(signals.get("audioEvents")) or signals.get("breath", {}).get("level") != "unknown",
+            "wenAsk": True,
+            "qie": bool(signals.get("vitals", {}).get("heartRateResting") or signals.get("vitals", {}).get("steps")),
+        },
+        "evidenceTags": [
+            SLEEP_EVENT_LABELS.get(event["type"], "未知声音")
+            for event in signals["audioEvents"]
+        ],
     }
 
 
@@ -59,6 +70,21 @@ def _one_sentence(profile_type: str) -> str:
         "insomnia": "今天重点不是补很多觉，而是重新建立稳定睡眠节律。",
     }
     return mapping.get(profile_type, "今天更适合恢复和观察。")
+
+
+def _body_status_hints(signals: dict) -> list[str]:
+    hints = []
+    if signals["sleep"]["sleepQuality"] == "poor":
+        hints.append("昨晚睡眠质量偏低，今天更适合恢复和观察。")
+    if signals["sleep"]["wakeCount"] >= 3:
+        hints.append("夜醒次数偏多，建议今天降低身体负荷。")
+    if signals.get("stool", {}).get("dryness") == "dry":
+        hints.append("排便偏干，饮水和膳食纤维需要优先补足。")
+    if signals.get("tongue", {}).get("coatingThickness") == "thick":
+        hints.append("舌苔偏厚，建议结合饮食油腻程度继续观察。")
+    if not hints:
+        hints.append("今天整体状态相对稳定，维持轻量记录即可。")
+    return hints
 
 
 def _food_advice(profile_type: str, signals: dict) -> list[str]:

@@ -15,7 +15,7 @@ cleanup() {
 trap cleanup EXIT
 
 echo "Starting SenseLoop backend at http://${BACKEND_HOST}:${BACKEND_PORT}"
-(cd backend && HOST="$BACKEND_HOST" PORT="$BACKEND_PORT" python3 simple_server.py) &
+(cd backend && PYTHONPATH=. .venv/bin/uvicorn app.main:app --host "$BACKEND_HOST" --port "$BACKEND_PORT") &
 BACKEND_PID=$!
 
 if [ ! -d "node_modules" ]; then
