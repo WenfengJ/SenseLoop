@@ -1,0 +1,182 @@
+[
+  {
+    "id": "01",
+    "title": "成人高脂血症食养指南（2023年版）",
+    "kind": "pdf",
+    "topic": "饮食调理/药食同源/中医辨证食养",
+    "publisher": "国家卫生健康委办公厅",
+    "url": "https://www.nhc.gov.cn/cms-search/downFiles/252e7bd69d064fc5a00f02fbc64b5e23.pdf",
+    "why": "慢病食养核心资料，含证型、食药物质、食谱示例。"
+  },
+  {
+    "id": "02",
+    "title": "成人高血压食养指南（2023年版）",
+    "kind": "pdf",
+    "topic": "饮食调理/药食同源/中医辨证食养",
+    "publisher": "国家卫生健康委办公厅",
+    "url": "https://www.nhc.gov.cn/cms-search/downFiles/63f752a17cfd4b4781f744477561866f.pdf",
+    "why": "高血压食养、DASH/东方膳食和中医证型结合。"
+  },
+  {
+    "id": "03",
+    "title": "儿童青少年生长迟缓食养指南（2023年版）",
+    "kind": "pdf",
+    "topic": "儿童食养/饮食调理/中医食养",
+    "publisher": "国家卫生健康委办公厅",
+    "url": "https://www.nhc.gov.cn/cms-search/downFiles/b127fbe92b104f929f0877303d369150.pdf",
+    "why": "儿童青少年食养，适合儿童健康问答边界。"
+  },
+  {
+    "id": "04",
+    "title": "成人糖尿病食养指南（2023年版）",
+    "kind": "pdf",
+    "topic": "饮食调理/药食同源/中医辨证食养",
+    "publisher": "国家卫生健康委办公厅",
+    "url": "https://www.nhc.gov.cn/cms-search/downFiles/4fcbecd2c18e46baaf291bf46c2b79cd.pdf",
+    "why": "糖尿病食养，需严格保留不可替代药物治疗边界。"
+  },
+  {
+    "id": "05",
+    "title": "成人高尿酸血症与痛风食养指南（2024年版）",
+    "kind": "pdf",
+    "topic": "饮食调理/药食同源/中医辨证食养",
+    "publisher": "国家卫生健康委办公厅",
+    "url": "https://www.nhc.gov.cn/cms-search/downFiles/6c8afb3b8981447c8e96a65143eefedd.pdf",
+    "why": "痛风/高尿酸食养，含低嘌呤与证型食养建议。"
+  },
+  {
+    "id": "06",
+    "title": "成人肥胖食养指南（2024年版）",
+    "kind": "pdf",
+    "topic": "饮食调理/体重管理/中医辨证食养",
+    "publisher": "国家卫生健康委办公厅",
+    "url": "https://www.cnsoc.org/activitykit5/images/%40cmsxh_7108bb5a-13de-4356-a2a9-50d178413c39.pdf",
+    "why": "体重管理项目高度相关，含分区食谱和证型食养方。"
+  },
+  {
+    "id": "07",
+    "title": "儿童青少年肥胖食养指南（2024年版）编制说明",
+    "kind": "pdf",
+    "topic": "儿童食养/体重管理/中医食养",
+    "publisher": "国家卫生健康委办公厅",
+    "url": "https://www.nhc.gov.cn/sps/c100088/202312/3fbdf286857a4235be5749ca7a7b2ac9/files/1732845041524_56563.pdf",
+    "why": "儿童青少年肥胖食养编制说明，适合了解适用范围和安全边界；正篇待后续补齐。"
+  },
+  {
+    "id": "08",
+    "title": "成人慢性肾脏病食养指南（2024年版）问答",
+    "kind": "pdf",
+    "topic": "饮食调理/药食同源/中医辨证食养",
+    "publisher": "国家卫生健康委办公厅",
+    "url": "https://www.nhc.gov.cn/cms-search/downFiles/5c5179f8fd134a3580e846a56a8f17d4.pdf",
+    "why": "慢性肾病食养问答，利于识别需就医/禁忌的高风险场景。"
+  },
+  {
+    "id": "09",
+    "title": "按照传统既是食品又是中药材的物质目录管理规定",
+    "kind": "pdf",
+    "topic": "药食同源/食药物质目录管理",
+    "publisher": "国家卫生健康委/市场监管总局相关公报",
+    "url": "https://www.nhc.gov.cn/bgt/201811pvb/202202/a70b2c3ca6734236a2c5ef8ca5221e38/files/1733795737474_31402.pdf",
+    "why": "定义食药物质准入要求，可作为药食同源安全规则基础。"
+  },
+  {
+    "id": "10",
+    "title": "WHO中医药国际标准术语",
+    "kind": "pdf",
+    "topic": "中医术语/标准化/知识库词表",
+    "publisher": "世界卫生组织",
+    "url": "https://iris.who.int/server/api/core/bitstreams/02be07cf-ef55-4ae2-9184-ded49210aa05/content",
+    "why": "453页中医术语标准，适合术语归一和同义词表。"
+  },
+  {
+    "id": "11",
+    "title": "WHO全球传统医学战略2025-2034",
+    "kind": "pdf",
+    "topic": "传统医学政策/安全与证据框架",
+    "publisher": "世界卫生组织",
+    "url": "https://iris.who.int/server/api/core/bitstreams/cf37a4ad-4d27-4244-a7ee-001de39841ee/content",
+    "why": "最新WHO传统医学战略，强调证据、安全、监管和整合。"
+  },
+  {
+    "id": "12",
+    "title": "WHO传统医学战略2014-2023",
+    "kind": "pdf",
+    "topic": "传统医学政策/安全与监管",
+    "publisher": "世界卫生组织",
+    "url": "https://iris.who.int/server/api/core/bitstreams/16362a42-6583-4601-a7da-d0ed6bc39108/content",
+    "why": "WHO传统医学旧版战略，可做政策背景。"
+  },
+  {
+    "id": "13",
+    "title": "WHO针灸实践基准",
+    "kind": "pdf",
+    "topic": "中医适宜技术/安全边界",
+    "publisher": "世界卫生组织",
+    "url": "https://iris.who.int/server/api/core/bitstreams/e4c8a673-688a-4a2a-af6d-f1c36438946a/content",
+    "why": "针灸实践安全基准，适合边界提示，不用于普通饮食问答核心。"
+  },
+  {
+    "id": "14",
+    "title": "中医诊断学课程（国家高等教育智慧教育平台）",
+    "kind": "html",
+    "topic": "中医四诊/舌诊/中医诊断框架",
+    "publisher": "国家高等教育智慧教育平台",
+    "url": "https://higher.smartedu.cn/course/67ba5009225d72705e5597e6",
+    "why": "课程大纲明确包含四诊、舌诊、问诊、切诊等，可作为结构参考。"
+  },
+  {
+    "id": "15",
+    "title": "中医诊断学课程教学大纲",
+    "kind": "pdf",
+    "topic": "中医四诊/舌诊/诊断教学要求",
+    "publisher": "北京中医药相关教育平台公开PDF",
+    "url": "https://zyj.beijing.gov.cn/sy/tzgg/202207/P020220725683596278972.pdf",
+    "why": "公开教学大纲，列出舌诊/望闻问切掌握点。"
+  },
+  {
+    "id": "16",
+    "title": "中医诊断学课程（国家高等教育智慧教育平台二）",
+    "kind": "html",
+    "topic": "中医四诊/舌诊/辨证",
+    "publisher": "国家高等教育智慧教育平台",
+    "url": "https://higher.smartedu.cn/course/671ad53716d8a05eedca44ce",
+    "why": "另一个公开课程页，补充四诊、舌诊教学结构。"
+  },
+  {
+    "id": "17",
+    "title": "WHO传统医学与ICD-11说明",
+    "kind": "html",
+    "topic": "传统医学分类/安全说明/非疗效背书",
+    "publisher": "世界卫生组织",
+    "url": "https://www.who.int/standards/classifications/frequently-asked-questions/traditional-medicine",
+    "why": "用于知识库免责声明：ICD收录不代表疗效背书。"
+  },
+  {
+    "id": "18",
+    "title": "中国成人失眠诊断与治疗指南（2023版）",
+    "kind": "pdf",
+    "topic": "睡眠/失眠/中医药治疗边界",
+    "publisher": "中华医学会神经病学分会睡眠障碍学组；中华神经科杂志",
+    "url": "https://medtion-image.medtion.com/uploads/1/file/public/202407/20240719144258_vhtdud2bn4.pdf",
+    "why": "专业睡眠指南，含中医药治疗建议；版权需谨慎，仅内部研究切片。"
+  },
+  {
+    "id": "19",
+    "title": "中国居民膳食指南（2022）核心推荐",
+    "kind": "html",
+    "topic": "饮食调理/基础营养/健康生活方式",
+    "publisher": "中国疾控中心；福建省卫健委转载",
+    "url": "https://wjw.fj.gov.cn/ztzl/jkjy/jkzgxd/202206/t20220615_5930367.htm",
+    "why": "基础膳食原则，适合所有饮食调理回答的底层规则。"
+  },
+  {
+    "id": "20",
+    "title": "中国公民健康素养——基本知识与技能（2024年版）",
+    "kind": "html",
+    "topic": "健康生活方式/饮食/运动/睡眠边界",
+    "publisher": "国家卫生健康委；广州市卫健委转载",
+    "url": "https://wjw.gz.gov.cn/zmhd/cjwt/zczy/content/post_9687151.html",
+    "why": "通用健康素养底层规则，适合生成安全科普边界。"
+  }
+]

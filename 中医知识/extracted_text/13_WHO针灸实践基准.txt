@@ -1,0 +1,639 @@
+[page 1]
+WHO BENCHMARKS FOR 
+THE PRACTICE 
+OF ACUPUNCTURE
+Department of Integrated Health Services
+World Health Organization (WHO)
+Avenue Appia 20 – CH-1211 Geneva 27 – Switzerland
+
+[page 3]
+WHO BENCHMARKS FOR 
+THE PRACTICE 
+OF ACUPUNCTURE
+
+[page 4]
+WHO benchmarks for the practice of acupuncture
+ISBN 978-92-4-001688-0 (electronic version) 
+ISBN 978-92-4-001689-7 (print version)
+© World Health Organization 2020
+Some rights reserved. This work is available under the Creative Commons Attribution-NonCommercial-
+ShareAlike 3.0 IGO licence (CC BY-NC-SA 3.0 IGO; https://creativecommons.org/licenses/by-nc-sa/3.0/igo). 
+Under the terms of this licence, you may copy, redistribute and adapt the work for non-commercial purposes, 
+provided the work is appropriately cited, as indicated below. In any use of this work, there should be no 
+suggestion that WHO endorses any specific organization, products or services. The use of the WHO logo is 
+not permitted. If you adapt the work, then you must license your work under the same or equivalent Creative 
+Commons licence. If you create a translation of this work, you should add the following disclaimer along 
+with the suggested citation: “This translation was not created by the World Health Organization (WHO). 
+WHO is not responsible for the content or accuracy of this translation. The original English edition shall be 
+the binding and authentic edition”. 
+Any mediation relating to disputes arising under the licence shall be conducted in accordance with the 
+mediation rules of the World Intellectual Property Organization (http://www.wipo.int/amc/en/mediation/rules/).
+Suggested citation. WHO benchmarks for the practice of acupuncture. Geneva: World Health Organization; 
+2020. Licence: CC BY-NC-SA 3.0 IGO.
+Cataloguing-in-Publication (CIP) data. CIP data are available at http://apps.who.int/iris.
+Sales, rights and licensing. To purchase WHO publications, see http://apps.who.int/bookorders. To submit 
+requests for commercial use and queries on rights and licensing, see http://www.who.int/about/licensing. 
+Third-party materials. If you wish to reuse material from this work that is attributed to a third party, such 
+as tables, figures or images, it is your responsibility to determine whether permission is needed for that 
+reuse and to obtain permission from the copyright holder. The risk of claims resulting from infringement of 
+any third-party-owned component in the work rests solely with the user.
+General disclaimers. The designations employed and the presentation of the material in this publication 
+do not imply the expression of any opinion whatsoever on the part of WHO concerning the legal status 
+of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or 
+boundaries. Dotted and dashed lines on maps represent approximate border lines for which there may not 
+yet be full agreement.
+The mention of specific companies or of certain manufacturers’ products does not imply that they are 
+endorsed or recommended by WHO in preference to others of a similar nature that are not mentioned. 
+Errors and omissions excepted, the names of proprietary products are distinguished by initial capital letters.
+All reasonable precautions have been taken by WHO to verify the information contained in this publication. 
+However, the published material is being distributed without warranty of any kind, either expressed or 
+implied. The responsibility for the interpretation and use of the material lies with the reader. In no event 
+shall WHO be liable for damages arising from its use.
+Design and layout by Inis Communication
+
+[page 5]
+Contents
+Foreword iv
+Preface v
+Acknowledgements vi
+Glossary vii
+Executive summary viii
+1. Introduction 1
+2. Procedures 3
+2.1 Preparation 3
+2.2 Techniques 3
+2.3 Records 4
+3. Facilities 5
+3.1 Physical space 5
+3.2 Equipment and devices 5
+3.3 Waste management 5
+4. Safety 7
+4.1 Precautions 7
+4.2 Contraindications 7
+4.3 Infection prevention and control 7
+4.4 Incident management 8
+References 9
+Annex 1. Disinfection requirements during acupuncture treatment 11
+Annex 2. Protocol for incident management during acupuncture treatment 12
+Annex 3. First working group meeting 14
+Annex 4. Second working group meeting 16
+iii
+
+[page 6]
+Foreword
+The World Health Organization (WHO) is currently implementing its 13th General Programme of Work 
+(GPW13) to support countries in reaching all health-related Sustainable Development Goals (SDGs). 
+GPW13 is structured around three interconnected strategic priorities: achieving universal health coverage; 
+addressing health emergencies; and promoting healthier populations. These strategic priorities are 
+supported by three strategic shifts: stepping up leadership; driving public health impacts in every country; 
+and focusing global public goods on impact.
+Traditional medicine has always had a role in this collective endeavour. The Declaration of Astana, renewed 
+from the Declaration of Alma-Ata towards universal health coverage and the SDGs, reaffirms the role of 
+traditional medicine in strengthening primary health care, a cornerstone of health systems, in pursuit of 
+health for all. This has also been reflected in the WHO global report on traditional and complementary 
+medicine 2019, in which 88% of WHO Member States acknowledge the use of traditional and 
+complementary medicine in health care.
+Taking note of the growing importance of traditional medicine in the provision of health care nationally 
+and globally, WHO and its Member States have strived to explore ways to integrate, as appropriate, safe 
+and evidence-based traditional and complementary medicine services within national or subnational 
+health systems, as committed to in the Political Declaration of the High-level Meeting on Universal Health 
+Coverage.
+WHO aims to provide policy and technical guidance to Member States; promote the safe and effective 
+use of traditional and complementary medicine through appropriate regulation of products, practices and 
+practitioners; and support Member States in harnessing the contribution of traditional and complementary 
+medicine to people-centred health care in implementing the WHO Traditional Medicine Strategy 
+2014–2023.
+Setting norms and standards is a unique function of WHO. The normative work is driven by needs and 
+could be translated into real impact in relevant countries through appropriate policy options. This series 
+of benchmarks, covering various systems and interventions of traditional, complementary and integrative 
+medicine, aims to provide a reference point to which actual practice and practitioners can be evaluated.
+I am very pleased to introduce this series to policy-makers, health workers and the general public, and I 
+firmly believe it will serve its purpose.
+Zsuzsanna Jakab
+Deputy Director-General
+World Health Organization
+iv
+
+[page 7]
+Preface
+Integrated health services are essential for the World Health Organization (WHO) in the implementation 
+of its 13th General Programme of Work, which aims to support countries in achieving universal health 
+coverage and the health-related Sustainable Development Goals. The overarching mission for the 
+Department of Integrated Health Services is to accelerate equitable access to quality health services that 
+are integrated and people-centred, and that can be monitored and evaluated.
+WHO is unique in its mandate to provide independent normative guidance. Its normative products 
+encompass a wide range of global public health goods, including norms and standards. It is therefore 
+the primary role of the Department of Integrated Health Services to generate and produce relevant global 
+goods. Key to improving its work in this area is ensuring global public health goods are driven by country 
+needs and can deliver tangible impacts at the country level.
+As of 2018, when 88% of WHO Member States acknowledged the use of traditional and complementary 
+medicine, WHO’s support in evaluating the safety, quality and effectiveness of traditional and complementary 
+medicine has continuously ranked in the top areas of need, according to the WHO global report on 
+traditional and complementary medicine 2019.
+WHO prioritizes normative products based on an assessment of demands. To address increasing needs 
+and to drive impact in countries, this series of benchmarks captures the main systems and interventions 
+of traditional, complementary and integrative medicine by setting up required norms and standards on 
+training and practice.
+WHO’s guiding principles and quality assurance procedures have been strictly followed in designing and 
+formulating these benchmarks. WHO will not only assess the quality of these normative products but 
+also streamline systems and plans for monitoring and evaluation.
+I am pleased to present this series of benchmarks and invite you to join us in measuring and documenting 
+their impact.
+Edward Kelley
+Director
+Department of Integrated Health Services
+World Health Organization
+v
+
+[page 8]
+Acknowledgements
+The World Health Organization (WHO) acknowledges the financial support of the National Administration 
+of Traditional Chinese Medicine, China, without which the production of this document would not have 
+been possible.
+Thanks are due to the China Association of Acupuncture-Moxibustion and Guangzhou University of 
+Chinese Medicine, China, which kindly provided logistic support to the WHO working group meetings 
+on this document.
+Special thanks go to Baoyan Liu, Jia Liu and Nicola Robinson, who have actively and diligently contributed 
+to the drafting and editing of this document. WHO is indebted to all experts who have provided their 
+inputs to the WHO working group meetings and the peer review process.
+Qi Zhang and Qin Liu undertook revision work under the guidance of Edward Kelley. Colleagues within 
+the WHO headquarters team for traditional, complementary and integrative medicine provided secretarial 
+support.
+vi
+
+[page 9]
+Glossary
+Acupuncture manipulation
+Movement of the needle applied after insertion to increase the effectiveness of acupuncture, basically 
+including thrusting, lifting, twirling and rotating manipulations.
+Pressing hand
+The acupuncture practitioner’s hand that presses the puncturing site to facilitate needle insertion.
+Puncturing hand
+The acupuncture practitioner’s hand that holds and inserts the needle.
+Reinforcing and reducing manipulation
+The therapeutic goal achieved by acupuncture manipulation. Reinforcing aims to replenish Qi and restore 
+the body from a decreased functional state. Reducing aims to expel pathogenic factors and restore the 
+body from a hyperactive functional state.
+vii
+
+[page 10]
+Executive summary
+Why this benchmark?
+In 1999, the World Health Organization (WHO) published the Guidelines on basic training and safety in 
+acupuncture. This presented what professional experts and health regulators considered to be appropriate 
+training programmes for acupuncture practitioners. 1
+A standardized protocol for acupuncture treatment, against which actual practice can be compared and 
+evaluated, has been lacking. With the increasing use of acupuncture in clinical settings worldwide, there 
+is an urgent need to develop benchmarks for the practice of acupuncture to ensure its safety, quality 
+and effectiveness.
+This document will join the updated benchmarks for the training of acupuncture to form an integral part 
+of the serial benchmarks, targeting key modalities of traditional medicine intervention and contributing 
+to the establishment of a reference toolkit for countries.
+How was this benchmark prepared?
+Four drafts were prepared during the development of this benchmark document, with intensive technical 
+support from an expert group based in China. Two WHO working group meetings and an extended peer 
+review were organized to facilitate the production of these drafts. This process has involved hundreds of 
+experts in relevant areas worldwide.
+In line with WHO established principles and processes for benchmark development, the WHO Secretariat 
+made the planning proposal and clarified the scope of work. The first draft was prepared by selected 
+leading experts based on the framework provided by WHO. This draft was presented to the working 
+group meeting for discussion.
+Twenty-three experts from 14 countries across the WHO regions joined the first working group meeting. 
+After three days of intensive discussion on the scope, structure and content of the draft document, the 
+meeting was concluded with consensus and advice on further improvement, which guided production 
+of the second draft. This draft was then ready for extended peer review.
+A total of 196 experts from 59 countries covering all six WHO regions were consulted in the external peer 
+review process. They represented a wide range of expertise needed in developing these benchmarks. 
+Eventually, 571 concrete suggestions encompassing every aspect of the document, from overall structural 
+arrangement to a specialized technical issue, were received. This valuable feedback strongly informed the 
+production of the third draft, which was then ready for further review at the second working group meeting.
+The second working group meeting aimed to conclude the consulting process by inviting selected experts 
+to finalize the document. Seventeen experts from nine countries across the WHO regions joined the 
+consultation and contributed to the development of the fourth draft, which became the last technical 
+version of the benchmark before formatting and printing.
+1 See: https://apps.who.int/iris/bitstream/handle/10665/66007/WHO_EDM_TRM_99.1.pdf
+viii
+
+[page 11]
+What does this benchmark cover?
+This document is structured in four parts:
+  Introduction: gives a short briefing on the background and objectives of the document.
+  Procedures: presents stepwise guidance for the administration of acupuncture treatment.
+  Facilities: provides the minimum infrastructure requirements for delivering an acupuncture service.
+  Safety: emphasizes the key elements for the safe practice of acupuncture.
+These four parts constitute a complete set of benchmarks for the practice of acupuncture.
+Who is this benchmark for?
+By setting norms and standards, this document helps to address the gap between the increased demands 
+and the uncertified delivery of acupuncture services. It offers a useful reference point to evaluate 
+acupuncture practice which will benefit policy-makers, health workers, education providers and the 
+public in general.
+Qi Zhang
+Head
+Unit of Traditional, Complementary and Integrative Medicine
+Department of Integrated Health Services
+World Health Organization
+ix
+
+[page 12]
+x
+
+[page 13]
+Acupuncture remains the most common form of traditional medicine practice, with its use acknowledged 
+by 113 Member States in the WHO global report on traditional and complementary medicine 2019 (1).
+In 1999, the World Health Organization (WHO) published the Guidelines on basic training and safety in 
+acupuncture (2). These guidelines presented what professional experts and health regulators considered 
+to be appropriate training programmes for acupuncture practitioners.
+There has, however, been a lack of standardized protocols for acupuncture treatment by which the 
+practice can be compared and evaluated. By setting up benchmarked requirements for the practice of 
+acupuncture, this document tries to reduce the gaps and ensure the safety, quality and effectiveness of 
+acupuncture services.
+In addition to the introduction, this document incorporates three essential components – procedures, 
+facilities and safety – to constitute a set of benchmarks for the practice of acupuncture.
+1 
+ 
+Introduction
+1
+
+[page 14]
+2
+
+[page 15]
+2 
+ 
+ Procedures
+2.1 Preparation
+2.1.1 Acupuncture needles
+  Selecting: the practitioner should select acupuncture needles according to the patient’s age, physical 
+constitution and state of illness, and the location of the selected acupoint (3).
+  Examining: the practitioner should check the acupuncture needles carefully before each treatment and 
+discard any imperfect needles (4).
+2.1.2 Acupoints
+  Locating: the practitioner should select the most appropriate methods to locate the acupoints to be 
+needled (5,6).
+  Disinfecting: the practitioner should prepare the needling site correctly according to local infection 
+control guidelines.
+2.1.3 Body positions
+  Lying:
+  supine position is suggested for acupuncture treatment to the chest and abdomen;
+  prone position is suggested for acupuncture treatment to the back and waist;
+  lateral position is suggested for acupuncture treatment to the side of the body.
+  Sitting:
+  backward-sitting position is suggested for acupuncture treatment to the forehead, face, neck, 
+upper limbs and chest;
+  forward-sitting position is suggested for acupuncture treatment to the vertex, occiput, shoulders 
+and back.
+Other positions can be decided by the practitioner and patient for the convenience of providing treatment.
+2.1.4 Other preparations
+  The practitioner should maintain a professional attitude and personal hygiene.
+  The patient should dress appropriately for the convenience of the treatment.
+2.2 Techniques
+2.2.1 Holding
+  The practitioner should pay strict attention to appropriate disinfection of their hands before administering 
+acupuncture.
+  The practitioner should hold the handle or the body of the acupuncture needle appropriately with 
+two or three fingers.
+3
+
+[page 16]
+2.2.2 Inserting
+  The practitioner should decide the most appropriate insertion method according to the location of the 
+acupoint and the selection of needles.
+  The practitioner should insert the needle by using the puncturing hand and the pressing hand in an 
+appropriate manner.
+  The practitioner should insert the needle at the appropriate angle and depth according to the acupoint 
+location, purpose of treatment and physical condition of the patient, to ensure safe and effective practice.
+2.2.3 Manipulating
+  The practitioner should perform appropriate thrusting, lifting, twirling and rotating manipulations to 
+obtain the needling sensation and treatment effectiveness (7).
+  The practitioner could perform pressing manipulation along the meridian with the fingers to enhance 
+the needling sensation.
+2.2.4 Retaining
+  The practitioner should determine the duration of time required for needle retention according to the 
+patient’s situation.
+  The practitioner could perform needle retention with or without intermittent needling manipulation 
+as appropriate.
+2.2.5 Withdrawing
+  The practitioner should lift the needle slightly until the release of a tight sensation around the shaft 
+and then withdraw the needle.
+  The practitioner should hold a clean swab to assist withdrawing and may press the acupuncture site 
+immediately after withdrawing.
+2.3 Records
+2.3.1 Information to be recorded
+  chief complaint and medical history;
+  physical examination;
+  pattern differentiation and therapeutic principle;
+  acupuncture prescription and patient’s consent;
+  needling details and patient’s response;
+  treatment outcomes and any incidents (8);
+  further advice, including follow-up, if needed.
+2.3.2 Maintenance of records
+The practitioner should keep complete patient records in the correct manner, as specified by local laws 
+and regulations.
+4
+
+[page 17]
+3 
+ 
+ Facilities
+3.1 Physical space
+  The working environment and surrounding area should be clean and tidy.
+  The treatment area should be well lit, be of an appropriate temperature, and have adequate ventilation.
+  The treatment area should comply with the local requirements for patient privacy and protection.
+  The storage environment for acupuncture needles and related devices should be kept dry and ventilated.
+  The physical space should be appropriate for disabled access.
+3.2 Equipment and devices
+  bed and stool for the treatment;
+  screen and towel for patient privacy and protection;
+  acupuncture needles of different specifications;
+  related devices to enhance acupuncture treatment;
+  related devices for adjunctive treatment;
+  equipment and devices for the hygiene requirements;
+  emergency equipment for first aid.
+3.3 Waste management
+  After use, disposable needles should be placed and stored in a sharps container and disposed of in 
+the appropriate manner.
+  Infectious waste should be handled appropriately according to local infection control guidelines.
+  Non-infectious waste should be disposed of properly in a timely manner.
+5
+
+[page 18]
+6
+
+[page 19]
+4
+ 
+ Safety
+4.1 Precautions
+4.1.1 Before treatment
+  The patient should be informed of the possible benefits and potential risks associated with the treatment.
+  The practitioner should obtain informed consent from the patient before treatment, either orally or 
+in writing.
+4.1.2 During treatment
+  The force of manipulation, including the depth of thrusting, length of lifting, and angle, frequency 
+and duration of twirling and rotating, should be decided based on the patient’s health condition and 
+response and the main objectives of the treatment.
+  Attention should be directed to withdrawing the acupuncture needle from body regions with a tendency 
+to bleed. Pressing with a clean swab is required in this case to avoid bleeding.
+4.1.3 After treatment
+  The practitioner should ensure all acupuncture needles have been removed from the patient.
+  The practitioner should document the patient’s records pertaining to the treatment.
+  The practitioner should provide the patient with further advice after the treatment, as needed.
+4.2 Contraindications
+4.2.1 By disease and syndrome
+  Acupuncture treatment should not be administered to people with a disturbance of blood coagulation.
+  Acupuncture treatment should not be administered to people with unstable epilepsy.
+4.2.2 By condition
+  Acupuncture treatment should not be administered to infants on the fontanelle before it has closed.
+  Acupuncture treatment should not be administered to the lower abdomen or lumbosacral region in 
+women who are pregnant, to avoid contraction of the uterus.
+4.2.3 By treatment region
+  Acupuncture treatment should not be administered to body regions where there are ulcers, sores or scars.
+  The depth of needle insertion should be strictly controlled for acupoints located close to vital blood 
+vessels, nerve trunks and vital organs.
+4.3 Infection prevention and control
+Annex 1 gives detailed information on the requirements of disinfection. Key elements for infection 
+prevention and control during acupuncture treatment are:
+7
+
+[page 20]
+ sterilization of reusable acupuncture needles;
+  disinfection of other apparatus;
+  hygiene of the practitioner’s hands (9);
+  hygiene of the acupoint sites;
+  disinfection of the materials;
+  disinfection of the treatment area.
+4.4 Incident management
+Annex 2 gives detailed information on managing incidents that may be encountered during acupuncture 
+treatment (10). Examples of such incidents include:
+  fainting;
+  excessive pain during needling;
+  stuck needle;
+  bent needle;
+  broken needle;
+  pneumothorax;
+  nerve injury;
+  vascular injury;
+  organ injury.
+8
+
+[page 21]
+References
+1. WHO global report on traditional and complementary medicine 2019. Geneva: World Health 
+Organization; 2019 (https://apps.who.int/iris/bitstream/handle/10665/312342/9789241515436-eng.
+pdf, accessed 28 July 2020).
+2. Guidelines on basic training and safety in acupuncture. Geneva: World Health Organization; 1999 
+(https://apps.who.int/iris/bitstream/handle/10665/66007/WHO_EDM_TRM_99.1.pdf, accessed 28 
+July 2020).
+3. Acupuncture needles. Beijing: Standardization Administration of People’s Republic of China; 2016.
+4. Standardized manipulation of acupuncture and moxibustion part 20: basic techniques of filiform 
+needle. Beijing: Standardization Administration of People’s Republic of China; 2009.
+5. Nomenclature and location of acupuncture points. Beijing: Standardization Administration of People’s 
+Republic of China; 2006.
+6. WHO standard acupuncture point locations in the Western Pacific region. Manila: World Health 
+Organization; 2008.
+7. Standardized manipulation of acupuncture and moxibustion part 21: filiform needle manipulation by 
+basic applying technique. Beijing: Standardization Administration of People’s Republic of China; 2013.
+8. Minimal information model for patient safety incident reporting and learning systems. Geneva: World 
+Health Organization; 2016 (https://apps.who.int/iris/bitstream/handle/10665/255642/WHO-HIS-SDS-
+2016.22-eng.pdf, accessed 28 July 2020).
+9. WHO guidelines on hand hygiene in health care. Geneva: World Health Organization; 2009 (https://
+apps.who.int/iris/bitstream/handle/10665/44102/9789241597906_eng.pdf, accessed 28 July 2020).
+10. Handling methods for acupuncture abnormal conditions. Beijing: Standardization Administration of 
+People’s Republic of China; 2016.
+9
+
+[page 22]
+10
+
+[page 23]
+Annex 1. Disinfection requirements during 
+acupuncture treatment
+Disinfection required during acupuncture provision should be conducted according to local infection 
+control guidelines by considering the following principles:
+  Sterilization of reusable acupuncture needles: reusable acupuncture needles should be sterilized. 
+Disposable single-use sterile needles are strongly recommended and shouldn’t be reused.
+  Disinfection of other apparatus: apparatus in direct contact with acupuncture needles should be 
+properly disinfected before each application.
+  Hygiene of the practitioner’s hands: the practitioner should clean and disinfect their hands and fingers 
+before and after providing acupuncture treatment.
+  Hygiene of the acupoint sites: acupoints and the surrounding areas should be disinfected before 
+acupuncture treatment is given.
+  Disinfection of the materials: materials in direct contact with the patient, including but not limited to 
+sheets and towels, should be disinfected or disposable. Materials without direct contact, including but 
+not limited to mattress and pillow, should be hygienically maintained for each use.
+  Disinfection of the treatment area: the treatment room, equipment and devices should be kept clean 
+and tidy.
+11
+
+[page 24]
+Annex 2. Protocol for incident management 
+during acupuncture treatment
+A2.1 Fainting
+  Stop needling immediately.
+  Withdraw all needles from the patient.
+  Have the patient lie down and rest in a comfortable position.
+  Assess and refer as appropriate.
+A2.2 Excessive pain during needling
+  Stop needling immediately.
+  Remove the needle from the patient.
+  Reassure the patient.
+  Have the patient rest in a comfortable position.
+A2.3 Stuck needle
+  Stop immediately if manipulating.
+  Reassure the patient.
+  Ask the patient to revert to the original position if applicable.
+  Rotate the needle in reverse in case of excessive twisting in one direction.
+  Tap local area to relieve spasm.
+A2.4 Bent needle
+  Stop immediately if manipulating.
+  Reassure the patient.
+  Ask the patient to revert to original position if applicable.
+  Withdraw the needle gently in the direction of bending.
+A2.5 Broken needle
+  Stop needling immediately.
+  Reassure the patient.
+  Ask the patient to maintain current body position.
+  Hold and withdraw the exposed fragment of the needle with a sterile tweezer.
+  Refer for surgery if the broken fragment is submerged under the skin.
+12
+
+[page 25]
+A2.6 Pneumothorax
+  Stop needling immediately.
+  Withdraw all needles from the patient.
+  Reassure the patient.
+  Have the patient rest in a suitable position.
+  Assess and refer to other health-care professionals as appropriate.
+A2.7 Nerve injury
+  Stop needling immediately.
+  Remove the needle from the patient.
+  Reassure the patient.
+  Apply a cold compress.
+  Assess and refer to other health-care professionals as appropriate.
+A2.8 Vascular injury
+  Stop needling immediately.
+  Remove the needle from the patient.
+  Reassure the patient.
+  Press with a dry sterile swab for slight bleeding.
+  Use a cold compress for moderate hematoma.
+  Apply compression bandaging for continuous bleeding.
+  Assess and refer to other health-care professionals as appropriate.
+A2.9 Organ injury
+  Stop needling immediately.
+  Withdraw all needles from the patient.
+  Assess and refer to other health-care professionals as appropriate.
+13
+
+[page 26]
+Annex 3. First working group meeting
+Participants
+WHO Region of the Americas
+Terry Wai-Tin Hui, Cosmos Integrative Health Centre, Canada
+Jian Kong, Department of Psychiatry, Massachusetts General Hospital, Harvard Medical School, United 
+States of America
+Paulo Roberto Sousa Rocha, Consultant, National Policy of Integrative and Complementary Medicine 
+Practices, Primary Health Care Department, Ministry of Health, Brazil
+Weidong Yu, Chair, Traditional Chinese Medicine-Acupuncture Program Advisory Committee, Kwantlen 
+Polytech University, Canada
+WHO Eastern Mediterranean Region
+Amir Hooman Kazemi, Traditional Medicine Faculty, Tehran University of Medical Sciences, Islamic Republic 
+of Iran
+WHO European Region
+Hongguang Dong, Director, Division of Integrative Medicine, La Tour Hospital, Switzerland
+Claudia Ghilardi, WHO Collaborating Centre for Traditional Medicine, Italy
+Raphaël Nogier, President, Groupe Lyonnais d’Etudes Médicales, France
+Pedro Ribeiro da Silva, Directorate General of Health, Portugal
+WHO South-East Asia Region
+Tawat Buranatawonsom, Institute of Thai-Chinese Medicine, Department for Development of Thai 
+Traditional and Alternative Medicine, Ministry of Public Health, Thailand
+Koosnadi Saputra, National Institute of Health Research and Development, Ministry of Health, Indonesia
+WHO Western Pacific Region
+Yaolong Chen, Head of GRADE Center, Lanzhou University, China
+Kim Kun Hyung, Department of Acupuncture and Moxibustion, Korean Medicine Hospital, Pusan National 
+University, Republic of Korea
+Baoyan Liu, President, World Federation of Acupuncture-Moxibustion Societies, China
+Farisah Binti Shaari, Senior Principal Assistant Director, Traditional and Complementary Division, Ministry 
+of Health, Malaysia
+Chunzhi Tang, Dean, Acupuncture and Tuina School, Guangzhou University of Chinese Medicine, China
+14
+
+[page 27]
+Nenggui Xu, Vice President, Guangzhou University of Chinese Medicine, China
+Charlie Changli Xue, Dean, School of Health Sciences, RMIT University, Australia
+Fang Zeng, Vice Dean, Acupuncture and Tuina School, Chengdu University of Traditional Chinese Medicine, 
+China
+Observers
+Zhaoxiang Bian, Director and Chair Professor of Clinical Division, School of Chinese Medicine, Hong Kong 
+Baptist University, Hong Kong Special Administrative Region, China
+Yi Feng, Associate Professor, Institute of Acupuncture Research, Shanghai Medical College, Fudan 
+University, China
+Yufeng Qiu, Nanjing University of Chinese Medicine, China
+Ling Zhao, Shanghai University of Traditional Chinese Medicine, China
+WHO Secretariat
+Qi Zhang, Coordinator, Traditional, Complementary and Integrative Medicine, Service Delivery and Safety, 
+WHO, Switzerland
+Lin Zheng, Volunteer, Traditional, Complementary and Integrative Medicine, Service Delivery and Safety, 
+WHO, Switzerland
+Local Secretariat
+Jia Liu, China Academy of Chinese Medical Sciences, China
+Hong Zhao, China Academy of Chinese Medical Sciences, China
+Guoxin Zhong, Acupuncture and Tuina School, Guangzhou University of Chinese Medicine, China
+15
+
+[page 28]
+Annex 4. Second working group meeting
+Participants
+WHO African Region
+Anastasia Michaelina Yirenkyi, Acting Director, Traditional and Alternative Medicine, Ministry of Health, 
+Ghana
+WHO Region of the Americas
+Iva Lloyd, President, World Naturopathic Federation, Canada
+WHO Eastern Mediterranean Region
+Amir Hooman Kazemi, Traditional Medicine Faculty, Tehran University of Medical Sciences, Islamic Republic 
+of Iran
+WHO European Region
+Mehmet Zafer Kalayci, Head, Traditional and Complementary Medicine Department, Ministry of Health, 
+Turkey
+Hedwig Luxenburger, President, International Council of Medical Acupuncture and Related Techniques, 
+Germany
+WHO South-East Asia Region
+Panita Kasomson, Huachiew Traditional Chinese Medicine Clinic, Thailand
+WHO Western Pacific Region
+Yi Guo, Dean, College of Clinical Medicine, Tianjin University of Traditional Chinese Medicine, China
+Longxiang Huang, Institute of Acupuncture and Moxibustion, China Academy of Chinese Medical 
+Sciences, China
+Yong-Suk Kim, Chief, Department of Acupuncture and Moxibustion, Hospital of Korean Medicine, Kyung 
+Hee University, Republic of Korea
+Lixing Lao, Director, School of Chinese Medicine, University of Hong Kong, Hong Kong Special 
+Administrative Region, China
+Yachan Li, Director, WHO Collaborating Centre for Traditional Medicine, Health Bureau, Macao Special 
+Administrative Region, China
+Fengxia Liang, Vice Dean, College of Acupuncture and Orthopedics, Hubei University of Chinese Medicine, China
+Baoyan Liu, President, World Federation of Acupuncture-Moxibustion Societies, China
+Hua Wang, Former President, Hubei University of Chinese Medicine, China
+16
+
+[page 29]
+Christopher Zaslawski, Discipline Leader, Chinese Medicine, School of Life Sciences, University of 
+Technology Sydney, Australia
+Hong Zhao, Vice President, Acupuncture and Moxibustion Hospital, China Academy of Chinese Medical 
+Sciences, China
+Observer
+Salih Mollahaliloglu, Ankara Yildirim Beyazit University, Turkey
+WHO Secretariat
+Qi Zhang, Coordinator, Traditional, Complementary and Integrative Medicine, Service Delivery and Safety, 
+WHO, Switzerland
+Qin Liu, Technical Officer, Traditional, Complementary and Integrative Medicine, Service Delivery and 
+Safety, WHO, Switzerland
+Local Secretariat
+Jingzhi Wang, Hubei University of Chinese Medicine, China
+Xuqiang Wei, China Academy of Chinese Medical Sciences, China
+17
+
+[page 32]
+WHO BENCHMARKS FOR 
+THE PRACTICE 
+OF ACUPUNCTURE
+Department of Integrated Health Services
+World Health Organization (WHO)
+Avenue Appia 20 – CH-1211 Geneva 27 – Switzerland

@@ -1,0 +1,206 @@
+All topics 
+A 
+B 
+C 
+D 
+E 
+F 
+G 
+H 
+I 
+J 
+K 
+L 
+M 
+N 
+O 
+P 
+Q 
+R 
+S 
+T 
+U 
+V 
+W 
+X 
+Y 
+Z 
+Resources 
+Fact sheets 
+Facts in pictures 
+Multimedia 
+Podcasts 
+Publications 
+Questions and answers 
+Tools and toolkits 
+Popular 
+Dengue 
+Endometriosis 
+Excessive heat 
+Herpes 
+Mental disorders 
+Mpox 
+Countries 
+All countries 
+A 
+B 
+C 
+D 
+E 
+F 
+G 
+H 
+I 
+J 
+K 
+L 
+M 
+N 
+O 
+P 
+Q 
+R 
+S 
+T 
+U 
+V 
+W 
+X 
+Y 
+Z 
+Regions 
+Africa 
+Americas 
+Europe 
+Eastern Mediterranean 
+South-East Asia 
+Western Pacific 
+WHO in countries 
+Data by country 
+Country presence 
+Country cooperation strategies 
+Country office profiles 
+Strengthening country offices 
+Newsroom 
+Newsroom 
+News releases 
+Statements 
+Campaigns 
+Events 
+Feature stories 
+Speeches 
+Commentaries 
+Photo library 
+Headlines 
+Emergencies 
+In focus 
+Cholera 
+Ebola disease 
+Israel and the occupied Palestinian territory 
+Middle East 
+Sudan 
+Ukraine 
+Latest 
+Disease Outbreak News 
+Situation reports 
+Rapid risk assessments 
+Weekly Epidemiological Record 
+WHO in emergencies 
+Surveillance 
+Alert and response 
+Operations 
+Research 
+Funding 
+Partners 
+Health emergency appeals 
+International Health Regulations 
+Independent Oversight and Advisory Committee 
+Data 
+Data at WHO 
+Data hub 
+Global Health Estimates 
+Health inequality 
+Global Health Observatory 
+Dashboards 
+Triple Billion Progress 
+Health Inequality Monitor 
+Delivery for impact 
+COVID-19 dashboard 
+Data collection 
+Classifications 
+SCORE 
+Surveys 
+Civil registration and vital statistics 
+Routine health information systems 
+Harmonized health facility assessment 
+GIS centre for health 
+Reports 
+World Health Statistics 
+UHC global monitoring report 
+About WHO 
+About WHO 
+Partnerships 
+Committees and advisory groups 
+Collaborating centres 
+Technical teams 
+Organizational structure 
+Who we are 
+Our work 
+Activities 
+Initiatives 
+General Programme of Work 
+WHO Academy 
+Funding 
+Investment in WHO 
+WHO Foundation 
+Accountability 
+External audit 
+Financial statements 
+Internal audit and investigations 
+Programme Budget 
+Results reports 
+Governance 
+Governing bodies 
+World Health Assembly 
+Executive Board 
+Member States Portal 
+Home / 
+Classifications / 
+Frequently asked questions / 
+Traditional medicine 
+Frequently Asked Questions 
+Importance of ICD 
+ICD-11 Implementation 
+COVID-19 Emergency ICD Codes 
+Proposal Platform 
+Frequently discussed topics 
+"Old age" 
+Chronic fatigue syndrome 
+Congenital Lyme disease 
+Gaming disorder 
+Gender incongruence and transgender health in the ICD 
+Parental alienation 
+Traditional medicine 
+Traditional medicine 
+What is the ICD? 
+The International Classification serves to record and report health and health-related conditions globally. ICD ensures interoperability of digital health data, and their comparability. The ICD contains diseases, disorders, health conditions and much more. The inclusion of a specific category into ICD depends on utility to the different uses of ICD and sufficient evidence that a health condition exists. 
+What is the Traditional Medicine Chapter of ICD-11? 
+A separate Chapter within the ICD-11 for optional use. It provides a list of diagnostics categories to collect and report on Traditional Medicine conditions in a standardized and international comparable manner. 
+The scope of the chapter is currently covering traditional medicine conditions which originated in ancient China and are now commonly used in China, Japan, Korea and elsewhere around the world (Module I). 
+This Traditional Medicine chapter is a formative step for the integration of Traditional Medicine conditions into a classification standard used in conventional medicine. WHO may develop additional modules classifying other prominent forms of Traditional Medicine in the future, provided that specific requirements (e.g. existing national classification and terminology standards and use cases) are met. Development of a Module 2 which derived from Ayurveda and related Traditional Medicine diagnostic systems has started. 
+The Traditional Medicine Chapter is neither judging nor endorsing the scientific validity of any Traditional Medicine practice or the efficacy of any Traditional Medicine intervention. 
+As a tool for counting and comparing Traditional Medicine conditions the Traditional Medicine Chapter of ICD-11 can provide the means for doing research and evaluation to establish efficacy of Traditional Medicine. 
+The Traditional Medicine Chapter is used only for optional dual coding in the morbidity data collection (e.g. morbidity reporting, reimbursement, patient safety, research). The Traditional Medicine Chapter is NOT used for the mortality use case . 
+Why is a Traditional Medicine Chapter within ICD-11 needed? 
+Traditional medicine is an area of health care in many Member States, and traditional practitioners, traditional knowledge, and traditional medicines are mentioned in the Declaration of Alma-Ata on Primary Health Care (1978) and the declaration of Astana [1] as part of the provision of primary health care. 
+Traditional medicine diagnosis in many countries around the world is currently not or poorly document and reported . Hence, aggregated and international comparable data on TM encounters in terms of form, frequency, effectiveness, safety, quality, outcome and cost is not available. 
+The TM Chapter will help to respond to growing demands for more and better regulation and integration of TM in mainstream health care and Health Information Systems . Efforts to effectively regulate Traditional Medicine as an integral part of the health system requires standardized and evidence-based information . 
+What does the inclusion of a Traditional Medicine Chapter in ICD-11 enable? 
+Counting of traditional medicine health service encounters and measure their form, frequency, effectiveness, safety, quality, outcomes and cost nationally and internationally. 
+International comparability of practice, research and reporting of morbidity in traditional medicine. 
+Digitization of Traditional Medicine diagnostic data and easier integration into Electronic Health Record (EHR) systems. 
+Better integration of Traditional Medicine diagnostic data in adverse-event reporting, insurance coverage and reimbursement systems , in line with larger WHO objectives relating to universal health coverage. 
+Link Traditional Medicine practices with global norms and standard development . 
+[1] Declaration of Astana: 
+https://www.nice.org.uk/guidance/ng95/documents/evidence-review-14 
+https://link.springer.com/content/pdf/10.1186/s13643-020-01329-2.pdf https://www.who.int/docs/default-source/primary-health/declaration/gcphc-declaration.pdf

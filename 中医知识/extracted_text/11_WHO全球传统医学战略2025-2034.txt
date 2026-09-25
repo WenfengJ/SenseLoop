@@ -1,0 +1,1189 @@
+[page 1]
+Global traditional 
+medicine strategy
+2025–2034
+
+[page 3]
+Global traditional 
+medicine strategy
+2025–2034
+
+[page 4]
+Global traditional medicine strategy 2025–2034
+ISBN 978-92-4-011317-6 (electronic version)
+ISBN 978-92-4-011318-3 (print version)
+© World Health Organization 2025
+Some rights reserved. This work is available under the Creative Commons Attribution-NonCommercial-ShareAlike 
+3.0 IGO licence (CC BY-NC-SA 3.0 IGO; https://creativecommons.org/licenses/by-nc-sa/3.0/igo ). 
+Under the terms of this licence, you may copy, redistribute and adapt the work for non-commercial purposes, 
+provided the work is appropriately cited, as indicated below. In any use of this work, there should be no suggestion 
+that WHO endorses any specific organization, products or services. The use of the WHO logo is not permitted. If you 
+adapt the work, then you must license your work under the same or equivalent Creative Commons licence. If you 
+create a translation of this work, you should add the following disclaimer along with the suggested citation: “This 
+translation was not created by the World Health Organization (WHO). WHO is not responsible for the content or 
+accuracy of this translation. The original English edition shall be the binding and authentic edition” . 
+Any mediation relating to disputes arising under the licence shall be conducted in accordance with the mediation 
+rules of the World Intellectual Property Organization ( http://www.wipo.int/amc/en/mediation/rules/ ).
+Suggested citation . Global traditional medicine strategy 2025–2034. Geneva: World Health Organization; 2025 
+(Health Systems Performance Assessment (HSPA) toolkit for universal health coverage). Licence: CC BY-NC-SA 3.0 IGO .
+Cataloguing-in-Publication (CIP) data. CIP data are available at https://iris.who.int/ .
+Sales, rights and licensing. To purchase WHO publications, see https://www.who.int/publications/book-orders . 
+To submit requests for commercial use and queries on rights and licensing, see https://www.who.int/copyright . 
+Third-party materials. If you wish to reuse material from this work that is attributed to a third party, such as tables, 
+figures or images, it is your responsibility to determine whether permission is needed for that reuse and to obtain 
+permission from the copyright holder. The risk of claims resulting from infringement of any third-party-owned 
+component in the work rests solely with the user.
+General disclaimers. The designations employed and the presentation of the material in this publication do not 
+imply the expression of any opinion whatsoever on the part of WHO concerning the legal status of any country, 
+territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries. Dotted and 
+dashed lines on maps represent approximate border lines for which there may not yet be full agreement.
+The mention of specific companies or of certain manufacturers’ products does not imply that they are endorsed 
+or recommended by WHO in preference to others of a similar nature that are not mentioned. Errors and omissions 
+excepted, the names of proprietary products are distinguished by initial capital letters.
+All reasonable precautions have been taken by WHO to verify the information contained in this publication. 
+However, the published material is being distributed without warranty of any kind, either expressed or implied. The 
+responsibility for the interpretation and use of the material lies with the reader. In no event shall WHO be liable for 
+damages arising from its use. 
+Design and layout by L’IV Com Sàrl.
+
+[page 5]
+iii
+Contents
+Foreword ..................................................................................... iv
+Acknowledgements ............................................................................ v
+Abbreviations ................................................................................. vii
+Glossary ..................................................................................... viii
+Executive summary ............................................................................. x
+1. Introduction ................................................................................ 1
+2. Vision ...................................................................................... 3
+3. Goal ........................................................................................ 4
+4. Guiding principles ........................................................................... 5
+4.1 Evidence-based ......................................................................... 5
+4.2 Holism and health ....................................................................... 5
+4.3 Sustainability and biodiversity ........................................................... 6
+4.4 The right to health and autonomy ........................................................ 6
+4.5 Indigenous Peoples’ rights ............................................................... 6
+4.6 Culture and health ...................................................................... 6
+4.7 People-centred care and community engagement ......................................... 6
+4.8 Integrated health services ................................................................ 6
+4.9 Health equity ........................................................................... 6
+5. Strategic objectives, directions and actions ................................................... 7
+5.1 Strategic objective 1 . Strengthen the evidence base for TCIM ................................ 8
+5.2 Strategic objective 2 . Support the provision of safe and effective TCIM through appropriate 
+regulatory mechanisms ................................................................. 11
+5.3 Strategic objective 3. Integrate safe and effective TCIM into health systems ................. 14
+5.4 Strategic objective 4 . Optimize the cross-sector value of TCIM and empower communities ... 17
+6. Implementation of the strategy ............................................................. 20
+6.1 General comments on implementation ................................................... 20
+6.2 Monitoring, measuring and reporting .................................................... 20
+References .................................................................................... 21
+iii
+
+[page 6]
+iv
+Foreword
+I am very pleased to introduce the Global traditional medicine strategy 2025–2034. This new strategy will 
+serve as a valuable guiding document for the health systems around the world serving the millions of 
+people for whom traditional medicine remains the first port of call to treat many diseases.
+Globally, there is a growing use of traditional, complementary and integrative medicine services and 
+products, particularly at the primary health care level. The practice of integrative medicine that combines 
+traditional and complementary medicine and biomedicine is gaining popularity.
+Ensuring that all people have access to safe and effective health care is an essential part of the mission 
+of the World Health Organization (WHO). To support the safe and effective use of traditional medicine, 
+which is an integral part of the Declarations of Alma Ata (1978) and Astana (2018) on primary health care, 
+as well as the United Nations General Assembly’s High Level Meeting Declarations on universal health 
+coverage in 2019 and 2023, two traditional medicine strategies have been launched previously by WHO 
+covering 2002–2005 and 2014–2023.
+Building on this foundation, the Global traditional medicine strategy 2025–2034 was recently adopted 
+by the Seventy-eighth World Health Assembly (1). This strategy emphasizes the importance of evidence-
+based traditional medicine, while recognizing the rights of Indigenous Peoples and the importance of the 
+protection of and access to traditional medical knowledge.
+A notable feature of this strategy is the formal inclusion of integrative medicine within the broader scope 
+of traditional medicine, including a definition of integrative medicine for the first time. With this inclusion, 
+this new strategy provides a clear vision, goals, guiding principles and four strategic objectives with eight 
+directions. Each direction contains proposed actions for Member States, partners, stakeholders and WHO.
+The strategy outlines a clear path forward: strengthening the evidence base and research supporting 
+policies and regulations; integrating traditional, complementary and integrative medicine into health 
+systems and services; encouraging multi-sectoral collaboration and empowering communities. 
+It is designed to support and facilitate the achievement of the 
+Fourteenth General Programme of Work 2025–2028, which emphasizes 
+the reorientation of health systems towards primary health care 
+tailored to the local context and ensuring the integrated delivery of 
+health service packages that include evidence-based traditional, 
+complementary and integrative medicine.
+This strategy aims to support Member States in designing and 
+implementing national strategic plans and actions in accordance 
+with their national capacities, priorities, relevant legislation, culture 
+and circumstances and to integrate, as appropriate, safe and evidence-
+based, traditional, complementary and integrative medicine within 
+national and local health systems.
+Dr Tedros Adhanom Ghebreyesus
+Director-General
+World Health Organization
+iv
+
+[page 7]
+v
+Acknowledgements
+The World Health Organization (WHO) gratefully acknowledges the many individuals and organizations 
+who contributed to the support and development of this new global traditional medicine strategy.
+WHO also expresses its deep gratitude to all Member States that supported the development of this new 
+strategy and subsequently supported its adoption by the Seventy-eighth World Health Assembly.
+This strategy was developed through a highly consultative and participatory process, with WHO greatly 
+benefiting from the guidance and support of Member States and a broad range of stakeholders. These 
+included individual experts, institutions, organizations, WHO Collaborating Centres on traditional 
+medicine, and Indigenous Peoples’ representatives. Their invaluable contributions were gathered through 
+one expert consultation, one online public consultation, seven regional Member State consultations, and 
+four global Member State consultations, all of which played a crucial role in shaping the direction of the 
+strategy. WHO extends its sincere gratitude for their collaboration and support.
+Following the decision of EB152(18), Sungchol Kim (Head, Traditional Medicine Norms, Standards, and 
+Systems Integration Unit, TSI, WHO headquarters) initiated and led the development work under the 
+guidance and supervision of Shyama Kuruvilla (Director, WHO Global Traditional Medicine Centre, GTMC) 
+and Rudi Eggers (former Director, Department of Integrated Health Services). Yachan Li (Senior technical 
+officer, TSI Unit) coordinated the overall development and consultation process of the strategy.
+Zhang Qi (Former Head, Traditional, Complementary and Integrative Medicine Unit), Neil Travis Gower 
+(University of Johannesburg, South Africa) and Tido von Schoen-Angerer (International Federation of 
+Anthroposophic Medical Associations, Switzerland) contributed to the initial draft developed between 
+July and September 2023.
+The expert consultation held in November 2023 was attended by: Pravit Akarasereenont (Mahidol 
+University, Thailand), Danbo Dou (Shanghai Shuguang Hospital, China), Ricardo Ghelman (Academic 
+Consortium for Integrative Health, Brazil), Sumeet Goel (Ministry of Ayush, India), Cheng Soon Goh (Ministry 
+of Health, Malaysia), John Hughes (University College London Hospitals, United Kingdom of Great Britain 
+and Northern Ireland), Nadine Ijaz (Carleton University, Canada), Miek Jong (The Arctic University, Norway), 
+Yong-Suk Kim (Kyung Hee University, Republic of Korea), Candong Li (Fujian University of Traditional 
+Chinese Medicine, China), Michael Smith (University of Mississippi, United States of America), Jonathan 
+Lee Wardle (Southern Cross University, Australia), Chunyu Wei (National Administration of Traditional 
+Chinese Medicine, China), Charlie Xue (RMIT University, Australia), Anastasia Michaelina Yirenkyi (Ministry 
+of Health, Ghana), and Arman Zargaran (Ministry of Health and Medical Education, Islamic Republic of Iran).
+From the preparation of the online public consultation in February 2024 until the final submission to the 
+Seventy-eighth World Health Assembly, the members of the TSI Unit, WHO headquarters, reviewed and 
+integrated all valuable inputs. This process was coordinated by Sangyoung Ahn, with contributions from 
+Aditi Bana, Pradeep Kumar Dua, Liu Qin, Shen Yunhui and Yuk Ming Alice Wong.
+v
+
+[page 8]
+This strategy was developed in close collaboration with WHO GTMC (Jamnagar, Gujarat, India) and high 
+appreciation goes to Geetha Krishnan Gopalakrishna Pillai for his strategic input to the content of this 
+document.
+The regional Member States consultations held from June to August 2024 were made possible through 
+the contribution of seven WHO regional focal points of traditional medicine: Philippe Doo-Kingue, 
+Gustavo Rosell de Almeida, Adi AL-Nuseirat, Dorina Pirgari, Pawan Kumar Godatwar, Geraldine Hill and 
+Eunkyung Han.
+Special thanks also go to the following individuals at WHO headquarters who provided insightful 
+comments to the strategy: John Reeder and Lisa Askie (Science Division); Agya Mahat (Health Workforce 
+Department); Elanie Marks (Department of Noncommunicable Diseases/Rehabilitation team); Susana 
+Lidia Gomez Reyers and Pauliina Nykanen-Rettaroli (Department of Gender, Equity, Diversity and Rights 
+for Health); and Giovanni Sala (Department of Mental Health and Substance Use). 
+Finally, WHO would like to express its sincere appreciation to Bruce Aylward (former Assistant 
+Director-General, Universal Health Coverage, Life Course Division) and Michaela Pfeiffer and colleagues 
+from the Assistant Director-General’s Office for their support throughout the process.
+WHO acknowledges with gratitude the financial support received inter alia from the China National 
+Administration of Traditional Chinese Medicine and the Ministry of Ayush, India, towards the development 
+and publication of this strategy.
+Global traditional medicine strategy 2025–2034
+vi
+
+[page 9]
+vii
+Abbreviations
+AI artificial intelligence
+CM complementary medicine
+ICD-11 International Classification of Diseases, 11th revision
+ICTRP International Clinical Trials Registry Platform
+IM integrative medicine
+ILO International Labour Organization
+IRCH International Regulatory Cooperation for Herbal Medicines
+PHC primary health care
+SDG Sustainable Development Goal(s)
+TCIM traditional, complementary and integrative medicine
+TM traditional medicine
+TMK traditional medical knowledge
+T&CM traditional and complementary medicine
+UHC universal health coverage
+UNDRIP United Nations Declaration on the Rights of Indigenous Peoples
+WHA World Health Assembly
+WHO World Health Organization
+WIPO World Intellectual Property Organization
+WTO World Trade Organization
+vii
+
+[page 10]
+viii
+Glossary
+Codified and non-
+codified
+Traditional medicine systems can be categorized into 1) codified systems that 
+have been disclosed in writing in ancient scriptures and are fully in the public 
+domain, and 2) non-codified traditional medicinal knowledge that has not 
+been fixed in writing, often remains undisclosed by traditional knowledge 
+holders, and is passed on in oral traditions from generation to generation (2, 3). 
+Complementary 
+medicine 
+Refers to additional health care practices that are not part of a country’s 
+mainstream medicine. Evidence-based complementary medicine has the 
+potential to support mainstream medicine and more comprehensively 
+support people’s health and well-being needs.
+Integrative 
+medicine
+An interdisciplinary and evidence-based approach to health and well-being 
+by using a combination of biomedical and traditional and/or complementary 
+medical knowledge, skills and practices.
+One Health An integrated, unifying approach that aims to sustainably balance and 
+optimize the health of people, animals and ecosystems. It recognizes that 
+the health of humans, domestic and wild animals, plants and the wider 
+environment (including ecosystems) are closely linked and interdependent. 
+The approach mobilizes multiple sectors, disciplines and communities at 
+varying levels of society to work together to foster well-being and tackle 
+threats to health and ecosystems, while addressing the collective need for 
+clean water, energy and air, safe and nutritious food, taking action on climate 
+change, and contributing to sustainable development (4).
+People-centred care An approach to care that consciously adopts the perspectives of individuals, 
+carers, families and communities, recognizing them as participants in, and 
+beneficiaries of trusted health systems that respond to their needs and 
+preferences in humane and holistic ways. People-centred care also requires 
+that people have the education and support they need to make decisions 
+and participate in their own care. It is organized around the health needs and 
+expectations of people rather than diseases (5).
+Primary health care A whole-of-society approach to health that aims to maximize the level and 
+distribution of health and well-being through three components: (a) primary 
+care and essential public health functions as the core of integrated health 
+services; (b) multi-sectoral policy and action; and (c) empowered people and 
+communities (6).
+Traditional medical 
+knowledge
+Health-related knowledge, know-how, skills and practices that are developed, 
+sustained and passed on from generation to generation within a community, 
+often forming part of its cultural identity.
+viii
+
+[page 11]
+Traditional 
+medicine
+Refers to codified or non-codified systems for health care and well-being, 
+comprising practices, skills, knowledge and philosophies originating in 
+different historical and cultural contexts, which are distinct from and pre-date 
+biomedicine, evolving with science for current use from an experience-based 
+origin. Traditional medicine emphasizes nature-based remedies and holistic, 
+personalized approaches to restore balance of mind, body and environment.
+Well-being A positive state experienced by individuals and societies. Similar to health, 
+it is a resource for daily life and is determined by social, economic and 
+environmental conditions. Well-being encompasses quality of life, as well 
+as the ability of people and societies to contribute to the world with a sense 
+of meaning and purpose. Focusing on well-being supports the tracking of 
+the equitable distribution of resources, overall thriving and sustainability. A 
+society’s well-being can be observed by the extent to which they are resilient, 
+build capacity for action, and are prepared to transcend challenges (7).
+ix
+Glossary
+
+[page 12]
+x
+Executive summary
+Sustainable Development Goal (SDG) target 3.8 on universal health coverage aspires that all people should 
+have access to the full range of quality health services they need, when and where they need them, and 
+without financial hardship. This includes the full continuum of essential health services, ranging from 
+health promotion to prevention, treatment, rehabilitation and palliative care across the life course.
+The United Nations General Assembly Resolutions 74/2 (2019) and 78/4 (2023) entitled “ Political 
+declaration of the high-level meeting on UHC ” , reaffirmed and renewed Member States’ commitment 
+to achieve universal health coverage (UHC) by 2030 by, inter alia, exploring ways to integrate safe and 
+evidence-based traditional and complementary medicine services within national and local health 
+systems as appropriate, particularly at the level of primary health care, according to the national context 
+and priorities.
+The World Health Organization (WHO) recognizes the evolution of the global landscape of traditional 
+medicine, the diversity of its practices, and the progress made and challenges faced by Member States, 
+as described in the third WHO global survey on traditional, complementary and integrative medicine and 
+presented in the WHO traditional, complementary and integrative medicine dashboards. An increasing 
+number of Member States are seeking technical support for integrating evidence-based, traditional 
+medicine into health systems and enhancing cross-sectoral coordination and global collaboration.
+The World Health Assembly decision [WHA76(20)] on traditional medicine, adopted in 2023, requested 
+the WHO Director-General to extend the WHO traditional medicine strategy 2014–2023 to 2025. It also 
+requested the development of a new global traditional medicine strategy for the period 2025–2034, guided 
+by the current version and in consultation with Member States and relevant stakeholders, with the aim to 
+submit a draft strategy for consideration by the Seventy-eighth World Health Assembly in 2025 through 
+the Executive Board at its 156th session.
+In response to this decision, the WHO Secretariat initiated the process of developing the Global traditional 
+medicine strategy 2025–2034, with a vision of universal access to safe, effective and people-centred 
+traditional, complementary and integrative medicine (TCIM) for the health and well-being of all. The aims 
+of the strategy are to address existing challenges across multiple domains, integrate safe and effective 
+TCIM as appropriate into health systems and advance the contribution of TCIM to the highest attainable 
+standard of health.
+The strategy was developed through an extensive consultative process including four global and seven 
+regional Member States’ consultations, an online consultation, and consultations with a broad range of 
+partners, including Indigenous Peoples' representatives, international experts, and across all three levels 
+of WHO. Each iteration incorporated inputs from Member States and different stakeholders.
+x
+
+[page 13]
+For the first time, the strategy presented a WHO definition of integrative medicine as “an interdisciplinary 
+and evidence-based approach to health and well-being by using a combination of biomedical and 
+traditional and/or complementary medical knowledge, skills and practices” . The strategy also emphasizes 
+the need for robust scientific evidence and appropriate regulation to support the safe and effective 
+integration of TCIM into health systems and services.
+Furthermore, this strategy responds to concerns raised by Indigenous Peoples’ groups and holders of 
+traditional knowledge by ensuring the protection of and access to traditional medical knowledge. Notably, 
+it aligns with the World Health Assembly resolution (WHA76.16) regarding the health of Indigenous Peoples, 
+reaffirming their right to their traditional medicines and to maintain their health practices, including the 
+conservation of their vital medicinal plants.
+The strategy is underpinned by nine guiding principles, which guide the actions of Member States, partners 
+and stakeholders, and WHO during its implementation. TCIM products and services must be evidence-
+based, while embracing a holistic perspective, ensuring that they contribute to the highest attainable 
+standards of health and well-being. TCIM respects the rights of Indigenous Peoples and promotes culturally 
+appropriate, people-centred care that is delivered sustainably, with due regard for biodiversity. These 
+services should be integrated within health systems and provided equitably to all, without discrimination.
+It presents four strategic objectives aimed at advancing the contribution of TCIM to achieving the highest 
+attainable standard of health and well-being: strengthening the evidence base; supporting the provision 
+of safe and effective TCIM through appropriate regulatory mechanisms; integrating safe and effective 
+TCIM into health systems; and optimizing the cross-sector value of TCIM and empowering communities.
+Each strategic objective is supported by two directions, including high-quality research; optimization of 
+the use of technological advancements; appropriate regulatory mechanisms for products, practices and 
+practitioners; integration into health systems and across the care continuum and life course; and cross-
+sector policies and action plans for the protection, access and benefit-sharing of traditional medical 
+knowledge. Each direction contains proposed actions for Member States, partners and stakeholders, 
+and WHO (Table 1).
+The strategy was developed in consideration of TCIM’s diversity, unique positioning, challenges and 
+opportunities and aims to support Member States in designing and implementing national strategic plans 
+and actions on TCIM in accordance with their national capacities, priorities, relevant legislation, culture 
+and circumstances. It also encourages Member States to monitor and evaluate progress in implementing 
+their national action plans and provide information for global reporting through WHO.
+WHO reaffirms its commitment to this important agenda, especially through the rigorous application 
+of science to strengthen the evidence base, and to leveraging its work across the three levels of the 
+Organization to support Member States in integrating evidence-based TCIM into health systems, as 
+appropriate, especially at the level of primary health care, in order to catalyse the attainment of universal 
+health coverage and the SDGs.
+xi
+Executive summary
+
+[page 14]
+Vision
+A world in which there is universal access to safe, effective and people-centred TCIM 
+for the health and well-being of all.
+Goal
+To advance the contribution of evidence-based TCIM to the highest attainable standard 
+of health and well-being.
+Guiding principles
+• Evidence-based
+• Holism and health
+• Sustainability and biodiversity
+• The right to health and autonomy
+• Indigenous Peoples' rights
+• Culture and health
+• People-centred care and community 
+engagement
+• Integrated health services
+• Health equity
+Strategic objective 1
+Strengthen the 
+evidence base for TCIM
+Direction 1.1
+Facilitate high-quality 
+TCIM research through 
+increased resource 
+allocation
+Direction 1.2 
+Explore relevant 
+research approaches and 
+optimize the utilization 
+of technological 
+advancements
+Strategic objective 2 
+Support the provision 
+of safe and effective 
+TCIM through 
+appropriate regulatory 
+mechanisms
+Direction 2.1
+Provide appropriate 
+regulatory mechanisms 
+for TCIM products 
+that are sustainably 
+produced and supplied
+Direction 2.2 
+Provide appropriate 
+regulatory mechanisms 
+for TCIM practice and 
+practitioners
+Strategic objective 3 
+Integrate safe and 
+effective TCIM into 
+health systems
+Direction 3.1
+Incorporate safe and 
+effective TCIM services 
+into national and 
+local health-related 
+frameworks and policies 
+for the integration of 
+safe and effective TCIM 
+into health systems
+Direction 3.2 
+Facilitate the integration 
+of safe and effective 
+TCIM services across the 
+care continuum and life 
+course
+Strategic objective 4 
+Optimize the cross-
+sector value of 
+TCIM and empower 
+communities
+Direction 4.1
+Include TCIM in cross-
+sector policies and 
+action plans for health, 
+well-being societies, One 
+Health and Sustainable 
+Development Goals
+Direction 4.2 
+Develop inclusive 
+approaches and models 
+for the protection of 
+and access to traditional 
+medical knowledge, 
+and for the fair and 
+equitable sharing of 
+the benefits arising 
+from the utilization of 
+such knowledge and/
+or associated genetic 
+resources
+Table 1. Strategy summary at a glance
+Global traditional medicine strategy 2025–2034
+xii
+
+[page 15]
+1
+Traditional medicine is used by people across all six regions of the World Health Organization (WHO) (8).
+Traditional medicine refers to codified or non-codified systems for health care and well-being, comprising 
+practices, skills, knowledge and philosophies originating in different historical and cultural contexts, which 
+are distinct from and pre-date biomedicine, evolving with science for current use from an experience-based 
+origin. Traditional medicine emphasizes nature-based remedies and holistic, personalized approaches 
+to restore balance of mind, body and environment.
+Complementary medicine refers to additional health care practices that are not part of a country’s 
+mainstream medicine. Evidence-based complementary medicine has the potential to support mainstream 
+medicine and more comprehensively support people’s health and well-being needs.
+As people become more empowered to choose the appropriate health care for their needs, health services 
+continually adapt to meet the challenge of delivering people-centred care. Whether government-led or 
+people-led, the practice of integrative medicine that combines traditional and complementary medicine 
+and biomedicine is gaining popularity.
+In 2017, WHO began supporting the developing field of integrative medicine by introducing the concept of 
+traditional, complementary and integrative medicine (TCIM). This strategy offers an expanded vision that 
+includes traditional, complementary and integrative medicine, bringing together these three approaches 
+to address individual health needs and expectations.
+The strategy was developed through an extensive consultative process, including global and regional 
+Member States consultations, a public hearing, and consultations with a broad range of stakeholders and 
+partners, including representatives of Indigenous Peoples.
+1. Introduction
+1
+1
+
+[page 16]
+The strategy aims to support Member States in designing and implementing national strategic plans 
+and actions in accordance with their national capacities, priorities, relevant legislation, culture and 
+circumstances. The strategy does not imply a preference for TCIM practice over biomedical practice. It 
+seeks to harness the potential contribution of TCIM to health and well-being based on evidence. The 
+strategy is also designed to prevent misinformation, disinformation and malinformation while ensuring 
+an evidence-based approach to TCIM. WHO emphasizes the principle of do no harm and consistently 
+refutes any claims that are not supported by scientific evidence.
+Global traditional medicine strategy 2025–2034
+2
+
+[page 17]
+3
+2. Vision2
+A world in which there is universal 
+access to safe, effective and 
+people-centred TCIM for the health 
+and well-being of all.
+3
+
+[page 18]
+4
+3. Goal3
+To advance the contribution of 
+evidence-based TCIM to the highest 
+attainable standard of health
+and well-being.
+4
+
+[page 19]
+5
+4. Guiding principles4
+The strategy was developed based on the following principles, which may also guide the implementation of 
+actions by Member States, partners and stakeholders, and WHO in achieving the strategy’s vision and goal.
+4.1 Evidence-based
+Scientific or research evidence refers to knowledge that is explicit, systematic and replicable, and can 
+be judged by its methodological standards. Decisions for the use of TCIM should be based on the best 
+available evidence of safety and effectiveness from research and practices. Correspondingly, no health care 
+practices or treatments, be they in biomedicine, public health or TCIM, will be supported or recommended 
+by WHO unless they are evidence-based.
+As with all health sciences, traditional medicine should incorporate the highest scientific standards 
+by employing rigorous and robust research methods, integrating continuous methodological and 
+technological advancements, adhering to ethical principles, and using a multidisciplinary approach to 
+select the most stringent and relevant research methods for specific topics and applications to ensure 
+validity, generalizability, reliability and positive impact for people’s health and well-being.
+Robust scientific validation includes ensuring the quality of the design of research and the quality of the 
+evidence in the way that research is interpreted to ensure safe and effective interventions, and taking into 
+account research ethics, conflicts of interest and issues such as scalability and sustainability for global 
+health, including through health technology assessments. These principles are agnostic to the discipline 
+from which the interventions come and focus on benefits to people’s health and well-being based on the 
+most stringent standards of science.
+4.2 Holism and health
+TCIM encompasses various medical systems rooted in holistic perspectives of health. It emphasizes the 
+internal connections within the human body and its connection to the environment.
+5
+
+[page 20]
+4.3 Sustainability and biodiversity
+Health care should consciously support environmental sustainability and biodiversity. TCIM is rooted in 
+natural resources, traditional medical knowledge, culture and history. It should contribute to safeguarding 
+biodiversity by promoting sustainable TCIM practices and aligning with One Health principles.
+4.4 The right to health and autonomy
+The Constitution of the World Health Organization states that the “enjoyment of the highest attainable 
+standard of health is one of the fundamental rights of every human being” . The right to health requires 
+that health services and products be available, effective, accessible, acceptable and of good quality for 
+all without discrimination (9). Autonomy in health decisions necessitates support for informed choices.
+4.5 Indigenous Peoples’ rights
+Indigenous Peoples have the right to their traditional medicines and to maintain their health practices, 
+including the conservation of their vital medicinal plants, animals and minerals. Indigenous individuals 
+also have the right to access, without any discrimination, all social and health services (10). They also have 
+the right to maintain, control, protect and develop their intellectual property over traditional knowledge, 
+and to safeguard it against misappropriation and unauthorized use (11). This strategy recognizes the role of 
+Indigenous traditional medicine and the need to uphold the autonomy and rights of Indigenous Peoples 
+through appropriate legislation, funding and fair engagement within their Member States’ national 
+context. It is informed by the United Nations Declaration on the Rights of Indigenous Peoples (12) and the 
+commitment to achieving the ends set forth therein, considering Member States’ national contexts and 
+priorities and the limitations set out in Article 46.2.
+4.6 Culture and health
+Recognizing the importance of aligning health needs and the preferences, lifestyles and cultural beliefs 
+of diverse populations helps to foster inclusive, equitable and culturally appropriate health services that 
+maintain respect for traditional medical knowledge and encourage intercultural dialogue (13).
+4.7 People-centred care and community engagement (14)
+These are key priorities in the delivery of quality health care. TCIM advocates for personalized care and 
+respects cultural preferences by considering an inclusive and collaborative approach closely aligned with 
+the concept of primary health care.
+4.8 Integrated health services (15)
+To achieve optimal outcomes, health services should be coordinated seamlessly across different medical 
+disciplines and should prioritize individual well-being. Integrating safe, effective and sustainable TCIM 
+can contribute to an approach that supports health and well-being. Evidence-based practices, continuous 
+quality assurance and regulatory mechanisms are essential to support the effective integration of TCIM 
+into health services.
+4.9 Health equity
+TCIM practice should be provided equitably, addressing potential barriers, such as those related to sex, 
+age, ethnicity/race, income, education and development differentials, that impact uptake (16).
+Global traditional medicine strategy 2025–2034
+6
+
+[page 21]
+7
+5. Strategic objectives, 
+ directions and actions
+5
+Evidence Regulation
+CollaborationIntegration
+7
+
+[page 22]
+Rationale
+WHO surveys have demonstrated the widespread use of TCIM but also a need for more data to advance 
+its evidence base for safety and effectiveness as a basis for its use and integration. To fully leverage the 
+potential of TCIM in improving health and well-being, further investment in and facilitation of TCIM 
+research is needed.
+Digital technologies and health innovations can potentially enhance TCIM research, health services and 
+self-care, but they require active capacity-building and development.
+Given TCIM’s complexity and multidisciplinary nature rooted in diverse philosophies, relevant research 
+methodologies and intellectual property rights modalities need to be employed, supported by a 
+collaboration between methodological and practice experts, and between TCIM and other researchers.
+5.1 Strategic objective 1
+ Strengthen the evidence 
+base for TCIM
+Global traditional medicine strategy 2025–2034
+8
+
+[page 23]
+Direction 1.1
+Facilitate high-quality TCIM research through increased resource allocation
+Rationale An international research agenda on traditional medicine focusing on scientifically 
+rigorous and high impact research, with agreements on key outcome measures for 
+TCIM, needs to be established. This should encompass all aspects of TCIM, such as 
+healthy lifestyles, disease prevention and treatment, medicines and interventions, 
+professions and practices, integrative services and systems, and the use of technology 
+within TCIM.
+Moreover, research should explore what traditional medical knowledge can inform 
+and contribute to in terms of health and well-being outcomes, thus necessitating the 
+involvement of TCIM practitioners in the co-design of research projects and supporting 
+them with research capacity-building throughout the entire process.
+Actions for 
+Member 
+States
+• Establish a national research agenda on TCIM treatments and practices to stimulate 
+innovation and allocate dedicated resources in alignment with objective criteria and 
+national, regional or/and global priorities.
+• Conduct appropriate scientific studies to support the evidence base regarding safe 
+and effective TCIM.
+• Establish a mechanism/system for collecting data from various sources, including 
+real-world data related to TCIM.
+• Support capacity-building for research and foster partnerships with research 
+institutions and international organizations to facilitate innovation in TCIM.
+• Promote participatory research approaches.
+• Develop a comprehensive database of evidence-based TCIM to inform health care 
+policies and practices.
+Actions for 
+partners and 
+stakeholders
+• Support the identification of priorities for a national TCIM research and innovation 
+agenda.
+• Support interdisciplinary research that includes TCIM.
+• Conduct scientific research that facilitates evidence-informed decision-making for 
+TCIM.
+• Invest in research capacity-building and the involvement of TCIM practitioners in 
+research design and conduct.
+• Include TCIM research in broader health research initiatives and evidence summaries.
+Actions for 
+the WHO 
+Secretariat
+• Develop, update and disseminate WHO guidelines, technical documents and tools 
+on TCIM research.
+• Encourage Member States and partners to enhance TCIM research and develop a 
+comprehensive research agenda, based on the research gaps and responding to 
+health needs and priorities.
+• Encourage TCIM research that is culturally appropriate, socially relevant, inclusive 
+and participative.
+• Encourage Member States to register TCIM clinical trials in WHO’s International 
+Traditional Medicine Clinical Trial Registry and other WHO-recognized clinical trial 
+registries.
+• Coordinate and promote bilateral and multilateral collaboration between Member 
+States and partners on TCIM research.
+9
+Strategic objectives, directions and actions
+
+[page 24]
+Direction 1.2
+Explore relevant research approaches and optimize the utilization of 
+technological advancements
+Rationale There is a need to explore innovative approaches to TCIM research that are appropriate 
+to the unique characteristics of TCIM knowledge and practices, including consideration 
+of the use of complexity science, system biology, big data and real-world data 
+approaches, as well as interdisciplinary collaboration. It is also important to explore 
+relevant research approaches for non-codified traditional medicine.
+Maximizing the rational use of advanced technologies is important for developing 
+appropriate and innovative approaches to research on TCIM. The application of 
+technological advancements can enhance and complement TCIM health services and 
+access to care, including self-care.
+Actions for 
+Member 
+States
+• Explore innovative, scientifically valid approaches for research appropriate to TCIM.
+• Enable the development and application of digital technologies in TCIM research.
+• Facilitate digitization and the use of electronic health records inclusive of TCIM-
+related information to enable comprehensive health care in a responsible and ethical 
+manner.
+• Develop mobile health solutions and telehealth services and utilize advanced 
+technologies such as those based on artificial intelligence for relevant TCIM.
+• Explore relevant research approaches for non-codified traditional medicine.
+Actions for 
+partners and 
+stakeholders
+• Contribute to developing research methods for the ethical and robust scientific 
+validation of individualized TCIM approaches and knowledge in ways that are 
+culturally appropriate, socially relevant and inclusive.
+• Develop digital health applications together with TCIM end-user communities and 
+beneficiaries in support of delivering people-centred care.
+• Contribute to developing/implementing electronic patient record systems accessible 
+by TCIM practitioners and promote interoperability.
+Actions for 
+the WHO 
+Secretariat
+• Support the development of research methodologies appropriate to complex, holistic 
+and individualized approaches of TCIM.
+• Strengthen capacity-building on TCIM research methodologies and evidence-
+collection strategies.
+• Encourage the development and use of TCIM-specific responsible artificial intelligence 
+tools (17).
+• Contribute to the bridging of digital and technological innovations across the TCIM 
+continuum of care, translate collected information into actionable knowledge tailored 
+to Member States, and propose interventions maximizing TCIM contributions.
+Global traditional medicine strategy 2025–2034
+10
+
+[page 25]
+Rationale
+Appropriate regulatory mechanisms are crucial for TCIM to safeguard the public from unsafe or substandard 
+TCIM products and services. A risk-based regulatory approach is well suited to TCIM, tailoring regulatory 
+requirements to the specific type of TCIM products or services based on safety and efficacy. This involves 
+establishing appropriate participatory mechanisms, quality control measures, standards and labelling 
+requirements, as well as ensuring that the intended use is justified and rational. The highest standard of 
+science and stringent regulatory provisions, as appropriate to national requirements, should apply for 
+TCIM products and services used for medical purposes to ensure their safety, quality and effectiveness 
+in clinical settings.
+Regulatory mechanisms for TCIM practitioners must prioritize patient safety. TCIM practitioners cannot 
+be considered as a single group due to the diverse nature of TCIM modalities, therapeutic approaches, 
+training, practice and practitioners’ division of labour. The identification and establishment of common 
+norms and standards for qualifications, competencies and ethical conduct contribute to ensuring that 
+practitioners have the necessary knowledge and skills to deliver safe and effective care.
+5.2 Strategic objective 2
+ Support the provision of 
+safe and effective TCIM 
+through appropriate 
+regulatory mechanisms
+11
+Strategic objectives, directions and actions
+
+[page 26]
+Direction 2.1
+Provide appropriate regulatory mechanisms for TCIM products that are 
+sustainably produced and supplied
+Rationale Individuals choosing to use TCIM should have access to products with proven safety 
+and efficacy. Appropriate regulatory mechanisms for TCIM products involve identifying 
+and adopting norms and standards, developing rules, educating industry and ensuring 
+mutual understanding from the supplier to the end-user.
+Equitable access to TCIM products with safety, quality and efficacy is an essential 
+outcome of balanced regulatory mechanisms and oversight. Close collaboration between 
+stakeholders and regulators can address barriers related to affordability, availability and 
+cultural appropriateness.
+Expanding international regulatory collaboration and cooperation will advance the 
+regulation of TCIM products, contributing to consistent standards across a broader range 
+of products and geographical locations.
+Actions for 
+Member 
+States
+• Establish norms and standards for TCIM products to ensure the supply of products 
+with safety, quality and efficacy through appropriate consultation and partnerships.
+• Explore approaches supporting evidence-based regulatory decision-making for TCIM 
+products that is inclusive of the principles of reliance and/or recognition (18).
+• Consider an evaluation of TCIM products utilizing a risk-based approach to ensure that 
+they are indicated appropriately for use.
+• Enforce relevant restrictions on the use of endangered species and wider biodiversity 
+for medicinal products, subject to stringent regulatory oversight, in line with the 
+Convention on International Trade in Endangered Species of Wild Fauna and Flora 
+(CITES) and other applicable international conventions and national legislation, 
+including, as appropriate, timebound plans to phase out current usage and to research 
+and implement sustainable alternatives.
+• Encourage sustainable practices in the production, supply, use and disposal of TCIM 
+products that contribute to the preservation and repopulation of endangered species.
+• Participate in international regulatory cooperative arrangements such as the WHO 
+International Regulatory Cooperation on Herbal Medicines.
+Actions for 
+partners 
+and 
+stakeholders
+• Encourage different stakeholders to be involved in devising regulatory mechanisms 
+for TCIM products.
+• Participate in and provide training on criteria, norms and standards for TCIM products.
+• Support ethical advertising and promotion to avoid any misleading or unsubstantiated 
+claims regarding TCIM.
+• Industry and practitioners should cooperate and participate in monitoring and 
+surveillance systems for the risk management of TCIM products.
+• Stakeholders should comply with biodiversity and conservation requirements in the 
+production and supply of TCIM products.
+Actions for 
+the WHO 
+Secretariat
+• Develop standards for herbal medicines in the form of the International Herbal 
+Pharmacopoeia and other such documents.
+• Develop, update and disseminate guidelines, technical documents and tools to support 
+TCIM regulatory mechanisms, including pharmacovigilance.
+• Develop standardized terminologies and an international classification of TCIM products.
+• Enhance the WHO International Regulatory Cooperation on Herbal Medicines network.
+Global traditional medicine strategy 2025–2034
+12
+
+[page 27]
+Direction 2.2
+Provide appropriate regulatory mechanisms for TCIM practices and 
+practitioners
+Rationale Regulatory frameworks should be adapted to the different forms of TCIM practices and 
+practitioners. They should also be aligned with TCIM policies to support the preservation 
+and strengthening of TCIM knowledge and practices that are safe and effective, while 
+preventing misappropriation.
+Regulatory frameworks should consider – based on health system objectives, risk profiles 
+and regulatory capacity in the local context – appropriate standards for educational 
+programmes, certification and licensing requirements to ensure that TCIM practitioners 
+have the knowledge and skills to deliver safe and effective care. Balanced frameworks 
+contribute to interprofessional collaboration and the coordination of service delivery 
+across the spectrum of health and social care systems, enabling a holistic and integrated 
+approach to people-centred care.
+Actions for 
+Member 
+States
+• Establish or strengthen appropriate regulatory mechanisms to promote safe and 
+effective TCIM practices, while recognizing their diversity.
+• Develop appropriate quality standards of medicinal preparations made by TCIM 
+practitioners.
+• Develop standards, guidelines and codes of conduct to promote responsible and 
+accountable TCIM practices.
+• Adopt or refer to WHO technical documents in developing minimum training 
+requirements, including ethics for TCIM practitioners.
+• Set training requirements for TCIM practitioners, including ongoing professional 
+development.
+• Collect, analyse and use data on the TCIM health workforce for improved planning 
+and accountability.
+Actions for 
+partners 
+and 
+stakeholders
+• Promote a dialogue between TCIM professional associations with regulatory authorities 
+for standards pertaining to education, practices and practitioners.
+• Encourage regulators, training institutions and professional organizations to support 
+national and local health workforce data collection, analysis and use for improved 
+planning and accountability.
+• Support research on the impact of regulatory systems in reference to patient safety 
+and population health outcomes.
+Actions for 
+the WHO 
+Secretariat
+• Develop a WHO international classification and qualification framework for TCIM 
+practitioners and provide technical guidance to countries.
+• Develop and/or update WHO technical documents in TCIM.
+• Improve health workforce data on TCIM practitioners through regular reporting in the 
+WHO National Health Workforce Accounts Data Portal and complementary surveys 
+and reports.
+• Facilitate information sharing between Member States and partners regarding 
+approaches to and experiences with the regulation of TCIM practices and practitioners 
+in different settings.
+13
+Strategic objectives, directions and actions
+
+[page 28]
+Rationale
+The integration of safe and effective TCIM into health systems will play a key role in the reorienting of health 
+services (19). TCIM can be integrated into all of the building blocks of a health system, covering all levels 
+of health care across the care continuum and life course, in line with the political declaration of the high-
+level meeting on universal health coverage adopted by the United Nations General Assembly in 2023 (20).
+Primary health care (21) is a foundation of universal health coverage and a natural entry point for the 
+integration of TCIM.
+5.3 Strategic objective 3
+ Integrate safe and 
+effective TCIM into health 
+systems
+Global traditional medicine strategy 2025–2034
+14
+
+[page 29]
+Direction 3.1
+Incorporate safe and effective TCIM services into national and local health-
+related frameworks and policies for the integration of safe and effective TCIM 
+into health systems
+Rationale Political commitments and policy frameworks are essential for the safe and effective 
+integration of TCIM into health services that are safe, effective, efficient, coordinated 
+and sufficiently resourced by governments.
+Policy frameworks for professional education and communication are also essential for 
+effective integration, especially at the level of educational institutions. Recognizing and 
+educating practitioners of both TCIM and biomedicine promotes mutual understanding, 
+respect, communication, collaboration and integration.
+Actions for 
+Member 
+States
+• Determine if and how the integration of safe and effective TCIM into national and 
+local health systems can support the reorientation of health systems and services.
+• Recognize the potential role of TCIM as an integral part of health services and include 
+it in the building blocks of national health frameworks, policies and plans to permit 
+integration at all levels of the health system.
+• Establish mechanisms for quality assurance, safety monitoring and evaluations of 
+outcomes of TCIM services and products.
+• Facilitate the integration of education between traditional and complementary 
+medicine and biomedicine.
+Actions for 
+partners and 
+stakeholders
+• Support the development of a national framework or policy that prioritizes health 
+and well-being in which traditional and complementary medicine and biomedicine 
+health practitioners collaborate and coordinate in the delivery of health services.
+• Encourage traditional and complementary medicine and biomedicine educational 
+institutions to integrate their curricula to promote interprofessional collaboration.
+• Educational institutions should consider the establishment and maintenance of TCIM 
+divisions.
+Actions for 
+the WHO 
+Secretariat
+• Develop WHO guidance on the integration of safe and effective TCIM into national 
+health systems.
+• Organize activities to support Member States in the integration of TCIM as well as its 
+monitoring and evaluation.
+• Support Member States in initiating and improving institutional education curricula 
+on appropriate knowledge and skills of traditional and complementary medicine 
+in biomedicine schools and vice versa in traditional and complementary medicine 
+schools.
+15
+Strategic objectives, directions and actions
+
+[page 30]
+Direction 3.2
+Facilitate the integration of safe and effective TCIM services across the care 
+continuum and life course
+Rationale An increasing research base demonstrates TCIM’s promise across the care continuum, 
+including in the areas of health promotion, disease prevention, treatment, rehabilitation 
+and palliative care. In this respect, it is essential to conduct evidence reviews on the 
+impact of safe and effective TCIM services.
+Integrated health services occur when biomedicine and TCIM are proven safe and effective, 
+and are aligned or complementary, including in the clinical pathway, thus providing users 
+with the seamless care they need, including mutual respect and coordination between 
+practitioners to achieve the common goal of people-centred care.
+Actions for 
+Member 
+States
+• Explore, identify, design and implement the most appropriate TCIM integration models, 
+especially at the primary care level.
+• Utilize applicable guidance from WHO on effective integration models and practices.
+• Promote standardized TCIM documentation, including an expanded and accelerated 
+use of the WHO Family of International Classifications to enable data collection and 
+evidence generation on TCIM.
+• Establish sustainable financing mechanisms to support initiatives of TCIM integration.
+• Develop clinical guidelines and care pathways incorporating TCIM approaches, 
+including timely cross-referrals, for specific health conditions and stages of life.
+• Include safe and effective TCIM across the care continuum and life course in essential 
+health services’ packages and the national essential medicines list.
+• Enhance the education and training of health care practitioners in TCIM practices, 
+safety considerations and potential interactions with biomedical treatments.
+• Promulgate educational materials and public information explaining TCIM modalities, 
+benefits and risks, including for appropriate self-care options.
+• Highlight the importance of evidence-based health literacy on TCIM interventions and 
+on when to seek critical, life-saving biomedical care and to avoid delay.
+Actions for 
+partners 
+and 
+stakeholders
+• Support the integration of safe and effective TCIM across the care continuum and life course.
+• Support the conduct of regular evaluations of integration.
+• Promote the research and inclusion of safe and effective TCIM interventions across the 
+care continuum and life course.
+Actions for 
+the WHO 
+Secretariat
+• Conduct surveys and disseminate information on the identified integration models.
+• Provide technical and policy support for integration based on the needs of Member 
+States.
+• Set up standardized indicators to enable monitoring of the access, coverage and 
+utilization of TCIM practices and assessment of their safety and effectiveness.
+• Continue to develop and promote the series of WHO technical documents on TCIM to 
+support integration, including on self-care.
+• Establish a global network of TCIM reference clinical centres for data collection and 
+monitoring based on the WHO Family of International Classifications.
+• Facilitate information exchange among Member States, partners and stakeholders, 
+through activities and mechanisms that are accountable and transparent, to support 
+collaboration on integration.
+Global traditional medicine strategy 2025–2034
+16
+
+[page 31]
+Rationale
+The knowledge, attributes and unique value of TCIM serve to address challenges across multiple 
+dimensions such as health, culture, environment, and social and economic factors, including a wide range 
+of knowledge and practices. Policies and approaches for the appropriate use of TCIM include capitalizing 
+on its potential in health services and self care.
+Capitalizing on the attributes of TCIM, while engaging communities and stakeholders, may harness its 
+potential across sectors and inform governance and societal approaches to maximizing its contribution 
+to health, well-being societies, One Health and the achievement of the Sustainable Development Goals 
+(SDGs).
+5.4 Strategic objective 4
+ Optimize the cross-
+sector value of TCIM and 
+empower communities
+17
+Strategic objectives, directions and actions
+
+[page 32]
+Direction 4.1
+Include TCIM in cross-sector policies and action plans for health, well-being 
+societies, One Health and the Sustainable Development Goals
+Rationale The promotion of TCIM concepts, knowledge and practices will assist in integrating 
+human, animal and environmental health. The rich cultural heritage and diversity of 
+TCIM’s healing traditions and principles promote a positive health vision that focuses 
+on the whole person and reinforces the sources of health.
+Recognizing its contribution to multiple SDGs would help to further engage TCIM in 
+the achievement of related targets. This requires coordination and collaboration from 
+multiple sectors related not only to health care but also to other areas such as culture, 
+education, agriculture, the environment, intellectual property, trade, and economic 
+and social protection.
+Actions for 
+Member 
+States
+• Establish cross-sector collaboration in health care for well-being societies and 
+sustainable development.
+• Collaborate with international organizations, regional bodies, neighbouring countries 
+and relevant stakeholders to share TCIM best practices and experiences.
+• Protect biodiversity and environment in accordance with international obligations, 
+while facilitating a sustainable supply of raw materials for good quality TCIM 
+products.
+• Preserve traditional practices by organizing intercultural dialogue to facilitate 
+knowledge exchange between diverse health systems.
+• Advocate for a healthy lifestyle and environmental conservation through a holistic 
+approach and traditional medical knowledge, and enhance understanding of TCIM 
+concepts, knowledge and practices.
+• Raise awareness on the importance of and need for the preservation of biodiversity.
+Actions for 
+partners and 
+stakeholders
+• Support cross-sector coordination by generating data and incorporating TCIM 
+concepts, knowledge and practices.
+• Contribute to the implementation of the One Health Joint Plan of Action.
+• Raise awareness among stakeholders about TCIM’s holistic concepts of health and 
+well-being.
+Actions for 
+the WHO 
+Secretariat
+• Support Member States in building cross-sector collaborations to enhance the TCIM 
+contribution to healthy societies.
+• Facilitate intersectoral dialogue to contribute towards One Health by promoting 
+synergy between TCIM and related stakeholders.
+• Liaise across the United Nations system and promote cross-sectoral initiatives for 
+TCIM-related information exchange and the promotion of collaborations.
+• Provide a traditional medical knowledge perspective in the implementation of the 
+One Health Joint Plan of Action.
+• Establish a TCIM library by linking with existing information or creating new ones for 
+knowledge-sharing.
+Global traditional medicine strategy 2025–2034
+18
+
+[page 33]
+Direction 4.2
+Develop inclusive approaches and models for the protection of and access 
+to traditional medical knowledge, and for the fair and equitable sharing of 
+the benefits arising from the utilization of such knowledge and/or associated 
+genetic resources
+Rationale All custodians of traditional medical knowledge can benefit from the appropriate 
+protection of their knowledge. Inclusive approaches and models for access to 
+traditional medical knowledge and for the fair and equitable sharing of the benefits 
+arising from the utilization of such knowledge are needed.
+These approaches and models should be informed, as applicable and appropriate, 
+by the Convention on Biological Diversity, the Nagoya Protocol on Access and 
+Benefit-sharing, the Kunming-Montreal Global Biodiversity Framework, and the World 
+Intellectual Property Organization’s Treaty on Intellectual Property, Genetic Resources 
+and Associated Traditional Knowledge. 1 
+Actions for 
+Member 
+States
+• Develop policy frameworks for traditional medical knowledge that ensure appropriate 
+access to this knowledge and associated genetic resources, and for the fair and 
+equitable sharing of benefits arising from their use.
+• Establish guidelines for the documentation and registration of traditional medical 
+knowledge and associated practices.
+• Foster intergenerational learning to preserve and pass traditional medical knowledge 
+to future generations, support its documentation by traditional medicine practitioners 
+and establish knowledge databases.
+• Promote collaboration to share best practices, policies and experiences related to 
+traditional medical knowledge.
+• Facilitate the development of technology to strengthen the conservation of 
+biodiversity for the sustainability of medicinal plants and germplasm banks.
+Actions for 
+partners and 
+stakeholders
+• Participate in the development of policy frameworks for traditional medical 
+knowledge.
+• Contribute to capacity-building for the protection of traditional medical knowledge 
+and prevention of its possible misappropriation.
+• Propose access and benefit-sharing models to incentivize and protect traditional 
+medical knowledge.
+Actions for 
+the WHO 
+Secretariat
+• Strengthen coordination and collaboration with other United Nations entities and 
+relevant organizations to address issues pertinent to traditional medical knowledge.
+• Organize training programmes for building the capacity of Member States in 
+traditional medical knowledge.
+• Raise awareness among the scientific community about ethical aspects and the need 
+to address rights regarding genetic resources in traditional medical knowledge.
+• Facilitate information sharing regarding appropriate approaches and models for 
+traditional medical knowledge.
+1 At the date of publication of this report, the Treaty is still open for signature and has not yet entered into force.
+19
+Strategic objectives, directions and actions
+
+[page 34]
+20
+6. Implementation of 
+ the strategy
+6
+6.1 General comments on implementation
+The guiding principles of the strategy also guide its implementation. To help to achieve the objectives, 
+it is necessary to regularly monitor and report on the implementation of the strategy. A mid-term review 
+of the objectives and directions in terms of Member States’ progress, for reporting in 2030, can help to 
+identify whether there is a need to modify the strategy to better fit countries’ needs.
+6.2 Monitoring, measuring and reporting
+The main purposes of monitoring, measuring and reporting are to ensure adequate implementation, 
+measure success and adapt the strategy, if needed. The role of WHO in this regard is to:
+ support Member States in the implementation and adaptation of the strategy at the country level, 
+including the design and development of national indicators;
+ organize workshops and on-site studies in Member States across the regions to identify and share 
+experiences and lessons learned in the implementation; and
+ report to the Eighty-third World Health Assembly in 2030 and the Eighty-seventh World Health Assembly 
+in 2034 on the implementation of the strategy for follow-up actions and decisions based on updated 
+WHO surveys.
+20
+
+[page 35]
+21
+References1
+1. Decision WHA78(18). WHO traditional medicine strategy: 2025–2034. In: Seventy-eighth World Health 
+Assembly, Geneva, 27 May 2025 ( WHO traditional medicine strategy: 2025–2034 ).
+2. Promoting access to medical technologies and innovation. Intersections between public health, 
+intellectual property and trade. 2nd ed. Geneva: World Trade Organization, World Intellectual Property 
+Organization, World Health Organization; 2020 ( https://iris.who.int/handle/10665/333552 ). License: 
+CC BY-NC-SA 3.0 IGO.
+3. Intergovernmental Committee on Intellectual Property and Genetic Resources, Traditional Knowledge 
+and Folklore. Seventeenth Session. Geneva, 6-10 December 2010. List and brief technical explanation 
+of various forms in which traditional knowledge may be found. Geneva: World Intellectual Property 
+Organization; 2010 (https://www.wipo.int/edocs/mdocs/tk/en/wipo_grtkf_ic_17/wipo_grtkf_ic_17_
+inf_9.pdf ).
+4. Tripartite and United Nations Environment Programme (UNEP) support the One Health High Level 
+Expert Panel (OHHLEP) definition of “One Health” . Joint Tripartite (Food and Agriculture Organization 
+of the United Nations [FAO], World Organization of Animal Health [OIE], WHO) and UNEP Statement. 
+Geneva: World Health Organization; 1 December 2021 [Joint news release] ( https://www.who.int/
+news/item/01-12-2021-tripartite-and-unep-support-ohhlep-s-definition-of-one-health ).
+5. WHO global strategy on people-centred and integrated health services: interim report. Geneva: World 
+Health Organization; 2015 ( https://iris.who.int/handle/10665/155002 ).
+6. A vision for primary health care in the 21st century: towards universal health coverage and the 
+Sustainable Development Goals. Geneva: World Health Organization; United Nations Children’s Fund 
+(UNICEF); 2018 ( https://iris.who.int/handle/10665/328065 ). License: CC BY-NC-SA 3.0 IGO.
+7. Health promotion glossary of terms 2021. Geneva: World Health Organization; 2021 ( https://iris.who.
+int/handle/10665/350161 ). License: CC BY-NC-SA 3.0 IGO.
+8. WHO global report on traditional and complementary medicine 2019. Geneva: World Health 
+Organization; 2019 ( https://iris.who.int/handle/10665/312342 ). License: CC BY-NC-SA 3.0 IGO.
+9. Fact Sheet no. 31: the Right to Health. Geneva: Office of the United Nations High Commissioner for 
+Human Rights & World Health Organization; 2008 ( Fact Sheet No. 31: The Right to Health ).
+10. Resolution A/RES/61/295. Article 24.1. United Nations Declaration on the Rights of Indigenous Peoples. 
+In: Sixty-first Session of the General Assembly of the United Nations, New York, 13 September 2007 
+(https://docs.un.org/en/A/res/61/295 ).
+11. Resolution A/RES/61/295. Article 31. United Nations Declaration on the Rights of Indigenous Peoples. 
+In: Sixty-first Session of the General Assembly of the United Nations, New York, 13 September 2007 
+(https://docs.un.org/en/A/res/61/295 ).
+1 All references were accessed on 15 June 2025.
+21
+
+[page 36]
+12. Resolution A/RES/61/295. United Nations Declaration on the Rights of Indigenous Peoples. In: Sixty-
+first Session of the General Assembly of the United Nations, New York, 13 September 2007 ( https://
+docs.un.org/en/A/res/61/295 ).
+13. Measuring intercultural dialogue: a conceptual and technical framework. Paris. United Nations 
+Educational, Scientific and Cultural Organization (UNESCO) & Institute for Economics and Peace; 2020 
+(https://unesdoc.unesco.org/ark:/48223/pf0000373442 ). License: CC BY-NC-SA 3.0 IGO.
+14. A vision for primary health care in the 21st century: towards universal health coverage and the 
+Sustainable Development Goals. Geneva: World Health Organization & United Nations Children’s 
+Fund; 2018 ( https://iris.who.int/handle/10665/328065 ). License: CC BY-NC-SA 3.0 IGO.
+15. WHO global strategy on people-centred and integrated health services: interim report. Geneva: World 
+Health Organization; 2015 ( https://iris.who.int/handle/10665/155002 ).
+16. A global health strategy for 2025–2028: advancing equity and resilience in a turbulent world: 
+fourteenth General Programme of Work. Geneva: World Health Organization; 2025 ( https://iris.who.
+int/handle/10665/380456 ). License: CC BY-NC-SA 3.0 IGO.
+17. Ethics and governance of artificial intelligence for health: WHO guidance. Geneva: World Health 
+Organization; 2021 ( https://iris.who.int/handle/10665/341996 ). License: CC BY-NC-SA 3.0 IGO.
+18. Annex 10. Good reliance practices in the regulation of medical products: high level principles and 
+considerations. In: WHO Expert Committee on Specifications for Pharmaceutical Preparations: Fifty-
+fifth report. Geneva: World Health Organization; 2021 (WHO Technical Report Series, No. 1033; https://
+iris.who.int/handle/10665/340323 ). License: CC BY-NC-SA 3.0 IGO.
+19. Report of the High-level Committee on South-South Cooperation. A69/39. In: Sixty-ninth session of 
+the General Assembly of the United Nations, New York, June 2014 (https://doc.un.org/en/A/79/39).
+20. Resolution A/78/L.3. Political Declaration of the High-level Meeting on Universal Health Coverage. 
+In: Seventy-eighth session of the General Assembly of the United Nations, New York, 5 October 2023 
+(https://docs.un.org/A/78/L.3).
+21. Traditional and complementary medicine in primary health care. Geneva: World Health Organization; 
+2018 (https://iris.who.int/handle/10665/326299 ). License: CC BY-NC-SA 3.0 IGO.
+Global traditional medicine strategy 2025–2034
+22
+
+[page 38]
+Global Traditional Medicine Centre
+World Health Organization
+Avenue Appia 20
+1211 Geneva
+Switzerland
+who.int

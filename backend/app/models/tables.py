@@ -79,6 +79,80 @@ class UserProfileTable(Base):
     signal_days: Mapped[list["DailySignalDayTable"]] = relationship(back_populates="profile", cascade="all, delete-orphan")
 
 
+class UserAccountTable(Base):
+    __tablename__ = "user_accounts"
+
+    id: Mapped[str] = mapped_column(String, primary_key=True)
+    auth_type: Mapped[str] = mapped_column(String, nullable=False, index=True)
+    email: Mapped[str | None] = mapped_column(String, unique=True, index=True)
+    display_name: Mapped[str] = mapped_column(String, nullable=False)
+    default_profile_id: Mapped[str | None] = mapped_column(ForeignKey("user_profiles.id", ondelete="SET NULL"), index=True)
+    extra_metadata: Mapped[dict] = mapped_column(JSON, default=dict)
+    created_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    updated_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+
+
+class AccountProfileTable(Base):
+    __tablename__ = "account_profiles"
+
+    account_id: Mapped[str] = mapped_column(ForeignKey("user_accounts.id", ondelete="CASCADE"), primary_key=True)
+    profile_id: Mapped[str] = mapped_column(ForeignKey("user_profiles.id", ondelete="CASCADE"), primary_key=True)
+    role: Mapped[str] = mapped_column(String, default="owner", nullable=False)
+    created_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class UserDeviceTable(Base):
+    __tablename__ = "user_devices"
+    __table_args__ = (UniqueConstraint("account_id", "device_id", name="uq_account_device"),)
+
+    id: Mapped[str] = mapped_column(String, primary_key=True)
+    account_id: Mapped[str] = mapped_column(ForeignKey("user_accounts.id", ondelete="CASCADE"), nullable=False, index=True)
+    device_id: Mapped[str] = mapped_column(String, nullable=False, index=True)
+    device_name: Mapped[str | None] = mapped_column(String)
+    last_seen_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+    created_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class GuestUserTable(Base):
+    __tablename__ = "guest_users"
+
+    id: Mapped[str] = mapped_column(String, primary_key=True)
+    device_id: Mapped[str] = mapped_column(String, nullable=False, unique=True, index=True)
+    default_profile_id: Mapped[str | None] = mapped_column(ForeignKey("user_profiles.id", ondelete="SET NULL"), index=True)
+    source: Mapped[str] = mapped_column(String, default="guest_auto", nullable=False)
+    created_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    updated_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+
+
+class EmailVerificationCodeTable(Base):
+    __tablename__ = "email_verification_codes"
+
+    id: Mapped[str] = mapped_column(String, primary_key=True)
+    email: Mapped[str] = mapped_column(String, nullable=False, index=True)
+    code_hash: Mapped[str] = mapped_column(String, nullable=False)
+    purpose: Mapped[str] = mapped_column(String, default="login", nullable=False, index=True)
+    display_name: Mapped[str | None] = mapped_column(String)
+    device_id: Mapped[str | None] = mapped_column(String, index=True)
+    device_name: Mapped[str | None] = mapped_column(String)
+    expires_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), nullable=False, index=True)
+    consumed_at: Mapped[DateTime | None] = mapped_column(DateTime(timezone=True))
+    attempt_count: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
+    created_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class UserSessionTable(Base):
+    __tablename__ = "user_sessions"
+
+    id: Mapped[str] = mapped_column(String, primary_key=True)
+    account_id: Mapped[str] = mapped_column(ForeignKey("user_accounts.id", ondelete="CASCADE"), nullable=False, index=True)
+    token_hash: Mapped[str] = mapped_column(String, nullable=False, unique=True, index=True)
+    device_id: Mapped[str | None] = mapped_column(String, index=True)
+    expires_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), nullable=False, index=True)
+    revoked_at: Mapped[DateTime | None] = mapped_column(DateTime(timezone=True))
+    created_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+    last_seen_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
+
+
 class ProfileGoalTable(Base):
     __tablename__ = "profile_goals"
 
@@ -228,6 +302,25 @@ class SignalObservationTable(Base):
     privacy_level: Mapped[str] = mapped_column(String, default="normal", nullable=False)
 
 
+class HealthDocumentTable(Base):
+    __tablename__ = "health_documents"
+
+    id: Mapped[str] = mapped_column(String, primary_key=True)
+    profile_id: Mapped[str] = mapped_column(ForeignKey("user_profiles.id", ondelete="CASCADE"), nullable=False, index=True)
+    day_id: Mapped[str | None] = mapped_column(ForeignKey("daily_signal_days.id", ondelete="SET NULL"), index=True)
+    document_type: Mapped[str] = mapped_column(String, nullable=False, index=True)
+    file_name: Mapped[str] = mapped_column(String, nullable=False)
+    mime_type: Mapped[str] = mapped_column(String, nullable=False)
+    byte_size: Mapped[int] = mapped_column(Integer, nullable=False)
+    user_description: Mapped[str | None] = mapped_column(Text)
+    ai_summary: Mapped[str | None] = mapped_column(Text)
+    extracted_text: Mapped[str | None] = mapped_column(Text)
+    privacy_level: Mapped[str] = mapped_column(String, default="high_sensitive", nullable=False)
+    source: Mapped[str] = mapped_column(String, default="file_upload", nullable=False)
+    extra_metadata: Mapped[dict] = mapped_column(JSON, default=dict)
+    created_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
 class MediaAssetTable(Base):
     __tablename__ = "media_assets"
 
@@ -298,6 +391,19 @@ class AgentMessageTable(Base):
     content: Mapped[str] = mapped_column(Text, nullable=False)
     extra_metadata: Mapped[dict] = mapped_column(JSON, default=dict)
     created_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now())
+
+
+class AgentMemoryTable(Base):
+    __tablename__ = "agent_memories"
+    __table_args__ = (UniqueConstraint("profile_id", "memory_type", name="uq_profile_memory_type"),)
+
+    id: Mapped[str] = mapped_column(String, primary_key=True)
+    profile_id: Mapped[str] = mapped_column(ForeignKey("user_profiles.id", ondelete="CASCADE"), nullable=False, index=True)
+    memory_type: Mapped[str] = mapped_column(String, nullable=False, index=True)
+    summary: Mapped[str] = mapped_column(Text, nullable=False)
+    source_window_days: Mapped[int] = mapped_column(Integer, default=7, nullable=False)
+    extra_metadata: Mapped[dict] = mapped_column(JSON, default=dict)
+    updated_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
 
 
 class AgentToolCallTable(Base):

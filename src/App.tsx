@@ -33,20 +33,35 @@ import { mockProfiles } from "./data/mockProfiles";
 import { mockDailySignals } from "./data/mockDailySignals";
 import { knowledgeBase } from "./data/knowledgeBase";
 import { sleepEventLabels } from "./domain/labels";
-import { DailyReport, DailySignals, DietSignal, ProfileType, SleepAudioEvent, UserProfile } from "./domain/types";
+import { DailyReport, DailySignals, DietSignal, ProfileType, SleepAudioEvent, SleepSignal, UserProfile } from "./domain/types";
 import {
   analyzeTongue,
+  createProfile,
   createAgentSession,
   createObservation,
   generateReport,
+  chatWithQihuangAgent,
+  getAgentContext,
+  getOrCreateGuestIdentity,
   getDailySignals,
   getProfiles,
+  getSessionIdentity,
+  requestEmailCode,
   sendAgentMessage,
+  summarizeHealthDocument,
+  updateProfile,
+  verifyEmailCode,
+  type AgentMessageResult,
+  type EmailCodeResult,
+  type HealthDocumentSummaryPayload,
+  type HealthDocumentSummaryResult,
   type ObservationPayload,
+  type GuestIdentity,
+  type ProfileWritePayload,
 } from "./services/apiClient";
 import { buildDailyReport } from "./services/reportBuilder";
 
-type PageKey = "onboarding" | "profiles" | "today" | "sleep" | "diet" | "signals" | "report" | "architecture";
+type PageKey = "today" | "detect" | "consult" | "report" | "mine" | "architecture";
 type ApiMode = "checking" | "api" | "mock";
 type ToastState = { kind: "success" | "error" | "info"; message: string };
 type SaveObservation = (payload: ObservationPayload) => Promise<void>;
@@ -66,14 +81,12 @@ type TongueDraft = {
 type TongueUpload = { name: string; url: string; size: number; type: string };
 
 const pageNames: Record<PageKey, string> = {
-  onboarding: "建档",
-  profiles: "档案",
   today: "今日",
-  sleep: "睡眠",
-  diet: "饮食",
-  signals: "四诊",
-  report: "日报",
-  architecture: "架构",
+  detect: "检测",
+  consult: "问诊",
+  report: "报告",
+  mine: "我的",
+  architecture: "说明",
 };
 
 const profileNotes: Record<ProfileType, string> = {
@@ -101,39 +114,158 @@ const statusLabels = {
   observe: "建议观察",
 };
 
+const profileGoalOptions: Array<{ value: UserProfile["goals"][number]; label: string }> = [
+  { value: "sleep_recovery", label: "睡眠恢复" },
+  { value: "weight_loss", label: "体重管理" },
+  { value: "elderly_care", label: "长辈关怀" },
+  { value: "focus_study", label: "学习专注" },
+  { value: "reduce_fatigue", label: "减少疲劳" },
+  { value: "digestive_health", label: "脾胃消化" },
+];
+
+function profileToDraft(profile: UserProfile, accountId?: string | null): ProfileWritePayload {
+  return {
+    accountId: accountId ?? null,
+    name: profile.name,
+    profileType: profile.profileType,
+    age: profile.age,
+    gender: profile.gender,
+    occupation: profile.occupation,
+    goals: [...profile.goals],
+    habits: { ...profile.habits },
+  };
+}
+
+function sanitizeProfileDraft(draft: ProfileWritePayload, accountId?: string | null): ProfileWritePayload {
+  return {
+    accountId: accountId ?? draft.accountId ?? null,
+    name: draft.name.trim() || "我的健康档案",
+    profileType: draft.profileType,
+    age: Math.min(120, Math.max(1, Number(draft.age) || 30)),
+    gender: draft.gender,
+    occupation: draft.occupation.trim() || "未填写",
+    goals: draft.goals.length ? draft.goals : ["sleep_recovery"],
+    habits: {
+      coffee: draft.habits.coffee,
+      lateNightSnack: Boolean(draft.habits.lateNightSnack),
+      sedentaryHours: Math.min(18, Math.max(0, Number(draft.habits.sedentaryHours) || 0)),
+      exerciseFrequency: draft.habits.exerciseFrequency,
+      sleepProblem: draft.habits.sleepProblem,
+    },
+  };
+}
+
 export default function App() {
-  const [profileType, setProfileType] = useState<ProfileType>("weight_loss_female");
-  const [page, setPage] = useState<PageKey>("onboarding");
+  const [activeProfileId, setActiveProfileId] = useState<string>(mockProfiles[0].id);
+  const [page, setPage] = useState<PageKey>("today");
   const [profiles, setProfiles] = useState<UserProfile[]>(mockProfiles);
   const [signals, setSignals] = useState<DailySignals>(mockDailySignals.weight_loss_female);
   const [report, setReport] = useState<DailyReport>(() => buildLocalReport(mockProfiles[0], mockDailySignals.weight_loss_female));
+  const [identity, setIdentity] = useState<GuestIdentity | null>(null);
   const [apiMode, setApiMode] = useState<ApiMode>("checking");
   const [isLoading, setIsLoading] = useState(false);
   const [toast, setToast] = useState<ToastState | null>(null);
   const [agentAnswer, setAgentAnswer] = useState<string>("");
 
   const profile = useMemo(
-    () => profiles.find((item) => item.profileType === profileType) ?? mockProfiles.find((item) => item.profileType === profileType) ?? mockProfiles[0],
-    [profileType, profiles],
+    () => profiles.find((item) => item.id === activeProfileId) ?? profiles[0] ?? mockProfiles[0],
+    [activeProfileId, profiles],
   );
 
   useEffect(() => {
     let active = true;
-    getProfiles()
-      .then((items) => {
+    const storedDeviceId = window.localStorage.getItem("senseloopDeviceId");
+    const storedSessionToken = window.localStorage.getItem("senseloopSessionToken");
+    const identityRequest = storedSessionToken ? getSessionIdentity(storedSessionToken, storedDeviceId) : getOrCreateGuestIdentity(storedDeviceId);
+    identityRequest
+      .then((nextIdentity) => {
         if (!active) return;
+        window.localStorage.setItem("senseloopDeviceId", nextIdentity.deviceId);
+        setIdentity(nextIdentity);
+        const items = nextIdentity.profiles;
         setProfiles(items.length ? items : mockProfiles);
+        const defaultProfile = items.find((item) => item.id === nextIdentity.profileId) ?? items[0];
+        if (defaultProfile) setActiveProfileId(defaultProfile.id);
         setApiMode("api");
       })
-      .catch(() => {
+      .catch(async () => {
         if (!active) return;
-        setProfiles(mockProfiles);
-        setApiMode("mock");
+        window.localStorage.removeItem("senseloopSessionToken");
+        try {
+          const guestIdentity = await getOrCreateGuestIdentity(storedDeviceId);
+          if (!active) return;
+          window.localStorage.setItem("senseloopDeviceId", guestIdentity.deviceId);
+          setIdentity(guestIdentity);
+          const items = guestIdentity.profiles;
+          setProfiles(items.length ? items : mockProfiles);
+          const defaultProfile = items.find((item) => item.id === guestIdentity.profileId) ?? items[0];
+          if (defaultProfile) setActiveProfileId(defaultProfile.id);
+          setApiMode("api");
+        } catch {
+          if (!active) return;
+          setIdentity({ deviceId: "demo-device-local", guestUserId: "guest-demo-local", profileId: mockProfiles[0].id, profiles: mockProfiles });
+          setProfiles(mockProfiles);
+          setApiMode("mock");
+        }
       });
     return () => {
       active = false;
     };
   }, []);
+
+  function applyIdentity(nextIdentity: GuestIdentity) {
+    window.localStorage.setItem("senseloopDeviceId", nextIdentity.deviceId);
+    window.localStorage.removeItem("senseloopEmail");
+    if (nextIdentity.authMode === "email" && nextIdentity.sessionToken) {
+      window.localStorage.setItem("senseloopSessionToken", nextIdentity.sessionToken);
+    } else {
+      window.localStorage.removeItem("senseloopSessionToken");
+    }
+    setIdentity(nextIdentity);
+    setProfiles(nextIdentity.profiles.length ? nextIdentity.profiles : mockProfiles);
+    const defaultProfile = nextIdentity.profiles.find((item) => item.id === nextIdentity.profileId) ?? nextIdentity.profiles[0];
+    if (defaultProfile) setActiveProfileId(defaultProfile.id);
+    setApiMode("api");
+  }
+
+  async function handleRequestEmailCode(email: string, displayName?: string) {
+    const result = await requestEmailCode(email, displayName || null, identity?.deviceId ?? window.localStorage.getItem("senseloopDeviceId"));
+    setToast({ kind: "success", message: result.delivery === "email" ? "验证码已发送，请查看邮箱" : "验证码已生成，可在页面中查看" });
+    return result;
+  }
+
+  async function handleVerifyEmailCode(email: string, code: string, displayName?: string) {
+    const nextIdentity = await verifyEmailCode(email, code, displayName || null, identity?.deviceId ?? window.localStorage.getItem("senseloopDeviceId"));
+    applyIdentity(nextIdentity);
+    setToast({ kind: "success", message: "已登录账号" });
+  }
+
+  async function handleGuestLogin() {
+    const nextIdentity = await getOrCreateGuestIdentity(identity?.deviceId ?? window.localStorage.getItem("senseloopDeviceId"));
+    applyIdentity(nextIdentity);
+    setToast({ kind: "success", message: "已切换为游客使用" });
+  }
+
+  async function handleCreateProfile(payload: ProfileWritePayload) {
+    if (!identity?.accountId) {
+      setToast({ kind: "error", message: "请先登录账号或创建游客身份" });
+      throw new Error("account is required");
+    }
+    const nextProfile = await createProfile({ ...payload, accountId: identity.accountId });
+    setProfiles((current) => [...current.filter((item) => item.id !== nextProfile.id), nextProfile]);
+    setActiveProfileId(nextProfile.id);
+    setIdentity((current) => current ? { ...current, profileId: nextProfile.id, profiles: [...current.profiles.filter((item) => item.id !== nextProfile.id), nextProfile] } : current);
+    setApiMode("api");
+    setToast({ kind: "success", message: "新健康档案已保存" });
+  }
+
+  async function handleUpdateProfile(profileId: string, payload: ProfileWritePayload) {
+    const nextProfile = await updateProfile(profileId, { ...payload, accountId: identity?.accountId ?? null });
+    setProfiles((current) => current.map((item) => (item.id === nextProfile.id ? nextProfile : item)));
+    setIdentity((current) => current ? { ...current, profiles: current.profiles.map((item) => (item.id === nextProfile.id ? nextProfile : item)) } : current);
+    setApiMode("api");
+    setToast({ kind: "success", message: "健康档案已更新" });
+  }
 
   useEffect(() => {
     let active = true;
@@ -175,9 +307,9 @@ export default function App() {
     try {
       await createObservation(profile.id, signals.date, payload);
       setApiMode("api");
-      setToast({ kind: "success", message: "已保存到后端观察记录" });
+      setToast({ kind: "success", message: "已保存记录" });
     } catch {
-      setToast({ kind: "error", message: "后端暂不可用，已保留在页面演示状态" });
+      setToast({ kind: "error", message: "暂时无法同步，请稍后再试" });
       setApiMode((current) => (current === "api" ? "api" : "mock"));
     }
   }
@@ -188,24 +320,24 @@ export default function App() {
       const nextReport = await generateReport(profile.id, signals.date);
       setReport(nextReport);
       setApiMode("api");
-      setToast({ kind: "success", message: "已调用后端生成健康日报" });
+      setToast({ kind: "success", message: "健康报告已更新" });
     } catch {
       setReport(buildLocalReport(profile, signals));
-      setToast({ kind: "info", message: "后端生成失败，已使用本地规则生成报告" });
+      setToast({ kind: "info", message: "暂时无法更新，已为你保留当前报告" });
     } finally {
       setIsLoading(false);
     }
   }
 
   async function handleAskAgent() {
-    setAgentAnswer("正在整理数据库里的日报、观察记录和知识库...");
+    setAgentAnswer("正在整理你的日报和近期记录...");
     try {
       const session = await createAgentSession(profile.id);
       const answer = await sendAgentMessage(session.id, `请解释 ${profile.name} 在 ${signals.date} 的健康日报，并指出下一步应该补充哪些记录。`);
       setAgentAnswer(answer.assistantMessage || answer.answer || "");
       setApiMode("api");
     } catch {
-      setAgentAnswer("当前后端 Agent 接口不可用。前端入口已经预留，后续接入 RAG/AI 后这里会展示基于知识库的解释。");
+      setAgentAnswer("暂时无法连接问诊助手，请稍后再试。你仍可以先补充睡眠、舌诊或饮食记录。");
     }
   }
 
@@ -224,7 +356,7 @@ export default function App() {
     setApiMode("api");
     setToast({
       kind: result.aiEnabled ? "success" : "info",
-      message: result.aiEnabled ? "已调用模型完成舌诊分析并落库" : "模型暂不可用，已用后端规则生成舌诊分析并落库",
+      message: result.aiEnabled ? "舌诊分析已完成" : "已生成舌诊参考报告",
     });
     return result.analysis;
   }
@@ -238,11 +370,11 @@ export default function App() {
         </div>
         <div className="top-actions">
           <span className={`api-badge ${apiMode}`}>
-            {apiMode === "checking" ? "连接中" : apiMode === "api" ? "后端已连接" : "演示数据"}
+            {apiMode === "checking" ? "同步中" : apiMode === "api" ? "已同步" : "离线模式"}
           </span>
           <button className="ghost-button" type="button" onClick={() => setPage("architecture")}>
             <Database size={16} />
-            架构
+            说明
           </button>
         </div>
       </header>
@@ -250,10 +382,10 @@ export default function App() {
       <section className="profile-strip" aria-label="用户画像切换">
         {profiles.map((item) => (
           <button
-            className={item.profileType === profileType ? "chip active" : "chip"}
+            className={item.id === profile.id ? "chip active" : "chip"}
             key={item.id}
             type="button"
-            onClick={() => setProfileType(item.profileType)}
+            onClick={() => setActiveProfileId(item.id)}
           >
             {item.name}
           </button>
@@ -261,37 +393,58 @@ export default function App() {
       </section>
 
       <section className="page-frame">
-        {isLoading && <div className="inline-status">正在同步后端数据...</div>}
-        {page === "onboarding" && (
-          <OnboardingPage
-            profile={profile}
+        {isLoading && <div className="inline-status">正在更新健康记录...</div>}
+        {page === "today" && (
+          <TodayPage
+            onOpenConsult={() => setPage("consult")}
+            onOpenDetect={() => setPage("detect")}
+            report={report}
+            signals={signals}
             profileType={profile.profileType}
-            onGenerateReport={handleGenerateReport}
-            onOpenProfiles={() => setPage("profiles")}
+          />
+        )}
+        {page === "detect" && (
+          <DetectPage
+            onAnalyzeTongue={handleAnalyzeTongue}
             onSaveObservation={saveObservation}
+            onSummarizeDocument={async (payload) => summarizeHealthDocument(profile.id, payload)}
+            profileType={profile.profileType}
+            signals={signals}
           />
         )}
-        {page === "profiles" && (
-          <ProfileArchivePage
-            activeProfile={profile}
-            onBack={() => setPage("onboarding")}
-            onSelectProfile={(nextProfileType) => {
-              setProfileType(nextProfileType);
-              setPage("onboarding");
-            }}
-            profiles={profiles}
+        {page === "consult" && (
+          <ConsultPage
+            identity={identity}
+            profile={profile}
+            report={report}
+            signals={signals}
+            onOpenDetect={() => setPage("detect")}
           />
         )}
-        {page === "today" && <TodayPage report={report} signals={signals} profileType={profile.profileType} />}
-        {page === "sleep" && <SleepPage events={signals.audioEvents} />}
-        {page === "diet" && <DietPage diet={signals.diet} profileType={profile.profileType} onSaveObservation={saveObservation} />}
-        {page === "signals" && <SignalsPage signals={signals} onAnalyzeTongue={handleAnalyzeTongue} onSaveObservation={saveObservation} />}
         {page === "report" && (
           <ReportPage
             agentAnswer={agentAnswer}
             onAskAgent={handleAskAgent}
             profileType={profile.profileType}
             report={report}
+          />
+        )}
+        {page === "mine" && (
+          <MinePage
+            activeProfile={profile}
+            identity={identity}
+            onCreateProfile={handleCreateProfile}
+            onGenerateReport={handleGenerateReport}
+            onGuestLogin={handleGuestLogin}
+            onRequestEmailCode={handleRequestEmailCode}
+            onSaveObservation={saveObservation}
+            onSelectProfile={(nextProfileId) => {
+              setActiveProfileId(nextProfileId);
+              setPage("today");
+            }}
+            onUpdateProfile={handleUpdateProfile}
+            onVerifyEmailCode={handleVerifyEmailCode}
+            profiles={profiles}
           />
         )}
         {page === "architecture" && <ArchitecturePage />}
@@ -428,9 +581,9 @@ function OnboardingPage({
       action: "模拟录音分析",
     },
     touch: {
-      title: "切：为未来穿戴硬件预留",
-      text: "当前 MVP 先展示接口位；未来由 Watch / Band / Pendant 补充心率、血氧和运动体征。",
-      action: "查看硬件接口",
+      title: "切：记录运动与体征",
+      text: "先记录心率、步数和运动状态，帮助判断今天适合恢复还是活动。",
+      action: "查看体征记录",
     },
   }[activeTab];
 
@@ -477,9 +630,9 @@ function OnboardingPage({
             <span>{completion}%</span>
           </div>
           <div className="phone-card hero">
-            <p className="eyebrow">AI 健康助手</p>
+            <p className="eyebrow">健康助手</p>
             <h2>先建档，再生成第一份健康日报</h2>
-            <p>录音 + 拍照 + 基础信息，组成 SenseLoop 的望闻问切数据源。</p>
+            <p>补充录音、照片和基础信息后，建议会更贴近你的日常状态。</p>
             <div className="health-ring" style={{ "--score": `${completion * 3.6}deg` } as React.CSSProperties}>
               <strong>{completion}</strong>
               <span>完成度</span>
@@ -519,11 +672,11 @@ function OnboardingPage({
         <div className="intake-console">
           <div className="console-head">
             <div>
-              <p className="eyebrow">可交互建档 MVP</p>
-              <h2>把参考图里的注册流程，改成 SenseLoop 的望闻问切建档页</h2>
-              <p>
-                基础信息、照片入口、声音事件和报告生成都已经具备可点击闭环；当前建档草稿先写入观察记录，后续补 profile 创建接口即可升级成真实新建档案。
-              </p>
+            <p className="eyebrow">健康档案</p>
+            <h2>先完成基础信息，再生成你的第一份健康报告</h2>
+            <p>
+                补充生活方式、睡眠感受和日常记录后，建议会更贴近你的身体状态。
+            </p>
             </div>
             <div className="button-stack">
               <button className="ghost-button compact" type="button" onClick={onOpenProfiles}>
@@ -539,7 +692,7 @@ function OnboardingPage({
           <section className="intake-panel">
             <div className="panel-toolbar">
               <strong>新建档案草稿</strong>
-              <span>保存到后端 observation</span>
+              <span>保存后可用于今日建议</span>
             </div>
             <div className="form-grid">
               <label className="form-field">
@@ -622,7 +775,7 @@ function OnboardingPage({
           <section className="intake-panel split">
             <div>
               <div className="panel-toolbar">
-                <strong>照片数据源</strong>
+                <strong>照片记录</strong>
                 <span>{selectedPhotos.length}/3 已选择</span>
               </div>
               <div className="source-list">
@@ -645,7 +798,7 @@ function OnboardingPage({
             </div>
             <div>
               <div className="panel-toolbar">
-                <strong>录音数据源</strong>
+                <strong>夜间声音</strong>
                 <span>{selectedAudio.length}/3 已选择</span>
               </div>
               <div className="source-list">
@@ -704,7 +857,7 @@ function OnboardingPage({
             </div>
             <p>{goalAdvice}</p>
             <ul>
-              <li>{hasDryMouth ? "今早口干：建议补水，并观察夜间打鼾和晨间疲惫是否连续出现。" : "今早疲惫：今天优先恢复，不把训练强度拉满。"}</li>
+              <li>{hasDryMouth ? "今早口干：建议补水，并观察夜间打鼾和晨间疲惫是否连续出现。" : "今早疲惫：今天优先恢复，运动强度不宜过高。"}</li>
               <li>{selectedPhotos.length ? "照片信号已进入报告，用标签辅助饮食和身体状态建议。" : "照片信号未选择，报告会提示用户补充记录。"}</li>
               <li>{selectedAudio.length ? "夜间录音已进入报告，能解释为什么今天这样安排。" : "录音未纳入时，只根据问答和照片生成轻量建议。"}</li>
             </ul>
@@ -714,7 +867,7 @@ function OnboardingPage({
 
       <section className="privacy-strip">
         <ShieldCheck size={18} />
-        <span>当前 MVP 亮点：用户可以完成基础问答、选择照片信号、选择录音事件，并即时生成健康日报。边界仍然清楚：只做趋势观察和生活方式建议，不做诊断。</span>
+        <span>所有建议仅用于日常健康管理。若不适持续、加重或影响生活，请及时咨询医生。</span>
       </section>
     </>
   );
@@ -743,7 +896,7 @@ function ProfileArchivePage({
 }: {
   activeProfile: UserProfile;
   onBack: () => void;
-  onSelectProfile: (profileType: ProfileType) => void;
+  onSelectProfile: (profileId: string) => void;
   profiles: UserProfile[];
 }) {
   const [mode, setMode] = useState<"list" | "new" | "reports">("list");
@@ -823,7 +976,7 @@ function ProfileArchivePage({
               key={item.id}
               type="button"
               onClick={() => {
-                onSelectProfile(item.profileType);
+                onSelectProfile(item.id);
                 setMode("list");
               }}
             >
@@ -844,7 +997,7 @@ function ProfileArchivePage({
     <section className="mobile-app-page">
       <div className="mobile-brand-bar">
         <div className="brand-mark">SL</div>
-        <strong>岐黄 AI 健康</strong>
+        <strong>岐黄健康助手</strong>
         <button className="profile-pill" type="button">
           {activeProfile.name}
           <ChevronRight size={14} />
@@ -852,7 +1005,7 @@ function ProfileArchivePage({
       </div>
       <section className="mobile-welcome-card">
         <p>下午好，{activeProfile.name}</p>
-        <span>基于中医四诊合参，AI 智能分析你的健康状态</span>
+        <span>基于中医四诊合参，整理你的健康状态</span>
       </section>
       <div className="mobile-action-grid">
         <button className="mobile-action-card active" type="button" onClick={() => setMode("new")}>
@@ -872,7 +1025,7 @@ function ProfileArchivePage({
       <section className="mobile-info-card">
         <h3>服务号测评说明</h3>
         <ol>
-          <li>舌诊：拍摄舌面/舌底照片，AI 智能分析舌象</li>
+          <li>舌诊：拍摄舌面/舌底照片，查看舌象变化</li>
           <li>问诊：通过智能问卷采集症状与体征信息</li>
           <li>五运六气：基于出生时辰推算运气养生方案</li>
         </ol>
@@ -880,14 +1033,14 @@ function ProfileArchivePage({
       <section className="archive-list">
         <div className="panel-toolbar">
           <strong>其他档案</strong>
-          <span>点击可切换当前页面画像</span>
+          <span>点击可切换当前档案</span>
         </div>
         {profiles.map((item) => (
           <button
             className={item.id === activeProfile.id ? "archive-row active" : "archive-row"}
             key={item.id}
             type="button"
-            onClick={() => onSelectProfile(item.profileType)}
+            onClick={() => onSelectProfile(item.id)}
           >
             <span>{item.name.slice(0, 1)}</span>
             <div>
@@ -902,24 +1055,329 @@ function ProfileArchivePage({
   );
 }
 
+function MinePage({
+  activeProfile,
+  identity,
+  onCreateProfile,
+  onGenerateReport,
+  onGuestLogin,
+  onRequestEmailCode,
+  onSaveObservation,
+  onSelectProfile,
+  onUpdateProfile,
+  onVerifyEmailCode,
+  profiles,
+}: {
+  activeProfile: UserProfile;
+  identity: GuestIdentity | null;
+  onCreateProfile: (payload: ProfileWritePayload) => Promise<void>;
+  onGenerateReport: () => Promise<void>;
+  onGuestLogin: () => Promise<void>;
+  onRequestEmailCode: (email: string, displayName?: string) => Promise<EmailCodeResult>;
+  onSaveObservation: SaveObservation;
+  onSelectProfile: (profileId: string) => void;
+  onUpdateProfile: (profileId: string, payload: ProfileWritePayload) => Promise<void>;
+  onVerifyEmailCode: (email: string, code: string, displayName?: string) => Promise<void>;
+  profiles: UserProfile[];
+}) {
+  const [email, setEmail] = useState(identity?.email ?? "");
+  const [emailCode, setEmailCode] = useState("");
+  const [codeSentTo, setCodeSentTo] = useState("");
+  const [devCode, setDevCode] = useState("");
+  const [displayName, setDisplayName] = useState(identity?.displayName ?? "");
+  const [accountLoading, setAccountLoading] = useState(false);
+  const [profileSaving, setProfileSaving] = useState(false);
+  const [profileDraft, setProfileDraft] = useState<ProfileWritePayload>(() => profileToDraft(activeProfile, identity?.accountId));
+
+  useEffect(() => {
+    setEmail(identity?.email ?? "");
+    setDisplayName(identity?.displayName ?? "");
+    setEmailCode("");
+    setCodeSentTo("");
+    setDevCode("");
+  }, [identity?.email, identity?.displayName]);
+
+  useEffect(() => {
+    setProfileDraft(profileToDraft(activeProfile, identity?.accountId));
+  }, [activeProfile, identity?.accountId]);
+
+  async function submitEmailCodeRequest() {
+    if (!email.trim()) return;
+    setAccountLoading(true);
+    try {
+      const result = await onRequestEmailCode(email.trim(), displayName.trim() || undefined);
+      setCodeSentTo(result.email);
+      setDevCode(result.devCode ?? "");
+      setEmailCode(result.devCode ?? "");
+    } finally {
+      setAccountLoading(false);
+    }
+  }
+
+  async function submitEmailCodeVerify() {
+    if (!email.trim() || !emailCode.trim()) return;
+    setAccountLoading(true);
+    try {
+      await onVerifyEmailCode(email.trim(), emailCode.trim(), displayName.trim() || undefined);
+    } finally {
+      setAccountLoading(false);
+    }
+  }
+
+  async function submitGuestLogin() {
+    setAccountLoading(true);
+    try {
+      await onGuestLogin();
+    } finally {
+      setAccountLoading(false);
+    }
+  }
+
+  async function saveCurrentProfile() {
+    setProfileSaving(true);
+    try {
+      await onUpdateProfile(activeProfile.id, sanitizeProfileDraft(profileDraft, identity?.accountId));
+    } finally {
+      setProfileSaving(false);
+    }
+  }
+
+  async function createNewProfileFromDraft() {
+    setProfileSaving(true);
+    try {
+      await onCreateProfile({
+        ...sanitizeProfileDraft(profileDraft, identity?.accountId),
+        name: profileDraft.name.trim() ? profileDraft.name.trim() : "新的健康档案",
+      });
+    } finally {
+      setProfileSaving(false);
+    }
+  }
+
+  return (
+    <>
+      <PageTitle
+        eyebrow="我的"
+        title="管理你的健康档案"
+        text="可在本页切换档案、查看当前设备身份，并管理健康记录与隐私设置。"
+      />
+      <section className="section-grid two">
+        <Panel title="账号">
+          <div className="account-card">
+            <div className="account-avatar">{(identity?.displayName || activeProfile.name).slice(0, 1)}</div>
+            <div>
+              <strong>{identity?.authMode === "email" ? identity.displayName || identity.email : "游客使用中"}</strong>
+              <span>{identity?.authMode === "email" ? identity.email : "登录邮箱后，换设备也能继续使用同一份健康档案"}</span>
+            </div>
+          </div>
+          <div className="form-grid compact">
+            <label className="form-field">
+              <span>邮箱</span>
+              <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="you@example.com" />
+            </label>
+            <label className="form-field">
+              <span>昵称</span>
+              <input value={displayName} onChange={(event) => setDisplayName(event.target.value)} placeholder="可选" />
+            </label>
+            <label className="form-field">
+              <span>验证码</span>
+              <input
+                inputMode="numeric"
+                maxLength={6}
+                value={emailCode}
+                onChange={(event) => setEmailCode(event.target.value.replace(/\D/g, "").slice(0, 6))}
+                placeholder="6 位验证码"
+              />
+            </label>
+          </div>
+          {codeSentTo && (
+            <p className="account-hint">
+              验证码已发送至 {codeSentTo}。{devCode ? `本地演示验证码：${devCode}` : "请在 10 分钟内完成登录。"}
+            </p>
+          )}
+          <div className="account-actions">
+            <button className="ghost-button compact" type="button" onClick={submitEmailCodeRequest} disabled={accountLoading || !email.trim()}>
+              发送验证码
+            </button>
+            <button className="action-button compact" type="button" onClick={submitEmailCodeVerify} disabled={accountLoading || !email.trim() || !emailCode.trim()}>
+              验证并登录
+            </button>
+            <button className="ghost-button compact" type="button" onClick={submitGuestLogin} disabled={accountLoading}>
+              游客使用
+            </button>
+          </div>
+        </Panel>
+        <Panel title="当前身份">
+          <div className="id-list">
+            <IdentityRow
+              label="账号编号"
+              helper={identity?.authMode === "email" ? "同一邮箱在不同设备登录会使用同一个账号" : "游客账号只用于当前设备"}
+              value={identity?.accountId ?? "未同步"}
+            />
+            <IdentityRow
+              label="当前设备"
+              helper="用于记录这台手机或浏览器"
+              value={identity?.deviceId ?? "未同步"}
+            />
+            <IdentityRow
+              label="当前健康档案"
+              helper={`${activeProfile.name} · ${activeProfile.age} 岁 · ${activeProfile.occupation}`}
+              value={activeProfile.id}
+            />
+          </div>
+          <button className="action-button" type="button" onClick={onGenerateReport}>
+            <FileText size={16} />
+            重新生成今日报告
+          </button>
+        </Panel>
+        <Panel title="健康档案">
+          <div className="form-grid compact">
+            <label className="form-field">
+              <span>姓名/昵称</span>
+              <input value={profileDraft.name} onChange={(event) => setProfileDraft((current) => ({ ...current, name: event.target.value }))} />
+            </label>
+            <label className="form-field">
+              <span>年龄</span>
+              <input type="number" min={1} max={120} value={profileDraft.age} onChange={(event) => setProfileDraft((current) => ({ ...current, age: Number(event.target.value) || current.age }))} />
+            </label>
+            <label className="form-field">
+              <span>性别</span>
+              <select value={profileDraft.gender} onChange={(event) => setProfileDraft((current) => ({ ...current, gender: event.target.value as UserProfile["gender"] }))}>
+                <option value="female">女性</option>
+                <option value="male">男性</option>
+                <option value="other">其他</option>
+              </select>
+            </label>
+            <label className="form-field">
+              <span>生活方式</span>
+              <input value={profileDraft.occupation} onChange={(event) => setProfileDraft((current) => ({ ...current, occupation: event.target.value }))} />
+            </label>
+            <label className="form-field">
+              <span>咖啡因</span>
+              <select value={profileDraft.habits.coffee} onChange={(event) => setProfileDraft((current) => ({ ...current, habits: { ...current.habits, coffee: event.target.value as UserProfile["habits"]["coffee"] } }))}>
+                <option value="none">不喝</option>
+                <option value="low">少量</option>
+                <option value="medium">中等</option>
+                <option value="high">较多</option>
+              </select>
+            </label>
+            <label className="form-field">
+              <span>睡眠困扰</span>
+              <select value={profileDraft.habits.sleepProblem} onChange={(event) => setProfileDraft((current) => ({ ...current, habits: { ...current.habits, sleepProblem: event.target.value as UserProfile["habits"]["sleepProblem"] } }))}>
+                <option value="none">暂无</option>
+                <option value="mild">轻微</option>
+                <option value="moderate">明显</option>
+                <option value="severe">严重</option>
+              </select>
+            </label>
+            <label className="form-field">
+              <span>久坐小时</span>
+              <input type="number" min={0} max={18} step={0.5} value={profileDraft.habits.sedentaryHours} onChange={(event) => setProfileDraft((current) => ({ ...current, habits: { ...current.habits, sedentaryHours: Number(event.target.value) || 0 } }))} />
+            </label>
+            <label className="form-field inline-check">
+              <input type="checkbox" checked={profileDraft.habits.lateNightSnack} onChange={(event) => setProfileDraft((current) => ({ ...current, habits: { ...current.habits, lateNightSnack: event.target.checked } }))} />
+              <span>经常夜宵</span>
+            </label>
+          </div>
+          <div className="goal-selector">
+            {profileGoalOptions.map((goal) => (
+              <button
+                className={profileDraft.goals.includes(goal.value) ? "mini-chip active" : "mini-chip"}
+                key={goal.value}
+                type="button"
+                onClick={() => setProfileDraft((current) => ({
+                  ...current,
+                  goals: current.goals.includes(goal.value)
+                    ? current.goals.filter((item) => item !== goal.value)
+                    : [...current.goals, goal.value],
+                }))}
+              >
+                {goal.label}
+              </button>
+            ))}
+          </div>
+          <div className="account-actions">
+            <button className="action-button compact" type="button" onClick={saveCurrentProfile} disabled={profileSaving}>
+              保存当前档案
+            </button>
+            <button className="ghost-button compact" type="button" onClick={createNewProfileFromDraft} disabled={profileSaving}>
+              另存为新档案
+            </button>
+          </div>
+        </Panel>
+        <Panel title="隐私设置">
+          <AdviceLine icon={<ShieldCheck size={16} />} title="敏感数据分级" text="舌图、体检报告、排便、口气、原始聊天会标记为敏感数据。" />
+          <AdviceLine icon={<LockKeyhole size={16} />} title="记忆范围" text="较早的记录会整理成摘要，减少不必要的敏感信息保留。" />
+          <AdviceLine icon={<Database size={16} />} title="档案隔离" text="每个健康档案独立保存，切换档案后只查看对应记录。" />
+        </Panel>
+      </section>
+      <ProfileArchivePage
+        activeProfile={activeProfile}
+        onBack={() => undefined}
+        onSelectProfile={onSelectProfile}
+        profiles={profiles}
+      />
+      <section className="section-grid two">
+        <Panel title="隐私确认">
+          <p>健康建议需要结合你的睡眠、舌诊、饮食和问诊记录。你可以随时选择补充或停止记录。</p>
+          <button
+            className="ghost-button compact"
+            type="button"
+            onClick={() => onSaveObservation({
+              signalType: "privacy_ack",
+              source: "manual",
+              privacyLevel: "normal",
+              confidence: 1,
+              valueJson: { acknowledgedAt: new Date().toISOString(), profileId: activeProfile.id },
+            })}
+          >
+            <CheckCircle2 size={15} />
+            我已了解
+          </button>
+        </Panel>
+        <Panel title="账号说明">
+          <p>游客适合快速体验；邮箱账号适合换设备继续使用同一份健康档案和问诊记忆。</p>
+        </Panel>
+      </section>
+    </>
+  );
+}
+
 function TodayPage({
+  onOpenConsult,
+  onOpenDetect,
   report,
   signals,
   profileType,
 }: {
+  onOpenConsult: () => void;
+  onOpenDetect: () => void;
   report: ReturnType<typeof buildDailyReport>;
   signals: (typeof mockDailySignals)[ProfileType];
   profileType: ProfileType;
 }) {
   const completed = Object.values(report.fourDiagnosisCompletion).filter(Boolean).length;
+  const snoreCount = signals.audioEvents.filter((event) => event.type === "snore").length;
+  const coughCount = signals.audioEvents.filter((event) => event.type === "cough").length;
+  const loudEvents = signals.audioEvents.filter((event) => event.intensity === "high").length;
 
   return (
     <>
       <section className="hero-panel">
         <div>
-          <p className="eyebrow">今日健康状态</p>
+          <p className="eyebrow">今日状态 · 岐黄问诊助手</p>
           <h2>{report.oneSentenceAdvice}</h2>
           <p className="lead">{profileNotes[profileType]}</p>
+          <div className="hero-action-row">
+            <button className="action-button" type="button" onClick={onOpenConsult}>
+              <Sparkles size={16} />
+              问问岐黄助手
+            </button>
+            <button className="ghost-button" type="button" onClick={onOpenDetect}>
+              <ClipboardList size={16} />
+              补充四诊检测
+            </button>
+          </div>
         </div>
         <div className="score-dial">
           <span>恢复分</span>
@@ -930,21 +1388,35 @@ function TodayPage({
 
       <div className="card-grid">
         <MetricCard label="睡眠时长" value={`${signals.sleep.sleepDurationHours}h`} icon={<Moon size={18} />} />
-        <MetricCard label="夜间声音" value={`${signals.audioEvents.length}条`} icon={<Ear size={18} />} />
+        <MetricCard label="鼾声/咳嗽" value={`${snoreCount}/${coughCount}`} suffix={`高强度 ${loudEvents}`} icon={<Ear size={18} />} />
         <MetricCard label="四诊完成" value={`${completed}/4`} icon={<Sparkles size={18} />} />
       </div>
 
       <section className="section-grid two">
+        <Panel title="昨晚闻诊摘要">
+          <AdviceLine icon={<Moon size={16} />} title="睡眠观察" text={`${signals.sleep.sleepDurationHours} 小时，夜醒/起夜 ${signals.sleep.wakeCount} 次，醒后感受：${sleepFeelingLabel(signals.sleep.userSleepFeeling)}。`} />
+          <AdviceLine icon={<Volume2 size={16} />} title="夜间声音" text={`共 ${signals.audioEvents.length} 段声音事件，打鼾 ${snoreCount} 段，咳嗽 ${coughCount} 段。`} />
+          <AdviceLine icon={<ShieldCheck size={16} />} title="提醒" text="夜间声音只用于趋势观察，不能作为疾病诊断依据。" />
+        </Panel>
         <Panel title="四诊完成度">
           <DiagnosisRow label="望" active={report.fourDiagnosisCompletion.wang} text="饮食、排便、舌苔" />
           <DiagnosisRow label="闻" active={report.fourDiagnosisCompletion.wen} text="夜间声音、口气反馈" />
           <DiagnosisRow label="问" active={report.fourDiagnosisCompletion.wenAsk} text="画像、醒后感受、饮食记录" />
           <DiagnosisRow label="切" active={report.fourDiagnosisCompletion.qie} text="心率、步数、运动状态" />
         </Panel>
+      </section>
+      <section className="section-grid two">
         <Panel title="今日三件事">
           <AdviceLine icon={<Utensils size={16} />} title="怎么吃" text={report.foodAdvice[0] ?? "保持清淡和稳定饮食。"} />
           <AdviceLine icon={<Activity size={16} />} title="怎么动" text={report.recoveryAdvice[0] ?? "维持低强度活动。"} />
           <AdviceLine icon={<Clock3 size={16} />} title="怎么恢复" text={report.riskNotice[0] ?? "今晚提前进入睡眠准备。"} />
+        </Panel>
+        <Panel title="问诊助手下一步">
+          <p>岐黄问诊助手会读取当前档案、昨晚声音、舌诊/报告摘要和近 7 天记忆，再主动追问缺失信息。</p>
+          <button className="action-button" type="button" onClick={onOpenConsult}>
+            <Sparkles size={16} />
+            开始问诊
+          </button>
         </Panel>
       </section>
     </>
@@ -970,7 +1442,7 @@ function SleepPage({ events }: { events: SleepAudioEvent[] }) {
       <PageTitle
         eyebrow="soundcore Work 夜间声音"
         title="先把昨晚听清楚，再把今天安排明白"
-        text="借鉴睡眠录音 App 的细颗粒回看方式：整夜噪声、事件分类、录音片段和来源标签都清楚展示，再进入 SenseLoop 的晨间建议。"
+      text="回看整晚的声音片段，了解打鼾、咳嗽、起夜和环境噪声是否影响了今天的精神状态。"
       />
       <div className="card-grid">
         <MetricCard label="声音片段" value={`${events.length}`} suffix={`共 ${formatDuration(totalRecordedSec)}`} icon={<Volume2 size={18} />} />
@@ -1007,8 +1479,8 @@ function SleepPage({ events }: { events: SleepAudioEvent[] }) {
           </div>
           <p className="subtle">
             {sleepView === "stats"
-              ? "当前为统计视图；接入 SDK 或上传音频后，这里会展示真实来源和识别置信度。"
-              : `当前共有 ${events.length} 个录音片段，可在下方列表回看。`}
+              ? "当前为统计视图，你可以切换到录音片段查看具体时间。"
+              : `共有 ${events.length} 个录音片段，可在下方列表回看。`}
           </p>
         </Panel>
       </section>
@@ -1078,7 +1550,7 @@ function DietPage({
         mealType: mealDraft.mealType,
         foodName: mealDraft.foodName,
         estimatedKcal: Number(mealDraft.estimatedKcal) || 0,
-        note: "MVP 阶段只保存图片元信息和用户修正标签，图片文件存储后续接入对象存储。",
+        note: "已记录图片名称和你的修正标签，便于后续回看。",
       },
     });
   }
@@ -1087,8 +1559,8 @@ function DietPage({
     <>
       <PageTitle
         eyebrow="饮食记录"
-        title="拍照估算只是入口，真正价值是下一餐怎么调整"
-        text="Demo 使用模拟识别结果，设计上保留用户修正机制，避免把 kcal 说成绝对精准。"
+        title="记录这一餐，帮你安排下一餐"
+        text="拍照或手动记录都可以。热量只是参考，你可以随时修正识别结果。"
       />
       <div className="card-grid">
         <MetricCard label="今日建议" value={`${kcalTarget}`} suffix="kcal" icon={<Apple size={18} />} />
@@ -1170,6 +1642,331 @@ function DietPage({
   );
 }
 
+function DetectPage({
+  onAnalyzeTongue,
+  onSaveObservation,
+  onSummarizeDocument,
+  profileType,
+  signals,
+}: {
+  onAnalyzeTongue: AnalyzeTongue;
+  onSaveObservation: SaveObservation;
+  onSummarizeDocument: (payload: HealthDocumentSummaryPayload) => Promise<HealthDocumentSummaryResult>;
+  profileType: ProfileType;
+  signals: DailySignals;
+}) {
+  const [mode, setMode] = useState<"overview" | "sleep" | "tongue" | "diet" | "document">("overview");
+  const fileRef = useRef<HTMLInputElement | null>(null);
+  const [docDraft, setDocDraft] = useState({ description: "体检报告里有几项箭头指标，想整理重点并看看今天需要注意什么。", extractedText: "" });
+  const [docFile, setDocFile] = useState<File | null>(null);
+  const [docSummary, setDocSummary] = useState("");
+  const [docLoading, setDocLoading] = useState(false);
+
+  async function handleDocFile(event: React.ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0] ?? null;
+    setDocFile(file);
+    if (!file) return;
+    const text = await readTextFromFile(file);
+    if (text) {
+      setDocDraft((current) => ({ ...current, extractedText: text.slice(0, 5000) }));
+    }
+  }
+
+  async function submitDocumentSummary() {
+    if (!docFile) {
+      setDocSummary("请先选择图片或 PDF。");
+      return;
+    }
+    setDocLoading(true);
+    try {
+      const fileBase64 = await readFileAsBase64(docFile);
+      const result = await onSummarizeDocument({
+        date: signals.date,
+        documentType: docFile.type.includes("pdf") ? "pdf" : "checkup_report",
+        fileName: docFile.name,
+        mimeType: docFile.type || "application/octet-stream",
+        byteSize: docFile.size,
+        userDescription: docDraft.description,
+        extractedText: docDraft.extractedText || null,
+        fileBase64,
+        metadata: { entry: "detect_page" },
+      });
+      setDocSummary(result.summary);
+    } catch {
+      setDocSummary("暂时无法完成资料解读。你可以稍后重试，或重新上传更清晰的原图/PDF。");
+    } finally {
+      setDocLoading(false);
+    }
+  }
+
+  if (mode === "sleep") return <SleepPage events={signals.audioEvents} />;
+  if (mode === "tongue") return <SignalsPage signals={signals} onAnalyzeTongue={onAnalyzeTongue} onSaveObservation={onSaveObservation} />;
+  if (mode === "diet") return <DietPage diet={signals.diet} profileType={profileType} onSaveObservation={onSaveObservation} />;
+
+  return (
+    <>
+      <PageTitle
+        eyebrow="检测"
+        title="补充今天的健康线索"
+        text="上传舌图、查看夜间声音、记录饮食或整理体检报告，让建议更贴近你今天的状态。"
+      />
+      <section className="diagnosis-tabs detect-grid">
+        {[
+          { key: "tongue", title: "望诊", text: "舌图、饮食图、体检报告", icon: <Camera size={18} /> },
+          { key: "sleep", title: "闻诊", text: "夜间声音、鼾声、咳嗽、起夜、口气", icon: <Ear size={18} /> },
+          { key: "document", title: "报告解读", text: "整理重点指标、异常线索和追问建议", icon: <FileText size={18} /> },
+          { key: "diet", title: "饮食记录", text: "拍照或手动记录一餐", icon: <Utensils size={18} /> },
+        ].map((item) => (
+          <button className="tab-card detect-card" key={item.key} type="button" onClick={() => setMode(item.key as typeof mode)}>
+            {item.icon}
+            <span>{item.title}</span>
+            <em>{item.text}</em>
+          </button>
+        ))}
+      </section>
+      <section className="section-grid two">
+        <Panel title="昨晚声音优先进入问诊">
+          <AdviceLine icon={<Moon size={16} />} title="睡眠时长" text={`${signals.sleep.sleepDurationHours} 小时，${sleepQualityLabel(signals.sleep.sleepQuality)}。`} />
+          <AdviceLine icon={<Ear size={16} />} title="闻诊证据" text={`夜间声音 ${signals.audioEvents.length} 段，数据来源包含 ${Array.from(new Set(signals.audioEvents.map((item) => sourceLabel(item.source)))).join(" / ")}。`} />
+          <button className="action-button" type="button" onClick={() => setMode("sleep")}>查看夜间声音详情</button>
+        </Panel>
+        <Panel title="健康资料解读">
+          <input accept="image/*,.pdf" className="visually-hidden" onChange={handleDocFile} ref={fileRef} type="file" />
+          <button className="ghost-button compact" type="button" onClick={() => fileRef.current?.click()}>
+            <FileText size={15} />
+            选择体检报告或健康资料
+          </button>
+          {docFile && <p className="subtle">已选择：{docFile.name}</p>}
+          <label className="form-field">
+            <span>补充描述</span>
+            <textarea rows={3} value={docDraft.description} onChange={(event) => setDocDraft((current) => ({ ...current, description: event.target.value }))} />
+          </label>
+          <label className="form-field">
+            <span>补充说明</span>
+            <textarea rows={4} value={docDraft.extractedText} onChange={(event) => setDocDraft((current) => ({ ...current, extractedText: event.target.value }))} placeholder="可选：补充拍摄日期、资料类型、近期不适或你最关心的问题" />
+          </label>
+          <button className="action-button" type="button" onClick={submitDocumentSummary}>
+            <Sparkles size={16} />
+            {docLoading ? "正在解读..." : "开始解读"}
+          </button>
+          {docSummary && <p className="agent-answer">{docSummary}</p>}
+        </Panel>
+      </section>
+      <section className="privacy-strip">
+        <ShieldCheck size={18} />
+        <span>体检报告、舌图和问诊记录都属于敏感信息。你可以随时只上传必要资料，并在“我的”里管理账号和档案。</span>
+      </section>
+    </>
+  );
+}
+
+type ChatMessage = {
+  id: string;
+  role: "assistant" | "user";
+  content: string;
+  citations?: Array<Record<string, unknown>>;
+};
+
+function ConsultPage({
+  identity,
+  onOpenDetect,
+  profile,
+  report,
+  signals,
+}: {
+  identity: GuestIdentity | null;
+  onOpenDetect: () => void;
+  profile: UserProfile;
+  report: DailyReport;
+  signals: DailySignals;
+}) {
+  const [sessionId, setSessionId] = useState<string | null>(null);
+  const [messages, setMessages] = useState<ChatMessage[]>([
+    {
+      id: "welcome",
+      role: "assistant",
+      content: "我是岐黄问诊助手。我会结合你的档案、昨晚声音、舌诊/报告摘要和近 7 天记忆来解释趋势。你可以问：昨晚为什么醒来累？打鼾多今天怎么安排？",
+    },
+  ]);
+  const [draft, setDraft] = useState("昨晚有点累，结合鼾声和舌诊，今天应该怎么调整？");
+  const [loading, setLoading] = useState(false);
+  const [contextSummary, setContextSummary] = useState("正在读取近 7 天记忆...");
+  const fileRef = useRef<HTMLInputElement | null>(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  const snoreCount = signals.audioEvents.filter((event) => event.type === "snore").length;
+  const coughCount = signals.audioEvents.filter((event) => event.type === "cough").length;
+
+  useEffect(() => {
+    let active = true;
+    getAgentContext(profile.id)
+      .then((context) => {
+        if (!active) return;
+        const memory = typeof context.memory?.summary === "string" ? context.memory.summary : "暂无长期记忆，问诊后会自动更新 7 天摘要。";
+        setContextSummary(memory);
+      })
+      .catch(() => {
+        if (!active) return;
+        setContextSummary("暂时无法读取历史摘要，你仍可以继续描述今天的情况。");
+      });
+    return () => {
+      active = false;
+    };
+  }, [profile.id]);
+
+  useEffect(() => {
+    scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
+  }, [messages, loading]);
+
+  async function sendMessage(message = draft) {
+    const trimmed = message.trim();
+    if (!trimmed || loading) return;
+    const userMessage: ChatMessage = { id: `user-${Date.now()}`, role: "user", content: trimmed };
+    setMessages((current) => [...current, userMessage]);
+    setDraft("");
+    setLoading(true);
+    try {
+      const result: AgentMessageResult = await chatWithQihuangAgent(profile.id, trimmed, sessionId);
+      setSessionId(result.sessionId);
+      setMessages((current) => [
+        ...current,
+        {
+          id: `assistant-${Date.now()}`,
+          role: "assistant",
+          content: result.assistantMessage || result.answer || "我已经记录这次问诊，但暂时没有生成回复。",
+          citations: result.citations,
+        },
+      ]);
+      const memorySummary = typeof result.memory?.summary === "string" ? result.memory.summary : "";
+      if (memorySummary) setContextSummary(memorySummary);
+    } catch {
+      setMessages((current) => [
+        ...current,
+        {
+          id: `assistant-error-${Date.now()}`,
+          role: "assistant",
+          content: "问诊助手暂时无法连接。你可以稍后再试；如果昨晚鼾声、夜醒或口干连续出现，今天先降低运动强度、清淡饮食，并观察是否持续。",
+        },
+      ]);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  async function handleUploadForChat(event: React.ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    setMessages((current) => [
+      ...current,
+      { id: `file-${Date.now()}`, role: "user", content: `上传文件：${file.name}，请结合问诊解释。` },
+    ]);
+    setLoading(true);
+    try {
+      const extractedText = await readTextFromFile(file);
+      const fileBase64 = await readFileAsBase64(file);
+      const result = await summarizeHealthDocument(profile.id, {
+        date: signals.date,
+        documentType: file.type.includes("pdf") ? "pdf" : "other_image",
+        fileName: file.name,
+        mimeType: file.type || "application/octet-stream",
+        byteSize: file.size,
+        userDescription: "问诊聊天窗口上传的健康资料",
+        extractedText: extractedText || null,
+        fileBase64,
+        metadata: { entry: "consult_page" },
+      });
+      setMessages((current) => [
+        ...current,
+        {
+          id: `file-summary-${Date.now()}`,
+          role: "assistant",
+          content: result.summary,
+          citations: result.citations,
+        },
+      ]);
+    } catch {
+      setMessages((current) => [
+        ...current,
+        { id: `file-error-${Date.now()}`, role: "assistant", content: "暂时无法读取这份文件。你可以稍后重试，或重新上传更清晰的原图/PDF。" },
+      ]);
+    } finally {
+      setLoading(false);
+      if (fileRef.current) fileRef.current.value = "";
+    }
+  }
+
+  return (
+    <>
+      <section className="consult-shell">
+        <aside className="consult-status-card">
+          <p className="eyebrow">岐黄问诊助手</p>
+          <h2>{profile.name}</h2>
+          <span>{profile.age} 岁 · {profile.occupation}</span>
+          <div className="consult-status-grid">
+            <b>{signals.sleep.sleepDurationHours}h<em>睡眠</em></b>
+            <b>{snoreCount}<em>鼾声</em></b>
+            <b>{coughCount}<em>咳嗽</em></b>
+            <b>{report.recoveryScore}<em>恢复分</em></b>
+          </div>
+          <p>{contextSummary}</p>
+          <div className="identity-mini">
+            <span>当前档案</span>
+            <strong>{profile.name}</strong>
+            <span>身份状态</span>
+            <strong>{identity?.guestUserId ? "游客使用中" : "未同步"}</strong>
+          </div>
+        </aside>
+        <section className="chat-panel">
+          <div className="chat-head">
+            <div>
+              <strong>问诊对话</strong>
+              <span>结合近期记录，持续记住你的健康重点</span>
+            </div>
+            <button className="ghost-button compact" type="button" onClick={onOpenDetect}>
+              <ClipboardList size={15} />
+              去检测
+            </button>
+          </div>
+          <div className="quick-prompts">
+            {["昨晚为什么醒来累？", "打鼾多今天怎么安排运动？", "舌苔偏干和口干有没有关系？"].map((item) => (
+              <button key={item} type="button" onClick={() => sendMessage(item)}>{item}</button>
+            ))}
+          </div>
+          <div className="chat-scroll" ref={scrollRef}>
+            {messages.map((message) => (
+              <article className={`chat-bubble ${message.role}`} key={message.id}>
+                <p>{message.content}</p>
+                {message.citations?.length ? (
+                  <div className="citation-row">
+                    {message.citations.slice(0, 3).map((item, index) => (
+                      <span key={`${message.id}-${index}`}>{String(item.title ?? "知识卡")}</span>
+                    ))}
+                  </div>
+                ) : null}
+              </article>
+            ))}
+            {loading && <article className="chat-bubble assistant"><p>正在读取档案、睡眠声音、知识卡和记忆...</p></article>}
+          </div>
+          <div className="chat-composer">
+            <input accept="image/*,.pdf" className="visually-hidden" onChange={handleUploadForChat} ref={fileRef} type="file" />
+            <button className="icon-button" type="button" onClick={() => fileRef.current?.click()} aria-label="上传健康文件">
+              <FileText size={18} />
+            </button>
+            <textarea value={draft} onChange={(event) => setDraft(event.target.value)} rows={2} placeholder="描述症状、昨晚声音、舌图或体检报告..." />
+            <button className="action-button compact" type="button" onClick={() => sendMessage()} disabled={loading}>
+              发送
+            </button>
+          </div>
+        </section>
+      </section>
+      <section className="privacy-strip">
+        <ShieldCheck size={18} />
+        <span>岐黄问诊助手只做健康管理建议。原始图片、PDF、音频属于敏感数据；长期记忆默认保存摘要，不保存原始敏感文件。</span>
+      </section>
+    </>
+  );
+}
+
 function SignalsPage({
   onAnalyzeTongue,
   signals,
@@ -1234,7 +2031,7 @@ function SignalsPage({
       const analysis = await onAnalyzeTongue({ date: signals.date, tongue: nextDraft, upload: nextUpload });
       setTongueAiText(analysis);
     } catch {
-      setTongueAiError("模型分析暂不可用，已保留本地舌象报告，可稍后再次测评。");
+      setTongueAiError("暂时无法完成舌象解读，已保留当前舌象记录，可稍后再次测评。");
     } finally {
       setTongueAiLoading(false);
     }
@@ -1485,13 +2282,13 @@ function TongueDiagnosisReport({
       <div className="tcm-report-brand">
         <div className="brand-leaf">叶</div>
         <div>
-          <strong>AI 中医舌诊</strong>
+          <strong>中医舌诊</strong>
           <span>Traditional TCM Tongue Analysis</span>
         </div>
       </div>
       <div className="report-hero-card">
         <div>
-          <p>AI 四诊合参 · 舌诊健康报告</p>
+          <p>四诊合参 · 舌诊健康报告</p>
           <h2>用户3968</h2>
           <span>测评日期：2026年3月15日</span>
           <div className="report-pill-row">
@@ -1519,7 +2316,7 @@ function TongueDiagnosisReport({
             <strong>{mainPattern}</strong>
             <span>主要倾向</span>
           </div>
-          <p>当前结果结合舌象标签与模型分析生成，只做健康管理参考，不替代医疗诊断。</p>
+          <p>当前结果结合舌象记录生成，只做健康管理参考，不替代医疗诊断。</p>
           <strong className="mini-heading">九型体质评估</strong>
           <div className="constitution-list">
             {constitutionScores.map((item) => (
@@ -1561,11 +2358,11 @@ function TongueDiagnosisReport({
             <p>您的舌象较显著的特征会优先进入健康管理建议。请结合问诊、排便、睡眠和饮食记录一起观察。</p>
           </section>
           <section className="ai-analysis-box">
-            <h3><Sparkles size={20} /> 模型分析</h3>
-            {aiLoading && <p>正在调用后端模型分析舌象...</p>}
+            <h3><Sparkles size={20} /> 舌象解读</h3>
+            {aiLoading && <p>正在分析舌象...</p>}
             {aiError && <p>{aiError}</p>}
             {!aiLoading && !aiError && aiText && aiText.split("\n").filter(Boolean).map((line) => <p key={line}>{line}</p>)}
-            {!aiLoading && !aiError && !aiText && <p>上传舌苔照片后，这里会展示后端模型生成的分析结果。</p>}
+            {!aiLoading && !aiError && !aiText && <p>上传舌苔照片后，这里会展示舌象解读结果。</p>}
           </section>
         </>
       )}
@@ -1575,7 +2372,7 @@ function TongueDiagnosisReport({
           <div className="inquiry-grid">
             {["晨起口干", "精神不振", "食欲一般", "睡眠偏晚"].map((item) => <span key={item}>{item}</span>)}
           </div>
-          <p>后续这里会接入问卷模块，把口干、口苦、畏寒、出汗、排便等回答与舌象合参。</p>
+          <p>补充口干、口苦、畏寒、出汗、排便等感受后，舌象建议会更准确。</p>
         </section>
       )}
       {activeTab === "wuyun" && (
@@ -1676,11 +2473,11 @@ function ReportPage({
         <Panel title="异常趋势提醒">
           {report.riskNotice.map((item) => <p key={item}>{item}</p>)}
         </Panel>
-        <Panel title="AI Agent 解释入口">
-          <p>这里预留给 RAG/Agent：读取日报、观察记录和知识库后，解释为什么给出这些建议。</p>
+        <Panel title="问问岐黄助手">
+          <p>如果你想知道为什么这样建议，可以让岐黄助手结合睡眠、舌诊和饮食记录解释给你听。</p>
           <button className="action-button" type="button" onClick={onAskAgent}>
             <Sparkles size={16} />
-            解释这份日报
+            解释这份报告
           </button>
           {agentAnswer && <p className="agent-answer">{agentAnswer}</p>}
         </Panel>
@@ -1693,22 +2490,22 @@ function ArchitecturePage() {
   return (
     <>
       <PageTitle
-        eyebrow="技术架构"
-        title="当前用 soundcore Work 跑通声音健康洞察，未来演进到健康穿戴硬件"
-        text="真实设备、模型和 API 都通过 adapter 接入；没有 SDK 时，Demo 仍可用 mock 数据完整演示。"
+        eyebrow="服务说明"
+        title="SenseLoop 如何理解你的健康线索"
+        text="SenseLoop 会把睡眠声音、舌图、饮食和问诊记录合在一起，生成日常健康管理建议。"
       />
       <section className="architecture-flow">
-        <ArchStep icon={<Ear size={20} />} title="当前原型" text="soundcore Work 采集夜间声音、重点标记和设备状态。" />
-        <ArchStep icon={<Home size={20} />} title="App 补充" text="用户画像、饮食、排便、舌苔、口气和醒后感受。" />
-        <ArchStep icon={<Database size={20} />} title="知识库与规则" text="睡眠、饮食、排便、舌苔、减脂和恢复建议规则。" />
-        <ArchStep icon={<Watch size={20} />} title="未来硬件" text="手表、手环或项链集成声音、图像、体征和端侧识别。" />
+        <ArchStep icon={<Ear size={20} />} title="夜间声音" text="记录打鼾、咳嗽、起夜和环境噪声，帮助解释晨起疲惫。" />
+        <ArchStep icon={<Home size={20} />} title="日常记录" text="补充饮食、排便、舌苔、口气和醒后感受。" />
+        <ArchStep icon={<Database size={20} />} title="健康建议" text="结合近期变化，给出饮食、运动和恢复建议。" />
+        <ArchStep icon={<Watch size={20} />} title="体征记录" text="心率、步数和运动状态可帮助判断恢复负荷。" />
       </section>
       <section className="section-grid two">
-        <Panel title="当前可演示">
-          <p>五类用户画像切换、夜间声音时间线、四诊完成度、每日健康建议、隐私边界和未来演进。</p>
+        <Panel title="你可以记录什么">
+          <p>睡眠声音、舌图、饮食、排便、口气、体检报告和主观感受都可以作为健康线索。</p>
         </Panel>
-        <Panel title="现场可增强">
-          <p>接入 soundcore Work SDK、上传真实音频、补充 eufy 非隐私视觉事件、接入 API Key 做报告润色。</p>
+        <Panel title="需要注意什么">
+          <p>报告只用于日常健康管理，不替代医生诊断。若异常持续或明显不适，请及时就医。</p>
         </Panel>
       </section>
     </>
@@ -1936,6 +2733,48 @@ function SignalValue({ label, value }: { label: string; value: string }) {
   );
 }
 
+function IdentityRow({ helper, label, value }: { helper: string; label: string; value: string }) {
+  return (
+    <div className="identity-row" title={value}>
+      <div>
+        <strong>{label}</strong>
+        <span>{helper}</span>
+      </div>
+      <code>{shortId(value)}</code>
+    </div>
+  );
+}
+
+async function readTextFromFile(file: File) {
+  const isTextLike =
+    file.type.startsWith("text/") ||
+    file.type.includes("json") ||
+    file.type.includes("csv") ||
+    /\.(txt|csv|json|md)$/i.test(file.name);
+  if (!isTextLike) return "";
+  try {
+    return await file.text();
+  } catch {
+    return "";
+  }
+}
+
+async function readFileAsBase64(file: File) {
+  return new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      const result = reader.result;
+      if (typeof result !== "string") {
+        reject(new Error("文件读取失败"));
+        return;
+      }
+      resolve(result.includes(",") ? result.split(",", 2)[1] : result);
+    };
+    reader.onerror = () => reject(reader.error ?? new Error("文件读取失败"));
+    reader.readAsDataURL(file);
+  });
+}
+
 function ArchStep({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) {
   return (
     <article className="arch-step">
@@ -1972,7 +2811,7 @@ function eventMarkerClass(type: SleepAudioEvent["type"]) {
 
 function sourceLabel(source: SleepAudioEvent["source"]) {
   return {
-    mock: "demo",
+    mock: "样例",
     manual: "manual",
     soundcore_sdk: "soundcore",
     audio_model: "model",
@@ -2023,4 +2862,18 @@ function photoQuality(value?: string) {
 
 function breathLevel(level: string) {
   return { none: "无", mild: "轻微", obvious: "明显", unknown: "待确认" }[level] ?? "待确认";
+}
+
+function shortId(value: string) {
+  if (!value || value === "未同步") return value;
+  if (value.length <= 22) return value;
+  return `${value.slice(0, 12)}...${value.slice(-8)}`;
+}
+
+function sleepFeelingLabel(value: SleepSignal["userSleepFeeling"]) {
+  return { refreshed: "精神尚可", tired: "偏疲惫", very_tired: "明显疲惫" }[value];
+}
+
+function sleepQualityLabel(value: SleepSignal["sleepQuality"]) {
+  return { good: "睡眠质量较好", fair: "睡眠质量一般", poor: "睡眠质量偏差" }[value];
 }

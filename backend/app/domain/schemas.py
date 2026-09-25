@@ -25,6 +25,69 @@ class UserProfile(BaseModel):
     habits: UserHabit
 
 
+class UserProfileWrite(BaseModel):
+    accountId: str | None = None
+    name: str
+    profileType: ProfileType = "weight_loss_female"
+    age: int = Field(ge=1, le=120)
+    gender: Literal["female", "male", "other"]
+    occupation: str
+    goals: list[str] = Field(default_factory=list)
+    habits: UserHabit
+
+
+class GuestIdentityRequest(BaseModel):
+    deviceId: str | None = None
+    deviceName: str | None = None
+
+
+class EmailLoginRequest(BaseModel):
+    email: str
+    displayName: str | None = None
+    deviceId: str | None = None
+    deviceName: str | None = None
+
+
+class EmailCodeRequest(BaseModel):
+    email: str
+    displayName: str | None = None
+    deviceId: str | None = None
+    deviceName: str | None = None
+
+
+class EmailCodeResponse(BaseModel):
+    email: str
+    expiresInSeconds: int
+    delivery: Literal["email", "dev"]
+    devCode: str | None = None
+
+
+class EmailCodeVerifyRequest(BaseModel):
+    email: str
+    code: str
+    displayName: str | None = None
+    deviceId: str | None = None
+    deviceName: str | None = None
+
+
+class SessionIdentityRequest(BaseModel):
+    sessionToken: str
+    deviceId: str | None = None
+    deviceName: str | None = None
+
+
+class GuestIdentityResponse(BaseModel):
+    deviceId: str
+    guestUserId: str
+    accountId: str | None = None
+    authMode: Literal["guest", "email"] = "guest"
+    email: str | None = None
+    displayName: str | None = None
+    profileId: str | None = None
+    profiles: list[UserProfile] = Field(default_factory=list)
+    sessionToken: str | None = None
+
+
 class SleepAudioEvent(BaseModel):
     id: str
     type: str
@@ -159,6 +222,54 @@ class AgentMessageCreate(BaseModel):
     message: str
     useRag: bool = True
     allowedTools: list[str] = Field(default_factory=list)
+
+
+class AgentChatRequest(BaseModel):
+    message: str
+    sessionId: str | None = None
+    useRag: bool = True
+    fileIds: list[str] = Field(default_factory=list)
+
+
+class AgentChatResponse(BaseModel):
+    sessionId: str
+    answer: str
+    assistantMessage: str
+    model: str | None = None
+    citations: list[dict[str, Any]] = Field(default_factory=list)
+    toolCalls: list[dict[str, Any]] = Field(default_factory=list)
+    memory: dict[str, Any] | None = None
+    aiEnabled: bool = False
+
+
+class AgentContextResponse(BaseModel):
+    profile: dict[str, Any]
+    signals: dict[str, Any] | None = None
+    report: dict[str, Any] | None = None
+    memory: dict[str, Any] | None = None
+    recentMessages: list[dict[str, Any]] = Field(default_factory=list)
+    knowledgeCards: list[dict[str, Any]] = Field(default_factory=list)
+
+
+class HealthDocumentSummaryRequest(BaseModel):
+    date: str | None = None
+    documentType: Literal["lab_report", "checkup_report", "tongue_image", "diet_image", "other_image", "pdf", "other"] = "checkup_report"
+    fileName: str
+    mimeType: str = "application/octet-stream"
+    byteSize: int = 0
+    userDescription: str | None = None
+    extractedText: str | None = None
+    fileBase64: str | None = None
+    metadata: dict[str, Any] = Field(default_factory=dict)
+
+
+class HealthDocumentSummaryResponse(BaseModel):
+    document: dict[str, Any]
+    summary: str
+    aiEnabled: bool
+    model: str | None = None
+    structuredFindings: dict[str, Any] = Field(default_factory=dict)
+    citations: list[dict[str, Any]] = Field(default_factory=list)
 
 
 class TongueAnalysisRequest(BaseModel):

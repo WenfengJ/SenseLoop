@@ -37,15 +37,22 @@ def config_status() -> dict[str, Any]:
         "provider": os.environ.get("AI_PROVIDER", "deepseek"),
         "baseUrl": _base_url(),
         "model": _model(),
+        "visionModel": vision_model(),
     }
 
 
-def chat_completion(messages: list[dict[str, str]], *, temperature: float = 0.35, max_tokens: int = 900) -> LlmResult:
+def chat_completion(
+    messages: list[dict[str, Any]],
+    *,
+    temperature: float = 0.35,
+    max_tokens: int = 900,
+    model: str | None = None,
+) -> LlmResult:
     api_key = os.environ.get("DEEPSEEK_API_KEY") or os.environ.get("OPENAI_API_KEY")
     if not api_key:
         raise LlmNotConfiguredError("DEEPSEEK_API_KEY or OPENAI_API_KEY is required")
 
-    model = _model()
+    model = model or _model()
     request_body = {
         "model": model,
         "messages": messages,
@@ -109,6 +116,10 @@ def _base_url() -> str:
 
 def _model() -> str:
     return os.environ.get("OPENAI_MODEL") or os.environ.get("DEEPSEEK_MODEL") or "deepseek-chat"
+
+
+def vision_model() -> str | None:
+    return os.environ.get("OPENAI_VISION_MODEL") or os.environ.get("DEEPSEEK_VISION_MODEL") or os.environ.get("VISION_MODEL")
 
 
 def _extract_content(raw: dict[str, Any]) -> str:
