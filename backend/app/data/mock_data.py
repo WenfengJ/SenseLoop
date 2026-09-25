@@ -6,6 +6,14 @@ PROFILES = [
         "age": 28,
         "gender": "female",
         "occupation": "产品经理",
+        "birthDate": "1998-03-15",
+        "birthHour": "you",
+        "fourDiagnosisProfile": {
+            "tongueNote": "舌苔偏薄，偶有口干",
+            "stoolNote": "排便偏干，约每日一次",
+            "sleepSoundNote": "偶有低强度鼾声和翻身",
+            "mainConcern": "减脂、睡眠恢复和脾胃状态",
+        },
         "goals": ["weight_loss", "sleep_recovery", "digestive_health"],
         "habits": {
             "coffee": "medium",
@@ -22,6 +30,14 @@ PROFILES = [
         "age": 68,
         "gender": "male",
         "occupation": "退休",
+        "birthDate": "1958-09-06",
+        "birthHour": "chen",
+        "fourDiagnosisProfile": {
+            "tongueNote": "舌质偏淡",
+            "stoolNote": "饮食清淡时较稳定",
+            "sleepSoundNote": "夜间起夜和咳嗽需要关注",
+            "mainConcern": "夜间异常和长辈关怀",
+        },
         "goals": ["elderly_care", "sleep_recovery"],
         "habits": {
             "coffee": "low",
@@ -38,6 +54,14 @@ PROFILES = [
         "age": 32,
         "gender": "other",
         "occupation": "互联网从业者",
+        "birthDate": "1994-11-22",
+        "birthHour": "hai",
+        "fourDiagnosisProfile": {
+            "tongueNote": "熬夜后口干明显",
+            "stoolNote": "外卖后容易腹胀",
+            "sleepSoundNote": "夜醒和环境噪声影响恢复",
+            "mainConcern": "熬夜修复和肠胃负担",
+        },
         "goals": ["reduce_fatigue", "sleep_recovery", "digestive_health"],
         "habits": {
             "coffee": "high",
@@ -54,6 +78,14 @@ PROFILES = [
         "age": 19,
         "gender": "female",
         "occupation": "学生",
+        "birthDate": "2007-06-18",
+        "birthHour": "wu",
+        "fourDiagnosisProfile": {
+            "tongueNote": "考试周偶有口干",
+            "stoolNote": "作息乱时不稳定",
+            "sleepSoundNote": "睡眠时长不足时白天困倦",
+            "mainConcern": "学习专注和睡眠恢复",
+        },
         "goals": ["focus_study", "sleep_recovery"],
         "habits": {
             "coffee": "low",
@@ -70,6 +102,14 @@ PROFILES = [
         "age": 39,
         "gender": "female",
         "occupation": "自由职业者",
+        "birthDate": "1987-12-02",
+        "birthHour": "zi",
+        "fourDiagnosisProfile": {
+            "tongueNote": "舌面偏干",
+            "stoolNote": "压力大时偏干",
+            "sleepSoundNote": "夜醒频繁，偶有呼吸声变化",
+            "mainConcern": "长期失眠和疲劳恢复",
+        },
         "goals": ["sleep_recovery", "reduce_fatigue"],
         "habits": {
             "coffee": "medium",

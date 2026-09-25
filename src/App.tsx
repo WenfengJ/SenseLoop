@@ -3,7 +3,6 @@ import {
   AlertTriangle,
   Apple,
   ArrowLeft,
-  CalendarDays,
   Camera,
   ChevronRight,
   CheckCircle2,
@@ -131,6 +130,14 @@ function profileToDraft(profile: UserProfile, accountId?: string | null): Profil
     age: profile.age,
     gender: profile.gender,
     occupation: profile.occupation,
+    birthDate: profile.birthDate ?? "",
+    birthHour: profile.birthHour ?? "",
+    fourDiagnosisProfile: {
+      tongueNote: profile.fourDiagnosisProfile?.tongueNote ?? "",
+      stoolNote: profile.fourDiagnosisProfile?.stoolNote ?? "",
+      sleepSoundNote: profile.fourDiagnosisProfile?.sleepSoundNote ?? "",
+      mainConcern: profile.fourDiagnosisProfile?.mainConcern ?? "",
+    },
     goals: [...profile.goals],
     habits: { ...profile.habits },
   };
@@ -144,6 +151,14 @@ function sanitizeProfileDraft(draft: ProfileWritePayload, accountId?: string | n
     age: Math.min(120, Math.max(1, Number(draft.age) || 30)),
     gender: draft.gender,
     occupation: draft.occupation.trim() || "未填写",
+    birthDate: draft.birthDate || null,
+    birthHour: draft.birthHour || null,
+    fourDiagnosisProfile: {
+      tongueNote: draft.fourDiagnosisProfile?.tongueNote?.trim() || "",
+      stoolNote: draft.fourDiagnosisProfile?.stoolNote?.trim() || "",
+      sleepSoundNote: draft.fourDiagnosisProfile?.sleepSoundNote?.trim() || "",
+      mainConcern: draft.fourDiagnosisProfile?.mainConcern?.trim() || "",
+    },
     goals: draft.goals.length ? draft.goals : ["sleep_recovery"],
     habits: {
       coffee: draft.habits.coffee,
@@ -406,6 +421,7 @@ export default function App() {
         {page === "detect" && (
           <DetectPage
             onAnalyzeTongue={handleAnalyzeTongue}
+            onOpenConsult={() => setPage("consult")}
             onSaveObservation={saveObservation}
             onSummarizeDocument={async (payload) => summarizeHealthDocument(profile.id, payload)}
             profileType={profile.profileType}
@@ -873,126 +889,17 @@ function OnboardingPage({
   );
 }
 
-const birthHourOptions = [
-  { key: "zi", label: "子时", time: "23:00-01:00" },
-  { key: "chou", label: "丑时", time: "01:00-03:00" },
-  { key: "yin", label: "寅时", time: "03:00-05:00" },
-  { key: "mao", label: "卯时", time: "05:00-07:00" },
-  { key: "chen", label: "辰时", time: "07:00-09:00" },
-  { key: "si", label: "巳时", time: "09:00-11:00" },
-  { key: "wu", label: "午时", time: "11:00-13:00" },
-  { key: "wei", label: "未时", time: "13:00-15:00" },
-  { key: "shen", label: "申时", time: "15:00-17:00" },
-  { key: "you", label: "酉时", time: "17:00-19:00" },
-  { key: "xu", label: "戌时", time: "19:00-21:00" },
-  { key: "hai", label: "亥时", time: "21:00-23:00" },
-];
-
 function ProfileArchivePage({
   activeProfile,
-  onBack,
+  onStartNewProfile,
   onSelectProfile,
   profiles,
 }: {
   activeProfile: UserProfile;
-  onBack: () => void;
+  onStartNewProfile: () => void;
   onSelectProfile: (profileId: string) => void;
   profiles: UserProfile[];
 }) {
-  const [mode, setMode] = useState<"list" | "new" | "reports">("list");
-  const [draft, setDraft] = useState({
-    name: "用户3968",
-    gender: "male",
-    birthDate: "2021-03-18",
-    birthHour: "you",
-  });
-
-  if (mode === "new") {
-    return (
-      <section className="mobile-app-page">
-        <div className="mobile-app-top">
-          <button className="icon-button" type="button" onClick={() => setMode("list")} aria-label="返回档案列表">
-            <ArrowLeft size={18} />
-          </button>
-          <strong>第 4 步 / 共 4 步</strong>
-          <span>五运六气</span>
-        </div>
-        <div className="step-progress" aria-label="建档步骤">
-          {["舌诊", "脉诊", "问诊", "五运六气"].map((item, index) => (
-            <span className={index === 3 ? "active" : ""} key={item}>{item}</span>
-          ))}
-        </div>
-        <div className="mobile-hint">已从档案中自动填入出生信息，如需修改可直接更改</div>
-        <section className="mobile-form-card">
-          <label className="form-field">
-            <span><CalendarDays size={15} /> 出生日期</span>
-            <input
-              type="date"
-              value={draft.birthDate}
-              onChange={(event) => setDraft((current) => ({ ...current, birthDate: event.target.value }))}
-            />
-          </label>
-        </section>
-        <section className="mobile-form-card">
-          <div className="mobile-form-title">
-            <Clock3 size={16} />
-            出生时辰
-          </div>
-          <div className="birth-hour-grid">
-            {birthHourOptions.map((item) => (
-              <button
-                className={draft.birthHour === item.key ? "birth-hour active" : "birth-hour"}
-                key={item.key}
-                type="button"
-                onClick={() => setDraft((current) => ({ ...current, birthHour: item.key }))}
-              >
-                <strong>{item.label}</strong>
-                <span>{item.time}</span>
-              </button>
-            ))}
-          </div>
-        </section>
-        <button className="action-button mobile-primary" type="button" onClick={() => setMode("list")}>
-          确认并继续
-        </button>
-      </section>
-    );
-  }
-
-  if (mode === "reports") {
-    return (
-      <section className="mobile-app-page">
-        <div className="mobile-app-top">
-          <button className="icon-button" type="button" onClick={() => setMode("list")} aria-label="返回档案首页">
-            <ArrowLeft size={18} />
-          </button>
-          <strong>我的报告</strong>
-          <span>历史测评</span>
-        </div>
-        <section className="archive-list">
-          {profiles.map((item, index) => (
-            <button
-              className={item.id === activeProfile.id ? "archive-row active" : "archive-row"}
-              key={item.id}
-              type="button"
-              onClick={() => {
-                onSelectProfile(item.id);
-                setMode("list");
-              }}
-            >
-              <span>{String(72 - index * 3)}</span>
-              <div>
-                <strong>{item.name} · 四诊合参健康报告</strong>
-                <em>舌诊 / 问诊 / 五运六气 · 点击切换档案查看</em>
-              </div>
-              <ChevronRight size={16} />
-            </button>
-          ))}
-        </section>
-      </section>
-    );
-  }
-
   return (
     <section className="mobile-app-page">
       <div className="mobile-brand-bar">
@@ -1008,26 +915,26 @@ function ProfileArchivePage({
         <span>基于中医四诊合参，整理你的健康状态</span>
       </section>
       <div className="mobile-action-grid">
-        <button className="mobile-action-card active" type="button" onClick={() => setMode("new")}>
+        <button className="mobile-action-card active" type="button" onClick={onStartNewProfile}>
           <UserPlus size={28} />
           <strong>新建档案</strong>
-          <span>舌诊 / 问诊 / 五运六气</span>
+          <span>基础信息、目标、睡眠困扰和生活习惯</span>
         </button>
-        <button className="mobile-action-card" type="button" onClick={() => setMode("reports")}>
+        <button className="mobile-action-card" type="button" onClick={() => onSelectProfile(activeProfile.id)}>
           <FileText size={28} />
-          <strong>我的报告</strong>
-          <span>查看历史健康报告</span>
+          <strong>当前档案</strong>
+          <span>四诊记录、问诊记忆和报告都跟随此档案</span>
         </button>
       </div>
-      <button className="action-button mobile-primary" type="button" onClick={() => setMode("new")}>
-        开始健康测评
+      <button className="action-button mobile-primary" type="button" onClick={onStartNewProfile}>
+        新建完整健康档案
       </button>
       <section className="mobile-info-card">
-        <h3>服务号测评说明</h3>
+        <h3>四诊档案如何使用</h3>
         <ol>
-          <li>舌诊：拍摄舌面/舌底照片，查看舌象变化</li>
-          <li>问诊：通过智能问卷采集症状与体征信息</li>
-          <li>五运六气：基于出生时辰推算运气养生方案</li>
+          <li>望诊：舌苔、饮食图和体检资料会进入当前档案</li>
+          <li>闻诊：昨晚睡眠声音、鼾声、咳嗽和起夜跟随当前档案</li>
+          <li>问诊：岐黄问诊助手只读取当前档案的记忆和报告</li>
         </ol>
       </section>
       <section className="archive-list">
@@ -1045,7 +952,7 @@ function ProfileArchivePage({
             <span>{item.name.slice(0, 1)}</span>
             <div>
               <strong>{item.name}</strong>
-              <em>{item.age} 岁 · {item.occupation}</em>
+              <em>{item.age} 岁 · {item.occupation}{item.birthDate ? ` · ${item.birthDate}` : ""}</em>
             </div>
             <ChevronRight size={16} />
           </button>
@@ -1154,6 +1061,34 @@ function MinePage({
     }
   }
 
+  function startNewProfileDraft() {
+    setProfileDraft({
+      ...profileToDraft(activeProfile, identity?.accountId),
+      name: "",
+      age: 30,
+      occupation: "",
+      birthDate: "",
+      birthHour: "",
+      fourDiagnosisProfile: {
+        tongueNote: "",
+        stoolNote: "",
+        sleepSoundNote: "",
+        mainConcern: "",
+      },
+      goals: ["sleep_recovery"],
+      habits: {
+        coffee: "low",
+        lateNightSnack: false,
+        sedentaryHours: 6,
+        exerciseFrequency: "medium",
+        sleepProblem: "mild",
+      },
+    });
+    window.setTimeout(() => {
+      document.getElementById("health-profile-editor")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 0);
+  }
+
   return (
     <>
       <PageTitle
@@ -1221,7 +1156,7 @@ function MinePage({
             />
             <IdentityRow
               label="当前健康档案"
-              helper={`${activeProfile.name} · ${activeProfile.age} 岁 · ${activeProfile.occupation}`}
+              helper={`${activeProfile.name} · ${activeProfile.age} 岁 · ${activeProfile.occupation}${activeProfile.birthDate ? ` · ${activeProfile.birthDate}` : ""}`}
               value={activeProfile.id}
             />
           </div>
@@ -1230,6 +1165,7 @@ function MinePage({
             重新生成今日报告
           </button>
         </Panel>
+        <div id="health-profile-editor">
         <Panel title="健康档案">
           <div className="form-grid compact">
             <label className="form-field">
@@ -1251,6 +1187,28 @@ function MinePage({
             <label className="form-field">
               <span>生活方式</span>
               <input value={profileDraft.occupation} onChange={(event) => setProfileDraft((current) => ({ ...current, occupation: event.target.value }))} />
+            </label>
+            <label className="form-field">
+              <span>出生年月日</span>
+              <input type="date" value={profileDraft.birthDate ?? ""} onChange={(event) => setProfileDraft((current) => ({ ...current, birthDate: event.target.value }))} />
+            </label>
+            <label className="form-field">
+              <span>出生时辰</span>
+              <select value={profileDraft.birthHour ?? ""} onChange={(event) => setProfileDraft((current) => ({ ...current, birthHour: event.target.value }))}>
+                <option value="">暂不确定</option>
+                <option value="zi">子时 23:00-01:00</option>
+                <option value="chou">丑时 01:00-03:00</option>
+                <option value="yin">寅时 03:00-05:00</option>
+                <option value="mao">卯时 05:00-07:00</option>
+                <option value="chen">辰时 07:00-09:00</option>
+                <option value="si">巳时 09:00-11:00</option>
+                <option value="wu">午时 11:00-13:00</option>
+                <option value="wei">未时 13:00-15:00</option>
+                <option value="shen">申时 15:00-17:00</option>
+                <option value="you">酉时 17:00-19:00</option>
+                <option value="xu">戌时 19:00-21:00</option>
+                <option value="hai">亥时 21:00-23:00</option>
+              </select>
             </label>
             <label className="form-field">
               <span>咖啡因</span>
@@ -1279,6 +1237,24 @@ function MinePage({
               <span>经常夜宵</span>
             </label>
           </div>
+          <div className="form-grid compact">
+            <label className="form-field">
+              <span>舌苔/口干线索</span>
+              <textarea rows={3} value={profileDraft.fourDiagnosisProfile?.tongueNote ?? ""} onChange={(event) => setProfileDraft((current) => ({ ...current, fourDiagnosisProfile: { ...(current.fourDiagnosisProfile ?? {}), tongueNote: event.target.value } }))} placeholder="例如：舌苔偏厚、口干、容易口苦" />
+            </label>
+            <label className="form-field">
+              <span>排便习惯</span>
+              <textarea rows={3} value={profileDraft.fourDiagnosisProfile?.stoolNote ?? ""} onChange={(event) => setProfileDraft((current) => ({ ...current, fourDiagnosisProfile: { ...(current.fourDiagnosisProfile ?? {}), stoolNote: event.target.value } }))} placeholder="例如：偏干、一天一次、偶尔腹胀" />
+            </label>
+            <label className="form-field">
+              <span>睡眠声音关注</span>
+              <textarea rows={3} value={profileDraft.fourDiagnosisProfile?.sleepSoundNote ?? ""} onChange={(event) => setProfileDraft((current) => ({ ...current, fourDiagnosisProfile: { ...(current.fourDiagnosisProfile ?? {}), sleepSoundNote: event.target.value } }))} placeholder="例如：鼾声多、夜里咳嗽、容易醒" />
+            </label>
+            <label className="form-field">
+              <span>主要健康关注</span>
+              <textarea rows={3} value={profileDraft.fourDiagnosisProfile?.mainConcern ?? ""} onChange={(event) => setProfileDraft((current) => ({ ...current, fourDiagnosisProfile: { ...(current.fourDiagnosisProfile ?? {}), mainConcern: event.target.value } }))} placeholder="例如：减脂、睡眠恢复、脾胃、疲劳" />
+            </label>
+          </div>
           <div className="goal-selector">
             {profileGoalOptions.map((goal) => (
               <button
@@ -1305,6 +1281,7 @@ function MinePage({
             </button>
           </div>
         </Panel>
+        </div>
         <Panel title="隐私设置">
           <AdviceLine icon={<ShieldCheck size={16} />} title="敏感数据分级" text="舌图、体检报告、排便、口气、原始聊天会标记为敏感数据。" />
           <AdviceLine icon={<LockKeyhole size={16} />} title="记忆范围" text="较早的记录会整理成摘要，减少不必要的敏感信息保留。" />
@@ -1313,7 +1290,7 @@ function MinePage({
       </section>
       <ProfileArchivePage
         activeProfile={activeProfile}
-        onBack={() => undefined}
+        onStartNewProfile={startNewProfileDraft}
         onSelectProfile={onSelectProfile}
         profiles={profiles}
       />
@@ -1644,12 +1621,14 @@ function DietPage({
 
 function DetectPage({
   onAnalyzeTongue,
+  onOpenConsult,
   onSaveObservation,
   onSummarizeDocument,
   profileType,
   signals,
 }: {
   onAnalyzeTongue: AnalyzeTongue;
+  onOpenConsult: () => void;
   onSaveObservation: SaveObservation;
   onSummarizeDocument: (payload: HealthDocumentSummaryPayload) => Promise<HealthDocumentSummaryResult>;
   profileType: ProfileType;
@@ -1699,9 +1678,64 @@ function DetectPage({
     }
   }
 
+  function renderDocumentPanel() {
+    return (
+      <Panel title="健康资料解读">
+        <input accept="image/*,.pdf" className="visually-hidden" onChange={handleDocFile} ref={fileRef} type="file" />
+        <button className="ghost-button compact" type="button" onClick={() => fileRef.current?.click()}>
+          <FileText size={15} />
+          选择体检报告、舌图或健康资料
+        </button>
+        {docFile && <p className="subtle">已选择：{docFile.name}</p>}
+        <label className="form-field">
+          <span>想重点了解什么</span>
+          <textarea rows={3} value={docDraft.description} onChange={(event) => setDocDraft((current) => ({ ...current, description: event.target.value }))} />
+        </label>
+        <label className="form-field">
+          <span>资料补充</span>
+          <textarea rows={4} value={docDraft.extractedText} onChange={(event) => setDocDraft((current) => ({ ...current, extractedText: event.target.value }))} placeholder="可选：拍摄日期、报告类型、近期睡眠/饮食/排便变化，或你最关心的问题" />
+        </label>
+        <div className="account-actions">
+          <button className="action-button compact" type="button" onClick={submitDocumentSummary} disabled={docLoading}>
+            <Sparkles size={16} />
+            {docLoading ? "正在解读..." : "开始解读"}
+          </button>
+          <button className="ghost-button compact" type="button" onClick={onOpenConsult}>
+            <ClipboardList size={15} />
+            去问诊助手
+          </button>
+        </div>
+        {docSummary && <p className="agent-answer">{docSummary}</p>}
+      </Panel>
+    );
+  }
+
   if (mode === "sleep") return <SleepPage events={signals.audioEvents} />;
   if (mode === "tongue") return <SignalsPage signals={signals} onAnalyzeTongue={onAnalyzeTongue} onSaveObservation={onSaveObservation} />;
   if (mode === "diet") return <DietPage diet={signals.diet} profileType={profileType} onSaveObservation={onSaveObservation} />;
+  if (mode === "document") {
+    return (
+      <>
+        <PageTitle
+          eyebrow="报告解读"
+          title="把资料整理成可追问的健康线索"
+          text="上传体检报告、舌图或健康图片后，系统会保存资料并生成摘要，后续可带到岐黄问诊助手继续追问。"
+        />
+        <section className="section-grid two">
+          {renderDocumentPanel()}
+          <Panel title="解读后怎么用">
+            <AdviceLine icon={<FileText size={16} />} title="整理重点" text="先提取异常指标、图片线索和用户最关心的问题。" />
+            <AdviceLine icon={<Moon size={16} />} title="关联睡眠" text="可继续让助手结合昨晚鼾声、咳嗽、夜醒和恢复建议一起解释。" />
+            <AdviceLine icon={<Database size={16} />} title="保留依据" text="摘要会进入当前健康档案，便于报告和问诊助手引用。" />
+            <button className="ghost-button compact" type="button" onClick={() => setMode("overview")}>
+              <ArrowLeft size={15} />
+              返回检测
+            </button>
+          </Panel>
+        </section>
+      </>
+    );
+  }
 
   return (
     <>
@@ -1728,29 +1762,12 @@ function DetectPage({
         <Panel title="昨晚声音优先进入问诊">
           <AdviceLine icon={<Moon size={16} />} title="睡眠时长" text={`${signals.sleep.sleepDurationHours} 小时，${sleepQualityLabel(signals.sleep.sleepQuality)}。`} />
           <AdviceLine icon={<Ear size={16} />} title="闻诊证据" text={`夜间声音 ${signals.audioEvents.length} 段，数据来源包含 ${Array.from(new Set(signals.audioEvents.map((item) => sourceLabel(item.source)))).join(" / ")}。`} />
-          <button className="action-button" type="button" onClick={() => setMode("sleep")}>查看夜间声音详情</button>
+          <div className="account-actions">
+            <button className="action-button compact" type="button" onClick={onOpenConsult}>带着昨晚声音去问诊</button>
+            <button className="ghost-button compact" type="button" onClick={() => setMode("sleep")}>查看夜间声音详情</button>
+          </div>
         </Panel>
-        <Panel title="健康资料解读">
-          <input accept="image/*,.pdf" className="visually-hidden" onChange={handleDocFile} ref={fileRef} type="file" />
-          <button className="ghost-button compact" type="button" onClick={() => fileRef.current?.click()}>
-            <FileText size={15} />
-            选择体检报告或健康资料
-          </button>
-          {docFile && <p className="subtle">已选择：{docFile.name}</p>}
-          <label className="form-field">
-            <span>补充描述</span>
-            <textarea rows={3} value={docDraft.description} onChange={(event) => setDocDraft((current) => ({ ...current, description: event.target.value }))} />
-          </label>
-          <label className="form-field">
-            <span>补充说明</span>
-            <textarea rows={4} value={docDraft.extractedText} onChange={(event) => setDocDraft((current) => ({ ...current, extractedText: event.target.value }))} placeholder="可选：补充拍摄日期、资料类型、近期不适或你最关心的问题" />
-          </label>
-          <button className="action-button" type="button" onClick={submitDocumentSummary}>
-            <Sparkles size={16} />
-            {docLoading ? "正在解读..." : "开始解读"}
-          </button>
-          {docSummary && <p className="agent-answer">{docSummary}</p>}
-        </Panel>
+        {renderDocumentPanel()}
       </section>
       <section className="privacy-strip">
         <ShieldCheck size={18} />

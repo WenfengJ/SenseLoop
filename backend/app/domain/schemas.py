@@ -14,6 +14,13 @@ class UserHabit(BaseModel):
     sleepProblem: Literal["none", "mild", "moderate", "severe"]
 
 
+class FourDiagnosisProfile(BaseModel):
+    tongueNote: str | None = None
+    stoolNote: str | None = None
+    sleepSoundNote: str | None = None
+    mainConcern: str | None = None
+
+
 class UserProfile(BaseModel):
     id: str
     name: str
@@ -21,6 +28,9 @@ class UserProfile(BaseModel):
     age: int
     gender: Literal["female", "male", "other"]
     occupation: str
+    birthDate: str | None = None
+    birthHour: str | None = None
+    fourDiagnosisProfile: FourDiagnosisProfile = Field(default_factory=FourDiagnosisProfile)
     goals: list[str]
     habits: UserHabit
 
@@ -32,6 +42,9 @@ class UserProfileWrite(BaseModel):
     age: int = Field(ge=1, le=120)
     gender: Literal["female", "male", "other"]
     occupation: str
+    birthDate: str | None = None
+    birthHour: str | None = None
+    fourDiagnosisProfile: FourDiagnosisProfile = Field(default_factory=FourDiagnosisProfile)
     goals: list[str] = Field(default_factory=list)
     habits: UserHabit
 

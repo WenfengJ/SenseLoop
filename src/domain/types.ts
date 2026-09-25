@@ -12,8 +12,18 @@ export type UserProfile = {
   age: number;
   gender: "female" | "male" | "other";
   occupation: string;
+  birthDate?: string | null;
+  birthHour?: string | null;
+  fourDiagnosisProfile?: FourDiagnosisProfile;
   goals: HealthGoal[];
   habits: UserHabit;
+};
+
+export type FourDiagnosisProfile = {
+  tongueNote?: string;
+  stoolNote?: string;
+  sleepSoundNote?: string;
+  mainConcern?: string;
 };
 
 export type HealthGoal =

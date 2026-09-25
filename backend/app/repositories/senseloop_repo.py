@@ -118,6 +118,11 @@ def seed_demo_data(session: Session) -> None:
                 sedentary_hours=profile["habits"]["sedentaryHours"],
                 exercise_frequency=profile["habits"]["exerciseFrequency"],
                 sleep_problem=profile["habits"]["sleepProblem"],
+                risk_preferences={
+                    "birthDate": profile.get("birthDate"),
+                    "birthHour": profile.get("birthHour"),
+                    "fourDiagnosisProfile": profile.get("fourDiagnosisProfile", {}),
+                },
                 goals=[ProfileGoalTable(goal=goal) for goal in profile["goals"]],
             )
             session.add(profile_row)
@@ -354,7 +359,12 @@ def _create_owned_profile(session: Session, owner_seed: str, display_name: str) 
         sedentary_hours=template["habits"]["sedentaryHours"],
         exercise_frequency=template["habits"]["exerciseFrequency"],
         sleep_problem=template["habits"]["sleepProblem"],
-        risk_preferences={"ownerSeed": owner_seed},
+        risk_preferences={
+            "ownerSeed": owner_seed,
+            "birthDate": template.get("birthDate"),
+            "birthHour": template.get("birthHour"),
+            "fourDiagnosisProfile": template.get("fourDiagnosisProfile", {}),
+        },
         goals=[ProfileGoalTable(goal=goal) for goal in template["goals"]],
     )
     session.add(profile_row)
@@ -371,6 +381,8 @@ def _profile_from_payload(profile_id: str, payload: dict) -> UserProfileTable:
 
 def _apply_profile_payload(row: UserProfileTable, payload: dict) -> None:
     habits = payload.get("habits") or {}
+    existing_preferences = row.risk_preferences or {}
+    four_diagnosis = payload.get("fourDiagnosisProfile") or {}
     row.name = payload["name"].strip() or "我的档案"
     row.profile_type = payload.get("profileType", "weight_loss_female")
     row.age = int(payload["age"])
@@ -382,6 +394,17 @@ def _apply_profile_payload(row: UserProfileTable, payload: dict) -> None:
     row.exercise_frequency = habits.get("exerciseFrequency", "medium")
     row.sleep_problem = habits.get("sleepProblem", "mild")
     row.goals = [ProfileGoalTable(goal=goal) for goal in payload.get("goals", [])]
+    row.risk_preferences = {
+        **existing_preferences,
+        "birthDate": payload.get("birthDate") or None,
+        "birthHour": payload.get("birthHour") or None,
+        "fourDiagnosisProfile": {
+            "tongueNote": (four_diagnosis.get("tongueNote") or "").strip(),
+            "stoolNote": (four_diagnosis.get("stoolNote") or "").strip(),
+            "sleepSoundNote": (four_diagnosis.get("sleepSoundNote") or "").strip(),
+            "mainConcern": (four_diagnosis.get("mainConcern") or "").strip(),
+        },
+    }
 
 
 def _upsert_device(session: Session, account_id: str, device_id: str, device_name: str | None = None) -> None:
@@ -829,6 +852,7 @@ def _seed_placeholder_knowledge(session: Session) -> None:
             extra_metadata={"manualImport": True},
         )
         session.add(source_row)
+        session.flush()
         for index, chunk in enumerate(source["chunks"]):
             session.add(
                 KnowledgeChunkTable(
@@ -970,6 +994,7 @@ def _get_or_create_day(session: Session, profile_id: str, signal_date: str) -> D
 
 
 def _profile_to_dict(profile: UserProfileTable) -> dict:
+    preferences = profile.risk_preferences or {}
     return {
         "id": profile.id,
         "name": profile.name,
@@ -977,6 +1002,9 @@ def _profile_to_dict(profile: UserProfileTable) -> dict:
         "age": profile.age,
         "gender": profile.gender,
         "occupation": profile.occupation,
+        "birthDate": preferences.get("birthDate"),
+        "birthHour": preferences.get("birthHour"),
+        "fourDiagnosisProfile": preferences.get("fourDiagnosisProfile") or {},
         "goals": [goal.goal for goal in profile.goals],
         "habits": {
             "coffee": profile.coffee,
