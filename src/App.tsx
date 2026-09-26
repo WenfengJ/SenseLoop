@@ -420,18 +420,20 @@ export default function App() {
         </div>
       </header>
 
-      <section className="profile-strip" aria-label="用户画像切换">
-        {profiles.map((item) => (
-          <button
-            className={item.id === profile.id ? "chip active" : "chip"}
-            key={item.id}
-            type="button"
-            onClick={() => setActiveProfileId(item.id)}
-          >
-            {profileDisplayName(item)}
-          </button>
-        ))}
-      </section>
+      {page !== "mine" && (
+        <section className="profile-strip" aria-label="当前健康档案切换">
+          {profiles.map((item) => (
+            <button
+              className={item.id === profile.id ? "chip active" : "chip"}
+              key={item.id}
+              type="button"
+              onClick={() => setActiveProfileId(item.id)}
+            >
+              {profileDisplayName(item)}
+            </button>
+          ))}
+        </section>
+      )}
 
       <section className="page-frame">
         {isLoading && <div className="inline-status">正在更新健康记录...</div>}
@@ -1047,11 +1049,6 @@ function MinePage({
 
   return (
     <>
-      <PageTitle
-        eyebrow="我的"
-        title="我的健康空间"
-        text="一个账号管理全家人的独立健康档案；切换成员后，只会看到对方自己的记录与建议。"
-      />
       <button className="account-profile-hero" type="button" onClick={() => setAccountPanelOpen((current) => !current)}>
         <div className="account-avatar">{identity?.authMode === "email" ? (identity.displayName || identity.email || "我").slice(0, 1) : "访"}</div>
         <div className="account-profile-copy">
@@ -1131,6 +1128,7 @@ function MinePage({
             >
               <span className="family-avatar">{profileDisplayName(item).slice(0, 1)}</span>
               <strong>{profileDisplayName(item)}</strong>
+              <span className="family-meta">{item.age} 岁 · {item.occupation || "待完善"}</span>
               <em>{profileGoalSummary(item)}</em>
             </button>
           ))}

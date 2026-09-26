@@ -2101,7 +2101,7 @@
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 16px;
-  margin-bottom: 16px;
+  margin: 20px 0 16px;
   border: 1px solid #d7e9e5;
   border-radius: 18px;
   padding: 20px 22px;
@@ -2169,6 +2169,11 @@
   margin-top: 18px;
   overflow-x: auto;
   padding-bottom: 4px;
+  scrollbar-width: none;
+}
+
+.family-profile-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .family-profile-card {
@@ -2197,6 +2202,14 @@
 
 .family-profile-card strong {
   font-size: 15px;
+}
+
+.family-profile-card .family-meta {
+  color: #536c63;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
 }
 
 .family-profile-card em {
