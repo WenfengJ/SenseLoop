@@ -81,12 +81,24 @@ type TongueUpload = { name: string; url: string; size: number; type: string };
 
 const pageNames: Record<PageKey, string> = {
   today: "今日",
-  detect: "检测",
-  consult: "问诊",
+  detect: "记录",
+  consult: "问助手",
   report: "报告",
   mine: "我的",
   architecture: "说明",
 };
+
+const demoRelationshipNames: Record<string, string> = {
+  "profile-weight-loss": "我",
+  "profile-elderly": "父亲",
+  "profile-office": "母亲",
+  "profile-student": "儿子",
+  "profile-insomnia": "伴侣",
+};
+
+function profileDisplayName(profile: UserProfile) {
+  return demoRelationshipNames[profile.id] ?? profile.name;
+}
 
 const profileNotes: Record<ProfileType, string> = {
   weight_loss_female: "减脂、皮肤状态、排便和训练强度联动",
@@ -116,16 +128,22 @@ const statusLabels = {
 const profileGoalOptions: Array<{ value: UserProfile["goals"][number]; label: string }> = [
   { value: "sleep_recovery", label: "睡眠恢复" },
   { value: "weight_loss", label: "体重管理" },
-  { value: "elderly_care", label: "长辈关怀" },
+  { value: "elderly_care", label: "老人关怀" },
   { value: "focus_study", label: "学习专注" },
   { value: "reduce_fatigue", label: "减少疲劳" },
   { value: "digestive_health", label: "脾胃消化" },
 ];
 
+function profileGoalLabels(profile: UserProfile) {
+  return profile.goals
+    .map((value) => profileGoalOptions.find((item) => item.value === value)?.label)
+    .filter((label): label is string => Boolean(label));
+}
+
 function profileToDraft(profile: UserProfile, accountId?: string | null): ProfileWritePayload {
   return {
     accountId: accountId ?? null,
-    name: profile.name,
+    name: profileDisplayName(profile),
     profileType: profile.profileType,
     age: profile.age,
     gender: profile.gender,
@@ -173,6 +191,7 @@ function sanitizeProfileDraft(draft: ProfileWritePayload, accountId?: string | n
 export default function App() {
   const [activeProfileId, setActiveProfileId] = useState<string>(mockProfiles[0].id);
   const [page, setPage] = useState<PageKey>("today");
+  const [previousPage, setPreviousPage] = useState<PageKey>("today");
   const [profiles, setProfiles] = useState<UserProfile[]>(mockProfiles);
   const [signals, setSignals] = useState<DailySignals>(mockDailySignals.weight_loss_female);
   const [report, setReport] = useState<DailyReport>(() => buildLocalReport(mockProfiles[0], mockDailySignals.weight_loss_female));
@@ -182,10 +201,10 @@ export default function App() {
   const [toast, setToast] = useState<ToastState | null>(null);
   const [agentAnswer, setAgentAnswer] = useState<string>("");
 
-  const profile = useMemo(
-    () => profiles.find((item) => item.id === activeProfileId) ?? profiles[0] ?? mockProfiles[0],
-    [activeProfileId, profiles],
-  );
+  const profile = useMemo(() => {
+    const source = profiles.find((item) => item.id === activeProfileId) ?? profiles[0] ?? mockProfiles[0];
+    return { ...source, name: profileDisplayName(source) };
+  }, [activeProfileId, profiles]);
 
   useEffect(() => {
     let active = true;
@@ -376,6 +395,12 @@ export default function App() {
     return result.analysis;
   }
 
+  function openPage(nextPage: PageKey) {
+    if (nextPage !== page) setPreviousPage(page);
+    setPage(nextPage);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <main className="app-shell">
       <header className="topbar">
@@ -387,32 +412,34 @@ export default function App() {
           <span className={`api-badge ${apiMode}`}>
             {apiMode === "checking" ? "同步中" : apiMode === "api" ? "已同步" : "离线模式"}
           </span>
-          <button className="ghost-button" type="button" onClick={() => setPage("architecture")}>
+          <button className="ghost-button" type="button" onClick={() => openPage("architecture")}>
             <Database size={16} />
             说明
           </button>
         </div>
       </header>
 
-      <section className="profile-strip" aria-label="用户画像切换">
-        {profiles.map((item) => (
-          <button
-            className={item.id === profile.id ? "chip active" : "chip"}
-            key={item.id}
-            type="button"
-            onClick={() => setActiveProfileId(item.id)}
-          >
-            {item.name}
-          </button>
-        ))}
-      </section>
+      {page !== "mine" && (
+        <section className="profile-strip" aria-label="当前健康档案切换">
+          {profiles.map((item) => (
+            <button
+              className={item.id === profile.id ? "chip active" : "chip"}
+              key={item.id}
+              type="button"
+              onClick={() => setActiveProfileId(item.id)}
+            >
+              {profileDisplayName(item)}
+            </button>
+          ))}
+        </section>
+      )}
 
       <section className="page-frame">
         {isLoading && <div className="inline-status">正在更新健康记录...</div>}
         {page === "today" && (
           <TodayPage
-            onOpenConsult={() => setPage("consult")}
-            onOpenDetect={() => setPage("detect")}
+            onOpenConsult={() => openPage("consult")}
+            onOpenDetect={() => openPage("detect")}
             report={report}
             signals={signals}
             profileType={profile.profileType}
@@ -421,7 +448,7 @@ export default function App() {
         {page === "detect" && (
           <DetectPage
             onAnalyzeTongue={handleAnalyzeTongue}
-            onOpenConsult={() => setPage("consult")}
+            onOpenConsult={() => openPage("consult")}
             onSaveObservation={saveObservation}
             onSummarizeDocument={async (payload) => summarizeHealthDocument(profile.id, payload)}
             profileType={profile.profileType}
@@ -434,7 +461,7 @@ export default function App() {
             profile={profile}
             report={report}
             signals={signals}
-            onOpenDetect={() => setPage("detect")}
+            onOpenDetect={() => openPage("detect")}
           />
         )}
         {page === "report" && (
@@ -456,14 +483,13 @@ export default function App() {
             onSaveObservation={saveObservation}
             onSelectProfile={(nextProfileId) => {
               setActiveProfileId(nextProfileId);
-              setPage("today");
             }}
             onUpdateProfile={handleUpdateProfile}
             onVerifyEmailCode={handleVerifyEmailCode}
             profiles={profiles}
           />
         )}
-        {page === "architecture" && <ArchitecturePage />}
+        {page === "architecture" && <ArchitecturePage onBack={() => setPage(previousPage === "architecture" ? "today" : previousPage)} />}
       </section>
 
       <nav className="bottom-nav" aria-label="页面导航">
@@ -471,11 +497,12 @@ export default function App() {
           .filter((key) => key !== "architecture")
           .map((key) => (
             <button
-              className={page === key ? "nav-item active" : "nav-item"}
+              className={`${page === key ? "nav-item active" : "nav-item"}${key === "consult" ? " nav-item-primary" : ""}`}
               key={key}
               type="button"
-              onClick={() => setPage(key)}
+              onClick={() => openPage(key)}
             >
+              {key === "consult" && <Sparkles size={17} />}
               {pageNames[key]}
             </button>
           ))}
@@ -889,79 +916,6 @@ function OnboardingPage({
   );
 }
 
-function ProfileArchivePage({
-  activeProfile,
-  onStartNewProfile,
-  onSelectProfile,
-  profiles,
-}: {
-  activeProfile: UserProfile;
-  onStartNewProfile: () => void;
-  onSelectProfile: (profileId: string) => void;
-  profiles: UserProfile[];
-}) {
-  return (
-    <section className="mobile-app-page">
-      <div className="mobile-brand-bar">
-        <div className="brand-mark">SL</div>
-        <strong>岐黄健康助手</strong>
-        <button className="profile-pill" type="button">
-          {activeProfile.name}
-          <ChevronRight size={14} />
-        </button>
-      </div>
-      <section className="mobile-welcome-card">
-        <p>下午好，{activeProfile.name}</p>
-        <span>基于中医四诊合参，整理你的健康状态</span>
-      </section>
-      <div className="mobile-action-grid">
-        <button className="mobile-action-card active" type="button" onClick={onStartNewProfile}>
-          <UserPlus size={28} />
-          <strong>新建档案</strong>
-          <span>基础信息、目标、睡眠困扰和生活习惯</span>
-        </button>
-        <button className="mobile-action-card" type="button" onClick={() => onSelectProfile(activeProfile.id)}>
-          <FileText size={28} />
-          <strong>当前档案</strong>
-          <span>四诊记录、问诊记忆和报告都跟随此档案</span>
-        </button>
-      </div>
-      <button className="action-button mobile-primary" type="button" onClick={onStartNewProfile}>
-        新建完整健康档案
-      </button>
-      <section className="mobile-info-card">
-        <h3>四诊档案如何使用</h3>
-        <ol>
-          <li>望诊：舌苔、饮食图和体检资料会进入当前档案</li>
-          <li>闻诊：昨晚睡眠声音、鼾声、咳嗽和起夜跟随当前档案</li>
-          <li>问诊：岐黄问诊助手只读取当前档案的记忆和报告</li>
-        </ol>
-      </section>
-      <section className="archive-list">
-        <div className="panel-toolbar">
-          <strong>其他档案</strong>
-          <span>点击可切换当前档案</span>
-        </div>
-        {profiles.map((item) => (
-          <button
-            className={item.id === activeProfile.id ? "archive-row active" : "archive-row"}
-            key={item.id}
-            type="button"
-            onClick={() => onSelectProfile(item.id)}
-          >
-            <span>{item.name.slice(0, 1)}</span>
-            <div>
-              <strong>{item.name}</strong>
-              <em>{item.age} 岁 · {item.occupation}{item.birthDate ? ` · ${item.birthDate}` : ""}</em>
-            </div>
-            <ChevronRight size={16} />
-          </button>
-        ))}
-      </section>
-    </section>
-  );
-}
-
 function MinePage({
   activeProfile,
   identity,
@@ -994,6 +948,8 @@ function MinePage({
   const [displayName, setDisplayName] = useState(identity?.displayName ?? "");
   const [accountLoading, setAccountLoading] = useState(false);
   const [profileSaving, setProfileSaving] = useState(false);
+  const [accountPanelOpen, setAccountPanelOpen] = useState(false);
+  const [profileEditorOpen, setProfileEditorOpen] = useState(false);
   const [profileDraft, setProfileDraft] = useState<ProfileWritePayload>(() => profileToDraft(activeProfile, identity?.accountId));
 
   useEffect(() => {
@@ -1084,6 +1040,7 @@ function MinePage({
         sleepProblem: "mild",
       },
     });
+    setProfileEditorOpen(true);
     window.setTimeout(() => {
       document.getElementById("health-profile-editor")?.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 0);
@@ -1091,19 +1048,24 @@ function MinePage({
 
   return (
     <>
-      <PageTitle
-        eyebrow="我的"
-        title="管理你的健康档案"
-        text="可在本页切换档案、查看当前设备身份，并管理健康记录与隐私设置。"
-      />
-      <section className="section-grid two">
-        <Panel title="账号">
-          <div className="account-card">
-            <div className="account-avatar">{(identity?.displayName || activeProfile.name).slice(0, 1)}</div>
+      <button className="account-profile-hero" type="button" onClick={() => setAccountPanelOpen((current) => !current)}>
+        <div className="account-avatar">{identity?.authMode === "email" ? (identity.displayName || identity.email || "我").slice(0, 1) : "访"}</div>
+        <div className="account-profile-copy">
+          <span>{identity?.authMode === "email" ? "SenseLoop 账号" : "游客模式"}</span>
+          <strong>{identity?.authMode === "email" ? identity.displayName || identity.email : "登录 / 注册"}</strong>
+          <p>{identity?.authMode === "email" ? identity.email : "登录后可跨设备同步家庭档案与问诊记忆"}</p>
+        </div>
+        <ChevronRight size={20} />
+      </button>
+
+      {accountPanelOpen && (
+        <section className="account-login-panel">
+          <div className="panel-toolbar">
             <div>
-              <strong>{identity?.authMode === "email" ? identity.displayName || identity.email : "游客使用中"}</strong>
-              <span>{identity?.authMode === "email" ? identity.email : "登录邮箱后，换设备也能继续使用同一份健康档案"}</span>
+              <p className="eyebrow">账号与同步</p>
+              <h3>{identity?.authMode === "email" ? "切换或管理账号" : "登录 SenseLoop"}</h3>
             </div>
+            <button className="ghost-button compact" type="button" onClick={() => setAccountPanelOpen(false)}>收起</button>
           </div>
           <div className="form-grid compact">
             <label className="form-field">
@@ -1141,32 +1103,65 @@ function MinePage({
               游客使用
             </button>
           </div>
-        </Panel>
-        <Panel title="当前身份">
-          <div className="id-list">
-            <IdentityRow
-              label="账号编号"
-              helper={identity?.authMode === "email" ? "同一邮箱在不同设备登录会使用同一个账号" : "游客账号只用于当前设备"}
-              value={identity?.accountId ?? "未同步"}
-            />
-            <IdentityRow
-              label="当前设备"
-              helper="用于记录这台手机或浏览器"
-              value={identity?.deviceId ?? "未同步"}
-            />
-            <IdentityRow
-              label="当前健康档案"
-              helper={`${activeProfile.name} · ${activeProfile.age} 岁 · ${activeProfile.occupation}${activeProfile.birthDate ? ` · ${activeProfile.birthDate}` : ""}`}
-              value={activeProfile.id}
-            />
+        </section>
+      )}
+
+      <section className="family-profile-panel">
+        <div className="panel-toolbar">
+          <div>
+            <p className="eyebrow">家庭健康档案</p>
+            <h3>现在查看：{profileDisplayName(activeProfile)}</h3>
           </div>
-          <button className="action-button" type="button" onClick={onGenerateReport}>
-            <FileText size={16} />
-            重新生成今日报告
+          <button className="ghost-button compact" type="button" onClick={startNewProfileDraft}>
+            <UserPlus size={15} />
+            新增成员
           </button>
-        </Panel>
+        </div>
+        <div className="family-profile-grid">
+          {profiles.map((item) => (
+            <button
+              className={item.id === activeProfile.id ? "family-profile-card active" : "family-profile-card"}
+              key={item.id}
+              type="button"
+              onClick={() => onSelectProfile(item.id)}
+            >
+              <span className="family-avatar">{profileDisplayName(item).slice(0, 1)}</span>
+              <strong>{profileDisplayName(item)}</strong>
+              <span className="family-meta">{item.age} 岁 · {item.occupation || "待完善"}</span>
+              <span className="family-card-label">健康目标</span>
+              <span className="family-tag-list">
+                {profileGoalLabels(item).slice(0, 2).map((label) => <b key={label}>{label}</b>)}
+              </span>
+            </button>
+          ))}
+          <button className="family-profile-card add" type="button" onClick={startNewProfileDraft}>
+            <span className="family-avatar"><UserPlus size={18} /></span>
+            <strong>新增</strong>
+            <em>建立独立档案</em>
+          </button>
+        </div>
+        <div className="active-profile-summary">
+          <div>
+            <span>当前档案</span>
+            <strong>{profileDisplayName(activeProfile)} · {activeProfile.age} 岁 · {activeProfile.occupation}</strong>
+            <p>{profileNotes[activeProfile.profileType]}</p>
+          </div>
+          <div className="button-stack">
+            <button className="ghost-button compact" type="button" onClick={() => setProfileEditorOpen((current) => !current)}>
+              {profileEditorOpen ? "收起档案" : "编辑档案"}
+            </button>
+            <button className="action-button compact" type="button" onClick={onGenerateReport}>
+              <FileText size={16} />
+              更新今日报告
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-grid two mine-settings-grid">
+        {profileEditorOpen && (
         <div id="health-profile-editor">
-        <Panel title="健康档案">
+        <Panel title="编辑健康档案">
           <div className="form-grid compact">
             <label className="form-field">
               <span>姓名/昵称</span>
@@ -1282,18 +1277,13 @@ function MinePage({
           </div>
         </Panel>
         </div>
+        )}
         <Panel title="隐私设置">
           <AdviceLine icon={<ShieldCheck size={16} />} title="敏感数据分级" text="舌图、体检报告、排便、口气、原始聊天会标记为敏感数据。" />
           <AdviceLine icon={<LockKeyhole size={16} />} title="记忆范围" text="较早的记录会整理成摘要，减少不必要的敏感信息保留。" />
           <AdviceLine icon={<Database size={16} />} title="档案隔离" text="每个健康档案独立保存，切换档案后只查看对应记录。" />
         </Panel>
       </section>
-      <ProfileArchivePage
-        activeProfile={activeProfile}
-        onStartNewProfile={startNewProfileDraft}
-        onSelectProfile={onSelectProfile}
-        profiles={profiles}
-      />
       <section className="section-grid two">
         <Panel title="隐私确认">
           <p>健康建议需要结合你的睡眠、舌诊、饮食和问诊记录。你可以随时选择补充或停止记录。</p>
@@ -1352,7 +1342,7 @@ function TodayPage({
             </button>
             <button className="ghost-button" type="button" onClick={onOpenDetect}>
               <ClipboardList size={16} />
-              补充四诊检测
+              补充健康记录
             </button>
           </div>
         </div>
@@ -1400,7 +1390,7 @@ function TodayPage({
   );
 }
 
-function SleepPage({ events }: { events: SleepAudioEvent[] }) {
+function SleepPage({ events, onBack }: { events: SleepAudioEvent[]; onBack: () => void }) {
   const [sleepView, setSleepView] = useState<"stats" | "clips">("stats");
   const snoreCount = events.filter((event) => event.type === "snore").length;
   const coughCount = events.filter((event) => event.type === "cough").length;
@@ -1419,7 +1409,8 @@ function SleepPage({ events }: { events: SleepAudioEvent[] }) {
       <PageTitle
         eyebrow="soundcore Work 夜间声音"
         title="先把昨晚听清楚，再把今天安排明白"
-      text="回看整晚的声音片段，了解打鼾、咳嗽、起夜和环境噪声是否影响了今天的精神状态。"
+        text="回看整晚的声音片段，了解打鼾、咳嗽、起夜和环境噪声是否影响了今天的精神状态。"
+        onBack={onBack}
       />
       <div className="card-grid">
         <MetricCard label="声音片段" value={`${events.length}`} suffix={`共 ${formatDuration(totalRecordedSec)}`} icon={<Volume2 size={18} />} />
@@ -1487,10 +1478,12 @@ function DietPage({
   diet,
   profileType,
   onSaveObservation,
+  onBack,
 }: {
   diet: DietSignal[];
   profileType: ProfileType;
   onSaveObservation: SaveObservation;
+  onBack: () => void;
 }) {
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const [preview, setPreview] = useState<{ name: string; url: string; size: number; type: string } | null>(null);
@@ -1538,6 +1531,7 @@ function DietPage({
         eyebrow="饮食记录"
         title="记录这一餐，帮你安排下一餐"
         text="拍照或手动记录都可以。热量只是参考，你可以随时修正识别结果。"
+        onBack={onBack}
       />
       <div className="card-grid">
         <MetricCard label="今日建议" value={`${kcalTarget}`} suffix="kcal" icon={<Apple size={18} />} />
@@ -1710,9 +1704,9 @@ function DetectPage({
     );
   }
 
-  if (mode === "sleep") return <SleepPage events={signals.audioEvents} />;
-  if (mode === "tongue") return <SignalsPage signals={signals} onAnalyzeTongue={onAnalyzeTongue} onSaveObservation={onSaveObservation} />;
-  if (mode === "diet") return <DietPage diet={signals.diet} profileType={profileType} onSaveObservation={onSaveObservation} />;
+  if (mode === "sleep") return <SleepPage events={signals.audioEvents} onBack={() => setMode("overview")} />;
+  if (mode === "tongue") return <SignalsPage signals={signals} onAnalyzeTongue={onAnalyzeTongue} onSaveObservation={onSaveObservation} onBack={() => setMode("overview")} />;
+  if (mode === "diet") return <DietPage diet={signals.diet} profileType={profileType} onSaveObservation={onSaveObservation} onBack={() => setMode("overview")} />;
   if (mode === "document") {
     return (
       <>
@@ -1720,6 +1714,7 @@ function DetectPage({
           eyebrow="报告解读"
           title="把资料整理成可追问的健康线索"
           text="上传体检报告、舌图或健康图片后，系统会保存资料并生成摘要，后续可带到岐黄问诊助手继续追问。"
+          onBack={() => setMode("overview")}
         />
         <section className="section-grid two">
           {renderDocumentPanel()}
@@ -1727,10 +1722,6 @@ function DetectPage({
             <AdviceLine icon={<FileText size={16} />} title="整理重点" text="先提取异常指标、图片线索和用户最关心的问题。" />
             <AdviceLine icon={<Moon size={16} />} title="关联睡眠" text="可继续让助手结合昨晚鼾声、咳嗽、夜醒和恢复建议一起解释。" />
             <AdviceLine icon={<Database size={16} />} title="保留依据" text="摘要会进入当前健康档案，便于报告和问诊助手引用。" />
-            <button className="ghost-button compact" type="button" onClick={() => setMode("overview")}>
-              <ArrowLeft size={15} />
-              返回检测
-            </button>
           </Panel>
         </section>
       </>
@@ -1740,8 +1731,8 @@ function DetectPage({
   return (
     <>
       <PageTitle
-        eyebrow="检测"
-        title="补充今天的健康线索"
+        eyebrow="健康记录"
+        title="把今天的健康线索记下来"
         text="上传舌图、查看夜间声音、记录饮食或整理体检报告，让建议更贴近你今天的状态。"
       />
       <section className="diagnosis-tabs detect-grid">
@@ -1941,7 +1932,7 @@ function ConsultPage({
             </div>
             <button className="ghost-button compact" type="button" onClick={onOpenDetect}>
               <ClipboardList size={15} />
-              去检测
+              去记录
             </button>
           </div>
           <div className="quick-prompts">
@@ -1988,15 +1979,17 @@ function SignalsPage({
   onAnalyzeTongue,
   signals,
   onSaveObservation,
+  onBack,
 }: {
   onAnalyzeTongue: AnalyzeTongue;
   signals: DailySignals;
   onSaveObservation: SaveObservation;
+  onBack: () => void;
 }) {
   const tongueFileRef = useRef<HTMLInputElement | null>(null);
   const [modal, setModal] = useState<"stool" | "tongue" | "breath" | null>(null);
   const [tongueUpload, setTongueUpload] = useState<TongueUpload | null>(null);
-  const [showTongueReport, setShowTongueReport] = useState(Boolean(signals.tongue.recorded));
+  const [showTongueReport, setShowTongueReport] = useState(false);
   const [tongueAiText, setTongueAiText] = useState("");
   const [tongueAiLoading, setTongueAiLoading] = useState(false);
   const [tongueAiError, setTongueAiError] = useState("");
@@ -2078,6 +2071,7 @@ function SignalsPage({
         eyebrow="望闻记录"
         title="舌诊、便诊、口气反馈，组成今日四诊线索"
         text="这些记录用于趋势观察和生活方式建议，敏感数据默认优先保存结构化标签。"
+        onBack={onBack}
       />
       <section className="section-grid three">
         <Panel title="便诊记录">
@@ -2222,24 +2216,6 @@ function SignalsPage({
   );
 }
 
-const constitutionScores = [
-  { label: "阳虚质", value: 85, highlight: true },
-  { label: "气虚质", value: 75 },
-  { label: "湿热质", value: 55 },
-  { label: "阴虚质", value: 50 },
-  { label: "痰湿质", value: 45 },
-  { label: "血瘀质", value: 40 },
-  { label: "气郁质", value: 35 },
-  { label: "平和质", value: 15 },
-];
-
-const foodTherapyItems = [
-  { name: "山药", text: "性平味甘，补脾养胃，生津益肺", usage: "蒸食、煮粥或炖汤，每日 100-200g" },
-  { name: "核桃", text: "性温味甘，补肾温肺，润肠通便", usage: "每日 2-3 个，嚼食或煮粥" },
-  { name: "红枣", text: "性温味甘，补中益气，养血安神", usage: "每日 3-5 颗，泡茶或煮粥" },
-  { name: "生姜", text: "性微温味辛，解表散寒，温中止呕", usage: "做菜佐料或晨起含服，不宜过量" },
-];
-
 function TongueDiagnosisReport({
   aiError,
   aiLoading,
@@ -2255,203 +2231,41 @@ function TongueDiagnosisReport({
   onRetest: () => void;
   upload: TongueUpload | null;
 }) {
-  const [activeTab, setActiveTab] = useState<"overview" | "tongue" | "inquiry" | "wuyun" | "risk" | "therapy">("tongue");
-  const [shareStatus, setShareStatus] = useState("");
-  const mainPattern = draft.moisture === "dry" || draft.coatingThickness === "none" ? "阴虚内热，以胃阴不足为主" : draft.tongueColor === "pale" ? "气血偏虚，脾胃运化不足倾向" : "气虚质";
-  const abnormalItems = [
-    draft.tongueColor === "pale" ? "舌色偏淡白，提示气血不足倾向" : "舌色以淡红为主，需结合疲劳和饮食观察",
-    draft.moisture === "dry" ? "舌面津液偏少，建议结合口干和睡眠状态观察" : "津液尚可，继续观察晨起口干变化",
-    draft.coatingThickness === "thin" || draft.coatingThickness === "none" ? "舌苔偏薄或少苔，近期不宜过食辛辣燥热" : "舌苔厚薄变化需结合饮食和排便趋势判断",
+  const observations = [
+    { label: "舌色", value: tongueColor(draft.tongueColor) },
+    { label: "舌苔", value: coating(draft.coatingThickness) },
+    { label: "湿润度", value: draft.moisture === "dry" ? "偏干" : draft.moisture === "wet" ? "偏湿" : "正常" },
   ];
-  const tabs = [
-    { key: "overview", label: "体质总览" },
-    { key: "tongue", label: "舌诊" },
-    { key: "inquiry", label: "问诊" },
-    { key: "wuyun", label: "五运六气" },
-    { key: "risk", label: "风险评估" },
-    { key: "therapy", label: "调理方案" },
-  ] as const;
-  const featureCards = [
-    { title: "舌色", value: draft.tongueColor === "pale" ? "舌质淡白偏淡，局部可见淡红" : tongueColor(draft.tongueColor), tone: "rose" },
-    { title: "舌形", value: "舌体形态适中略偏胖，质地较为柔嫩", tone: "amber" },
-    { title: "苔质", value: draft.coatingThickness === "none" ? "少苔或局部剥脱，舌面较光洁" : `${coating(draft.coatingThickness)}，需结合饮食观察`, tone: "gold" },
-    { title: "津液", value: draft.moisture === "dry" ? "津液偏少，舌面水润度不足" : "津液尚可，舌面有光泽", tone: "blue" },
-  ];
-
-  async function handleShareReport() {
-    const text = `SenseLoop 舌诊报告：${mainPattern}。舌象要点：${abnormalItems.join("；")}。当前结果仅作健康管理参考。`;
-    try {
-      const nav = navigator as Navigator & { share?: (data: { title?: string; text?: string }) => Promise<void> };
-      if (nav.share) {
-        await nav.share({ title: "SenseLoop 舌诊报告", text });
-        setShareStatus("已打开系统分享");
-        return;
-      }
-      await navigator.clipboard.writeText(text);
-      setShareStatus("报告摘要已复制");
-    } catch {
-      setShareStatus("分享暂不可用，可稍后重试");
-    }
-  }
 
   return (
-    <section className="tongue-report-shell">
-      <div className="tcm-report-brand">
-        <div className="brand-leaf">叶</div>
+    <section className="tongue-observation-card">
+      <div className="panel-toolbar">
         <div>
-          <strong>中医舌诊</strong>
-          <span>Traditional TCM Tongue Analysis</span>
+          <p className="eyebrow">本次记录</p>
+          <h3>舌象参考</h3>
+        </div>
+        <span className="api-badge">仅供日常观察</span>
+      </div>
+      <div className="tongue-observation-body">
+        {upload ? <img alt="舌面上传预览" src={upload.url} /> : <div className="tongue-placeholder">舌</div>}
+        <div className="tongue-observation-values">
+          {observations.map((item) => (
+            <div key={item.label}>
+              <span>{item.label}</span>
+              <strong>{item.value}</strong>
+            </div>
+          ))}
         </div>
       </div>
-      <div className="report-hero-card">
-        <div>
-          <p>四诊合参 · 舌诊健康报告</p>
-          <h2>用户3968</h2>
-          <span>测评日期：2026年3月15日</span>
-          <div className="report-pill-row">
-            <b>舌诊 · 已完成</b>
-            <b>问诊 · 已完成</b>
-            <b>五运六气 · 已完成</b>
-          </div>
-        </div>
-        <div className="report-score-ring">
-          <strong>72</strong>
-          <span>综合评分</span>
-        </div>
+      <div className="ai-analysis-box">
+        <h3><Sparkles size={20} /> AI 观察说明</h3>
+        {aiLoading && <p>正在整理这次舌象记录...</p>}
+        {aiError && <p>{aiError}</p>}
+        {!aiLoading && !aiError && aiText && aiText.split("\n").filter(Boolean).map((line) => <p key={line}>{line}</p>)}
+        {!aiLoading && !aiError && !aiText && <p>已保存本次舌象标签。结合口干、饮食、排便和睡眠记录后，助手才能给出更有依据的生活建议。</p>}
       </div>
-      <div className="report-tab-strip">
-        {tabs.map((item) => (
-          <button className={activeTab === item.key ? "active" : ""} key={item.key} type="button" onClick={() => setActiveTab(item.key)}>
-            {item.label}
-          </button>
-        ))}
-      </div>
-      {activeTab === "overview" && (
-        <section className="tongue-result-card">
-          <h3>体质辨识结果</h3>
-          <div className="constitution-title">
-            <strong>{mainPattern}</strong>
-            <span>主要倾向</span>
-          </div>
-          <p>当前结果结合舌象记录生成，只做健康管理参考，不替代医疗诊断。</p>
-          <strong className="mini-heading">九型体质评估</strong>
-          <div className="constitution-list">
-            {constitutionScores.map((item) => (
-              <div className="constitution-row" key={item.label}>
-                <span>{item.label}</span>
-                <i><b style={{ width: `${item.value}%` }} /></i>
-                <em>{item.value}%{item.highlight ? " *" : ""}</em>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-      {activeTab === "tongue" && (
-        <>
-          <section className="tongue-result-card">
-            <h3>舌象分析</h3>
-            <div className="tongue-photo-grid">
-              <figure>
-                {upload ? <img alt="舌面上传预览" src={upload.url} /> : <div className="tongue-placeholder">舌</div>}
-                <figcaption>舌面</figcaption>
-              </figure>
-              <figure>
-                <div className="tongue-placeholder underside">舌下</div>
-                <figcaption>舌下</figcaption>
-              </figure>
-            </div>
-            <div className="tongue-feature-grid">
-              {featureCards.map((item) => (
-                <article className={`tongue-feature-card ${item.tone}`} key={item.title}>
-                  <span>{item.title}</span>
-                  <strong>{item.value}</strong>
-                </article>
-              ))}
-            </div>
-          </section>
-          <section className="diagnosis-card">
-            <h3><CheckCircle2 size={22} /> 辨证结果 <span>(Diagnosis)</span></h3>
-            <b>{mainPattern}</b>
-            <p>您的舌象较显著的特征会优先进入健康管理建议。请结合问诊、排便、睡眠和饮食记录一起观察。</p>
-          </section>
-          <section className="ai-analysis-box">
-            <h3><Sparkles size={20} /> 舌象解读</h3>
-            {aiLoading && <p>正在分析舌象...</p>}
-            {aiError && <p>{aiError}</p>}
-            {!aiLoading && !aiError && aiText && aiText.split("\n").filter(Boolean).map((line) => <p key={line}>{line}</p>)}
-            {!aiLoading && !aiError && !aiText && <p>上传舌苔照片后，这里会展示舌象解读结果。</p>}
-          </section>
-        </>
-      )}
-      {activeTab === "inquiry" && (
-        <section className="tongue-result-card">
-          <h3>问诊摘要</h3>
-          <div className="inquiry-grid">
-            {["晨起口干", "精神不振", "食欲一般", "睡眠偏晚"].map((item) => <span key={item}>{item}</span>)}
-          </div>
-          <p>补充口干、口苦、畏寒、出汗、排便等感受后，舌象建议会更准确。</p>
-        </section>
-      )}
-      {activeTab === "wuyun" && (
-        <section className="tongue-result-card">
-          <h3>五运六气参考</h3>
-          <p>当前按春末湿热与作息消耗场景处理：饮食宜清润，避免连续熬夜、辛辣和大汗运动。</p>
-          <div className="abnormal-box">
-            <strong>季节提醒</strong>
-            <p>如近期口干、咽干明显，优先关注补水、睡眠和室内湿度。</p>
-          </div>
-        </section>
-      )}
-      {activeTab === "risk" && (
-        <section className="tongue-result-card">
-          <h3>风险评估</h3>
-          <div className="abnormal-box">
-            <strong>注意事项</strong>
-            {abnormalItems.map((item) => <p key={item}>· {item}</p>)}
-            <p>· 如出现持续疼痛、发热、口腔溃疡不愈或明显不适，请及时就医。</p>
-          </div>
-        </section>
-      )}
-      {activeTab === "therapy" && (
-        <section className="therapy-card">
-          <div className="therapy-head">
-            <span>膳</span>
-            <div>
-              <h3>饮食调理与个性化食疗</h3>
-              <p>基于体质辨识和舌诊数据，精选药食同源食材</p>
-            </div>
-          </div>
-          <div className="diet-advice-card">
-            <h3><Apple size={20} /> 饮食调理 (Diet)</h3>
-            <p>多吃滋阴润燥的食物，如银耳、百合、雪梨、莲藕、山药。</p>
-            <p>避免辛辣刺激性食物，少吃油炸烧烤，减少温热性食物过量摄入。</p>
-          </div>
-          <div className="herb-chip-grid">
-            {["石斛（滋养胃阴）", "麦冬（养阴生津）", "沙参（清肺养阴）", "玉竹（养阴润燥）", "枸杞子（滋补肝肾）", "西洋参（补气养阴）"].map((item) => <span key={item}>{item}</span>)}
-          </div>
-          <div className="therapy-grid">
-            {foodTherapyItems.map((item) => (
-              <article className="therapy-item" key={item.name}>
-                <div>{item.name.slice(0, 1)}</div>
-                <strong>{item.name}</strong>
-                <p>{item.text}</p>
-                <em>{item.usage}</em>
-              </article>
-            ))}
-          </div>
-          <div className="lifestyle-list">
-            <h3><Clock3 size={20} /> 起居建议 (Lifestyle)</h3>
-            <p>务必保证充足睡眠，尽量在晚上 11 点前入睡。</p>
-            <p>运动宜缓，避免大汗淋漓的剧烈运动。</p>
-            <p>保持情绪平稳，避免焦虑急躁。</p>
-          </div>
-        </section>
-      )}
-      <section className="fixed-report-actions">
-        <button className="ghost-button" type="button" onClick={handleShareReport}>分享报告</button>
-        <button className="action-button compact" type="button" onClick={onRetest}>再次测评</button>
-        {shareStatus && <span>{shareStatus}</span>}
-      </section>
+      <p className="subtle">舌象变化不能单独用于诊断疾病或判断体质；如有持续不适，请咨询专业医生。</p>
+      <button className="ghost-button compact" type="button" onClick={onRetest}>重新记录</button>
     </section>
   );
 }
@@ -2503,13 +2317,14 @@ function ReportPage({
   );
 }
 
-function ArchitecturePage() {
+function ArchitecturePage({ onBack }: { onBack: () => void }) {
   return (
     <>
       <PageTitle
         eyebrow="服务说明"
         title="SenseLoop 如何理解你的健康线索"
         text="SenseLoop 会把睡眠声音、舌图、饮食和问诊记录合在一起，生成日常健康管理建议。"
+        onBack={onBack}
       />
       <section className="architecture-flow">
         <ArchStep icon={<Ear size={20} />} title="夜间声音" text="记录打鼾、咳嗽、起夜和环境噪声，帮助解释晨起疲惫。" />
@@ -2529,9 +2344,15 @@ function ArchitecturePage() {
   );
 }
 
-function PageTitle({ eyebrow, title, text }: { eyebrow: string; title: string; text: string }) {
+function PageTitle({ eyebrow, title, text, onBack }: { eyebrow: string; title: string; text: string; onBack?: () => void }) {
   return (
     <section className="page-title">
+      {onBack && (
+        <button className="page-back-button" type="button" onClick={onBack}>
+          <ArrowLeft size={17} />
+          返回
+        </button>
+      )}
       <p className="eyebrow">{eyebrow}</p>
       <h2>{title}</h2>
       <p className="lead">{text}</p>
@@ -2750,18 +2571,6 @@ function SignalValue({ label, value }: { label: string; value: string }) {
   );
 }
 
-function IdentityRow({ helper, label, value }: { helper: string; label: string; value: string }) {
-  return (
-    <div className="identity-row" title={value}>
-      <div>
-        <strong>{label}</strong>
-        <span>{helper}</span>
-      </div>
-      <code>{shortId(value)}</code>
-    </div>
-  );
-}
-
 async function readTextFromFile(file: File) {
   const isTextLike =
     file.type.startsWith("text/") ||
@@ -2879,12 +2688,6 @@ function photoQuality(value?: string) {
 
 function breathLevel(level: string) {
   return { none: "无", mild: "轻微", obvious: "明显", unknown: "待确认" }[level] ?? "待确认";
-}
-
-function shortId(value: string) {
-  if (!value || value === "未同步") return value;
-  if (value.length <= 22) return value;
-  return `${value.slice(0, 12)}...${value.slice(-8)}`;
 }
 
 function sleepFeelingLabel(value: SleepSignal["userSleepFeeling"]) {

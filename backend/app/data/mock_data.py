@@ -1,7 +1,7 @@
 PROFILES = [
     {
         "id": "profile-weight-loss",
-        "name": "减脂女性",
+        "name": "我",
         "profileType": "weight_loss_female",
         "age": 28,
         "gender": "female",
@@ -25,12 +25,12 @@ PROFILES = [
     },
     {
         "id": "profile-elderly",
-        "name": "老人关怀",
+        "name": "父亲",
         "profileType": "elderly",
-        "age": 68,
+        "age": 62,
         "gender": "male",
-        "occupation": "退休",
-        "birthDate": "1958-09-06",
+        "occupation": "退休工程师",
+        "birthDate": "1964-09-06",
         "birthHour": "chen",
         "fourDiagnosisProfile": {
             "tongueNote": "舌质偏淡",
@@ -49,12 +49,12 @@ PROFILES = [
     },
     {
         "id": "profile-office",
-        "name": "熬夜上班族",
+        "name": "母亲",
         "profileType": "office_worker",
-        "age": 32,
-        "gender": "other",
-        "occupation": "互联网从业者",
-        "birthDate": "1994-11-22",
+        "age": 58,
+        "gender": "female",
+        "occupation": "会计",
+        "birthDate": "1968-05-22",
         "birthHour": "hai",
         "fourDiagnosisProfile": {
             "tongueNote": "熬夜后口干明显",
@@ -73,12 +73,12 @@ PROFILES = [
     },
     {
         "id": "profile-student",
-        "name": "学生",
+        "name": "儿子",
         "profileType": "student",
-        "age": 19,
-        "gender": "female",
-        "occupation": "学生",
-        "birthDate": "2007-06-18",
+        "age": 8,
+        "gender": "male",
+        "occupation": "小学生",
+        "birthDate": "2018-06-18",
         "birthHour": "wu",
         "fourDiagnosisProfile": {
             "tongueNote": "考试周偶有口干",
@@ -97,12 +97,12 @@ PROFILES = [
     },
     {
         "id": "profile-insomnia",
-        "name": "失眠人群",
+        "name": "伴侣",
         "profileType": "insomnia",
-        "age": 39,
+        "age": 30,
         "gender": "female",
-        "occupation": "自由职业者",
-        "birthDate": "1987-12-02",
+        "occupation": "自由设计师",
+        "birthDate": "1996-04-02",
         "birthHour": "zi",
         "fourDiagnosisProfile": {
             "tongueNote": "舌面偏干",
