@@ -128,23 +128,22 @@ const statusLabels = {
 const profileGoalOptions: Array<{ value: UserProfile["goals"][number]; label: string }> = [
   { value: "sleep_recovery", label: "睡眠恢复" },
   { value: "weight_loss", label: "体重管理" },
-  { value: "elderly_care", label: "长辈关怀" },
+  { value: "elderly_care", label: "老人关怀" },
   { value: "focus_study", label: "学习专注" },
   { value: "reduce_fatigue", label: "减少疲劳" },
   { value: "digestive_health", label: "脾胃消化" },
 ];
 
-function profileGoalSummary(profile: UserProfile) {
-  const labels = profile.goals
+function profileGoalLabels(profile: UserProfile) {
+  return profile.goals
     .map((value) => profileGoalOptions.find((item) => item.value === value)?.label)
-    .filter(Boolean);
-  return labels.slice(0, 2).join(" · ") || profileNotes[profile.profileType];
+    .filter((label): label is string => Boolean(label));
 }
 
 function profileToDraft(profile: UserProfile, accountId?: string | null): ProfileWritePayload {
   return {
     accountId: accountId ?? null,
-    name: profile.name,
+    name: profileDisplayName(profile),
     profileType: profile.profileType,
     age: profile.age,
     gender: profile.gender,
@@ -202,10 +201,10 @@ export default function App() {
   const [toast, setToast] = useState<ToastState | null>(null);
   const [agentAnswer, setAgentAnswer] = useState<string>("");
 
-  const profile = useMemo(
-    () => profiles.find((item) => item.id === activeProfileId) ?? profiles[0] ?? mockProfiles[0],
-    [activeProfileId, profiles],
-  );
+  const profile = useMemo(() => {
+    const source = profiles.find((item) => item.id === activeProfileId) ?? profiles[0] ?? mockProfiles[0];
+    return { ...source, name: profileDisplayName(source) };
+  }, [activeProfileId, profiles]);
 
   useEffect(() => {
     let active = true;
@@ -1129,7 +1128,10 @@ function MinePage({
               <span className="family-avatar">{profileDisplayName(item).slice(0, 1)}</span>
               <strong>{profileDisplayName(item)}</strong>
               <span className="family-meta">{item.age} 岁 · {item.occupation || "待完善"}</span>
-              <em>{profileGoalSummary(item)}</em>
+              <span className="family-card-label">健康目标</span>
+              <span className="family-tag-list">
+                {profileGoalLabels(item).slice(0, 2).map((label) => <b key={label}>{label}</b>)}
+              </span>
             </button>
           ))}
           <button className="family-profile-card add" type="button" onClick={startNewProfileDraft}>

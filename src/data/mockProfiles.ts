@@ -3,7 +3,7 @@ import { UserProfile } from "../domain/types";
 export const mockProfiles: UserProfile[] = [
   {
     id: "profile-weight-loss",
-    name: "减脂女性",
+    name: "我",
     profileType: "weight_loss_female",
     age: 28,
     gender: "female",
@@ -16,7 +16,7 @@ export const mockProfiles: UserProfile[] = [
   },
   {
     id: "profile-elderly",
-    name: "老人关怀",
+    name: "父亲",
     profileType: "elderly",
     age: 68,
     gender: "male",
@@ -29,7 +29,7 @@ export const mockProfiles: UserProfile[] = [
   },
   {
     id: "profile-office",
-    name: "熬夜上班族",
+    name: "母亲",
     profileType: "office_worker",
     age: 32,
     gender: "other",
@@ -42,7 +42,7 @@ export const mockProfiles: UserProfile[] = [
   },
   {
     id: "profile-student",
-    name: "学生",
+    name: "儿子",
     profileType: "student",
     age: 19,
     gender: "female",
@@ -55,7 +55,7 @@ export const mockProfiles: UserProfile[] = [
   },
   {
     id: "profile-insomnia",
-    name: "失眠人群",
+    name: "伴侣",
     profileType: "insomnia",
     age: 39,
     gender: "female",
