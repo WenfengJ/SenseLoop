@@ -28,8 +28,8 @@
 | 参赛补充 TODO | ./TODO-参赛提交补充清单.md | 持续维护 |
 | 人工填写项 | ./submission-ready/人工填写项.md | 已完成 |
 | 当前实现截图 | ./screenshots/README.md | 目录已建立，截图待补 |
-| 演示视频文件 | ./video/README.md | 目录已建立，视频待录制 |
-| 飞书预赛材料填写稿 | ./飞书预赛材料填写稿.md | 已整理，待复制到飞书并补团队信息 |
+| 演示视频材料 | ./video/README.md | 已补产品介绍视频和页面操作视频链接 |
+| 飞书预赛材料填写稿 | ./飞书预赛材料填写稿.md | 已整理，待复制到飞书 |
 
 ## 当前赛场要求与任务宗旨
 
@@ -58,3 +58,8 @@ SenseLoop 的参赛宗旨：
 1. soundcore 夜间声音闻诊：鼾声、咳嗽、夜醒、起夜、环境噪声进入健康档案。
 2. 岐黄问诊助手：结合当前档案、睡眠声音、舌苔/排便/报告摘要和知识库继续追问。
 3. 四诊报告沉淀：把检测和问诊结果沉淀为报告、趋势和下一步建议。
+
+## 已准备视频材料
+
+- 产品介绍视频（约 6 分钟）：https://my.feishu.cn/minutes/obcn9z9219l2yush23i41tud?from=from_copylink
+- 页面操作介绍视频：https://my.feishu.cn/minutes/obcn9147vhn191mb44vh7335?from=from_copylink

@@ -59,6 +59,20 @@ GitHub 仓库：
 https://github.com/WenfengJ/SenseLoop
 ```
 
+## 视频材料
+
+产品介绍视频（约 6 分钟）：
+
+```text
+https://my.feishu.cn/minutes/obcn9z9219l2yush23i41tud?from=from_copylink
+```
+
+页面操作介绍视频：
+
+```text
+https://my.feishu.cn/minutes/obcn9147vhn191mb44vh7335?from=from_copylink
+```
+
 后台：
 
 ```text
@@ -106,7 +120,7 @@ bash scripts/start-all.sh
 
 - GitHub 仓库链接：`https://github.com/WenfengJ/SenseLoop`
 - 在线部署链接：`https://13-57-166-217.sslip.io/senseloop/`
-- 3 分钟演示视频链接。
+- 产品介绍视频：`https://my.feishu.cn/minutes/obcn9z9219l2yush23i41tud?from=from_copylink`
+- 页面操作介绍视频：`https://my.feishu.cn/minutes/obcn9147vhn191mb44vh7335?from=from_copylink`
+- 3 分钟演示视频：短版脚本已准备，可按官方时长要求另行录制或剪辑。
 - PPT 或项目概览附件链接。
-
-这些链接目前需要人工上传或部署后填写。

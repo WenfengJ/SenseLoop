@@ -1,6 +1,22 @@
 # 演示视频
 
-这里放预选提交用的演示视频。
+这里记录预选提交用的视频材料。
+
+## 已准备的视频链接
+
+产品介绍视频（约 6 分钟）：
+
+```text
+https://my.feishu.cn/minutes/obcn9z9219l2yush23i41tud?from=from_copylink
+```
+
+页面操作介绍视频：
+
+```text
+https://my.feishu.cn/minutes/obcn9147vhn191mb44vh7335?from=from_copylink
+```
+
+## 短版视频建议
 
 建议文件名：
 
@@ -21,6 +37,6 @@ anker-SenseLoop-3分钟演示.mp4
 
 当前需要人工操作：
 
-1. 按 `../3分钟演示视频脚本.md` 录屏。
+1. 如果官方要求 3 分钟以内视频，按 `../3分钟演示视频脚本.md` 录屏或从已准备视频中剪辑短版。
 2. 上传到官方要求的平台或网盘。
-3. 将链接填写到 `../submission-ready/人工填写项.md`。
+3. 将最终短版链接补充到 `../submission-ready/人工填写项.md`。
